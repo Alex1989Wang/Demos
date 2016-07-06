@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XDChatViewController">
+            <connections>
+                <outlet property="inputTextView" destination="bbl-Ay-nHs" id="lA6-kn-czq"/>
+                <outlet property="textViewBottomToWholeView" destination="TOD-ai-mkY" id="Plw-lQ-eKZ"/>
+                <outlet property="textViewTopToWholeView" destination="c3j-il-mca" id="bbn-SB-K4s"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wholeViewAtBottom" destination="eSN-tQ-WT8" id="XMe-1O-cDQ"/>
+                <outlet property="wholeViewBottomConstraint" destination="fyp-cu-fg0" id="Lwf-nh-Z7j"/>
+                <outlet property="wholeViewHeight" destination="bby-LR-Y0R" id="0wg-pf-ice"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sva-ip-Q4N">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eSN-tQ-WT8" userLabel="文本框整体View">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teq-KU-ffF" userLabel="发送Button">
+                            <rect key="frame" x="308" y="5" width="57" height="40"/>
+                            <color key="backgroundColor" red="1" green="0.95294117647058818" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="57" id="PkC-xq-Oac"/>
+                                <constraint firstAttribute="height" constant="40" id="VU1-iR-ZAd"/>
+                            </constraints>
+                            <state key="normal" title="发送">
+                                <color key="titleColor" red="0.38823529411764707" green="0.19607843137254902" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="100" horizontalCompressionResistancePriority="100" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-Ay-nHs" userLabel="输入框View">
+                            <rect key="frame" x="8" y="5" width="288" height="40"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="teq-KU-ffF" secondAttribute="trailing" constant="10" id="AZP-LB-Atv"/>
+                        <constraint firstItem="teq-KU-ffF" firstAttribute="top" secondItem="bbl-Ay-nHs" secondAttribute="top" id="MwJ-JV-ThT"/>
+                        <constraint firstItem="teq-KU-ffF" firstAttribute="leading" secondItem="bbl-Ay-nHs" secondAttribute="trailing" constant="10" id="SCq-nt-Wh7"/>
+                        <constraint firstAttribute="bottom" secondItem="bbl-Ay-nHs" secondAttribute="bottom" constant="5" id="TOD-ai-mkY"/>
+                        <constraint firstAttribute="height" constant="50" id="bby-LR-Y0R"/>
+                        <constraint firstItem="bbl-Ay-nHs" firstAttribute="top" secondItem="eSN-tQ-WT8" secondAttribute="top" constant="5" id="c3j-il-mca"/>
+                        <constraint firstItem="bbl-Ay-nHs" firstAttribute="leading" secondItem="eSN-tQ-WT8" secondAttribute="leading" constant="10" id="uCF-lu-myx"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eSN-tQ-WT8" secondAttribute="trailing" id="AWu-bS-wss"/>
+                <constraint firstAttribute="trailing" secondItem="Sva-ip-Q4N" secondAttribute="trailing" id="EjL-nZ-8Qs"/>
+                <constraint firstItem="eSN-tQ-WT8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qq6-VE-cDE"/>
+                <constraint firstAttribute="bottom" secondItem="eSN-tQ-WT8" secondAttribute="bottom" id="fyp-cu-fg0"/>
+                <constraint firstItem="Sva-ip-Q4N" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ks1-0X-yPb"/>
+                <constraint firstItem="Sva-ip-Q4N" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qPC-Vf-a4H"/>
+                <constraint firstAttribute="bottom" secondItem="Sva-ip-Q4N" secondAttribute="bottom" id="uor-tG-AEU"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="-6.5" y="405.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XDMessageController">
+            <connections>
+                <outlet property="messageTable" destination="5Qr-cG-osl" id="XAw-dZ-2RK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WG0-r4-wNl" userLabel="背景无消息视图">
+                    <rect key="frame" x="142" y="273" width="90" height="121"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂无消息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hto-VG-qHp" userLabel="暂无消息">
+                            <rect key="frame" x="11" y="95" width="68" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="qq9-Zs-QSP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.69411764705882351" green="0.70588235294117641" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_seeyou_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nZd-2N-AxE" userLabel="背景LOGO">
+                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="Iua-ie-xwx"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nZd-2N-AxE" firstAttribute="top" secondItem="WG0-r4-wNl" secondAttribute="top" id="38t-n4-vJ3"/>
+                        <constraint firstItem="hto-VG-qHp" firstAttribute="top" secondItem="nZd-2N-AxE" secondAttribute="bottom" constant="5" id="AT5-nM-Dtq"/>
+                        <constraint firstItem="nZd-2N-AxE" firstAttribute="leading" secondItem="WG0-r4-wNl" secondAttribute="leading" id="Faf-6q-kPN"/>
+                        <constraint firstAttribute="bottom" secondItem="hto-VG-qHp" secondAttribute="bottom" constant="2" id="R3k-si-rEe"/>
+                        <constraint firstAttribute="trailing" secondItem="nZd-2N-AxE" secondAttribute="trailing" id="VXP-5q-9Bs"/>
+                        <constraint firstItem="hto-VG-qHp" firstAttribute="centerX" secondItem="nZd-2N-AxE" secondAttribute="centerX" id="XYe-7g-FQF"/>
+                        <constraint firstAttribute="width" constant="90" id="wia-Tb-RXj"/>
+                    </constraints>
+                </view>
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Qr-cG-osl" userLabel="消息表视图">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5Qr-cG-osl" secondAttribute="trailing" id="EcJ-lf-1ca"/>
+                <constraint firstItem="WG0-r4-wNl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Rcr-Oq-For"/>
+                <constraint firstAttribute="bottom" secondItem="5Qr-cG-osl" secondAttribute="bottom" id="U1H-XM-dbT"/>
+                <constraint firstItem="5Qr-cG-osl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dZz-gm-UKF"/>
+                <constraint firstItem="5Qr-cG-osl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fLi-G3-mFM"/>
+                <constraint firstItem="WG0-r4-wNl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="naI-10-7WC"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="814.5" y="417.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="test_seeyou_logo.png" width="129" height="127"/>
+    </resources>
+</document>
