@@ -6,6 +6,8 @@
 //  Copyright © 2016年 JiangWang. All rights reserved.
 //
 
+// just a test to see if git works;
+
 #import "ViewController.h"
 
 @interface ViewController ()
