@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UJ1-El-MPF">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="mCJ-Yb-YPe">
+            <objects>
+                <tableViewController id="dhh-EM-R1s" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mNp-sa-gfz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableTouchCell" id="5go-Zx-UdJ" customClass="TableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5go-Zx-UdJ" id="bYC-lh-bYq">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohN-H6-jec">
+                                            <rect key="frame" x="532" y="8" width="60" height="27"/>
+                                            <state key="normal" title="关注按钮"/>
+                                            <connections>
+                                                <action selector="followButton:" destination="dhh-EM-R1s" eventType="touchUpInside" id="6ZY-qY-5YZ"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-0N-G1k">
+                                            <rect key="frame" x="8" y="8" width="90" height="27"/>
+                                            <state key="normal" title="再来一个按钮"/>
+                                            <connections>
+                                                <action selector="anotherButton:" destination="dhh-EM-R1s" eventType="touchUpInside" id="OED-lB-r8I"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5R6-xC-i3z">
+                                            <rect key="frame" x="452" y="8" width="60" height="27"/>
+                                            <state key="normal" title="删除按钮"/>
+                                            <connections>
+                                                <action selector="deleteButton:" destination="dhh-EM-R1s" eventType="touchUpInside" id="QNA-CH-Gob"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ohN-H6-jec" firstAttribute="leading" secondItem="5R6-xC-i3z" secondAttribute="trailing" constant="20" id="07F-ZB-8Os"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5R6-xC-i3z" secondAttribute="bottom" id="0QQ-bE-pdq"/>
+                                        <constraint firstItem="c3N-0N-G1k" firstAttribute="top" secondItem="bYC-lh-bYq" secondAttribute="topMargin" id="1f2-LJ-2qf"/>
+                                        <constraint firstItem="5R6-xC-i3z" firstAttribute="top" secondItem="bYC-lh-bYq" secondAttribute="topMargin" id="8we-sh-alR"/>
+                                        <constraint firstItem="ohN-H6-jec" firstAttribute="top" secondItem="bYC-lh-bYq" secondAttribute="topMargin" id="GYz-xK-ERB"/>
+                                        <constraint firstItem="c3N-0N-G1k" firstAttribute="leading" secondItem="bYC-lh-bYq" secondAttribute="leadingMargin" id="LCY-Tl-CMF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ohN-H6-jec" secondAttribute="bottom" id="XBv-vQ-2ye"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="c3N-0N-G1k" secondAttribute="bottom" id="aod-xl-21D"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="ohN-H6-jec" secondAttribute="trailing" id="jwZ-Sq-SMc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dhh-EM-R1s" id="J5w-cV-Zcz"/>
+                            <outlet property="delegate" destination="dhh-EM-R1s" id="S9e-XD-GvQ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ElP-V6-AnF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgI-C6-bUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="402"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mVF-ni-qvg">
+            <objects>
+                <navigationController id="UJ1-El-MPF" customClass="NavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ur5-mq-51N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dhh-EM-R1s" kind="relationship" relationship="rootViewController" id="bgD-6f-au3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jM2-ja-xh2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204" y="425"/>
+        </scene>
+    </scenes>
+</document>

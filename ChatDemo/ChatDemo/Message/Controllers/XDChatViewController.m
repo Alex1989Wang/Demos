@@ -112,5 +112,7 @@
     }
     
     [self.wholeViewAtBottom layoutIfNeeded];
+    
+    NSLog(@"%s", __func__);
 }
 @end

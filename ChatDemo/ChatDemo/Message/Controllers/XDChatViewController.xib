@@ -39,8 +39,8 @@
                                 <color key="titleColor" red="0.38823529411764707" green="0.19607843137254902" blue="0.023529411764705882" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="100" horizontalCompressionResistancePriority="100" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-Ay-nHs" userLabel="输入框View">
-                            <rect key="frame" x="8" y="5" width="288" height="40"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="100" horizontalCompressionResistancePriority="100" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bbl-Ay-nHs" userLabel="输入框View">
+                            <rect key="frame" x="10" y="5" width="288" height="40"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
