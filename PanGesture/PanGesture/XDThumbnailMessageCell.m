@@ -16,7 +16,7 @@
 /* animation time */
 #define kAnimationTime 0.5f
 
-@interface XDThumbnailMessageCell()
+@interface XDThumbnailMessageCell()<UIGestureRecognizerDelegate>
 
 /* properties need to be assigned values to */
 @property (weak, nonatomic) IBOutlet UIImageView *userIconImageView;
@@ -47,6 +47,9 @@
     //gesture recognizer left and right;
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
     [self.customizedCellContentView addGestureRecognizer:pan];
+    pan.delegate = self;
+    pan.delaysTouchesBegan = YES;
+    self.pan = pan;
     
     
     //round the message count label
@@ -142,5 +145,18 @@
     }
 
 }
+
+#pragma mark - gesture delegate 
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    
+    NSLog(@"%s", __func__);
+    return YES;
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+    NSLog(@"%s", __func__);
+    return YES;
+}
+
 
 @end

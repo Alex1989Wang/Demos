@@ -47,6 +47,8 @@ typedef NS_ENUM(NSUInteger, XDThumbnailCellPosition) {
 @property (weak, nonatomic) IBOutlet UIButton *deleteMessageButton;
 @property (weak, nonatomic) IBOutlet UIButton *personalPageButton;
 
+@property (weak, nonatomic) UIPanGestureRecognizer *pan;
+
 /*
  Methods
  */

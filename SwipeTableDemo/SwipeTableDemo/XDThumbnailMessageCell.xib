@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -12,18 +12,18 @@
             <rect key="frame" x="0.0" y="0.0" width="429" height="136"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="429" height="135.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="429" height="135"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xtf-QV-tZ0" userLabel="分割线View">
-                        <rect key="frame" x="0.0" y="134.5" width="429" height="1"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xtf-QV-tZ0" userLabel="分割线View">
+                        <rect key="frame" x="0.0" y="135" width="429" height="1"/>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="0Yn-0C-OTt"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xm7-iD-oSg" userLabel="单元格内容View">
-                        <rect key="frame" x="0.0" y="0.0" width="429" height="134.5"/>
+                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xm7-iD-oSg" userLabel="单元格内容View">
+                        <rect key="frame" x="0.0" y="0.0" width="429" height="135"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ouQ-wM-YrN" userLabel="  头像图片">
                                 <rect key="frame" x="10" y="43" width="50" height="50"/>
@@ -102,18 +102,7 @@
                     <constraint firstItem="Xm7-iD-oSg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nO5-lW-fHT"/>
                 </constraints>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="customizedCellContentView" destination="Xm7-iD-oSg" id="Bnd-I8-UIr"/>
-                <outlet property="customizedViewLeftConstraint" destination="nO5-lW-fHT" id="mg5-YE-oI7"/>
-                <outlet property="customizedViewRightConstraint" destination="Vf2-wM-eQm" id="KEk-ZH-lVS"/>
-                <outlet property="latestMessageReceivedTimeLabel" destination="Uod-HV-jpc" id="Eeg-Ck-3mv"/>
-                <outlet property="messageCountLabel" destination="6hG-63-wQ6" id="4b7-Jz-9eE"/>
-                <outlet property="messageLabel" destination="Ax7-q2-Ah6" id="GG6-c1-dWf"/>
-                <outlet property="userDistanceLabel" destination="ijV-zp-jsJ" id="DFc-lf-Vjz"/>
-                <outlet property="userIconImageView" destination="ouQ-wM-YrN" id="ASg-St-fld"/>
-                <outlet property="userNameLabel" destination="0Sd-La-s6c" id="smm-5X-Om0"/>
-            </connections>
-            <point key="canvasLocation" x="231.5" y="299"/>
+            <point key="canvasLocation" x="340.5" y="295"/>
         </tableViewCell>
     </objects>
 </document>
