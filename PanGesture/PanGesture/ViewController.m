@@ -25,6 +25,10 @@ static NSString *const cellID = @"cellID";
     self.title = @"table VC";
     
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([XDThumbnailMessageCell class]) bundle:nil] forCellReuseIdentifier:cellID];
+    
+    [self.tableView setRowHeight:70];
+    
+    [self.tableView canCancelContentTouches];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,6 +49,30 @@ static NSString *const cellID = @"cellID";
     return cell;
 }
 
+#pragma mark - scroll view delegate 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    UIPanGestureRecognizer *scrollPan = scrollView.panGestureRecognizer;
+    
+    CGPoint locationInView = [scrollPan locationInView:self.tableView];
+    
+    XDThumbnailMessageCell *cellUnderTouch = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForRowAtPoint:locationInView]];
+    
+//    [cellUnderTouch.pan requireGestureRecognizerToFail:scrollPan];
+    
+
+    
+}
+
+
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    UIPanGestureRecognizer *scrollPan = scrollView.panGestureRecognizer;
+    
+    CGPoint locationInView = [scrollPan locationInView:self.tableView];
+    
+    XDThumbnailMessageCell *cellUnderTouch = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForRowAtPoint:locationInView]];
+    
+}
 
 
 

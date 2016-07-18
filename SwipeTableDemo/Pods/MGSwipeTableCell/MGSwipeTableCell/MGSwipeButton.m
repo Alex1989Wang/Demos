@@ -68,7 +68,8 @@
 {
     MGSwipeButton * button = [self buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = color;
-    button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//    button.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+    button.titleLabel.numberOfLines = 1;
     button.titleLabel.textAlignment = NSTextAlignmentCenter;
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -130,5 +131,7 @@
     self.contentEdgeInsets = insets;
     [self sizeToFit];
 }
+
+
 
 @end
