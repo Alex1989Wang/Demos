@@ -15,6 +15,8 @@
 		ACFA55191D3E0768006B12B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACFA55171D3E0768006B12B3 /* LaunchScreen.storyboard */; };
 		ACFA55241D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlertTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFA55231D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlertTests.m */; };
 		ACFA552F1D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlertUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = ACFA552E1D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlertUITests.m */; };
+		ACFA553D1D3E0CA3006B12B3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFA553C1D3E0CA3006B12B3 /* AudioToolbox.framework */; };
+		ACFA55401D3E18CF006B12B3 /* original_sound_alert.wav in Resources */ = {isa = PBXBuildFile; fileRef = ACFA553F1D3E18CF006B12B3 /* original_sound_alert.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		ACFA552A1D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AudioServiceVibrateAndSoundAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACFA552E1D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlertUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioServiceVibrateAndSoundAlertUITests.m; sourceTree = "<group>"; };
 		ACFA55301D3E0768006B12B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACFA553C1D3E0CA3006B12B3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		ACFA553F1D3E18CF006B12B3 /* original_sound_alert.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = original_sound_alert.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACFA553D1D3E0CA3006B12B3 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 		ACFA54FD1D3E0767006B12B3 = {
 			isa = PBXGroup;
 			children = (
+				ACFA553C1D3E0CA3006B12B3 /* AudioToolbox.framework */,
 				ACFA55081D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlert */,
 				ACFA55221D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlertTests */,
 				ACFA552D1D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlertUITests */,
@@ -101,6 +107,7 @@
 		ACFA55081D3E0768006B12B3 /* AudioServiceVibrateAndSoundAlert */ = {
 			isa = PBXGroup;
 			children = (
+				ACFA553F1D3E18CF006B12B3 /* original_sound_alert.wav */,
 				ACFA550C1D3E0768006B12B3 /* AppDelegate.h */,
 				ACFA550D1D3E0768006B12B3 /* AppDelegate.m */,
 				ACFA550F1D3E0768006B12B3 /* ViewController.h */,
@@ -207,6 +214,7 @@
 				TargetAttributes = {
 					ACFA55051D3E0767006B12B3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = Y39R442P5T;
 					};
 					ACFA551E1D3E0768006B12B3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -246,6 +254,7 @@
 				ACFA55191D3E0768006B12B3 /* LaunchScreen.storyboard in Resources */,
 				ACFA55161D3E0768006B12B3 /* Assets.xcassets in Resources */,
 				ACFA55141D3E0768006B12B3 /* Main.storyboard in Resources */,
+				ACFA55401D3E18CF006B12B3 /* original_sound_alert.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +424,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AudioServiceVibrateAndSoundAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seeyoutime.AudioServiceVibrateAndSoundAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -426,10 +439,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AudioServiceVibrateAndSoundAlert/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.seeyoutime.AudioServiceVibrateAndSoundAlert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -498,6 +515,7 @@
 				ACFA55351D3E0768006B12B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACFA55361D3E0768006B12B3 /* Build configuration list for PBXNativeTarget "AudioServiceVibrateAndSoundAlertTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +524,7 @@
 				ACFA55381D3E0768006B12B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACFA55391D3E0768006B12B3 /* Build configuration list for PBXNativeTarget "AudioServiceVibrateAndSoundAlertUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +533,7 @@
 				ACFA553B1D3E0768006B12B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

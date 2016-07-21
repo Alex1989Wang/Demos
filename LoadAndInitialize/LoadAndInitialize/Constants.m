@@ -8,6 +8,4 @@
 
 #import "Constants.h"
 
-@implementation Constants
-
-@end
+NSString *const globalSettingTest = @"globalSettingTest";

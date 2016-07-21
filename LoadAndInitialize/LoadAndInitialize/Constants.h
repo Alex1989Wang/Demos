@@ -6,8 +6,6 @@
 //  Copyright © 2016 JiangWang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface Constants : NSObject
-
-@end
+UIKIT_EXTERN NSString *const globalSettingTest;

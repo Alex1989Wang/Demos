@@ -10,4 +10,6 @@
 
 @interface GlobalSettings : NSObject
 
++ (BOOL)fetchGlobalSettingWithKey:(NSString *)key;
+
 @end

@@ -7,8 +7,12 @@
 //
 
 #import "ViewController.h"
+#import "GlobalSettings.h"
+#import "Constants.h"
 
 @interface ViewController ()
+
+@property (nonatomic, weak) UISwitch *addedSwitch;
 
 @end
 
@@ -16,12 +20,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    [self.view setBackgroundColor:[UIColor grayColor]];
+    
+    UISwitch *testSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(200, 200, 40, 25)];
+    [self.view addSubview:testSwitch];
+    
+    self.addedSwitch = testSwitch;
+    
+    self.addedSwitch.on = [GlobalSettings fetchGlobalSettingWithKey:globalSettingTest];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    
+    
+    BOOL boolValue = [GlobalSettings fetchGlobalSettingWithKey:globalSettingTest];
+    
+    self.addedSwitch.on = boolValue;
+    
 }
 
 @end

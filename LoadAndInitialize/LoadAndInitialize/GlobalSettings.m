@@ -7,7 +7,22 @@
 //
 
 #import "GlobalSettings.h"
+#import "Constants.h"
 
 @implementation GlobalSettings
+
+
++ (void)initialize {
+    if (self == [GlobalSettings self]) {
+        //do the initialization here
+        
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:globalSettingTest];
+        
+    }
+}
+
++ (BOOL)fetchGlobalSettingWithKey:(NSString *)key {
+    return [[NSUserDefaults standardUserDefaults] boolForKey:key];
+}
 
 @end

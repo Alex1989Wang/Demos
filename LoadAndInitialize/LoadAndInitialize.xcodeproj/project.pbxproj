@@ -15,6 +15,8 @@
 		AC3908311D409F0500911F89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC39082F1D409F0500911F89 /* LaunchScreen.storyboard */; };
 		AC39083C1D409F0500911F89 /* LoadAndInitializeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39083B1D409F0500911F89 /* LoadAndInitializeTests.m */; };
 		AC3908471D409F0500911F89 /* LoadAndInitializeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3908461D409F0500911F89 /* LoadAndInitializeUITests.m */; };
+		AC3908561D409F2800911F89 /* GlobalSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3908551D409F2800911F89 /* GlobalSettings.m */; };
+		AC3908591D40A08200911F89 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = AC3908581D40A08200911F89 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		AC3908421D409F0500911F89 /* LoadAndInitializeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoadAndInitializeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3908461D409F0500911F89 /* LoadAndInitializeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoadAndInitializeUITests.m; sourceTree = "<group>"; };
 		AC3908481D409F0500911F89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3908541D409F2800911F89 /* GlobalSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalSettings.h; sourceTree = "<group>"; };
+		AC3908551D409F2800911F89 /* GlobalSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalSettings.m; sourceTree = "<group>"; };
+		AC3908571D40A08200911F89 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		AC3908581D40A08200911F89 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,10 @@
 				AC39082F1D409F0500911F89 /* LaunchScreen.storyboard */,
 				AC3908321D409F0500911F89 /* Info.plist */,
 				AC3908211D409F0500911F89 /* Supporting Files */,
+				AC3908541D409F2800911F89 /* GlobalSettings.h */,
+				AC3908551D409F2800911F89 /* GlobalSettings.m */,
+				AC3908571D40A08200911F89 /* Constants.h */,
+				AC3908581D40A08200911F89 /* Constants.m */,
 			);
 			path = LoadAndInitialize;
 			sourceTree = "<group>";
@@ -270,7 +280,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3908591D40A08200911F89 /* Constants.m in Sources */,
 				AC3908291D409F0500911F89 /* ViewController.m in Sources */,
+				AC3908561D409F2800911F89 /* GlobalSettings.m in Sources */,
 				AC3908261D409F0500911F89 /* AppDelegate.m in Sources */,
 				AC3908231D409F0500911F89 /* main.m in Sources */,
 			);
