@@ -6,7 +6,7 @@ target 'textShare' do
   # use_frameworks!
 
   # Pods for textShare
-pod 'UMengSocialCOM', '~> 5.2.1'
+  # pod 'UMengSocialCOM', '~> 5.2.1'
 
   target 'textShareTests' do
     inherit! :search_paths
