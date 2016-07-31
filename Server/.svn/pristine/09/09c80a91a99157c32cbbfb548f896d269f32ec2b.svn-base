@@ -1,0 +1,34 @@
+// 定义
+
+HTTP请求中必须包含的header
+X-Appid: appid 100001
+X-Device-Token: 设备token 06037d7ccab
+X-Device:设备 
+
+// 上报自己的当前地理位置信息
+/user/location
+方法:             PUT 
+参数:             HTTP请求的header中必须包含以下字段
+                 X-App-Token: 逻辑token
+                 X-App-Uid: 逻辑uid
+                 longitude  当前所在的经度
+                 latitude 当前所在的维度 
+返回:             {
+                    code:错误代码
+                    msg:错误消息
+                 }
+
+// 获取自己距离别人的当前距离
+/users/:uid/distance
+方法:             GET
+参数:             :uid 别人的uid
+                 HTTP请求的header中必须包含以下字段 
+                 X-App-Token:逻辑token
+                 X-App-Uid 逻辑uid 
+                 longitude 当前所在的经度， 如果不填则使用最后一次的位置
+                 latitude  当前的维度， 如果不填则使用最后一次的位置
+返回:             {
+                    code:xx 
+                    msg:xx 
+                    distance:距离，以km为单位的浮点数的字符串格式
+                 }

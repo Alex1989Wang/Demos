@@ -1,0 +1,15 @@
+package protocol;
+option java_package = "com.xingdian.seeyou.net.protocol";
+
+enum Code {
+	EC_SUCCESS = 1000;					// 成功
+	EC_APP_VER_OUT_OF_DATE = 1001;		// app 版本已过期
+	EC_INVALID_DEVICE_INFO = 1002;		// 无效的设备信息
+	EC_USER_NOT_EXIST = 1003;			    // 用户不存在
+	EC_INVALID_USER_TOKEN = 1004;		    // 无效的用户token
+	EC_INVALID_NET_TYPE = 1005;			// 无效的网络类型
+	EC_SERVER_UNAVAILABLE = 1006;		    // 服务器过载无法提供服务，此时客户端应该重试
+	EC_USER_ALREADY_LOGINED = 1007;		// 用户已经登陆
+	EC_FRAQ_LIMIT = 1008;					// 频率限制
+	EC_SYSTEM_ERROR = 1009;					// 系统错误
+}

@@ -1,0 +1,40 @@
+// 相关定义
+
+HTTP请求中必须包含的header
+X-Appid: appid 100001
+
+// 组排行项定义
+groups_topn_item = {group_id:组id, count:当前在线数量}
+
+// 获取当前的总在线人数
+/online_count/count
+方法: 		GET
+参数:			
+返回:			{
+					code: 错误代码, 详细请参见错误代码表
+					msg:错误消息
+					count: 在线人数
+				}
+
+// 获取当前某一组的总在线人数
+/online_count/count/:groupid
+方法:			GET
+参数:			
+			  :groupid组ID
+返回:
+				{
+					code:xx
+					msg:xx
+					count:xx	
+				}
+
+// 获取按照组在线人数的排行榜
+/online_count/groups_topn[?n=xx]
+方法:			GET 
+参数:			[]为可选参数, n为最多拉取的数量， 如果不制定则默认为30条
+返回:			{
+					code:xx 
+					msg:xx 
+					items:[groups_topn_item, ...]
+			 }
+

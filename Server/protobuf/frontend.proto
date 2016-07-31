@@ -1,0 +1,67 @@
+package protocol;
+option java_package = "com.xingdian.seeyou.net.protocol";
+import "code.proto";
+
+// App版本号定义
+message AppVer {
+	required uint32 major = 1;  		// 客户端主要版本
+	required uint32 minor = 2;  		// 客户端次要版本
+	required uint32 revise = 3; 		// 修订版本号
+	required string date = 4;   		// 版本日期, 格式如20160326
+	required string stage = 5;  		// 版本阶段, 有效的类型为alpha, beta, rc, 为空则代表为正式版
+}
+
+// 设备信息定义
+message DeviceInfo {
+	required uint32 platform = 1;  	// 设备平台， 1为IOS, 2为Android
+	required string vendor = 2;	 		// 厂商标识, 如huawei, xiaomi等
+	required string system_ver =3; 	// 操作系统版本
+	required string token = 4;	 		// Device token, 设备唯一标识
+	optional string imei = 5;
+}
+
+// 登陆请求 
+message UserLoginReq {
+	required AppVer app_ver = 1;			// app的版本
+	required uint64 app_id = 2;				// app的唯一id标识
+	required DeviceInfo dev_info = 3;		// 设备信息
+	optional string net_type = 7;			// 网络类型, 如wifi, 移动cmcc/2g cmcc/3g cmcc/4g 网通cucc/2g cucc/3g cucc/4g 电信ctcc/2g ctcc/3g ctcc/4g 
+}
+
+// 登陆回应
+message UserLoginRes {
+	required uint32 next_ping_interval = 1; // 下次ping的间隔时间，以秒为单位
+	required Code code = 3;					// 状态码
+}
+
+// Ping请求
+message UserPingReq {
+}
+
+// Ping回应
+message UserPingRes {
+	required uint32 next_interval = 1;		// 下次ping的间隔时间，以秒为单位
+}
+
+// 上报客户端相关状态
+message ReportUserStatus {
+	optional string net_type = 1;			// 网络类型, 如wifi, 移动cmcc/2g cmcc/3g cmcc/4g 网通cucc/2g cucc/3g cucc/4g 电信ctcc/2g ctcc/3g ctcc/4g 
+	optional bool background = 2;			// 应用是否切换到了后台运行
+}
+
+// 消息通知
+message MsgNotice {
+	required uint64 seqnum = 1;			// 服务端的消息唯一编号，用来做去重
+	required uint64 app_id = 2;			// 应用ID
+	required bytes  data = 3;			// 消息数据
+}
+
+// 顶层消息
+message FrontendPk {
+	optional UserLoginReq user_login_req = 1;
+	optional UserLoginRes user_login_res = 2;
+	optional UserPingReq user_ping_req = 3;
+	optional UserPingRes user_ping_res = 4;
+	optional MsgNotice msg_notice = 5;
+	optional ReportUserStatus report_user_status = 6;
+}

@@ -1,0 +1,402 @@
+#所有的http协议必须有头部必须包含
+
+request header字段中
+X-Device-Token: 设备token 06037d7ccab
+X-App-Token: 逻辑token
+X-App-Uid: 逻辑uid
+X-Device: 设备名称 Xiaomi Redmi Note 2
+X-OS: 操作系统信息 Android 5.0.2
+X-App-Version: app版本 2.5.0
+X-Locale: 所在地 zh_CN
+X-Appid: appid 10001
+X-Anonymous-User: 是否匿名 1:是 0:否
+
+
+response http状态码
+200 操作成功
+业务状态码见 svn://120.24.63.167/server/src/common/http_errcodes.go
+
+
+
+
+
+
+定义:
+user_base_info 定义
+{
+    user_name: //string 用户名
+    gender: //int 1:男 2:女 0:未知
+    header_url: //string 头像路径
+    album：   //string 相册地址 以#隔开 最多8张
+    register_time://string "2015-12-11 00:00:01" 注册时间
+    birthday://string "2015-12-11"
+    locate://string 所在地
+    locate_code://string 所在地行政代码
+    description://string 个人说明
+   
+}
+
+
+thrid_user_base_info 
+{
+    user_name: //string 用户名
+    gender: //int 1:男 2:女 0:未知
+    header_url: //string 头像
+}
+
+
+
+--
+获取验证码
+--
+/verifyCode
+方法:           GET
+参数:           phone_num                         // stirng 手机号 类型 4，5需要http header需要带登陆态
+                type                             // int 类型，取值有:
+                    1:    注册验证码
+                    2:    绑定手机
+                    3:    登陆
+                    4:    解除绑定
+                    5:    修改密码
+
+                    
+返回:           json 格式
+              {
+                    code:错误代码
+                        HTTP_EC_SUCCESS
+                        HTTP_EC_FREQ_LIMIT 
+                        HTTP_EC_SYS_ERROR 
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS                
+                    msg:错误消息
+                    remain_time: // int剩余秒数
+                    next_req_interval: // int下一次请求的间隔时间，以秒为单位
+              }
+
+
+--
+注册
+--
+/users          
+方法:           POST
+参数:           phone_num                       // string 手机号
+                verify_code                     // string 验证码
+                passwd                          // strng 密码
+返回:           {
+                    code:错误代码
+                        HTTP_EC_SUCCESS
+                        HTTP_EC_INVALID_VERIFY_CODE 
+                        HTTP_EC_USER_ALREADY_REGISTERED 
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                    msg:错误消息 
+                    token://string 用户token,如果code为HTTP_EC_SUCCESS则此字段有效
+                    uid://uint64 用户唯一id,如果status为HTTP_EC_SUCCESS则此字段有效
+                    token_expire_secs: // int token的过期时间，以秒为单位   
+                }
+           
+--
+注册第二步
+--
+/users/:uid/step2
+方法:           PATCH
+参数:     
+                :uid                       //uint64 uid
+                user_name                   //string 用户名
+                gender                     //int 1:男 2:女 0:未知
+返回:           {
+                   code:错误代码
+                        HTTP_EC_SUCCESS 
+                        HTTP_EC_INVALID_TOKEN
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                        HTTP_EC_USER_NAME_EXIST
+                        HTTP_EC_USER_NAME_FORMATE_ERROR
+                        HTTP_EC_USER_NOT_EXIST
+                   
+                    msg:错误消息 
+                }
+--
+注册第三部
+--
+/users/:uid/step3
+方法:           PATCH
+                :uid                        //uint64 用户uid
+                header_url                  //string
+返回:           {
+                    code:错误代码
+                        HTTP_EC_SUCCESS 
+                        HTTP_EC_INVALID_TOKEN
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+             
+                    msg:错误消息                        
+                }
+
+
+--
+手机或者用户名登陆(手机可以用密码和验证码登陆，用户名只能用密码登陆)
+--
+/sessions
+方法:           POST
+参数:           login_name                       // string 手机号或者用户名
+                verify_code                      // string 验证码
+                passwd                          // string 密码
+返回:           {
+                    code:xx
+                        HTTP_EC_SUCCESS
+                        HTTP_EC_NEED_VERIFY_CODE 
+                        HTTP_EC_USER_ALREADY_LOGINED 
+                        HTTP_EC_USER_NOT_EXIST
+                        HTTP_EC_INVALID_VERIFY_CODE 
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                        HTTP_EC_INVALID_PASS
+                        HTTP_EC_ACCOUNT_FREEZED
+                        HTTP_EC_FREQ_LIMIT
+                    msg:错误消息
+                    token://string 用户token,如果code为HTTP_EC_SUCCESS则此字段有效
+                    uid://uint64 用户唯一id,如果code为HTTP_EC_SUCCESS则此字段有效
+                    freeze_remain_secs: //int 如果错误代码为HTTP_EC_ACCOUNT_FREEZED则此字段表示用户距离解除冻结还剩余的秒数，如果为0则表示为永久冻结
+                    is_old: //int 如果为1则表示客户端密码为老版本，需要重新设置密码加强安全性 0：否 1：是
+                    token_expire_secs: // int token的过期时间，以秒为单位
+                    need_bind_username: //int 是否需要跳转到绑定用户名 0：否 1：是
+                }
+
+--
+登出
+--
+/sessions           
+方法:           DELETE                
+返回:           {
+                    code:错误代码
+                        HTTP_EC_SUCCESS
+                        HTTP_EC_USER_NOT_EXIST
+                        HTTP_EC_USER_NOT_LOGINED
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                    msg:错误消息
+                        
+                }
+
+
+
+--
+第三方接入
+--
+/users
+方法:           PATCH
+参数:           
+                source                          //int  1:weixin 2:qq 3:weibo
+                code                            // string 微信返回的code
+                openid                           // string qq openid
+                access_token                     // string qq/weibo access_token
+                expires_in                         // int  qq/weibo 超时时间 单位
+                refresh_token                    //string weibo续期token
+                weibo_uid                        //int64 weibouid
+
+                    返回:    {  
+                                code:错误代码
+                                    HTTP_EC_SUCCESS 
+                                    HTTP_EC_ILLEGAL_LOGIN
+                                    HTTP_EC_SYS_ERROR
+                                    HTTP_EC_UNKNOWN_ERROR
+                                    HTTP_EC_INVALID_ARGS
+                                    HTTP_EC_FREQ_LIMIT
+                                    HTTP_EC_ACCOUNT_FREEZED
+                                msg:错误消息
+                                token://string 用户token,如果code为HTTP_EC_SUCCESS则此字段有效
+                                uid://uint64 用户唯一id,如果code为HTTP_EC_SUCCESS则此字段有效
+                                freeze_remain_secs: //int 如果错误代码为HTTP_EC_ACCOUNT_FREEZED则此字段表示用户距离解除冻结还剩余的秒数，如果为0则表示为永久冻结
+                                token_expire_secs: // int token的过期时间，以秒为单位  
+                                is_first:    //int 是否是首次登陆 1:是 0:不是
+                                thrid_user_info://json 首次登陆有此信息，便于验证，见thrid_user_info 定义
+                                need_bind_username: //int 是否需要跳转到绑定用户名 0：否 1：是
+                             }      
+
+
+--
+刷新token
+--
+/token
+方法:           PUT
+返回:          {
+                    code:错误代码
+                        HTTP_EC_SUCCESS
+                        HTTP_EC_USER_NOT_EXIST
+                        HTTP_EC_INVALID_TOKEN
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                        HTTP_EC_USER_NOT_EXIST
+                    msg:错误消息
+                    new_token:新token
+                    token_expire_secs: // int token的过期时间，以秒为单位
+                }  
+
+
+
+
+
+
+--
+获取用户信息
+--
+users/:uid
+方法:           GET
+参数:          
+            :uid                        //uint64 用户uid
+返回:           {
+                     code:错误代码
+                        HTTP_EC_SUCCESS 
+                        HTTP_EC_INVALID_TOKEN
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                        HTTP_EC_USER_NOT_EXIST
+                    msg:xx
+                    user_base_info://json 见userinfo信息
+                    fans_count:// int 粉丝数
+                    follow_count://int 关注数
+                    glamour_value://int 魅力值
+                    wealth：//财富值
+                }
+
+--
+获取用户账户信息
+--
+users/:uid/account
+方法:           GET
+参数:          
+               :uid                        //uint64 用户uid
+返回:           {
+                         code:错误代码
+                            HTTP_EC_SUCCESS 
+                            HTTP_EC_INVALID_TOKEN
+                            HTTP_EC_SYS_ERROR
+                            HTTP_EC_UNKNOWN_ERROR
+                            HTTP_EC_INVALID_ARGS
+                     
+                        msg:错误消息
+                        has_login_passwd: //int 1:有 0 :无
+                        phone_num: //string 如果无为空
+                        weibo_nick ://string 如果无为空
+                        weixin_nick ://string 如果无为空
+                        qq_nick :://string 如果无为空
+                    }
+
+--
+修改用户信息
+--
+users/:uid
+方法:           PUT
+参数:           :uid                         // 用户uid uint64
+               以下项必须至少一个
+               album：//string 以#隔开相册
+               user_name ://string 昵称
+               birthday :// string 生日"2015-12-11"
+               locate_code： //string 所在地行政区代码
+               description:  //string 描述
+
+返回:           {
+                     code:错误代码
+                        HTTP_EC_SUCCESS 
+                        HTTP_EC_INVALID_TOKEN
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                        HTTP_EC_USER_NAME_FORMATE_ERROR
+                        HTTP_EC_USER_NAME_EXIST
+                    msg:xx                    
+                }
+
+--
+设置/修改用户密码（如果未绑定手机，需要先绑定手机，如果修改密码，则需要验证码）
+--
+users/:uid/passwd
+方法:           POST
+参数:          
+               :uid                         // 用户uid uint64
+               passwd                       //string 设置/修改密码
+               verify_code                         //验证码
+
+
+
+
+ 返回:           {
+                     code:错误代码
+                        HTTP_EC_SUCCESS 
+                        HTTP_EC_INVALID_TOKEN
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                        HTTP_EC_INVALID_PASS
+                        HTTP_EC_NEED_BIND_PHONE
+                        HTTP_EC_NEED_VERIFY_CODE
+                        
+                    msg:错误消息
+                }
+
+--
+绑定
+--
+users/:uid/source/:source
+方法:           POST
+参数:       
+               :uid                        // 用户uid uint64
+               :source                     //int  1:weixin 2:qq 3:weibo 4:手机
+               phone_num                   //string 手机
+               verify_code              //string 验证码
+
+               weixin_code                 // string 微信返回的code
+               openid                      // string qq openid
+               access_token                // string qq/weibo access_token
+               expires_in                   // int  qq/weibo 超时时间 单位
+               refresh_token               //string weibo续期token
+               weibo_uid                   //weibouid
+
+
+
+返回:           {
+                     code:错误代码
+                        HTTP_EC_SUCCESS 
+                        HTTP_EC_INVALID_TOKEN
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                        HTTP_EC_USER_BIND_FlAG_EXIST
+                        HTTP_EC_FLAG_BIND_USER_EXIST
+                        HTTP_EC_INVALID_VERIFY_CODE
+                        HTTP_EC_ILLEGAL_BIND
+                    msg:错误消息
+               }
+
+
+--
+解绑(http delete方法中 body中不允许带参数，code在url里面)
+--
+users/:uid/source/:source?verify_code=:verify_code
+方法:           DELETE
+参数:
+               :uid                        // 用户uid uint64
+               :source                     //int  1:weixin 2:qq 3:weibo 4:手机
+               :verify_code                        //string 若是解绑手机需要 验证码
+
+返回:           {
+                    code:错误代码
+                        HTTP_EC_SUCCESS 
+                        HTTP_EC_INVALID_TOKEN
+                        HTTP_EC_SYS_ERROR
+                        HTTP_EC_UNKNOWN_ERROR
+                        HTTP_EC_INVALID_ARGS
+                        HTTP_EC_INVALID_VERIFY_CODE
+                        HTTP_EC_USER_BIND_FlAG_NOT_EXIST
+                        HTTP_EC_FLAG_BIND_USER_NOT_EXIST
+                        HTTP_EC_NEED_VERIFY_CODE
+                    msg:错误消息
+               }
