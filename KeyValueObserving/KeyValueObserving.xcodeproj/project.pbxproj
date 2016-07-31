@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC4D98B11D4DE029001D41BC /* XDDataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4D98B01D4DE029001D41BC /* XDDataCenter.m */; };
 		C29B6D0E1D47AB8000D5FDF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C29B6D0D1D47AB8000D5FDF8 /* main.m */; };
 		C29B6D111D47AB8000D5FDF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C29B6D101D47AB8000D5FDF8 /* AppDelegate.m */; };
 		C29B6D141D47AB8000D5FDF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29B6D131D47AB8000D5FDF8 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC4D98AF1D4DE029001D41BC /* XDDataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDDataCenter.h; sourceTree = "<group>"; };
+		AC4D98B01D4DE029001D41BC /* XDDataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDDataCenter.m; sourceTree = "<group>"; };
 		C29B6D091D47AB8000D5FDF8 /* KeyValueObserving.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyValueObserving.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29B6D0D1D47AB8000D5FDF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C29B6D0F1D47AB8000D5FDF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				C29B6D101D47AB8000D5FDF8 /* AppDelegate.m */,
 				C29B6D121D47AB8000D5FDF8 /* ViewController.h */,
 				C29B6D131D47AB8000D5FDF8 /* ViewController.m */,
+				AC4D98AF1D4DE029001D41BC /* XDDataCenter.h */,
+				AC4D98B01D4DE029001D41BC /* XDDataCenter.m */,
 				C29B6D151D47AB8000D5FDF8 /* Main.storyboard */,
 				C29B6D181D47AB8000D5FDF8 /* Assets.xcassets */,
 				C29B6D1A1D47AB8000D5FDF8 /* LaunchScreen.storyboard */,
@@ -222,6 +227,7 @@
 				C29B6D111D47AB8000D5FDF8 /* AppDelegate.m in Sources */,
 				C29B6D0E1D47AB8000D5FDF8 /* main.m in Sources */,
 				C29B6D331D47AC6700D5FDF8 /* Salary.m in Sources */,
+				AC4D98B11D4DE029001D41BC /* XDDataCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +416,7 @@
 				C29B6D2D1D47AB8000D5FDF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C29B6D2E1D47AB8000D5FDF8 /* Build configuration list for PBXNativeTarget "KeyValueObservingTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +425,7 @@
 				C29B6D301D47AB8000D5FDF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
