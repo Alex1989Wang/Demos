@@ -1,7 +1,0 @@
-package protocol;
-option java_package = "com.xingdian.seeyou.net.protocol";
-enum MSG_TYPE {
-	TEST = 500;							// 测试
-	EXCHANGE_KEY = 10000;					// 秘钥交换类型
-	FRONTEND = 10010;					// 前端
-}
