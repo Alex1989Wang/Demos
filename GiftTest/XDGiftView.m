@@ -186,9 +186,9 @@ static NSString *ID = @"giftCollection";
     
     for (UIView *subV in self.topView.subviews) {
         
-        if ([subV isKindOfClass:[XDGigtUserView class]] && subV != tap.view) {
+        if ([subV isKindOfClass:[XDGiftUserView class]] && subV != tap.view) {
             
-            XDGigtUserView *vv = (XDGiftUserView *)subV;
+            XDGiftUserView *vv = (XDGiftUserView *)subV;
             vv.big = YES;
         }
     }

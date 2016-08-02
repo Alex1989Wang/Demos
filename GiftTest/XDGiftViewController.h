@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XDLLTestGiftViewController : UIViewController
+@interface XDGiftViewController : UIViewController
 
 @end

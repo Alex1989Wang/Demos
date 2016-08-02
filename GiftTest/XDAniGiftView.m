@@ -42,7 +42,7 @@
 
 @end
 
-static BOOL shouldContinueAnimation;
+static BOOL shouldStopAnimation;
 
 @implementation XDAniGiftView
 
@@ -188,7 +188,6 @@ static BOOL shouldContinueAnimation;
 
 - (void)screenFitting
 {
-
     self.height = self.height * H6;
     self.userImageWidth.constant = 30 * H6;
     self.userLeftMagin.constant = 10 * H6;
@@ -198,71 +197,9 @@ static BOOL shouldContinueAnimation;
     self.giftWidth.constant = 50 * H6;
     self.giftLeftMagin.constant = 5 * H6;
     
-    self.width = (self.giftImageView.x + self.giftWidth.constant * 0.5);
+    self.width = (self.giftImageView.x + self.giftWidth.constant);
 }
 
-
-
-//-(void)setGiftCountArray:(NSMutableArray *)giftCountArray
-//{
-//    _giftCountArray = giftCountArray;
-//    
-//    [self.totalArray addObjectsFromArray:giftCountArray];
-//    
-//    [self giftQueueAnimation:nil];
-//    
-//}
-
-//// 根据个数来执行动画
-//- (void)giftQueueAnimation:(completeBlock)complete
-//{
-//    if (self.timerGift) return;
-//    self.timerGift = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(donghua) userInfo:nil repeats:YES];
-//    
-//    XDGiftModel *model = [self.totalArray firstObject];
-//    // 每次动画的时候 标志一下该种礼物正在动画
-////    [XDGiftInfoManager sharedXDGiftInfoManager].animateState[model.group_id] = @1;  // 这种礼物开始送
-//    
-//    NSInteger frontCount = [[XDGiftInfoManager sharedXDGiftInfoManager].countInfo[model.group_id] integerValue];  // 获取这种礼物已经送了多少了
-//    
-//    _aniCount = frontCount;
-//    
-//    self.giftImageView.image = model.giftImage;  // 礼物图片
-//    self.sendUserImageView.image = model.sendImage;  // 送礼的人头像
-//    self.sendUserNameLabel.text = model.sendName;  // 送礼的人名
-//    self.acceptUserNameLabel.text = model.acceptName;  // 收礼的人名
-//    
-//    self.acceptType = model.acceptType; // 接受者类型
-//    
-//    self.animationView.hidden = YES;
-//    
-//    if (self.columNum == 1) {
-//    
-//        self.y = 30;
-//        self.x = -self.width + 30;
-//        [UIView animateWithDuration:0.3 animations:^{
-//            
-//            self.x = 0;
-//        }];
-//    }else if (self.columNum == 2) {
-//        
-//        self.y = 90;
-//        self.x = -self.width + 30;
-//        [UIView animateWithDuration:0.3 animations:^{
-//            
-//            self.x = 0;
-//        }];
-//    }else if (self.columNum == 3) {
-//        
-//        self.y = 150;
-//        self.x = -self.width + 30;
-//        [UIView animateWithDuration:0.3 animations:^{
-//            
-//            self.x = 0;
-//        }];
-//    }
-//    
-//}
 
 - (void)setGiftModel:(XDGiftModel *)giftModel
 {
@@ -272,49 +209,33 @@ static BOOL shouldContinueAnimation;
     self.sendUserImageView.image = giftModel.sendImage;  // 送礼的人头像
     self.sendUserNameLabel.text = giftModel.sendName;  // 送礼的人名
     self.acceptUserNameLabel.text = giftModel.acceptName;  // 收礼的人名
-    
-    
 }
 
-// 开始数字动画的接口
-- (void)beginAnimate:(NSInteger)from andTo:(NSInteger)to
-{
-    self.hidden = NO;
 
+// begin animation;
+- (void)beginAnimation {
+    self.hidden = NO;
+    
     if (self.timerGift) {
         //if the timerGift is nil - this means there is no animation going on;
-        //return immediately;
+        //shoud add a timer to start animation;
         return;
     };
     
-    if (self.columNum == 1) {
-        self.y = 30;
-        self.x = -self.width + 30;
+    //move the gifview from hidding in the left to displaying on the screen;
+    //remember after the animation - moves it back;
+    if (self.x != 0) {
         [UIView animateWithDuration:0.3 animations:^{
-            
             self.x = 0;
         }];
     }
-    if (self.columNum == 2) {
-        self.y = 90;
-        self.x = -self.width + 30;
-        [UIView animateWithDuration:0.3 animations:^{
-            
-            self.x = 0;
-        }];
-    }
-    if (self.columNum == 3) {
-        self.y = 150;
-        self.x = -self.width + 30;
-        [UIView animateWithDuration:0.3 animations:^{
-            
-            self.x = 0;
-        }];
-    }
-
-    self.timerGift = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(startAnimating) userInfo:nil repeats:YES];
     
-    _aniCount = from;
+    self.timerGift = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(startAnimating) userInfo:nil repeats:YES];
+}
+
+- (void)setColumNum:(NSInteger)columNum {
+    self.y = 30 * columNum;
+    self.x = -self.width;
 }
 
 - (void)startAnimating
@@ -345,10 +266,10 @@ static BOOL shouldContinueAnimation;
         [XDGiftInfoManager sharedXDGiftInfoManager].giftTotalCount[self.animateGroup_id] = @(_aniCount); // 保存这种礼物送了几个了
         
         if ([self.delegate respondsToSelector:@selector(aniGiftViewShouldStopAnimation:)]) {
-            [self.delegate aniGiftViewShouldStopAnimation:&shouldContinueAnimation];
+            [self.delegate aniGiftViewShouldStopAnimation:&shouldStopAnimation];
         }
         
-        if (!shouldContinueAnimation) {
+        if (!shouldStopAnimation) {
             [self.timerGift invalidate];
             self.timerGift = nil;
         }

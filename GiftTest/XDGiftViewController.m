@@ -6,7 +6,7 @@
 //  Copyright © 2016年 形点网络. All rights reserved.
 //
 
-#import "XDLLTestGiftViewController.h"
+#import "XDGiftViewController.h"
 #import "XDGiftView.h"
 #import "XDAniGiftView.h"
 #import "XDGiftModel.h"
@@ -15,7 +15,7 @@
 
 #define ANI_VIEW_COUNT 3
 
-@interface XDLLTestGiftViewController ()<XDAniGiftViewDelegate>
+@interface XDGiftViewController ()<XDAniGiftViewDelegate>
 
 @property (nonatomic, assign) NSInteger gr_id;   // 模拟group_id
 
@@ -24,21 +24,21 @@
 
 @property (nonatomic, strong) NSMutableArray *aniViews;
 
-@property (nonatomic, strong) NSMutableArray *guangBoGiftTotalArray;
+@property (nonatomic, strong) NSMutableArray *broadcastGiftsArray;
 
 
 
 @end
 
-@implementation XDLLTestGiftViewController
+@implementation XDGiftViewController
 
-- (NSMutableArray *)guangBoGiftTotalArray
+- (NSMutableArray *)broadcastGiftsArray
 {
-    if (_guangBoGiftTotalArray == nil) {
-        _guangBoGiftTotalArray = [NSMutableArray array];
+    if (_broadcastGiftsArray == nil) {
+        _broadcastGiftsArray = [NSMutableArray array];
     }
     
-    return _guangBoGiftTotalArray;
+    return _broadcastGiftsArray;
 }
 
 -(NSMutableArray *)aniViews
@@ -81,7 +81,7 @@
     UIButton *notBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [notBtn setTitle:@"接到广播通知" forState:UIControlStateNormal];
     notBtn.backgroundColor = [UIColor blackColor];
-    [notBtn addTarget:self action:@selector(guangboClick) forControlEvents:UIControlEventTouchUpInside];
+    [notBtn addTarget:self action:@selector(prepareAnimation) forControlEvents:UIControlEventTouchUpInside];
     notBtn.frame = CGRectMake(XDScreenW * 0.5 - 150, XDScreenH * 0.5-50, 100, 30);
     [self.view addSubview:notBtn];
     
@@ -94,33 +94,20 @@
     for (i = 0; i < ANI_VIEW_COUNT; i++) {
         XDAniGiftView *aniView = [XDAniGiftView aniGiftView];
         aniView.columNum = i+1;
-        aniView.hidden = YES;
         aniView.delegate = self;
         [self.aniViews addObject:aniView];
         [self.view addSubview: aniView];
     }
+    
+    //initialize gifts from broadcast;
+    [self giftsFromBroadcast];
 }
 
-
-// 获取适合的view
-- (XDAniGiftView *)getGiftViewSlot: (NSString *)grp_id
-{
-    int i;
-    for (i = 0; i < ANI_VIEW_COUNT; i++) {
-        XDAniGiftView *ani = self.aniViews[i];
-        if (!ani.isRunning || [ani.animateGroup_id isEqualToString: grp_id])
-            return ani;
-    }
-
-    return nil;
-}
-- (void)guangboClick    // 模拟收到礼物通知      ---  接到礼物通知的时候还要记录在哪个总队列中   **************
+- (void)giftsFromBroadcast    // 模拟收到礼物通知      ---  接到礼物通知的时候还要记录在哪个总队列中   **************
 {
     NSMutableArray *arr;
-    XDAniGiftView *giftView;
-    
-    NSInteger gr_id = 0;
 
+    NSInteger gr_id = 0;
     
     gr_id += 1;
     
@@ -148,108 +135,83 @@
     model3.acceptType = arc4random_uniform(2) + 2;
     model3.count = 13;
     
-    arr = self.guangBoGiftTotalArray;
-    if (arr == nil) {
-        NSLog(@"Failed to create the mutable array!");
-        return;
-    }
-    
+    arr = self.broadcastGiftsArray;
+
     [arr addObject:model1];   // 加入到广播消息队列中
     [arr addObject:model2];   // 加入到广播消息队列中
     [arr addObject:model3];   // 加入到广播消息队列中
-    
+}
+
+- (void)prepareAnimation {
     // 1 从队列取值
-    XDGiftModel *model = [self.guangBoGiftTotalArray firstObject];
+    XDGiftModel *model = [self.broadcastGiftsArray firstObject];
     
     // 1.1 把这个对象从总数组中移除
-    
-    giftView = [self getGiftViewSlot: model.group_id];
+    XDAniGiftView *giftView = [self getGiftViewSlot:model.group_id];
     
     if (giftView != nil) {
         
-        [self.guangBoGiftTotalArray removeObject: model];
-        giftView.running = YES;
+        [self.broadcastGiftsArray removeObject: model];
+        
         // 2 给动画横幅赋值
+        giftView.giftModel = model;
+        
+        // tag the giftView
+        giftView.running = YES;
+        giftView.hidden = NO;
+        giftView.animateGroup_id = model.group_id;
+        
+        // 3 开始动画
+//        [giftView beginAnimate:0 andTo:0];
+        [giftView beginAnimation];
+    }
+    
+
+}
+
+// 获取适合的view
+- (XDAniGiftView *)getGiftViewSlot:(NSString *)grp_id
+{
+    for (NSUInteger index = 0; index < ANI_VIEW_COUNT; index++) {
+        XDAniGiftView *ani = self.aniViews[index];
+        if (!ani.isRunning || [ani.animateGroup_id isEqualToString:grp_id])
+            return ani;
+        
+//        if (!ani.isRunning) {
+//            return ani;
+//        }else if ([ani.animateGroup_id isEqualToString:grp_id]) {
+//            return ani;
+//        }
+    }
+    
+    return nil;
+}
+
+- (void)aniGiftViewShouldStopAnimation:(BOOL *)should {
+    if (self.broadcastGiftsArray.count == 0) {
+        //
+        *should = YES;
+        return;
+    }
+    
+    //still has other gift groups in the array
+    XDGiftModel *model = [self.broadcastGiftsArray firstObject];
+    
+    XDAniGiftView *giftView;
+    giftView = [self getGiftViewSlot:model.group_id];
+    
+    if (giftView != nil) {
+        [self.broadcastGiftsArray removeObject: model];
+        
+        // 2 给动画横幅赋值
+        giftView.running = YES;
         giftView.giftModel = model;
         giftView.hidden = NO;
         giftView.animateGroup_id = model.group_id;
         
         // 3 开始动画
-        [giftView beginAnimate:0 andTo:0];
+        [giftView beginAnimation];
     }
-    
-    
-   }
-
-
-//-(void)aniGiftViewWaiting
-//{
-//    if (!self.guangBoGiftTotalArray.count)
-//        return;
-//    
-//    for (XDGiftModel *model in self.guangBoGiftTotalArray) {
-//        
-//        
-//    }
-//}
-
-- (void)aniGiftViewFinished
-{
-    if (self.guangBoGiftTotalArray.count == 0) {
-        //
-        return;
-    }
-    
-    for (XDGiftModel *model in self.guangBoGiftTotalArray) {
-        
-        XDAniGiftView *giftView;
-        giftView = [self getGiftViewSlot:model.group_id];
-        
-        if (giftView != nil) {
-            
-            [self.guangBoGiftTotalArray removeObject: model];
-            giftView.running = YES;
-            // 2 给动画横幅赋值
-            giftView.giftModel = model;
-            giftView.hidden = NO;
-            giftView.animateGroup_id = model.group_id;
-            
-            NSInteger count = [[XDGiftInfoManager sharedXDGiftInfoManager].giftTotalCount[model.group_id] integerValue];
-            
-            // 3 开始动画
-            [giftView beginAnimate:count andTo:0];
-        }
-    }
-}
-
-- (void)aniGiftViewShouldStopAnimation:(BOOL *)should {
-    if (self.guangBoGiftTotalArray.count == 0) {
-        //
-        *should = NO;
-        return;
-    }
-    
-    for (XDGiftModel *model in self.guangBoGiftTotalArray) {
-        
-        XDAniGiftView *giftView;
-        giftView = [self getGiftViewSlot:model.group_id];
-        
-        if (giftView != nil) {
-            
-            [self.guangBoGiftTotalArray removeObject: model];
-            giftView.running = YES;
-            // 2 给动画横幅赋值
-            giftView.giftModel = model;
-            giftView.hidden = NO;
-            giftView.animateGroup_id = model.group_id;
-            
-            NSInteger count = [[XDGiftInfoManager sharedXDGiftInfoManager].giftTotalCount[model.group_id] integerValue];
-            
-            // 3 开始动画
-            [giftView beginAnimate:count andTo:0];
-        }
-    }
-
 
 }
 

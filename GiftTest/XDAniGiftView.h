@@ -61,4 +61,6 @@ typedef void(^waitBlock)();  // 执行动画完成后
 
 - (void)beginAnimate:(NSInteger)from andTo:(NSInteger)to;  // 执行动画的接口
 
+- (void)beginAnimation;
+
 @end
