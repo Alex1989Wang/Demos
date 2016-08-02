@@ -10,28 +10,55 @@
 
 @interface NotiTestViewController ()
 
+@property (nonatomic, assign, getter=isRegistered) BOOL registerStatus;
+
 @end
 
 @implementation NotiTestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    [self registerNotificationTest];
+    
+    [self registerNotificationTest];
+    
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(200, 200, 50, 50)];
+    [addButton setTitle:@"send notification" forState:UIControlStateNormal];
+    [addButton addTarget:self action:@selector(sendNoti) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addButton];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self registerNotificationTest];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)registerNotificationTest {
+    
+    if (!self.isRegistered) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNiti:) name:@"ahahhahah" object:nil];
+        
+        self.registerStatus = !self.isRegistered;
+    }
 }
-*/
+
+- (void)handleNiti:(NSNotification *)noti {
+    NSLog(@"notification user info:%@", noti.userInfo);
+}
+
+- (void)dealloc {
+    if (self.isRegistered) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    }
+}
+
+- (void)sendNoti {
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ahahhahah" object:nil];
+}
+
 
 @end
