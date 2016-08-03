@@ -24,6 +24,10 @@
     [super viewDidLoad];
     
     [self instantiateSalaryAndObserve];
+    
+    XDUserIndentityType defaultType;
+    
+    NSLog(@"the default type is: %lu", defaultType);
 }
 
 
