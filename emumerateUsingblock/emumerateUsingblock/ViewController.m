@@ -10,18 +10,48 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSArray<NSString *> *testArray;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSArray *testArray = @[@"jiang", @"wang", @"chun"];
+    
+    self.testArray = testArray;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//- (void)viewWillAppear:(BOOL)animated {
+//    [super viewWillAppear:animated];
+//    
+//    [self.testArray enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//        
+//        if ([obj isEqualToString:@"wang"]) {
+//            *stop = YES;
+//        }
+//        return;
+//    }];
+//    
+//    return;
+//    
+//    
+//    NSLog(@"test array: %@", self.testArray);
+//    
+//}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    for (NSString *str in self.testArray) {
+        if ([str isEqualToString:@"wang"]) {
+            continue;
+        }
+    }
+    
+    NSLog(@"test array: %@", self.testArray);
 }
 
 @end

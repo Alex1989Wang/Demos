@@ -37,26 +37,22 @@
     
     [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
     [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
-    [self.center addObserver:self forKeyPath:@"salary.theNewValueToBeObserved" options:NSKeyValueObservingOptionNew];
 
+    [self.center addObserver:self forKeyPath:@"salaryCollection" options:NSKeyValueObservingOptionNew];
+    
+    [self.center addObserver:self forKey:@"mutableArray"];
 }
 
 #pragma mark - key value observing methods
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
 
-    
+    NSLog(@"change: %@", change);
+    NSLog(@"object: %@", object);
     
 }
 
-
+- (void)handleMutableArrayChange:(NSNotification *)noti {
+    NSLog(@"notification noti user info: %@", noti.userInfo);
+}
 
 @end

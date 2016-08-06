@@ -17,4 +17,8 @@
 
 - (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options;
 
+
+
+- (void)addObserver:(id)observer forKey:(NSString *)key;
+
 @end
