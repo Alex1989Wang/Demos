@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DrawRectTestView : UIView
+@interface XDNumberAnimationView : UIView
 
 @property (nonatomic, assign) NSUInteger numberToDraw;
 
