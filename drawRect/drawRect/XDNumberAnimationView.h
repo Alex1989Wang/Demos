@@ -12,4 +12,6 @@
 
 @property (nonatomic, assign) NSUInteger numberToDraw;
 
+- (instancetype)initWithPosition:(CGPoint)position;
+
 @end

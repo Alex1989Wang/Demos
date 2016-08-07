@@ -7,11 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "DrawRectTestView.h"
+#import "XDNumberAnimationView.h"
 
 @interface ViewController ()
 
-@property (nonatomic, weak) DrawRectTestView *drawView;
+@property (nonatomic, weak) XDNumberAnimationView *drawView;
 @property (nonatomic, weak) NSTimer *timer;
 
 @property (nonatomic, assign) NSUInteger numberToDisplay;
@@ -23,9 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    DrawRectTestView *test = [[DrawRectTestView alloc] init];
+    XDNumberAnimationView *test = [[XDNumberAnimationView alloc] initWithPosition:CGPointMake(200, 200)];
     self.drawView = test;
-    [test setBackgroundColor:[UIColor brownColor]];
     
     [self.view addSubview:test];
 }

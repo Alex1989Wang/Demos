@@ -37,7 +37,7 @@
 		AC006A9E1D5737C3004C67AD /* 9_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC006A881D5737C3004C67AD /* 9_icon@3x.png */; };
 		AC006A9F1D5737C3004C67AD /* x_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC006A891D5737C3004C67AD /* x_icon@2x.png */; };
 		AC006AA01D5737C3004C67AD /* x_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC006A8A1D5737C3004C67AD /* x_icon@3x.png */; };
-		AC006AA31D5737FA004C67AD /* DrawRectTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC006AA21D5737FA004C67AD /* DrawRectTestView.m */; };
+		AC006AA31D5737FA004C67AD /* XDNumberAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC006AA21D5737FA004C67AD /* XDNumberAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,8 +96,8 @@
 		AC006A881D5737C3004C67AD /* 9_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "9_icon@3x.png"; sourceTree = "<group>"; };
 		AC006A891D5737C3004C67AD /* x_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x_icon@2x.png"; sourceTree = "<group>"; };
 		AC006A8A1D5737C3004C67AD /* x_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "x_icon@3x.png"; sourceTree = "<group>"; };
-		AC006AA11D5737FA004C67AD /* DrawRectTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawRectTestView.h; sourceTree = "<group>"; };
-		AC006AA21D5737FA004C67AD /* DrawRectTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawRectTestView.m; sourceTree = "<group>"; };
+		AC006AA11D5737FA004C67AD /* XDNumberAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDNumberAnimationView.h; sourceTree = "<group>"; };
+		AC006AA21D5737FA004C67AD /* XDNumberAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDNumberAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,8 +156,8 @@
 				AC006A4E1D573760004C67AD /* Assets.xcassets */,
 				AC006A501D573760004C67AD /* LaunchScreen.storyboard */,
 				AC006A531D573760004C67AD /* Info.plist */,
-				AC006AA11D5737FA004C67AD /* DrawRectTestView.h */,
-				AC006AA21D5737FA004C67AD /* DrawRectTestView.m */,
+				AC006AA11D5737FA004C67AD /* XDNumberAnimationView.h */,
+				AC006AA21D5737FA004C67AD /* XDNumberAnimationView.m */,
 				AC006A421D573760004C67AD /* Supporting Files */,
 			);
 			path = drawRect;
@@ -363,7 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC006AA31D5737FA004C67AD /* DrawRectTestView.m in Sources */,
+				AC006AA31D5737FA004C67AD /* XDNumberAnimationView.m in Sources */,
 				AC006A4A1D573760004C67AD /* ViewController.m in Sources */,
 				AC006A471D573760004C67AD /* AppDelegate.m in Sources */,
 				AC006A441D573760004C67AD /* main.m in Sources */,
@@ -592,6 +592,7 @@
 				AC006A6E1D573760004C67AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC006A6F1D573760004C67AD /* Build configuration list for PBXNativeTarget "drawRectTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +601,7 @@
 				AC006A711D573760004C67AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC006A721D573760004C67AD /* Build configuration list for PBXNativeTarget "drawRectUITests" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +610,7 @@
 				AC006A741D573760004C67AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

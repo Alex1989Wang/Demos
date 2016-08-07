@@ -10,6 +10,14 @@
 
 @implementation XDNumberAnimationView
 
+- (instancetype)initWithPosition:(CGPoint)position {
+    self = [super initWithFrame:CGRectMake(position.x, position.y, 0, 24)];
+    if (self) {
+        [self setBackgroundColor:[UIColor brownColor]];
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect {
     
     //1.0 获取当前图形上下文
@@ -44,7 +52,7 @@
     NSString *numString = [NSString stringWithFormat:@"%lu", numberToDraw];
     NSUInteger count = numString.length;
     
-    //2.0 根据位数计算显示大小 - 前面还有一个X
+    //2.0 根据位数计算显示宽度 - 前面还有一个X
     CGRect bounds = self.frame;
     bounds.size.width = (count + 1) * 16.f;
     bounds.size.height = 24.f;
