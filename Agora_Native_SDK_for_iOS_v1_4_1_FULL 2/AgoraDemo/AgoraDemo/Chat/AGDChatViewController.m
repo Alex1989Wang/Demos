@@ -82,6 +82,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    
     self.videoMainView.frame = self.videoMainView.superview.bounds; // video view's autolayout cause crash
     NSLog(@"%@", NSStringFromCGRect(self.videoMainView.frame));
     [self joinChannel];
@@ -103,25 +105,9 @@
 {
     // 本地化的一些操作,房间等待好友加入...
     [self showAlertLabelWithString:NSLocalizedString(@"wait_attendees", nil)];
-    __weak typeof(self) weakSelf = self;
+    
     // 加入频道,通过key
-    [self.agoraKit joinChannelByKey:nil channelName:self.channel info:nil uid:0 joinSuccess:^(NSString *channel, NSUInteger uid, NSInteger elapsed) {
-        
-        // 扬声器通话设置
-        [weakSelf.agoraKit setEnableSpeakerphone:YES];
-        // 如果是语音模式
-        if (weakSelf.type == AGDChatTypeAudio) {
-            // 此时切换为纯语音模式
-            [weakSelf.agoraKit disableVideo];
-        }
-        
-        // 控制whether the idle定时器is disabled for the app
-        [UIApplication sharedApplication].idleTimerDisabled = YES;
-        
-        // 偏好设置存储
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:weakSelf.vendorKey forKey:AGDKeyVendorKey];
-    }];
+    [self.agoraKit joinChannelByKey:nil channelName:self.channel info:nil uid:0 joinSuccess:nil];
 }
 
 - (void)setUpVideo
@@ -160,6 +146,31 @@
 //    }
 }
 
+#pragma mark - 自己视频的加入
+- (void)rtcEngine:(AgoraRtcEngineKit *)engine didJoinChannel:(NSString *)channel withUid:(NSUInteger)uid elapsed:(NSInteger)elapsed {
+    
+    NSLog(@"channel: %@, uid: %ld and elapsed: %ld", channel, uid, elapsed);
+    
+    //扬声器通话设置
+    [self.agoraKit setEnableSpeakerphone:YES];
+    
+    
+    // 如果是语音模式
+    if (self.type == AGDChatTypeAudio) {
+        // 此时切换为纯语音模式
+        [self.agoraKit disableVideo];
+    }
+    
+    // 控制whether the idle定时器is disabled for the app
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
+    
+    // 偏好设置存储
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:self.vendorKey forKey:AGDKeyVendorKey];
+}
+
+
+#pragma mark - 远端视频的加入和退出
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine didJoinedOfUid:(NSUInteger)uid elapsed:(NSInteger)elapsed
 {
     __weak typeof(self) weakSelf = self;
@@ -238,73 +249,7 @@
     }
 }
 
-#warning 设置mainView的底部约束
-- (void)changeBotoomConstrains
-{
-//    if (self.uids.count > 1) {
-//        CGFloat height = ScreemHeight - MarginT - MarginB - self.collectionHeightConstraint.constant;
-//        self.videoMainView.superview.frame = CGRectMake(0, MarginT, ScreemWidth, height);
-//    }else {
-//        CGFloat height = ScreemHeight - MarginT - MarginB;
-//        self.videoMainView.superview.frame = CGRectMake(0, MarginT, ScreemWidth, height);
-//    }
-    
-}
 
-
-- (void)setUpBlocks
-{
-    //    [self.agoraKit rtcStatsBlock:^(AgoraRtcStats *stat) {
-    //        // Update talk time
-    //        if (self.duration == 0 && !self.durationTimer) {
-    //            self.talkTimeLabel.text = @"00:00";
-    //            self.durationTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTalkTimeLabel) userInfo:nil repeats:YES];
-    //        }
-    //
-    //        NSUInteger traffic = (stat.txBytes + stat.rxBytes - lastStat_.txBytes - lastStat_.rxBytes) / 1024;
-    //        NSUInteger speed = traffic / (stat.duration - lastStat_.duration);
-    //        NSString *trafficString = [NSString stringWithFormat:@"%@KB/s", @(speed)];
-    //        self.dataTrafficLabel.text = trafficString;
-    //
-    //        lastStat_ = stat;
-    //    }];
-    
-    //    [self.agoraKit userJoinedBlock:^(NSUInteger uid, NSInteger elapsed) {
-    //        [self hideAlertLabel];
-    //        [self.uids addObject:@(uid)];
-    //
-    //        [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.uids.count-1 inSection:0]]];
-    //    }];
-    
-    //    [self.agoraKit userOfflineBlock:^(NSUInteger uid) {
-    //        NSInteger index = [self.uids indexOfObject:@(uid)];
-    //        if (index != NSNotFound) {
-    //            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-    //            [self.uids removeObjectAtIndex:index];
-    //            [self.collectionView deleteItemsAtIndexPaths:@[indexPath]];
-    //        }
-    //    }];
-    
-    
-    
-    //    [self.agoraKit connectionLostBlock:^{
-    //        [self showAlertLabelWithString:NSLocalizedString(@"no_network", nil)];
-    //        self.videoMainView.hidden = YES;
-    //        self.dataTrafficLabel.text = @"0KB/s";
-    //    }];
-    
-    //    [self.agoraKit userMuteVideoBlock:^(NSUInteger uid, BOOL muted) {
-    //        NSLog(@"user %@ mute video: %@", @(uid), muted ? @"YES" : @"NO");
-    //
-    //        [self.videoMuteForUids setObject:@(muted) forKey:@(uid)];
-    //        [self.collectionView reloadItemsAtIndexPaths:@[[NSIndexPath indexPathForRow:[self.uids indexOfObject:@(uid)] inSection:0]]];
-    //    }];
-    //
-    //    [self.agoraKit firstLocalVideoFrameBlock:^(NSInteger width, NSInteger height, NSInteger elapsed) {
-    //        NSLog(@"local video display");
-    //        self.videoMainView.frame = self.videoMainView.superview.bounds; // video view's autolayout cause crash
-    //    }];
-}
 
 #pragma mark -
 

@@ -23,8 +23,6 @@ static NSString * const AGDSegueIdentifierChat = @"Chat";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,7 +33,7 @@ static NSString * const AGDSegueIdentifierChat = @"Chat";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+     self.navigationController.navigationBarHidden = YES;
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSString *vendorKey = [userDefaults objectForKey:AGDKeyVendorKey];

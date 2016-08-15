@@ -548,13 +548,6 @@ __attribute__((visibility("default"))) @interface AgoraRtcEngineKit : NSObject
 - (int)leaveChannel:(void(^)(AgoraRtcStats* stat))leaveChannelBlock;
 
 /**
- *  Disables the network quality test.
- *
- *  @return 0 when executed successfully, and return minus value when failed.
- */
-- (int)enableNetworkTest;
-
-/**
  *  Enables the network quality test. When enabled, the callback 'networkQualityBlock' notifies the application about the user's network connection quality.
  Note: Once the network test is enabled, it uses the network bandwidth even when the application is not in a call.
  Recommandation: When the application is foreground, enable the network connection test; and when the application is switched to background, disable network test  in order to reduce network traffic.
@@ -562,6 +555,14 @@ __attribute__((visibility("default"))) @interface AgoraRtcEngineKit : NSObject
  *
  *  @return 0 when executed successfully, and return minus value when failed.
  */
+
+- (int)enableNetworkTest;
+/**
+ *  Disables the network quality test.
+ *
+ *  @return 0 when executed successfully, and return minus value when failed.
+ */
+
 - (int)disableNetworkTest;
 
 /**

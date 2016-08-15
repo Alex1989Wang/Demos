@@ -264,7 +264,7 @@
 				TargetAttributes = {
 					18F23F621B9FC3F400A7A622 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 6ZA2D8B3X7;
+						DevelopmentTeam = 28PG352U45;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -472,7 +472,7 @@
 					"-ObjC",
 					"-licucore",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.simpledemo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.JiangWang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -501,7 +501,7 @@
 					"-ObjC",
 					"-licucore",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.simpledemo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.JiangWang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
