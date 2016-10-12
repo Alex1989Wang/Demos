@@ -28,6 +28,7 @@
     [super viewDidLoad];
     
     [self setupSubviews];
+    
 }
 
 
@@ -54,5 +55,7 @@
     [self.view addSubview:yellowView];
     [self.view addSubview:blueView];
 }
+
+
 
 @end

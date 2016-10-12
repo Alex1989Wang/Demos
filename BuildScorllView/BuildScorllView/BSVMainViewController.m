@@ -24,6 +24,8 @@
     [self setupSubviews];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Custome" style:UIBarButtonItemStylePlain target:self action:@selector(pushOutCustomScrollView)];
+    
+    [self autoLayoutTest];
 }
 
 - (void)setupSubviews {
@@ -65,5 +67,22 @@
     BSVCustomScrollViewController *customScrollController = [[BSVCustomScrollViewController alloc] init];
     [self.navigationController pushViewController:customScrollController animated:YES];
 }
+
+
+- (void)autoLayoutTest {
+    UIView *testView = [[UIView alloc] init];
+    testView.backgroundColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.5];
+    testView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSLayoutConstraint *demensionHeight = [NSLayoutConstraint constraintWithItem:testView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeHeight multiplier:1.0 constant:50.f];
+    NSLayoutConstraint *demensionWidth = [NSLayoutConstraint constraintWithItem:testView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeWidth multiplier:1.0 constant:50.f];
+    NSLayoutConstraint *positionCenterX = [NSLayoutConstraint constraintWithItem:testView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.mainView attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0];
+    NSLayoutConstraint *positionCenterY = [NSLayoutConstraint constraintWithItem:testView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.mainView attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+    
+    [self.mainView addSubview:testView];
+    
+    [NSLayoutConstraint activateConstraints:@[demensionHeight, demensionWidth, positionCenterX, positionCenterY]];
+}
+
 
 @end
