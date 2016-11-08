@@ -10,8 +10,6 @@
 
 @interface XDNumberAnimationView : UIView
 
-/* 需要绘制和显示的总数 */
-@property (nonatomic, assign) NSUInteger numberTotal;
 
 /**
  *  根据位置实例化一个数字动画view
@@ -29,6 +27,6 @@
  *  @param num    传入的number
  *  @param change 是否需要缩放
  */
-- (void)drawNum:(NSUInteger)num withSizeChange:(BOOL)change;
+- (void)drawNum:(NSString *)num withSizeChange:(BOOL)change;
 
 @end

@@ -16,6 +16,8 @@
     if (self) {
         _name = @"";
         _age = 0;
+        _siblings = [[NSMutableArray alloc] init];
+        _cousins = [[KVOMutableArray alloc] init];
     }
     return self;
 }
@@ -41,6 +43,28 @@
         _name = name;
         [self didChangeValueForKey:@"name"];
     }
+}
+
+#pragma mark - KVO methods 
+- (NSUInteger)countOfSiblings
+{
+    return self.siblings.count;
+}
+
+- (id)objectInSiblingsAtIndex:(NSUInteger)index
+{
+    return [self.siblings objectAtIndex:index];
+}
+
+- (void)insertObject:(NSString *)object
+   inSiblingsAtIndex:(NSUInteger)index
+{
+    [self.siblings insertObject:object atIndex:index];
+}
+
+- (void)removeObjectFromSiblingsAtIndex:(NSUInteger)index
+{
+    [self.siblings removeObjectAtIndex:index];
 }
 
 @end

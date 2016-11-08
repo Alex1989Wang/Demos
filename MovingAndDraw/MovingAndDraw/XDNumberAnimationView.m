@@ -16,7 +16,7 @@
 @interface XDNumberAnimationView()
 
 /* 正在绘制显示的数值 */
-@property (nonatomic, assign) NSUInteger numberToDraw;
+@property (nonatomic, assign) NSString *numberToDraw;
 
 /* 数值显示的timer */
 @property (nonatomic, weak) NSTimer *timer;
@@ -47,8 +47,7 @@
     CGContextRef imageContext = UIGraphicsGetCurrentContext();
     
     //2.0 从传入的数值获得字符串和翻转图形上下文
-    NSString *numString = [NSString stringWithFormat:@"%lu",
-                           (unsigned long)self.numberToDraw];
+    NSString *numString = self.numberToDraw;
     if (numString.length < 2) //前面加“0”
     {
         numString = [@"0" stringByAppendingString:numString];
@@ -72,18 +71,18 @@
         CGRectMake(kAniNumWidth * (index + 1), 0, kAniNumWidth, kAniNumHeight);
         CGContextDrawImage(imageContext, drawRect, digitImage.CGImage);
     }
+    NSLog(@"draw number string: %@", numString);
 }
 
 /**
  *  要绘制哪个数字
  *
  */
-- (void)drawNum:(NSUInteger)num {
-    _numberToDraw = num;
+- (void)drawNum:(NSString *)numStr {
+    _numberToDraw = numStr;
     
     //1.0 多少位的数值
-    NSString *numString = [NSString stringWithFormat:@"%lu", num];
-    NSUInteger count = numString.length;
+    NSUInteger count = numStr.length;
     
     //2.0 根据位数计算显示宽度 - 前面还有一个X(如果小于10,前面补0）
     CGRect frame = self.frame;
@@ -94,11 +93,44 @@
     self.frame = frame;
     
     //3.0 显示
-    [self setNeedsDisplay];
-    
+    //[self setNeedsDisplay];
+    [self prepareImageViewsAndDispalyNumImages];
 }
 
-- (void)drawNum:(NSUInteger)num withSizeChange:(BOOL)change {
+- (void)prepareImageViewsAndDispalyNumImages
+{
+    NSString *numStr = self.numberToDraw;
+    if (numStr.length < 2)
+    {
+        numStr = [@"0" stringByAppendingString:numStr];
+    }
+    //暴力移除子控件
+    for (UIView *subView in self.subviews)
+    {
+        [subView removeFromSuperview];
+    }
+    
+    UIImage *crossImage = [UIImage imageNamed:@"x_icon"];
+    CGRect crossRect = CGRectMake(0, 0, kAniNumWidth, kAniNumHeight);
+    UIImageView *crossView = [[UIImageView alloc] initWithFrame:crossRect];
+    crossView.image = crossImage;
+    [self addSubview:crossView];
+    for (NSUInteger index = 0; index<numStr.length; index++)
+    {
+        NSString *digit = [numStr substringWithRange:NSMakeRange(index, 1)];
+        UIImage *digitImage =
+        [UIImage imageNamed: [NSString stringWithFormat:@"%@_icon", digit]];
+        
+        //3.1 绘制到合适位置
+        CGRect drawRect =
+        CGRectMake(kAniNumWidth * (index + 1), 0, kAniNumWidth, kAniNumHeight);
+        UIImageView *digitView = [[UIImageView alloc] initWithFrame:drawRect];
+        digitView.image = digitImage;
+        [self addSubview:digitView];
+    }
+}
+
+- (void)drawNum:(NSString *)num withSizeChange:(BOOL)change {
     //1.0 绘制数字
     [self drawNum:num];
     

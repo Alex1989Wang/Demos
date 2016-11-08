@@ -57,11 +57,29 @@ static void *childTwoCtx = &childTwoCtx;
                     forKeyPath:@"age"
                        options:options
                        context:childTwoCtx];
+    [self.childOne addObserver:self
+                    forKeyPath:@"siblings"
+                       options:options
+                       context:childOneCtx];
+    [self.childOne addObserver:self
+                    forKeyPath:@"cousins.array"
+                       options:options
+                       context:childOneCtx];
     
     
     //赋值
     [self.childOne setValue:@(28) forKey:@"age"];
     [self.childTwo setValue:@(30) forKey:@"age"];
+    [self.childOne insertObject:@"Jack" inSiblingsAtIndex:0];
+    [self.childOne insertObject:@"Mary" inSiblingsAtIndex:1];
+    [self.childOne insertObject:@"Hellen" inSiblingsAtIndex:2];
+    
+    [self.childOne.cousins insertObject:@"Wang" inArrayAtIndex:0];
+    [self.childOne.cousins insertObject:@"Jiang" inArrayAtIndex:0];
+    [self.childOne.cousins removeObjectFromArrayAtIndex:0];
+    
+    
+    [self.childOne removeObjectFromSiblingsAtIndex:0];
     
     self.childOne.name = @"Michelle";
 }
@@ -87,6 +105,20 @@ static void *childTwoCtx = &childTwoCtx;
         if (context == childTwoCtx) {
             NSLog(@"child two's change");
         }
+        NSLog(@"changed key path: %@", keyPath);
+        NSLog(@"change dictionary: %@", change);
+        return;
+    }
+    
+    if ([keyPath isEqualToString:@"siblings"])
+    {
+        NSLog(@"changed key path: %@", keyPath);
+        NSLog(@"change dictionary: %@", change);
+        return;
+    }
+    
+    if ([keyPath isEqualToString:@"cousins.array"])
+    {
         NSLog(@"changed key path: %@", keyPath);
         NSLog(@"change dictionary: %@", change);
     }
