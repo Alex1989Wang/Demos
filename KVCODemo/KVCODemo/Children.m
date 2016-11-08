@@ -20,4 +20,27 @@
     return self;
 }
 
+
++ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)key
+{
+    if ([key isEqualToString:@"name"])
+    {
+        return NO;
+    }
+    else
+    {
+        return [super automaticallyNotifiesObserversForKey:key];
+    }
+}
+
+- (void)setName:(NSString *)name
+{
+    if (![_name isEqualToString:name])
+    {
+        [self willChangeValueForKey:@"name"];
+        _name = name;
+        [self didChangeValueForKey:@"name"];
+    }
+}
+
 @end
