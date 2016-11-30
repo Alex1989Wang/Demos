@@ -1,0 +1,17 @@
+
+  # platform :ios, '8.0'
+inhibit_all_warnings!
+
+target 'UIViewProgrammingGuide' do
+  pod 'Masonry'
+  pod 'MJRefresh'
+
+  # Has its own copy of OCMock
+  # and has access to GoogleAnalytics via the app
+  # that hosts the test target
+
+  target 'UIViewProgrammingGuideTests' do
+    inherit! :search_paths
+  end
+end
+

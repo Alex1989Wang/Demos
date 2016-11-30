@@ -49,7 +49,7 @@
                                                   preferredFont:font
                                              preferredTextColor:textColor];
     
-    self.customSearchBar.barTintColor = tintColor;
+    self.customSearchBar.barTintColor = [UIColor yellowColor];
     self.customSearchBar.tintColor = textColor;
     self.customSearchBar.showsBookmarkButton = NO;
     self.customSearchBar.showsCancelButton = YES;
@@ -88,7 +88,7 @@
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
     if ([self.cusSearchConDelegate respondsToSelector:
-         @selector(searchBarCancelButtonClicked:)])
+         @selector(searchControllerDidTapCancelBtn:)])
     {
         [self.cusSearchConDelegate searchControllerDidTapCancelBtn:self];
     }

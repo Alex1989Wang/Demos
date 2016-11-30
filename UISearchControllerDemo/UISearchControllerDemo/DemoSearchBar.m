@@ -44,6 +44,24 @@
 }
 
 
+- (NSUInteger)indexOfCancelButton
+{
+    __block NSUInteger index = 0;
+    UIView *searchBarView = self.subviews[0];
+    [searchBarView.subviews enumerateObjectsUsingBlock:
+     ^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop)
+     {
+         if ([obj isKindOfClass:[UIButton class]])
+         {
+             index = idx;
+             *stop = YES;
+         }
+     }];
+    return index;
+}
+
+
+
 - (void)drawRect:(CGRect)rect
 {
     NSUInteger indexOfSearchField = [self indexOfTextFieldInSearchBar];
@@ -59,8 +77,18 @@
             CGRectMake(5, 5, self.bounds.size.width - 10, self.bounds.size.height - 10);
             searchField.font = self.preferredFont;
             searchField.textColor = self.preferredTextColor;
-            searchField.backgroundColor = self.barTintColor;
+            searchField.backgroundColor = [UIColor grayColor];
+            searchField.leftViewMode = UITextFieldViewModeNever;
+            CGSize searchFieldSize = searchField.bounds.size;
+            [searchField drawPlaceholderInRect:
+             CGRectMake(0, 0, searchFieldSize.width - 100, searchFieldSize.height)];
         }
+    }
+    
+    if (searchBarView.subviews.count >= [self indexOfCancelButton])
+    {
+        UIButton *cancelBtn = searchBarView.subviews[[self indexOfCancelButton]];
+        [cancelBtn setTitle:@"取消" forState:UIControlStateNormal];
     }
     
     

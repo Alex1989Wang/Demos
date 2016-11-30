@@ -120,6 +120,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)searchControllerDidTapCancelBtn:(CustomSearchController *)cusSearchCon
 {
     self.shouldShowSearchResults = NO;
+    [cusSearchCon.customSearchBar resignFirstResponder];
     [self.tableView reloadData];
 }
 
