@@ -1,0 +1,19 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.0'
+
+target 'DraggableViewDemo' do
+
+  # Pods for DraggableViewDemo
+	pod 'Masonry'
+
+  target 'DraggableViewDemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'DraggableViewDemoUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
