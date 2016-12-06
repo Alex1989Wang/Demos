@@ -11,5 +11,6 @@
 @interface CarouselReuseView : UIView
 
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) NSString *text;
 
 @end

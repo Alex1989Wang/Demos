@@ -12,6 +12,7 @@
 @interface CarouselReuseView()
 
 @property (nonatomic, weak) UIImageView *imageView;
+@property (nonatomic, weak) UILabel *label;
 
 @end
 
@@ -22,6 +23,8 @@
     self = [super initWithFrame:frame];
     if(self)
     {
+        self.backgroundColor = [UIColor greenColor];
+        
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.backgroundColor = [UIColor orangeColor];
         _imageView = imageView;
@@ -32,7 +35,18 @@
         {
             make.edges.equalTo(self).with.insets(insets);
         }];
-        [self addSubview:_imageView];
+        
+        UILabel *label = [[UILabel alloc] init];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont systemFontOfSize:20];
+        label.textColor = [UIColor redColor];
+        _label = label;
+        [self addSubview:label];
+        [label mas_makeConstraints:
+        ^(MASConstraintMaker *make)
+        {
+            make.edges.equalTo(self);
+        }];
     }
     return self;
 }
@@ -43,6 +57,14 @@
     if (_image != image)
     {
         self.imageView.image = image;
+    }
+}
+
+- (void)setText:(NSString *)text
+{
+    if (text != _text)
+    {
+        self.label.text = text;
     }
 }
 

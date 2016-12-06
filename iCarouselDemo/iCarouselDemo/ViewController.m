@@ -65,6 +65,8 @@ iCarouselDataSource>
         CarouselReuseView *reuseView =
         [[CarouselReuseView alloc] initWithFrame:reuseViewBounds];
         reuseView.image = [UIImage imageNamed:@"jack"];
+        reuseView.text = [NSString stringWithFormat:@"index %ld \n \
+                          view: %@", index, view];
         return reuseView;
     }
 }
@@ -91,13 +93,19 @@ iCarouselDataSource>
    itemTransformForOffset:(CGFloat)offset
             baseTransform:(CATransform3D)transform
 {
-    transform = CATransform3DRotate(transform, M_PI / 8.0, 0.0, 1.0, 0.0);
-    CGFloat tilt = 0.01;
-    CGFloat spacing = 0.01;
+    CGAffineTransform affineTransform =
+    CATransform3DGetAffineTransform(transform);
+    NSLog(@"offset: %f ---- transform: %@",
+          offset,
+          NSStringFromCGAffineTransform(affineTransform));
+    
+    CGFloat tilt = -0.2;
+    CGFloat spacing = 0.1;
+    CGFloat newOffset = -offset;
     return CATransform3DTranslate(transform,
-                                  offset * carousel.itemWidth * tilt,
+                                  newOffset * carousel.itemWidth * tilt,
                                   0.0,
-                                  offset * carousel.itemWidth * spacing);
+                                  newOffset * carousel.itemWidth * spacing);
 }
 
 #pragma mark - 懒加载
