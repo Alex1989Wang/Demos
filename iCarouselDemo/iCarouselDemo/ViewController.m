@@ -6,6 +6,13 @@
 //  Copyright © 2016 JiangWang. All rights reserved.
 //
 
+#define ACTION_MARGIN 120 //%%% distance from center where the action applies. Higher = swipe further in order for the action to be called
+#define SCALE_STRENGTH 4 //%%% how quickly the card shrinks. Higher = slower shrinking
+#define SCALE_MAX .93 //%%% upper bar for how much the card shrinks. Higher = shrinks less
+#define ROTATION_MAX 1 //%%% the maximum rotation allowed in radians.  Higher = card can keep rotating longer
+#define ROTATION_STRENGTH 320 //%%% strength of rotation. Higher = weaker rotation
+#define ROTATION_ANGLE M_PI/8 //%%% Higher = stronger rotation angl
+
 #import "ViewController.h"
 #import "CarouselReuseView.h"
 
@@ -102,6 +109,12 @@ iCarouselDataSource>
     CGFloat tilt = -0.2;
     CGFloat spacing = 0.1;
     CGFloat newOffset = -offset;
+   
+    if (carousel.currentItemIndex == roundf(offset))
+    {
+        
+    }
+    
     return CATransform3DTranslate(transform,
                                   newOffset * carousel.itemWidth * tilt,
                                   0.0,
