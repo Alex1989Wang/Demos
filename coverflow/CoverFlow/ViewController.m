@@ -9,6 +9,14 @@
 
 #import "ViewController.h"
 
+#define kCollectionViewHeight self.collectionView.bounds.size.height
+#define kCollectionViewWidth self.collectionView.bounds.size.width
+#define kTriggerCardChangeThreshold kCollectionViewWidth * 0.5
+
+//for testing
+#define kDefaultNameCardMaxHeight self.collectionView.bounds.size.height * 0.8
+#define kDefaultNameCardMinHeight self.collectionView.bounds.size.height * 0.6
+
 @interface XDCollectionViewCell : UICollectionViewCell
 @property (nonatomic, strong) UILabel *label;
 @end
@@ -40,6 +48,7 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
 
 - (CGSize)collectionViewContentSize
 {
+    
     return self.collectionView.bounds.size;
 }
 
@@ -65,21 +74,27 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
             nameCardLayoutAttribs.frame =
             [self itemAttributedFrameWithIndexPath:indexPath
                              horizontalTranslation:self.xTranslation];
-            nameCardLayoutAttribs.transform =
-            [self itemAttributedTransformWithIndexPath:indexPath
-                                 horizontalTranslation:self.xTranslation];
-            nameCardLayoutAttribs.zIndex =
-            [self itemAttributedZIndexWithIndexPath:indexPath];
+//            nameCardLayoutAttribs.transform =
+//            [self itemAttributedTransformWithIndexPath:indexPath
+//                                 horizontalTranslation:self.xTranslation];
+//            nameCardLayoutAttribs.zIndex =
+//            [self itemAttributedZIndexWithIndexPath:indexPath];
             
+            nameCardLayoutAttribs.transform3D =
+            [self itemAttributedTransform3DWithIndexPath:indexPath
+                                   horizontalTranslation:self.xTranslation];
+            nameCardLayoutAttribs.alpha =
+            [self alphaForItemAtIndexPath:indexPath
+                    horizontalTranslation:self.xTranslation];
             [itemLayouts setObject:nameCardLayoutAttribs forKey:indexPath];
             
             NSLog(@"section: %lu ---- item: %lu", sec, item);
             NSLog(@"\nframe: %@   \n\
                   transform: %@   \n\
-                  zindex: %lu \n\n\n",
+                  alpha: %f     \n",
                   NSStringFromCGRect(nameCardLayoutAttribs.frame),
                   NSStringFromCGAffineTransform(nameCardLayoutAttribs.transform),
-                  nameCardLayoutAttribs.zIndex);
+                  nameCardLayoutAttribs.alpha);
         }
     }
     
@@ -94,8 +109,8 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
 {
     CGFloat collectionHeight = self.collectionView.bounds.size.height;
     CGFloat collectionWidth = self.collectionView.bounds.size.width;
-    CGFloat minHeight = collectionHeight * 0.6;
-    CGFloat maxHeight = collectionHeight * 0.8;
+    CGFloat minHeight = kDefaultNameCardMinHeight;
+    CGFloat maxHeight = kDefaultNameCardMaxHeight;
     CGFloat itemWith = self.collectionView.bounds.size.width - 60;
     CGFloat itemGap = 20;
     
@@ -110,28 +125,126 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
 }
 
 
-- (NSUInteger)itemAttributedZIndexWithIndexPath:(NSIndexPath *)indexPath
+//- (NSUInteger)itemAttributedZIndexWithIndexPath:(NSIndexPath *)indexPath
+//{
+//    switch (indexPath.item)
+//    {
+//        case 0:
+//            return (self.xTranslation < 0) ? 1 : 2;
+//            break;
+//            
+//        case 1:
+//            return 3;
+//            break;
+//            
+//        case 2:
+//            return (self.xTranslation < 0) ? 2 : 1;
+//            break;
+//            
+//        default:
+//            return 0;
+//            break;
+//    }
+//}
+
+- (CATransform3D)itemAttributedTransform3DWithIndexPath:(NSIndexPath *)indexPath
+                                  horizontalTranslation:(CGFloat)xTranslation
 {
+    // 1个或0个的时候不用动画
+    if ([self.collectionView numberOfItemsInSection:0] <= 1)
+    {
+        return CATransform3DIdentity;
+    }
+    
+    if (xTranslation == 0)
+    {
+        if (indexPath.item == 1)
+        {
+            return CATransform3DMakeTranslation(0, 0, 3);
+        }
+        else
+        {
+            return CATransform3DMakeTranslation(0, 0, 2);
+        }
+    }
+    
+    //多个-固定第一个在最前
+    CATransform3D transform = CATransform3DIdentity;
+    
+    CGFloat xTranslationAbs =
+    (fabs(xTranslation) > kTriggerCardChangeThreshold) ?
+    kTriggerCardChangeThreshold : fabs(xTranslation);
+    
+    CGFloat diffToThreshold = kTriggerCardChangeThreshold - xTranslationAbs;
+    CGFloat diffRatio = diffToThreshold / kTriggerCardChangeThreshold;
     switch (indexPath.item)
     {
         case 0:
-            return (self.xTranslation < 0) ? 1 : 2;
+        {
+            //向右
+            if (xTranslation > 0)
+            {
+                CGFloat heightDiff = kDefaultNameCardMaxHeight -
+                kDefaultNameCardMinHeight;
+                CGFloat newHeight = kDefaultNameCardMaxHeight - diffRatio * heightDiff;
+                CGFloat heightScale = kDefaultNameCardMaxHeight / newHeight;
+                
+                transform = CATransform3DMakeScale(1, heightScale, 1);
+                transform = CATransform3DTranslate(transform, xTranslation, 0, 2);
+            }
             break;
+        }
+            
             
         case 1:
-            return 3;
+        {
+            transform = CATransform3DMakeTranslation(xTranslation, 0, 3);
             break;
+        }
             
         case 2:
-            return (self.xTranslation < 0) ? 2 : 1;
+        {
+            //向左
+            if (xTranslation < 0)
+            {
+                CGFloat heightDiff = kDefaultNameCardMaxHeight -
+                kDefaultNameCardMinHeight;
+                CGFloat newHeight = kDefaultNameCardMaxHeight - diffRatio * heightDiff;
+                CGFloat heightScale = kDefaultNameCardMaxHeight / newHeight;
+                
+                transform = CATransform3DMakeScale(1, heightScale, 1);
+                transform = CATransform3DTranslate(transform, xTranslation, 0, 2);
+            }
             break;
+        }
             
         default:
-            return 0;
             break;
     }
+
+    return transform;
 }
 
+- (CGFloat)alphaForItemAtIndexPath:(NSIndexPath *)indexPath
+             horizontalTranslation:(CGFloat)xTranslation
+{
+    CGFloat ratio = xTranslation / self.collectionView.bounds.size.width;
+    if (indexPath.item == 1)
+    {
+        return (1 - fabs(ratio));
+    }
+    else
+    {
+        CGFloat xTranslationAbs =
+        (fabs(xTranslation) > kTriggerCardChangeThreshold) ?
+        kTriggerCardChangeThreshold : fabs(xTranslation);
+        
+        CGFloat diffToThreshold = kTriggerCardChangeThreshold - xTranslationAbs;
+        CGFloat alphaDiff = 1 - diffToThreshold / kTriggerCardChangeThreshold;
+        
+        return MAX(0.6, alphaDiff);
+    }
+}
 
 - (CGAffineTransform)itemAttributedTransformWithIndexPath:(NSIndexPath *)indexPath
                                     horizontalTranslation:(CGFloat)xTranslation
@@ -154,8 +267,8 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
             {
                 transform = CGAffineTransformMakeScale(1, 1+ratio);
                 transform = CGAffineTransformTranslate(transform, xTranslation, 0);
+                break;
             }
-            break;
         }
             
             
@@ -165,6 +278,7 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
             CGFloat angle = direction * M_PI_4 * ratio;
             transform = CGAffineTransformMakeRotation(angle);
             transform = CGAffineTransformTranslate(transform, xTranslation, 0);
+            break;
         }
             
         case 2:
@@ -174,8 +288,8 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
             {
                 transform = CGAffineTransformMakeScale(1, 1+ratio);
                 transform = CGAffineTransformTranslate(transform, xTranslation, 0);
+                break;
             }
-            break;
         }
             
         default:
@@ -261,6 +375,7 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
         return;
     }
 
+    CGFloat collectionWidth = self.collectionView.bounds.size.width;
     switch (pan.state)
     {
         case UIGestureRecognizerStateBegan:
@@ -271,18 +386,30 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
             break;
         }
             
+        case UIGestureRecognizerStateEnded:
+        case UIGestureRecognizerStateCancelled:
+        case UIGestureRecognizerStateFailed:
         default:
         {
-            if ([pan translationInView:self.view].x < -(self.collectionView.bounds.size.width/2)) {
-                self.coverflowLayout.currentIndex = (self.coverflowLayout.currentIndex+1)%count;
-            } else if ([pan translationInView:self.view].x > (self.collectionView.bounds.size.width/2)) {
-                self.coverflowLayout.currentIndex = (self.coverflowLayout.currentIndex+count-1)%count;
+            //向左滑动超过一半
+            if ([pan translationInView:self.view].x < (-collectionWidth / 2))
+            {
+                self.coverflowLayout.currentIndex =
+                (self.coverflowLayout.currentIndex + 1) % count;
+            }
+            //向右滑动超过一半
+            else if ([pan translationInView:self.view].x > (collectionWidth/2))
+            {
+                self.coverflowLayout.currentIndex =
+                (self.coverflowLayout.currentIndex + count - 1) % count;
             }
             
-            [self.collectionView performBatchUpdates:^{
-                self.coverflowLayout.xTranslation = 0;
-                [self.collectionView reloadData];
-            } completion:nil];
+            [self.collectionView performBatchUpdates:
+             ^{
+                 self.coverflowLayout.xTranslation = 0;
+                 [self.collectionView reloadData];
+             }
+                                          completion:nil];
         }
     }
 }
@@ -315,7 +442,9 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
     return cell;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
     NSLog(@"%ld", indexPath.item);
 }
 
