@@ -2095,7 +2095,7 @@ NSComparisonResult compareViewDepth(UIView *view1, UIView *view2, iCarousel *sel
                 _dragging = YES;
                 _scrolling = NO;
                 _decelerating = NO;
-                _previousTranslation = _vertical? [panGesture translationInView:self].y: [panGesture translationInView:self].x;
+                _previousTranslation = _vertical ? [panGesture translationInView:self].y : [panGesture translationInView:self].x;
 
 #if USING_CHAMELEON
 
