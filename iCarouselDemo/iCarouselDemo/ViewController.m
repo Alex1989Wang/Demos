@@ -91,12 +91,12 @@ iCarouselDataSource>
         }
             case iCarouselOptionTilt:
         {
-            return 0.9;
+            return 0.0;
             break;
         }
             case iCarouselOptionSpacing:
         {
-            return 0.25;
+            return 0.5;
             break;
         }
 
@@ -106,35 +106,6 @@ iCarouselDataSource>
     }
 }
 
-- (CATransform3D)carousel:(__unused iCarousel *)carousel
-   itemTransformForOffset:(CGFloat)offset
-            baseTransform:(CATransform3D)transform
-{
-    CGFloat tilt = 0.0;
-    CGFloat spacing = 0.25;
-    CGFloat clampedOffset = MAX(-1.0, MIN(1.0, offset));
-    
-    NSLog(@"\noffset: %f --- \n\
-          current index: %ld  ---\n\
-          scroll offset: %f ---",
-          offset,
-          carousel.currentItemIndex,
-          carousel.scrollOffset);
-    
-    CGFloat x = (clampedOffset * 0.5 * tilt + offset * spacing) * carousel.itemWidth;
-    CGFloat z = fabs(clampedOffset) * -carousel.itemWidth * 0.5;
-    if ((carousel.scrollOffset + offset) == carousel.currentItemIndex)
-    {
-        //当前item
-        transform = CATransform3DTranslate(transform, x, 0.0, z);
-        return CATransform3DRotate(transform, offset * M_PI_4, 0.0, 0.0, 1.0);
-    }
-    else
-    {
-        transform = CATransform3DTranslate(transform, x, 0.0, z);
-        return CATransform3DRotate(transform, -clampedOffset * M_PI_2 * tilt, 0.0, 1.0, 0.0);
-    }
-}
 
 #pragma mark - 懒加载
 - (iCarousel *)nameCardContainer
@@ -143,7 +114,7 @@ iCarouselDataSource>
     {
         _nameCardContainer = [[iCarousel alloc] init];
         _nameCardContainer.backgroundColor = [UIColor brownColor];
-        _nameCardContainer.type = iCarouselTypeCustom;
+        _nameCardContainer.type = iCarouselTypeRotary;
         _nameCardContainer.pagingEnabled = YES;
         _nameCardContainer.vertical = NO;
         _nameCardContainer.delegate = self;

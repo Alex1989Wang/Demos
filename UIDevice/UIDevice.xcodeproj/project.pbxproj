@@ -160,6 +160,7 @@
 				TargetAttributes = {
 					C2D2BE3F1DF4606E002BB525 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Y39R442P5T;
 						ProvisioningStyle = Automatic;
 					};
 					C2D2BE581DF4606E002BB525 = {
@@ -349,7 +350,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y39R442P5T;
 				INFOPLIST_FILE = UIDevice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.UIDevice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -360,7 +363,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y39R442P5T;
 				INFOPLIST_FILE = UIDevice/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.UIDevice;
 				PRODUCT_NAME = "$(TARGET_NAME)";

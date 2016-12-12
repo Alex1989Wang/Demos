@@ -11,11 +11,14 @@
 
 #define kCollectionViewHeight self.collectionView.bounds.size.height
 #define kCollectionViewWidth self.collectionView.bounds.size.width
-#define kTriggerCardChangeThreshold kCollectionViewWidth * 0.5
+#define kTriggerCardChangeThreshold (kCollectionViewWidth * 0.3)
+#define kItemHorizontalGap 10
+#define kItemVerticalHeightGap 15
 
 //for testing
 #define kDefaultNameCardMaxHeight self.collectionView.bounds.size.height * 0.8
 #define kDefaultNameCardMinHeight self.collectionView.bounds.size.height * 0.6
+
 
 @interface XDCollectionViewCell : UICollectionViewCell
 @property (nonatomic, strong) UILabel *label;
@@ -28,7 +31,8 @@
         self.label = [[UILabel alloc] init];
         [self.contentView addSubview:self.label];
         self.label.frame = self.contentView.bounds;
-        self.label.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        self.label.autoresizingMask = UIViewAutoresizingFlexibleWidth|
+        UIViewAutoresizingFlexibleHeight;
     }
     return self;
 }
@@ -39,16 +43,18 @@
 static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
 
 @interface XDCoverFlowLayout : UICollectionViewLayout
+
 @property (nonatomic, assign) CGFloat xTranslation;
 @property (nonatomic, assign) NSInteger currentIndex;
 @property (nonatomic, strong) NSDictionary *layoutInfo;
+@property (nonatomic, assign) CGRect cellBounds;
+
 @end
 
 @implementation XDCoverFlowLayout
 
 - (CGSize)collectionViewContentSize
 {
-    
     return self.collectionView.bounds.size;
 }
 
@@ -71,29 +77,24 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
             UICollectionViewLayoutAttributes *nameCardLayoutAttribs =
             [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
             
-            nameCardLayoutAttribs.frame =
-            [self itemAttributedFrameWithIndexPath:indexPath
-                             horizontalTranslation:self.xTranslation];
-//            nameCardLayoutAttribs.transform =
-//            [self itemAttributedTransformWithIndexPath:indexPath
-//                                 horizontalTranslation:self.xTranslation];
-//            nameCardLayoutAttribs.zIndex =
-//            [self itemAttributedZIndexWithIndexPath:indexPath];
-            
-            nameCardLayoutAttribs.transform3D =
-            [self itemAttributedTransform3DWithIndexPath:indexPath
-                                   horizontalTranslation:self.xTranslation];
+            nameCardLayoutAttribs.center =
+            [self centerForItemAtIndexPath:indexPath
+                     horizontalTranslation:self.xTranslation];
+            nameCardLayoutAttribs.bounds =
+            [self boundsForItemAtIndexPath:indexPath
+                     horizontalTranslation:self.xTranslation];
+            nameCardLayoutAttribs.zIndex =
+            [self zIndexForItemAtIndexPath:indexPath];
             nameCardLayoutAttribs.alpha =
             [self alphaForItemAtIndexPath:indexPath
                     horizontalTranslation:self.xTranslation];
+            
             [itemLayouts setObject:nameCardLayoutAttribs forKey:indexPath];
             
             NSLog(@"section: %lu ---- item: %lu", sec, item);
             NSLog(@"\nframe: %@   \n\
-                  transform: %@   \n\
                   alpha: %f     \n",
                   NSStringFromCGRect(nameCardLayoutAttribs.frame),
-                  NSStringFromCGAffineTransform(nameCardLayoutAttribs.transform),
                   nameCardLayoutAttribs.alpha);
         }
     }
@@ -103,133 +104,96 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
     self.layoutInfo = [allLayoutAttribs copy];
 }
 
-
-- (CGRect)itemAttributedFrameWithIndexPath:(NSIndexPath *)indexPath
-                     horizontalTranslation:(CGFloat)xTranslation
+- (CGPoint)centerForItemAtIndexPath:(NSIndexPath *)indexPath
+              horizontalTranslation:(CGFloat)xTranslation
 {
-    CGFloat collectionHeight = self.collectionView.bounds.size.height;
-    CGFloat collectionWidth = self.collectionView.bounds.size.width;
-    CGFloat minHeight = kDefaultNameCardMinHeight;
-    CGFloat maxHeight = kDefaultNameCardMaxHeight;
-    CGFloat itemWith = self.collectionView.bounds.size.width - 60;
-    CGFloat itemGap = 20;
-    
-    CGFloat itemX = (collectionWidth - itemWith - 2 * itemGap) * 0.5 +
-    itemGap * indexPath.item;
-    CGFloat itemY = (indexPath.item == 1) ?
-    (collectionHeight - maxHeight) * 0.5 :
-    (collectionHeight - minHeight) * 0.5;
-    CGFloat itemHeight = (indexPath.item == 1) ? maxHeight: minHeight;
-    
-    return CGRectMake(itemX, itemY, itemWith, itemHeight);
-}
-
-
-//- (NSUInteger)itemAttributedZIndexWithIndexPath:(NSIndexPath *)indexPath
-//{
-//    switch (indexPath.item)
-//    {
-//        case 0:
-//            return (self.xTranslation < 0) ? 1 : 2;
-//            break;
-//            
-//        case 1:
-//            return 3;
-//            break;
-//            
-//        case 2:
-//            return (self.xTranslation < 0) ? 2 : 1;
-//            break;
-//            
-//        default:
-//            return 0;
-//            break;
-//    }
-//}
-
-- (CATransform3D)itemAttributedTransform3DWithIndexPath:(NSIndexPath *)indexPath
-                                  horizontalTranslation:(CGFloat)xTranslation
-{
-    // 1个或0个的时候不用动画
-    if ([self.collectionView numberOfItemsInSection:0] <= 1)
-    {
-        return CATransform3DIdentity;
-    }
-    
-    if (xTranslation == 0)
-    {
-        if (indexPath.item == 1)
-        {
-            return CATransform3DMakeTranslation(0, 0, 3);
-        }
-        else
-        {
-            return CATransform3DMakeTranslation(0, 0, 2);
-        }
-    }
-    
-    //多个-固定第一个在最前
-    CATransform3D transform = CATransform3DIdentity;
-    
+    //元数据
     CGFloat xTranslationAbs =
     (fabs(xTranslation) > kTriggerCardChangeThreshold) ?
     kTriggerCardChangeThreshold : fabs(xTranslation);
+    CGFloat changeRate = xTranslationAbs / kTriggerCardChangeThreshold;
+    CGPoint collectionCenter = CGPointMake(kCollectionViewWidth * 0.5,
+                                           kCollectionViewHeight * 0.5);
     
-    CGFloat diffToThreshold = kTriggerCardChangeThreshold - xTranslationAbs;
-    CGFloat diffRatio = diffToThreshold / kTriggerCardChangeThreshold;
-    switch (indexPath.item)
+    CGFloat centerX = collectionCenter.x;
+    CGFloat centerY = collectionCenter.y;
+    if (indexPath.item == [self leftItemIndex])
     {
-        case 0:
+        if (xTranslation >= 0)
         {
-            //向右
-            if (xTranslation > 0)
-            {
-                CGFloat heightDiff = kDefaultNameCardMaxHeight -
-                kDefaultNameCardMinHeight;
-                CGFloat newHeight = kDefaultNameCardMaxHeight - diffRatio * heightDiff;
-                CGFloat heightScale = kDefaultNameCardMaxHeight / newHeight;
-                
-                transform = CATransform3DMakeScale(1, heightScale, 1);
-                transform = CATransform3DTranslate(transform, xTranslation, 0, 2);
-            }
-            break;
+            centerX = centerX - kItemHorizontalGap +
+            changeRate * kItemHorizontalGap;
         }
-            
-            
-        case 1:
-        {
-            transform = CATransform3DMakeTranslation(xTranslation, 0, 3);
-            break;
-        }
-            
-        case 2:
-        {
-            //向左
-            if (xTranslation < 0)
-            {
-                CGFloat heightDiff = kDefaultNameCardMaxHeight -
-                kDefaultNameCardMinHeight;
-                CGFloat newHeight = kDefaultNameCardMaxHeight - diffRatio * heightDiff;
-                CGFloat heightScale = kDefaultNameCardMaxHeight / newHeight;
-                
-                transform = CATransform3DMakeScale(1, heightScale, 1);
-                transform = CATransform3DTranslate(transform, xTranslation, 0, 2);
-            }
-            break;
-        }
-            
-        default:
-            break;
     }
+    else if (indexPath.item == self.currentIndex)
+    {
+        centerX += xTranslation * 4;
+    }
+    else if (indexPath.item == [self rightItemIndex])
+    {
+        if (xTranslation <= 0)
+        {
+            centerX = centerX + kItemHorizontalGap -
+            changeRate * kItemHorizontalGap;
+        }
+    }
+    return CGPointMake(centerX, centerY);
+}
 
-    return transform;
+- (CGRect)boundsForItemAtIndexPath:(NSIndexPath *)indexPath
+             horizontalTranslation:(CGFloat)xTranslation
+{
+    //元数据
+    CGFloat xTranslationAbs =
+    (fabs(xTranslation) > kTriggerCardChangeThreshold) ?
+    kTriggerCardChangeThreshold : fabs(xTranslation);
+    CGFloat changeRate = xTranslationAbs / kTriggerCardChangeThreshold;
+    CGFloat cellWidth = self.cellBounds.size.width;
+    CGFloat cellHeight = self.cellBounds.size.height;
+    
+    CGFloat newHeight = (indexPath.item == self.currentIndex) ?
+    cellHeight : (cellHeight - kItemVerticalHeightGap);
+    
+    if (indexPath.item == [self leftItemIndex])
+    {
+        if (xTranslation > 0)
+        {
+            newHeight += changeRate * kItemVerticalHeightGap;
+        }
+    }
+    else if (indexPath.item == [self rightItemIndex])
+    {
+        if (xTranslation < 0)
+        {
+            newHeight += changeRate * kItemVerticalHeightGap;
+        }
+    }
+    
+    return CGRectMake(0, 0, cellWidth, newHeight);
+}
+
+
+- (NSUInteger)zIndexForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.item == [self leftItemIndex])
+    {
+        return (self.xTranslation >= 0) ? 2 : 1;
+    }
+    else if (indexPath.item == self.currentIndex)
+    {
+        return 3;
+    }
+    else 
+    {
+        return (self.xTranslation <= 0) ? 2 : 1;
+    }
 }
 
 - (CGFloat)alphaForItemAtIndexPath:(NSIndexPath *)indexPath
              horizontalTranslation:(CGFloat)xTranslation
 {
     CGFloat ratio = xTranslation / self.collectionView.bounds.size.width;
-    if (indexPath.item == 1)
+    if (indexPath.item == self.currentIndex)
     {
         return (1 - fabs(ratio));
     }
@@ -246,58 +210,6 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
     }
 }
 
-- (CGAffineTransform)itemAttributedTransformWithIndexPath:(NSIndexPath *)indexPath
-                                    horizontalTranslation:(CGFloat)xTranslation
-{
-    // 1个或0个的时候不用动画
-    if ([self.collectionView numberOfItemsInSection:0] <= 1)
-    {
-        return CGAffineTransformIdentity;
-    }
-
-    //多个-固定第一个在最前
-    CGAffineTransform transform = CGAffineTransformIdentity;
-    CGFloat ratio = fabs(xTranslation) / self.collectionView.bounds.size.width;
-    switch (indexPath.item)
-    {
-        case 0:
-        {
-            //向右
-            if (xTranslation > 0)
-            {
-                transform = CGAffineTransformMakeScale(1, 1+ratio);
-                transform = CGAffineTransformTranslate(transform, xTranslation, 0);
-                break;
-            }
-        }
-            
-            
-        case 1:
-        {
-            NSInteger direction = (xTranslation > 0) ? 1 : -1;
-            CGFloat angle = direction * M_PI_4 * ratio;
-            transform = CGAffineTransformMakeRotation(angle);
-            transform = CGAffineTransformTranslate(transform, xTranslation, 0);
-            break;
-        }
-            
-        case 2:
-        {
-            //向左
-            if (xTranslation < 0)
-            {
-                transform = CGAffineTransformMakeScale(1, 1+ratio);
-                transform = CGAffineTransformTranslate(transform, xTranslation, 0);
-                break;
-            }
-        }
-            
-        default:
-            break;
-    }
-
-    return transform;
-}
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -329,6 +241,36 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
 {
     _xTranslation = xTranslation;
     [self invalidateLayout];
+}
+
+- (void)setCellBounds:(CGRect)cellBounds
+{
+    if (!CGRectEqualToRect(_cellBounds, cellBounds))
+    {
+        _cellBounds = cellBounds;
+        [self invalidateLayout];
+    }
+}
+
+- (void)setCurrentIndex:(NSInteger)currentIndex
+{
+    if (_currentIndex != currentIndex)
+    {
+        _currentIndex = currentIndex;
+        [self invalidateLayout];
+    }
+}
+
+- (NSUInteger)leftItemIndex
+{
+    NSUInteger itemsCount = [self.collectionView numberOfItemsInSection:0];
+    return (self.currentIndex + itemsCount - 1) % itemsCount;
+}
+
+- (NSUInteger)rightItemIndex
+{
+    NSUInteger itemsCount = [self.collectionView numberOfItemsInSection:0];
+    return(self.currentIndex + 1) % itemsCount;
 }
 
 @end
@@ -375,7 +317,6 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
         return;
     }
 
-    CGFloat collectionWidth = self.collectionView.bounds.size.width;
     switch (pan.state)
     {
         case UIGestureRecognizerStateBegan:
@@ -392,13 +333,13 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
         default:
         {
             //向左滑动超过一半
-            if ([pan translationInView:self.view].x < (-collectionWidth / 2))
+            if ([pan translationInView:self.view].x < (-kTriggerCardChangeThreshold))
             {
                 self.coverflowLayout.currentIndex =
                 (self.coverflowLayout.currentIndex + 1) % count;
             }
             //向右滑动超过一半
-            else if ([pan translationInView:self.view].x > (collectionWidth/2))
+            else if ([pan translationInView:self.view].x > (kTriggerCardChangeThreshold))
             {
                 self.coverflowLayout.currentIndex =
                 (self.coverflowLayout.currentIndex + count - 1) % count;
@@ -427,6 +368,11 @@ static NSString *const kNameCardItemLayoutKind = @"kNameCardItemLayoutKind";
     XDCollectionViewCell *cell =
     [collectionView dequeueReusableCellWithReuseIdentifier:@"UICollectionViewCell"
                                               forIndexPath:indexPath];
+    CGRect cellOriginalBounds =
+    CGRectMake(0, 0, 250, 380);
+    cell.bounds = cellOriginalBounds;
+    self.coverflowLayout.cellBounds = cellOriginalBounds;
+    
     
     cell.backgroundColor = [UIColor orangeColor];
     cell.contentView.backgroundColor = [UIColor orangeColor];
