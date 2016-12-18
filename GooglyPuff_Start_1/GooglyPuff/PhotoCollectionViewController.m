@@ -33,6 +33,28 @@ UIActionSheetDelegate>
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+#if DEBUG
+    
+    dispatch_queue_t queue = dispatch_get_main_queue();
+    static dispatch_source_t source = nil;
+    __weak typeof(self) weakSelf = self;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        source = dispatch_source_create(DISPATCH_SOURCE_TYPE_SIGNAL,
+                                        SIGSTOP,
+                                        0,
+                                        queue);
+        if (source) {
+            dispatch_source_set_event_handler(source, ^{
+                NSLog(@"Hi I am a: %@", weakSelf);
+            });
+            dispatch_resume(source);
+        }
+    });
+    
+#endif
+    
     self.library = [[ALAssetsLibrary alloc] init];
     
     // Background image setup
