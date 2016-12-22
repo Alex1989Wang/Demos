@@ -229,6 +229,7 @@
 				TargetAttributes = {
 					C23526931DA4A68A00B7A987 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = VGT62P4UF6;
 						ProvisioningStyle = Automatic;
 					};
 					C23526AC1DA4A68B00B7A987 = {
@@ -515,7 +516,9 @@
 			baseConfigurationReference = 5DE56FE78AE6B0572153C1A1 /* Pods-FMDB_Tutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VGT62P4UF6;
 				INFOPLIST_FILE = FMDB_Tutorial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangwang.FMDB-Tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,7 +530,9 @@
 			baseConfigurationReference = 20C89647977813E8D4268DAA /* Pods-FMDB_Tutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VGT62P4UF6;
 				INFOPLIST_FILE = FMDB_Tutorial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangwang.FMDB-Tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
