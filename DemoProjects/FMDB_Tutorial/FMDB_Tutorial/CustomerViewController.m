@@ -17,6 +17,7 @@
 @interface CustomerViewController ()
 
 @property (nonatomic, strong) NSMutableArray<Customer *> *customers;
+@property (nonatomic, strong) NSArray <Customer *> *customersPool;
 
 void testPool(NSString *dbPath);
 void testDateFormat();
@@ -34,19 +35,94 @@ void testStatementCaching();
     Customer *firstCus = [[Customer alloc] init];
     firstCus.firstName = @"Jiang";
     firstCus.lastName = @"Wang";
+    [CutomersManager insertACustomer:firstCus
+                           completed:nil];
+    __weak typeof(self) weakSelf = self;
+    [CutomersManager getCutomers:^(NSArray<Customer *> *customers) {
+        __strong typeof(weakSelf) strSelf = weakSelf;
+        strSelf.customers = [customers mutableCopy];
+        [strSelf.tableView reloadData];
+    }];
     
-    [CutomersManager insertACustomer:firstCus];
     
-    self.customers = [[CutomersManager getCutomers] mutableCopy];
+//    [self officialDemo];
     
-    [self officialDemo];
+    [NSTimer scheduledTimerWithTimeInterval:0.3
+                                     target:self
+                                   selector:@selector(generateCustomers:) userInfo:nil
+                                    repeats:YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval:1.0
+                                     target:self
+                                   selector:@selector(reloadTable) userInfo:nil
+                                    repeats:YES];
+    
+    [NSTimer scheduledTimerWithTimeInterval:5.0
+                                     target:self
+                                   selector:@selector(deleteResults:)
+                                   userInfo:nil
+                                    repeats:YES];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (void)generateCustomers:(NSTimer *)generateTimer {
+    NSInteger randomIndex = arc4random_uniform(5000) % self.customersPool.count;
+    Customer *randomCus = self.customersPool[randomIndex];
+    [CutomersManager insertACustomer:randomCus
+                           completed:
+     ^(BOOL result) {
+         NSLog(@"insertd customer: %@", randomCus.firstName);
+     }];
+}
+
+- (void)reloadTable {
+    __weak typeof(self) weakSelf = self;
+    [CutomersManager getCutomers:^(NSArray<Customer *> *customers) {
+        __strong typeof(weakSelf) strSelf = weakSelf;
+        strSelf.customers = [customers mutableCopy];
+        [strSelf.tableView reloadData];
+    }];
+}
+
+- (void)deleteResults:(NSTimer *)deleteTimer {
+    NSInteger randomIndex = arc4random_uniform(5000) % self.customersPool.count;
+    Customer *randomCus = self.customersPool[randomIndex];
+    __weak typeof(self) weakSelf = self;
+    [CutomersManager deleteCustomersByFirstName:randomCus.firstName completed:^(BOOL result) {
+        __strong typeof(weakSelf) strSelf = weakSelf;
+        [strSelf reloadTable];
+    }];
+}
+
+- (NSArray<Customer *> *)customersPool {
+    if (nil == _customersPool) {
+        Customer *jiang = [[Customer alloc] init];
+        jiang.lastName = @"Wang";
+        jiang.firstName = @"Jiang";
+        Customer *chun = [[Customer alloc] init];
+        chun.lastName = @"Chun";
+        chun.firstName = @"Wen";
+        Customer *unknown = [[Customer alloc] init];
+        unknown.lastName = @"Unknown";
+        unknown.firstName = @"Who";
+        _customersPool = @[jiang, chun, unknown];
+    }
+    return _customersPool;
+}
+
+- (NSMutableArray<Customer *> *)customers {
+    if (nil == _customers) {
+        _customers = [NSMutableArray array];
+    }
+    return _customers;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
     return self.customers.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *customerCellID = @"customersCellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:customerCellID];
     
@@ -60,8 +136,7 @@ void testStatementCaching();
     return cell;
 }
 
-- (void)officialDemo
-{
+- (void)officialDemo {
     FMDBReportABugFunction();
     
     NSString *documentsPath =

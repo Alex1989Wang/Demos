@@ -20,12 +20,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //open data base
-    BOOL openRes = [[TutorialDataBaseManager sharedManager] checkAndConnectSharedDataBase];
-    if (openRes) {
-        NSLog(@"Global data base has opened.");
-        [CutomersManager openCustomersTable];
-    }
-    
+    [TutorialDataBaseManager sharedManager];
+    [CutomersManager openCustomersTableCompleted:^(BOOL result) {
+        NSLog(@"Global data base open result: %d.", result);
+    }];
     
     return YES;
 }

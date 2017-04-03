@@ -9,34 +9,38 @@
 #import <Foundation/Foundation.h>
 @class Customer;
 
+typedef void(^DataBaseExecuteStatementCompletionBlock)(BOOL result);
+
 @interface CutomersManager : NSObject
 
 /**
  Open table to store customers data;
 
- @return A boolean value to indicate 
-         whether the table is successfully opened
-         or created;
  */
-+ (BOOL)openCustomersTable;
++ (void)openCustomersTableCompleted:(DataBaseExecuteStatementCompletionBlock)completion;
 
 /**
  *  Get customers from the data base table;
  *
  */
-+ (NSArray <Customer *> *)getCutomers;
++ (void)getCutomers:(void(^)(NSArray <Customer *> *customers))completion;
 
 /**
  *  Insert a customer;
  *
  */
-+ (BOOL)insertACustomer:(Customer *)customer;
++ (void)insertACustomer:(Customer *)customer
+              completed:(DataBaseExecuteStatementCompletionBlock)completion;
 
 
 /**
  *  Insert an array of customers;
  *
  */
-+ (BOOL)insertCustomers:(NSArray <Customer *> *)customers;
++ (void)insertCustomers:(NSArray <Customer *> *)customers
+              completed:(DataBaseExecuteStatementCompletionBlock)completion;
+
++ (void)deleteCustomersByFirstName:(NSString *)firstName
+                         completed:(DataBaseExecuteStatementCompletionBlock)completion;
 
 @end

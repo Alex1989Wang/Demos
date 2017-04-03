@@ -8,31 +8,30 @@
 
 #import "TutorialDataBaseManager.h"
 
+@interface TutorialDataBaseManager()
+@property (nonatomic, strong) FMDatabaseQueue *sharedOperationQueue;
+@end
+
 @implementation TutorialDataBaseManager
 
 + (TutorialDataBaseManager *)sharedManager {
     static TutorialDataBaseManager *sharedManager = nil;
-    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedManager = [[self alloc] init];
+        [sharedManager sharedOperationQueue];
     });
-    
     return sharedManager;
 }
 
-- (BOOL)checkAndConnectSharedDataBase {
-    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    NSString *dataBaseFullPath = [documentsPath stringByAppendingPathComponent:@"tutorial.db"];
-    
-    FMDatabase *dataBase = [FMDatabase databaseWithPath:dataBaseFullPath];
-    _globalDataBase = dataBase;
-    
-    return (dataBase == nil) ? NO : [dataBase open];
-}
-
-- (BOOL)closeSharedDataBase {
-    return [self.globalDataBase close];
+#pragma mark - Lazy Loading 
+- (FMDatabaseQueue *)sharedOperationQueue {
+    if (nil == _sharedOperationQueue) {
+        NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *dataBaseFullPath = [documentsPath stringByAppendingPathComponent:@"tutorial.db"];
+        _sharedOperationQueue = [[FMDatabaseQueue alloc] initWithPath:dataBaseFullPath];
+    }
+    return _sharedOperationQueue;
 }
 
 @end

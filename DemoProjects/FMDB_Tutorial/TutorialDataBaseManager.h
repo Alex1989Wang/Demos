@@ -11,7 +11,7 @@
 
 @interface TutorialDataBaseManager : NSObject
 
-@property (nonatomic, strong, readonly) FMDatabase *globalDataBase;
+@property (nonatomic, strong, readonly) FMDatabaseQueue *sharedOperationQueue;
 
 #pragma mark - 
 #pragma mark - Methods
@@ -20,21 +20,5 @@
  *
  */
 + (TutorialDataBaseManager *)sharedManager;
-
-
-/**
- *  Check whether the data base file exists or not?
- *  If not, create the data base file;
- *  Otherwise, connnect to the existing data base file;
- *  
- */
-- (BOOL)checkAndConnectSharedDataBase;
-
-
-/**
- *  Close data base;
- *
- */
-- (BOOL)closeSharedDataBase;
 
 @end
