@@ -8,6 +8,7 @@
 
 #import "CustomerViewController.h"
 #import "CutomersManager.h"
+#import "TutorialDataBaseManager.h"
 #import "Customer.h"
 
 #import <sqlite3.h>
@@ -49,17 +50,24 @@ void testStatementCaching();
     
     [NSTimer scheduledTimerWithTimeInterval:0.3
                                      target:self
-                                   selector:@selector(generateCustomers:) userInfo:nil
+                                   selector:@selector(generateCustomers:)
+                                   userInfo:nil
                                     repeats:YES];
     
     [NSTimer scheduledTimerWithTimeInterval:1.0
                                      target:self
-                                   selector:@selector(reloadTable) userInfo:nil
+                                   selector:@selector(reloadTable)
+                                   userInfo:nil
                                     repeats:YES];
     
     [NSTimer scheduledTimerWithTimeInterval:5.0
                                      target:self
                                    selector:@selector(deleteResults:)
+                                   userInfo:nil
+                                    repeats:YES];
+    [NSTimer scheduledTimerWithTimeInterval:3.0
+                                     target:self
+                                   selector:@selector(changeUserVersion:)
                                    userInfo:nil
                                     repeats:YES];
 }
@@ -81,6 +89,27 @@ void testStatementCaching();
         strSelf.customers = [customers mutableCopy];
         [strSelf.tableView reloadData];
     }];
+}
+
+- (void)changeUserVersion:(NSTimer *)changeVersionTimer {
+    BOOL isMainThread = arc4random() % 2;
+    uint32_t randomVersion = arc4random_uniform(3000);
+    if (isMainThread) {
+        NSLog(@"version operation in main thread with new version number: %d", randomVersion);
+        [[TutorialDataBaseManager sharedManager] logCurrentVersion];
+        [[TutorialDataBaseManager sharedManager] setCurrentVersion:randomVersion];
+        [[TutorialDataBaseManager sharedManager] logCurrentVersion];
+    }
+    else {
+        NSLog(@"version operation not in main thread with new version number: %d", randomVersion);
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),
+                       ^{
+                           [[TutorialDataBaseManager sharedManager] logCurrentVersion];
+                           [[TutorialDataBaseManager sharedManager] setCurrentVersion:randomVersion];
+                           [[TutorialDataBaseManager sharedManager] logCurrentVersion];
+                       });
+    }
+    
 }
 
 - (void)deleteResults:(NSTimer *)deleteTimer {

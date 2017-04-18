@@ -21,4 +21,7 @@
  */
 + (TutorialDataBaseManager *)sharedManager;
 
+- (void)logCurrentVersion;
+- (void)setCurrentVersion:(uint32_t)newVersion;
+
 @end

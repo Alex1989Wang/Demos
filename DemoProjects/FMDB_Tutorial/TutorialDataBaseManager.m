@@ -24,7 +24,26 @@
     return sharedManager;
 }
 
-#pragma mark - Lazy Loading 
+- (void)logCurrentVersion {
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *dataBaseFullPath = [documentsPath stringByAppendingPathComponent:@"tutorial.db"];
+    FMDatabase *databaseInUse = [[FMDatabase alloc] initWithPath:dataBaseFullPath];
+    [databaseInUse open];
+    NSLog(@"current version: %d", [databaseInUse userVersion]);
+    [databaseInUse close];
+}
+
+- (void)setCurrentVersion:(uint32_t)newVersion {
+    NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *dataBaseFullPath = [documentsPath stringByAppendingPathComponent:@"tutorial.db"];
+    FMDatabase *databaseInUse = [[FMDatabase alloc] initWithPath:dataBaseFullPath];
+    [databaseInUse open];
+    [databaseInUse setUserVersion:newVersion];
+    NSLog(@"set current version: %d", [databaseInUse userVersion]);
+    [databaseInUse close];
+}
+
+#pragma mark - Lazy Loading
 - (FMDatabaseQueue *)sharedOperationQueue {
     if (nil == _sharedOperationQueue) {
         NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
