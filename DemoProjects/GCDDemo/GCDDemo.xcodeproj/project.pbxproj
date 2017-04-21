@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC36AC2B1EA9EB23000BF798 /* NSOperationTester.m in Sources */ = {isa = PBXBuildFile; fileRef = AC36AC2A1EA9EB23000BF798 /* NSOperationTester.m */; };
 		C2C4FD7A1EA8FB5A00B9B1B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C4FD791EA8FB5A00B9B1B6 /* main.m */; };
 		C2C4FD7D1EA8FB5A00B9B1B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C4FD7C1EA8FB5A00B9B1B6 /* AppDelegate.m */; };
 		C2C4FD801EA8FB5A00B9B1B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C4FD7F1EA8FB5A00B9B1B6 /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC36AC291EA9EB23000BF798 /* NSOperationTester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOperationTester.h; sourceTree = "<group>"; };
+		AC36AC2A1EA9EB23000BF798 /* NSOperationTester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOperationTester.m; sourceTree = "<group>"; };
 		C2C4FD751EA8FB5A00B9B1B6 /* GCDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2C4FD791EA8FB5A00B9B1B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2C4FD7B1EA8FB5A00B9B1B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				C2C4FD7C1EA8FB5A00B9B1B6 /* AppDelegate.m */,
 				C2C4FD7E1EA8FB5A00B9B1B6 /* ViewController.h */,
 				C2C4FD7F1EA8FB5A00B9B1B6 /* ViewController.m */,
+				AC36AC291EA9EB23000BF798 /* NSOperationTester.h */,
+				AC36AC2A1EA9EB23000BF798 /* NSOperationTester.m */,
 				C2C4FD9D1EA8FC2600B9B1B6 /* GCDTester.h */,
 				C2C4FD9E1EA8FC2600B9B1B6 /* GCDTester.m */,
 				C2C4FD811EA8FB5A00B9B1B6 /* Main.storyboard */,
@@ -222,6 +227,7 @@
 				C2C4FD801EA8FB5A00B9B1B6 /* ViewController.m in Sources */,
 				C2C4FD7D1EA8FB5A00B9B1B6 /* AppDelegate.m in Sources */,
 				C2C4FD7A1EA8FB5A00B9B1B6 /* main.m in Sources */,
+				AC36AC2B1EA9EB23000BF798 /* NSOperationTester.m in Sources */,
 				C2C4FD9F1EA8FC2600B9B1B6 /* GCDTester.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +366,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VGT62P4UF6;
 				INFOPLIST_FILE = GCDDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.GCDDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -372,6 +379,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VGT62P4UF6;
 				INFOPLIST_FILE = GCDDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.GCDDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -421,6 +429,7 @@
 				C2C4FD991EA8FB5A00B9B1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2C4FD9A1EA8FB5A00B9B1B6 /* Build configuration list for PBXNativeTarget "GCDDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +438,7 @@
 				C2C4FD9C1EA8FB5A00B9B1B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

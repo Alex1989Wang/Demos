@@ -8,11 +8,12 @@
 
 #import "ViewController.h"
 #import "GCDTester.h"
+#import "NSOperationTester.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) GCDTester *gcdTester;
 @property (nonatomic, weak) UIButton *resetButton;
-
+@property (nonatomic, strong) NSOperationTester *operationTester;
 @end
 
 @implementation ViewController
@@ -24,15 +25,18 @@
     
     GCDTester *gcdTester = [[GCDTester alloc] init];
     self.gcdTester = gcdTester;
+    
+    NSOperationTester *operationTester = [[NSOperationTester alloc] init];
+    self.operationTester = operationTester;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self.gcdTester serialTest];
+    [self.operationTester concurrentTest];
 }
 
 - (void)clickToResetTest:(UIButton *)button {
-    [self.gcdTester serialTest];
+    [self.operationTester concurrentTest];
 }
 
 #pragma mark - Lazy Loading 
