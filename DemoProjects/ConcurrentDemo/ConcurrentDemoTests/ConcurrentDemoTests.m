@@ -1,18 +1,18 @@
 //
-//  GCDDemoTests.m
-//  GCDDemoTests
+//  ConcurrentDemoTests.m
+//  ConcurrentDemoTests
 //
-//  Created by JiangWang on 20/04/2017.
+//  Created by JiangWang on 23/04/2017.
 //  Copyright © 2017 JiangWang. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface GCDDemoTests : XCTestCase
+@interface ConcurrentDemoTests : XCTestCase
 
 @end
 
-@implementation GCDDemoTests
+@implementation ConcurrentDemoTests
 
 - (void)setUp {
     [super setUp];

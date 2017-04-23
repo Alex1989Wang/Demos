@@ -1,12 +1,13 @@
 //
 //  AppDelegate.m
-//  GCDDemo
+//  ConcurrentDemo
 //
-//  Created by JiangWang on 20/04/2017.
+//  Created by JiangWang on 23/04/2017.
 //  Copyright © 2017 JiangWang. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    CGRect screenBounds = [[UIScreen mainScreen] bounds];
+    UIWindow *mainWindow = [[UIWindow alloc] initWithFrame:screenBounds];
+    self.window = mainWindow;
+    
+    ViewController *mainViewCon = [[ViewController alloc] init];
+    UINavigationController *naviCon = [[UINavigationController alloc] init];
+    [naviCon pushViewController:mainViewCon animated:YES];
+    mainWindow.rootViewController = naviCon;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

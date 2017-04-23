@@ -1,8 +1,8 @@
 //
 //  main.m
-//  GCDDemo
+//  ConcurrentDemo
 //
-//  Created by JiangWang on 20/04/2017.
+//  Created by JiangWang on 23/04/2017.
 //  Copyright © 2017 JiangWang. All rights reserved.
 //
 

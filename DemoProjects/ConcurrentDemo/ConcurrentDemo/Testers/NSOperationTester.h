@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface NSOperationTester : NSObject
-
+- (void)serialTest;
 - (void)concurrentTest;
 @end
