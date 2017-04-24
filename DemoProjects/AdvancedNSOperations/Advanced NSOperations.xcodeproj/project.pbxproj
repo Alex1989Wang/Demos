@@ -342,6 +342,7 @@
 				TargetAttributes = {
 					551B9BDC1AEB1C9700302388 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = Y39R442P5T;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -544,9 +545,10 @@
 				CODE_SIGN_ENTITLEMENTS = Earthquakes/Earthquakes.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y39R442P5T;
 				INFOPLIST_FILE = Earthquakes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.samplecode.Earthquakes;
 				PRODUCT_NAME = Earthquakes;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -560,9 +562,10 @@
 				CODE_SIGN_ENTITLEMENTS = Earthquakes/Earthquakes.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y39R442P5T;
 				INFOPLIST_FILE = Earthquakes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.samplecode.Earthquakes;
 				PRODUCT_NAME = Earthquakes;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
