@@ -8,6 +8,6 @@
 
 #import "ViewController.h"
 
-@interface DeallocationProblemViewController : ViewController
+@interface DeallocationProblemViewController : UIViewController
 
 @end

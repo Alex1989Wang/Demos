@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC70DFDD1EB08A48000811B5 /* TestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70DFDC1EB08A48000811B5 /* TestOperation.m */; };
+		AC70DFE01EB0950D000811B5 /* TestAnswersOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70DFDF1EB0950D000811B5 /* TestAnswersOperation.m */; };
+		AC70DFE31EB09BD5000811B5 /* TestAnswersAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70DFE21EB09BD5000811B5 /* TestAnswersAPIManager.m */; };
+		AC70DFE71EB09D48000811B5 /* TestOperationQueueManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70DFE61EB09D48000811B5 /* TestOperationQueueManager.m */; };
+		AC70DFED1EB19378000811B5 /* TestSynchronusOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70DFEC1EB19378000811B5 /* TestSynchronusOperation.m */; };
+		AC70DFF01EB1C386000811B5 /* TestAsynchronousOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AC70DFEF1EB1C386000811B5 /* TestAsynchronousOperation.m */; };
 		C248EF5B1EACF13200574088 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C248EF5A1EACF13200574088 /* main.m */; };
 		C248EF5E1EACF13200574088 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C248EF5D1EACF13200574088 /* AppDelegate.m */; };
 		C248EF611EACF13200574088 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C248EF601EACF13200574088 /* ViewController.m */; };
@@ -29,6 +35,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC70DFDB1EB08A48000811B5 /* TestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOperation.h; sourceTree = "<group>"; };
+		AC70DFDC1EB08A48000811B5 /* TestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOperation.m; sourceTree = "<group>"; };
+		AC70DFDE1EB0950D000811B5 /* TestAnswersOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnswersOperation.h; sourceTree = "<group>"; };
+		AC70DFDF1EB0950D000811B5 /* TestAnswersOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAnswersOperation.m; sourceTree = "<group>"; };
+		AC70DFE11EB09BD5000811B5 /* TestAnswersAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAnswersAPIManager.h; sourceTree = "<group>"; };
+		AC70DFE21EB09BD5000811B5 /* TestAnswersAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAnswersAPIManager.m; sourceTree = "<group>"; };
+		AC70DFE41EB09C69000811B5 /* TypeDefineConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TypeDefineConstants.h; sourceTree = "<group>"; };
+		AC70DFE51EB09D48000811B5 /* TestOperationQueueManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOperationQueueManager.h; sourceTree = "<group>"; };
+		AC70DFE61EB09D48000811B5 /* TestOperationQueueManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOperationQueueManager.m; sourceTree = "<group>"; };
+		AC70DFEB1EB19378000811B5 /* TestSynchronusOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSynchronusOperation.h; sourceTree = "<group>"; };
+		AC70DFEC1EB19378000811B5 /* TestSynchronusOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSynchronusOperation.m; sourceTree = "<group>"; };
+		AC70DFEE1EB1C386000811B5 /* TestAsynchronousOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestAsynchronousOperation.h; sourceTree = "<group>"; };
+		AC70DFEF1EB1C386000811B5 /* TestAsynchronousOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestAsynchronousOperation.m; sourceTree = "<group>"; };
 		C248EF561EACF13200574088 /* ConcurrentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConcurrentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C248EF5A1EACF13200574088 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C248EF5C1EACF13200574088 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +114,19 @@
 				C248EF601EACF13200574088 /* ViewController.m */,
 				C248EF851EACF28000574088 /* DeallocationProblemViewController.h */,
 				C248EF861EACF28000574088 /* DeallocationProblemViewController.m */,
+				AC70DFDB1EB08A48000811B5 /* TestOperation.h */,
+				AC70DFDC1EB08A48000811B5 /* TestOperation.m */,
+				AC70DFDE1EB0950D000811B5 /* TestAnswersOperation.h */,
+				AC70DFDF1EB0950D000811B5 /* TestAnswersOperation.m */,
+				AC70DFE11EB09BD5000811B5 /* TestAnswersAPIManager.h */,
+				AC70DFE21EB09BD5000811B5 /* TestAnswersAPIManager.m */,
+				AC70DFE51EB09D48000811B5 /* TestOperationQueueManager.h */,
+				AC70DFE61EB09D48000811B5 /* TestOperationQueueManager.m */,
+				AC70DFEE1EB1C386000811B5 /* TestAsynchronousOperation.h */,
+				AC70DFEF1EB1C386000811B5 /* TestAsynchronousOperation.m */,
+				AC70DFEB1EB19378000811B5 /* TestSynchronusOperation.h */,
+				AC70DFEC1EB19378000811B5 /* TestSynchronusOperation.m */,
+				AC70DFE41EB09C69000811B5 /* TypeDefineConstants.h */,
 				C248EF651EACF13200574088 /* Assets.xcassets */,
 				C248EF671EACF13200574088 /* LaunchScreen.storyboard */,
 				C248EF6A1EACF13200574088 /* Info.plist */,
@@ -233,10 +265,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC70DFE31EB09BD5000811B5 /* TestAnswersAPIManager.m in Sources */,
 				C248EF611EACF13200574088 /* ViewController.m in Sources */,
 				C248EF5E1EACF13200574088 /* AppDelegate.m in Sources */,
+				AC70DFE71EB09D48000811B5 /* TestOperationQueueManager.m in Sources */,
+				AC70DFED1EB19378000811B5 /* TestSynchronusOperation.m in Sources */,
 				C248EF5B1EACF13200574088 /* main.m in Sources */,
+				AC70DFDD1EB08A48000811B5 /* TestOperation.m in Sources */,
+				AC70DFF01EB1C386000811B5 /* TestAsynchronousOperation.m in Sources */,
 				C248EF871EACF28000574088 /* DeallocationProblemViewController.m in Sources */,
+				AC70DFE01EB0950D000811B5 /* TestAnswersOperation.m in Sources */,
 				C248EF841EACF1BD00574088 /* NSOperationTester.m in Sources */,
 				C248EF831EACF1BD00574088 /* GCDTester.m in Sources */,
 			);
@@ -431,6 +469,7 @@
 				C248EF7A1EACF13200574088 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C248EF7B1EACF13200574088 /* Build configuration list for PBXNativeTarget "ConcurrentDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +478,7 @@
 				C248EF7D1EACF13200574088 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
