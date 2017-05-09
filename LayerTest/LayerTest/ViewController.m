@@ -36,12 +36,32 @@
     [self cornerRadiusTestView];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self explicitAnimationTest];
+}
+
 - (void)testImage {
     //test image
     NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"KVO-KVC" ofType:@"png"];
     UIImage *testImage = [UIImage imageWithContentsOfFile:imagePath];
     LayerTestView *testView = (LayerTestView *)self.view;
     testView.image = testImage;
+}
+
+- (void)explicitAnimationTest {
+    //explicit animation won't change the animated value when it ends;
+    //if you want to change the animated value to the end value; you have to
+    //to set it explicitly to keep the effect permanant.
+    CABasicAnimation *basicAni = [[CABasicAnimation alloc] init];
+    basicAni.keyPath = @"opacity";
+    basicAni.fromValue = [NSNumber numberWithFloat:self.cornerRadiusTestView.layer.opacity];
+    basicAni.toValue = [NSNumber numberWithFloat:0.f];
+    basicAni.duration = 1.f;
+    [self.cornerRadiusTestView.layer addAnimation:basicAni forKey:@"opacity"];
+    
+    //final value
+//    self.cornerRadiusTestView.layer.opacity = 0.f;
 }
 
 - (UIView *)cornerRadiusTestView {
