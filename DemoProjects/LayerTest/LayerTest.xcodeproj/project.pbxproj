@@ -109,14 +109,14 @@
 				AC5A4B8A1EC15BA300B389C6 /* AppDelegate.h */,
 				AC5A4B8B1EC15BA300B389C6 /* AppDelegate.m */,
 				AC5A4B8D1EC15BA300B389C6 /* ViewController.h */,
-				AC5A4BBD1EC1611400B389C6 /* KVO-KVC.png */,
-				AC5A4BBF1EC16B3B00B389C6 /* jack.jpg */,
 				AC5A4B8E1EC15BA300B389C6 /* ViewController.m */,
 				AC5A4BBA1EC15CBE00B389C6 /* LayerTestView.h */,
 				AC5A4BBB1EC15CBE00B389C6 /* LayerTestView.m */,
 				AC5A4B931EC15BA300B389C6 /* Assets.xcassets */,
 				AC5A4B951EC15BA300B389C6 /* LaunchScreen.storyboard */,
 				AC5A4B981EC15BA300B389C6 /* Info.plist */,
+				AC5A4BBD1EC1611400B389C6 /* KVO-KVC.png */,
+				AC5A4BBF1EC16B3B00B389C6 /* jack.jpg */,
 				AC5A4B871EC15BA300B389C6 /* Supporting Files */,
 			);
 			path = LayerTest;
@@ -518,6 +518,7 @@
 				AC5A4BB31EC15BA300B389C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC5A4BB41EC15BA300B389C6 /* Build configuration list for PBXNativeTarget "LayerTestTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +527,7 @@
 				AC5A4BB61EC15BA300B389C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC5A4BB71EC15BA300B389C6 /* Build configuration list for PBXNativeTarget "LayerTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				AC5A4BB91EC15BA300B389C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -38,7 +38,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self explicitAnimationTest];
+//    [self explicitAnimationTest];
+//    [self keyFrameAnimationTest];
+    [self implicitAndExplicitAnimationMixture];
 }
 
 - (void)testImage {
@@ -62,6 +64,43 @@
     
     //final value
 //    self.cornerRadiusTestView.layer.opacity = 0.f;
+}
+
+- (void)implicitAndExplicitAnimationMixture {
+    [UIView animateWithDuration:1.0
+                     animations:
+     ^{
+         self.cornerRadiusTestView.layer.opacity = 0.5;
+         
+         CABasicAnimation *positionAni = [CABasicAnimation animationWithKeyPath:@"position"];
+         CGPoint oldPoint = self.cornerRadiusTestView.layer.position;
+         positionAni.fromValue = [NSValue valueWithCGPoint:oldPoint];
+         CGPoint newPoint = CGPointMake(oldPoint.x + 100, oldPoint.y + 100);
+         positionAni.toValue = [NSValue valueWithCGPoint:newPoint];
+         positionAni.duration = 3.f;
+         [self.cornerRadiusTestView.layer addAnimation:positionAni forKey:@"position_animation"];
+     }];
+}
+
+- (void)keyFrameAnimationTest {
+    //key frame animation one
+    CAKeyframeAnimation *animationOne = [CAKeyframeAnimation animationWithKeyPath:@"borderWidth"];
+    animationOne.values = @[@1.0, @10.0, @5.0, @30.0, @0.5, @15.0, @2.0,
+                            @50.0, @0.0];
+    animationOne.calculationMode = kCAAnimationPaced;
+    
+    //key frame animation two
+    CAKeyframeAnimation *animationTwo = [CAKeyframeAnimation animationWithKeyPath:@"borderColor"];
+    animationTwo.values = @[(id)[UIColor greenColor].CGColor,
+                            (id)[UIColor redColor].CGColor, (id)[UIColor blueColor].CGColor];
+    animationTwo.calculationMode = kCAAnimationPaced;
+    
+    //group
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.animations = @[animationOne, animationTwo];
+    animationGroup.duration = 5.f;
+    
+    [self.cornerRadiusTestView.layer addAnimation:animationGroup forKey:@"border_change"];
 }
 
 - (UIView *)cornerRadiusTestView {
