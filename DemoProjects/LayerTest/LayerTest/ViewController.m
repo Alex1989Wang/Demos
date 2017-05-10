@@ -11,6 +11,11 @@
 
 @interface ViewController ()
 @property (nonatomic, weak) UIView *cornerRadiusTestView;
+
+@property (nonatomic, weak) UIView *transTestOne;
+@property (nonatomic, weak) UIView *transTestTwo;
+
+@property (nonatomic, weak) UIButton *pushButton;
 @end
 
 @implementation ViewController
@@ -34,13 +39,18 @@
     
     //test corner radius
     [self cornerRadiusTestView];
+    [self transTestOne];
+//    [self transTestTwo];
+    [self pushButton];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 //    [self explicitAnimationTest];
 //    [self keyFrameAnimationTest];
-    [self implicitAndExplicitAnimationMixture];
+//    [self implicitAndExplicitAnimationMixture];
+//    [self transitionTest];
+    [self autoReverseAnimation];
 }
 
 - (void)testImage {
@@ -103,6 +113,75 @@
     [self.cornerRadiusTestView.layer addAnimation:animationGroup forKey:@"border_change"];
 }
 
+- (void)transitionTest {
+    if (!self.transTestOne.hidden &&
+        self.transTestTwo.hidden) {
+        self.transTestOne.hidden = NO;
+        self.transTestTwo.hidden = NO;
+    }
+   
+    CIFilter* aFilter = [CIFilter filterWithName:@"CIBarsSwipeTransition"];
+    [aFilter setValue:[NSNumber numberWithFloat:3.14] forKey:@"inputAngle"];
+    [aFilter setValue:[NSNumber numberWithFloat:30.0] forKey:@"inputWidth"];
+    [aFilter setValue:[NSNumber numberWithFloat:10.0] forKey:@"inputBarOffset"];
+    
+    CATransition *pushTrans = [CATransition animation];
+    pushTrans.startProgress = 0.0;
+    pushTrans.endProgress = 1.0;
+    pushTrans.filter = aFilter;
+    pushTrans.duration = 1.0f;
+    
+    [self.transTestTwo setHidden:NO];
+    [self.transTestOne.layer addAnimation:pushTrans forKey:@"transition"];
+    [self.transTestTwo.layer addAnimation:pushTrans forKey:@"transition"];
+    
+    //final values
+    [self.transTestOne setHidden:YES];
+}
+
+- (void)pushButtonDidClick:(UIButton *)pushButton {
+//    [self transitionTest];
+    if (fpclassify(self.transTestOne.layer.speed) == FP_ZERO) {
+        [self resumeAnimation];
+    }
+    else {
+        [self animationPause];
+    }
+}
+
+- (void)autoReverseAnimation {
+    CABasicAnimation *basicAnimation = [CABasicAnimation animation];
+    basicAnimation.keyPath = @"position";
+    CGPoint originalPosition = self.transTestOne.layer.position;
+    basicAnimation.fromValue = [NSValue valueWithCGPoint:originalPosition];
+    originalPosition.y += 200;
+    basicAnimation.toValue = [NSValue valueWithCGPoint:originalPosition];
+    basicAnimation.autoreverses = YES;
+    basicAnimation.duration = 1.5f;
+    basicAnimation.repeatCount = CGFLOAT_MAX;
+    
+    [self.transTestOne.layer addAnimation:basicAnimation forKey:@"position_animation"];
+}
+
+- (void)animationPause {
+    self.transTestOne.layer.speed = 0.f;
+    CFTimeInterval pausedTime = [self.transTestOne.layer convertTime:CACurrentMediaTime()
+                                                             toLayer:nil];
+    self.transTestOne.layer.timeOffset = pausedTime;
+}
+
+- (void)resumeAnimation {
+    CFTimeInterval pausedTime = [self.transTestOne.layer timeOffset];
+    self.transTestOne.layer.speed = 1.f;
+    self.transTestOne.layer.beginTime = 0.f;
+    self.transTestOne.layer.timeOffset = 0.f;
+    CFTimeInterval currentTime = [self.transTestOne.layer convertTime:CACurrentMediaTime()
+                                                              toLayer:nil];
+    CFTimeInterval timeSincePaused = (currentTime - pausedTime);
+    self.transTestOne.layer.beginTime = timeSincePaused;
+}
+
+#pragma mark - Lazy Loading 
 - (UIView *)cornerRadiusTestView {
     if (nil == _cornerRadiusTestView) {
         UIView *cornerTestView  = [[UIView alloc] init];
@@ -130,6 +209,48 @@
          */
     }
     return _cornerRadiusTestView;
+}
+
+- (UIView *)transTestOne {
+    if (nil == _transTestOne) {
+        UIView *transTestOne = [[UIView alloc] init];
+        _transTestOne = transTestOne;
+        CGRect transRect = CGRectMake(200, 200, 150, 150);
+        transTestOne.frame = transRect;
+        [self.view addSubview:transTestOne];
+        
+        transTestOne.backgroundColor = [UIColor yellowColor];
+    }
+    return _transTestOne;
+}
+
+
+- (UIView *)transTestTwo {
+    if (nil == _transTestTwo) {
+        UIView *transTestTwo = [[UIView alloc] init];
+        _transTestTwo = transTestTwo;
+        CGRect transRect = CGRectMake(200, 200, 150, 150);
+        transTestTwo.frame = transRect;
+        [self.view addSubview:transTestTwo];
+        
+        transTestTwo.backgroundColor = [UIColor redColor];
+    }
+    return _transTestTwo;
+}
+
+- (UIButton *)pushButton {
+    if (nil == _pushButton) {
+        UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        pushButton.frame = CGRectMake(175, 400, 80, 40);
+        _pushButton = pushButton;
+        [self.view addSubview:pushButton];
+        
+        [pushButton setTitle:@"Click To Push" forState:UIControlStateNormal];
+        [pushButton addTarget:self
+                       action:@selector(pushButtonDidClick:)
+             forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _pushButton;
 }
 
 @end
