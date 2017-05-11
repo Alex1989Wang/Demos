@@ -50,7 +50,8 @@
 //    [self keyFrameAnimationTest];
 //    [self implicitAndExplicitAnimationMixture];
 //    [self transitionTest];
-    [self autoReverseAnimation];
+//    [self autoReverseAnimation];
+//    [self transactionTest];
 }
 
 - (void)testImage {
@@ -141,12 +142,14 @@
 
 - (void)pushButtonDidClick:(UIButton *)pushButton {
 //    [self transitionTest];
-    if (fpclassify(self.transTestOne.layer.speed) == FP_ZERO) {
-        [self resumeAnimation];
-    }
-    else {
-        [self animationPause];
-    }
+//    if (fpclassify(self.transTestOne.layer.speed) == FP_ZERO) {
+//        [self resumeAnimation];
+//    }
+//    else {
+//        [self animationPause];
+//    }
+//    [self transactionTest];
+    [self implicitLayerAnimation];
 }
 
 - (void)autoReverseAnimation {
@@ -179,6 +182,53 @@
                                                               toLayer:nil];
     CFTimeInterval timeSincePaused = (currentTime - pausedTime);
     self.transTestOne.layer.beginTime = timeSincePaused;
+}
+
+- (void)transactionTest {
+    self.transTestOne.layer.opacity = 0.5f;
+    
+    [CATransaction begin];
+    CAMediaTimingFunction *timingFunc = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [CATransaction setAnimationDuration:2.f];
+    [CATransaction setAnimationTimingFunction:timingFunc];
+    [CATransaction setCompletionBlock:^{
+        NSLog(@"transaction finished.");
+        //subsequently added animations
+    }];
+    NSLog(@"transaction began");
+    CGPoint originalPos = self.transTestOne.layer.position;
+    self.transTestOne.layer.backgroundColor = [UIColor greenColor].CGColor;
+    CABasicAnimation *basicAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+    basicAnimation.fromValue = [NSValue valueWithCGPoint:originalPos];
+    basicAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(originalPos.x, originalPos.y + 200)];
+    [self.transTestOne.layer addAnimation:basicAnimation forKey:@"position_animation"];
+    [CATransaction commit];
+}
+
+- (void)implicitLayerAnimation {
+    LayerTestView *testView = (LayerTestView *)self.view;
+    CALayer *animationLayer = testView.animationLayer;
+    
+    if (CGColorEqualToColor(animationLayer.backgroundColor, [UIColor purpleColor].CGColor)) {
+        [CATransaction begin];
+        NSLog(@"transaction began");
+        [CATransaction setCompletionBlock:^{
+            NSLog(@"transaction ended.");
+        }];
+        [CATransaction setDisableActions:YES];
+        animationLayer.backgroundColor = [UIColor blueColor].CGColor;
+        [CATransaction commit];
+    }
+    else {
+        [CATransaction begin];
+        NSLog(@"transaction began");
+        [CATransaction setCompletionBlock:^{
+            NSLog(@"transaction ended.");
+        }];
+        [CATransaction setAnimationDuration:2.0];
+        animationLayer.backgroundColor = [UIColor purpleColor].CGColor;
+        [CATransaction commit];
+    }
 }
 
 #pragma mark - Lazy Loading 

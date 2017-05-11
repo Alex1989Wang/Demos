@@ -11,6 +11,7 @@
 @interface LayerTestView()
 @property (nonatomic, weak) CALayer *imageLayer;
 @property (nonatomic, weak) CALayer *delegateLayer;
+@property (nonatomic, weak) CALayer *animationLayer;
 @end
 
 @implementation LayerTestView
@@ -25,7 +26,7 @@
 
 - (void)addLayerHierachy {
     [self imageLayer];
-    [self delegateLayer];
+    [self animationLayer];
 }
 
 - (void)setImage:(UIImage *)image {
@@ -39,7 +40,7 @@
 - (void)layoutSublayersOfLayer:(CALayer *)layer {
     if (layer == self.layer) {
         self.imageLayer.frame = self.layer.bounds;
-        self.delegateLayer.frame = CGRectInset(self.layer.bounds, 50, 50);
+        self.animationLayer.frame = CGRectInset(self.layer.bounds, 50, 50);
     }
 }
 
@@ -80,6 +81,16 @@
 //        delegateLayer.delegate = self;
     }
     return _delegateLayer;
+}
+
+- (CALayer *)animationLayer {
+    if (_animationLayer == nil) {
+        CALayer *layer = [[CALayer alloc] init];
+        layer.backgroundColor = [UIColor blueColor].CGColor;
+        _animationLayer = layer;
+        [self.layer addSublayer:layer];
+    }
+    return _animationLayer;
 }
 
 @end

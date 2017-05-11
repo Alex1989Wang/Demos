@@ -17,6 +17,7 @@
 @interface LayerTestView : UIView
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, weak) id<LayerTestViewDelegate> delegate;
+@property (nonatomic, weak, readonly) CALayer *animationLayer;
 
 /**
  override init method
