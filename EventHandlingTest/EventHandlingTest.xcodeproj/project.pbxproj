@@ -14,6 +14,8 @@
 		AC5A4BDD1EC4531200B389C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC5A4BDB1EC4531200B389C6 /* LaunchScreen.storyboard */; };
 		AC5A4BE81EC4531200B389C6 /* EventHandlingTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5A4BE71EC4531200B389C6 /* EventHandlingTestTests.m */; };
 		AC5A4BF31EC4531200B389C6 /* EventHandlingTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5A4BF21EC4531200B389C6 /* EventHandlingTestUITests.m */; };
+		C2E89ADC1EC5552900D6AD59 /* CheckGuestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E89ADB1EC5552900D6AD59 /* CheckGuestureRecognizer.m */; };
+		C2E89ADF1EC56A9600D6AD59 /* MultiTouchDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E89ADE1EC56A9600D6AD59 /* MultiTouchDemoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		AC5A4BEE1EC4531200B389C6 /* EventHandlingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventHandlingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC5A4BF21EC4531200B389C6 /* EventHandlingTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventHandlingTestUITests.m; sourceTree = "<group>"; };
 		AC5A4BF41EC4531200B389C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2E89ADA1EC5552900D6AD59 /* CheckGuestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckGuestureRecognizer.h; sourceTree = "<group>"; };
+		C2E89ADB1EC5552900D6AD59 /* CheckGuestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckGuestureRecognizer.m; sourceTree = "<group>"; };
+		C2E89ADD1EC56A9600D6AD59 /* MultiTouchDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiTouchDemoView.h; sourceTree = "<group>"; };
+		C2E89ADE1EC56A9600D6AD59 /* MultiTouchDemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiTouchDemoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,10 @@
 				AC5A4BD11EC4531100B389C6 /* AppDelegate.m */,
 				AC5A4BD31EC4531100B389C6 /* ViewController.h */,
 				AC5A4BD41EC4531100B389C6 /* ViewController.m */,
+				C2E89ADA1EC5552900D6AD59 /* CheckGuestureRecognizer.h */,
+				C2E89ADB1EC5552900D6AD59 /* CheckGuestureRecognizer.m */,
+				C2E89ADD1EC56A9600D6AD59 /* MultiTouchDemoView.h */,
+				C2E89ADE1EC56A9600D6AD59 /* MultiTouchDemoView.m */,
 				AC5A4BD91EC4531200B389C6 /* Assets.xcassets */,
 				AC5A4BDB1EC4531200B389C6 /* LaunchScreen.storyboard */,
 				AC5A4BDE1EC4531200B389C6 /* Info.plist */,
@@ -274,6 +284,8 @@
 			files = (
 				AC5A4BD51EC4531100B389C6 /* ViewController.m in Sources */,
 				AC5A4BD21EC4531100B389C6 /* AppDelegate.m in Sources */,
+				C2E89ADC1EC5552900D6AD59 /* CheckGuestureRecognizer.m in Sources */,
+				C2E89ADF1EC56A9600D6AD59 /* MultiTouchDemoView.m in Sources */,
 				AC5A4BCF1EC4531100B389C6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +516,7 @@
 				AC5A4BF91EC4531200B389C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC5A4BFA1EC4531200B389C6 /* Build configuration list for PBXNativeTarget "EventHandlingTestTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +525,7 @@
 				AC5A4BFC1EC4531200B389C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC5A4BFD1EC4531200B389C6 /* Build configuration list for PBXNativeTarget "EventHandlingTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +534,7 @@
 				AC5A4BFF1EC4531200B389C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
