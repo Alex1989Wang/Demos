@@ -221,17 +221,17 @@
     }
     else {
         [CATransaction begin];
-        NSLog(@"transaction began");
-        [CATransaction setCompletionBlock:^{
-            NSLog(@"transaction ended.");
-        }];
         [CATransaction setAnimationDuration:2.0];
+        NSLog(@"animation timing function: %@", [CATransaction animationTimingFunction]);
         animationLayer.backgroundColor = [UIColor purpleColor].CGColor;
+        NSLog(@"CAActions: %@", animationLayer.presentationLayer.actions);
+        NSLog(@"animation timing function: %@", [CATransaction animationTimingFunction]);
         [CATransaction commit];
+        NSLog(@"CAActions: %@", animationLayer.actions);
     }
 }
 
-#pragma mark - Lazy Loading 
+#pragma mark - Lazy Loading
 - (UIView *)cornerRadiusTestView {
     if (nil == _cornerRadiusTestView) {
         UIView *cornerTestView  = [[UIView alloc] init];
