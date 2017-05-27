@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C2DD281C1ED8176F00B27553 /* NSRunLoopNewUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DD281B1ED8176F00B27553 /* NSRunLoopNewUnitTest.m */; };
 		C2E9300D1ED570740073ED8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9300C1ED570740073ED8A /* main.m */; };
 		C2E930101ED570740073ED8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9300F1ED570740073ED8A /* AppDelegate.m */; };
 		C2E930131ED570740073ED8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E930121ED570740073ED8A /* ViewController.m */; };
 		C2E930161ED570740073ED8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E930141ED570740073ED8A /* Main.storyboard */; };
 		C2E930181ED570740073ED8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2E930171ED570740073ED8A /* Assets.xcassets */; };
 		C2E9301B1ED570740073ED8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E930191ED570740073ED8A /* LaunchScreen.storyboard */; };
-		C2E930261ED570750073ED8A /* NSRunLoopTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E930251ED570750073ED8A /* NSRunLoopTestTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C2DD281E1ED8176F00B27553 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2E930001ED570740073ED8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2E930071ED570740073ED8A;
+			remoteInfo = NSRunLoopTest;
+		};
 		C2E930221ED570750073ED8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C2E930001ED570740073ED8A /* Project object */;
@@ -27,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C2DD28191ED8176F00B27553 /* NSRunLoopNewUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSRunLoopNewUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2DD281B1ED8176F00B27553 /* NSRunLoopNewUnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRunLoopNewUnitTest.m; sourceTree = "<group>"; };
+		C2DD281D1ED8176F00B27553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E930081ED570740073ED8A /* NSRunLoopTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSRunLoopTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E9300C1ED570740073ED8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2E9300E1ED570740073ED8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,11 +48,16 @@
 		C2E9301A1ED570740073ED8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2E9301C1ED570740073ED8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2E930211ED570750073ED8A /* NSRunLoopTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSRunLoopTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2E930251ED570750073ED8A /* NSRunLoopTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRunLoopTestTests.m; sourceTree = "<group>"; };
-		C2E930271ED570750073ED8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C2DD28161ED8176F00B27553 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2E930051ED570740073ED8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,11 +75,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2DD281A1ED8176F00B27553 /* NSRunLoopNewUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				C2DD281B1ED8176F00B27553 /* NSRunLoopNewUnitTest.m */,
+				C2DD281D1ED8176F00B27553 /* Info.plist */,
+			);
+			path = NSRunLoopNewUnitTest;
+			sourceTree = "<group>";
+		};
 		C2E92FFF1ED570740073ED8A = {
 			isa = PBXGroup;
 			children = (
 				C2E9300A1ED570740073ED8A /* NSRunLoopTest */,
-				C2E930241ED570750073ED8A /* NSRunLoopTestTests */,
+				C2DD281A1ED8176F00B27553 /* NSRunLoopNewUnitTest */,
 				C2E930091ED570740073ED8A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +98,7 @@
 			children = (
 				C2E930081ED570740073ED8A /* NSRunLoopTest.app */,
 				C2E930211ED570750073ED8A /* NSRunLoopTestTests.xctest */,
+				C2DD28191ED8176F00B27553 /* NSRunLoopNewUnitTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,18 +127,27 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C2E930241ED570750073ED8A /* NSRunLoopTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				C2E930251ED570750073ED8A /* NSRunLoopTestTests.m */,
-				C2E930271ED570750073ED8A /* Info.plist */,
-			);
-			path = NSRunLoopTestTests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C2DD28181ED8176F00B27553 /* NSRunLoopNewUnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2DD28221ED8176F00B27553 /* Build configuration list for PBXNativeTarget "NSRunLoopNewUnitTest" */;
+			buildPhases = (
+				C2DD28151ED8176F00B27553 /* Sources */,
+				C2DD28161ED8176F00B27553 /* Frameworks */,
+				C2DD28171ED8176F00B27553 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2DD281F1ED8176F00B27553 /* PBXTargetDependency */,
+			);
+			name = NSRunLoopNewUnitTest;
+			productName = NSRunLoopNewUnitTest;
+			productReference = C2DD28191ED8176F00B27553 /* NSRunLoopNewUnitTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C2E930071ED570740073ED8A /* NSRunLoopTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2E9302A1ED570750073ED8A /* Build configuration list for PBXNativeTarget "NSRunLoopTest" */;
@@ -158,8 +192,15 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = JiangWang;
 				TargetAttributes = {
+					C2DD28181ED8176F00B27553 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = VGT62P4UF6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C2E930071ED570740073ED8A;
+					};
 					C2E930071ED570740073ED8A = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = VGT62P4UF6;
 						ProvisioningStyle = Automatic;
 					};
 					C2E930201ED570750073ED8A = {
@@ -184,11 +225,19 @@
 			targets = (
 				C2E930071ED570740073ED8A /* NSRunLoopTest */,
 				C2E930201ED570750073ED8A /* NSRunLoopTestTests */,
+				C2DD28181ED8176F00B27553 /* NSRunLoopNewUnitTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C2DD28171ED8176F00B27553 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2E930061ED570740073ED8A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,6 +258,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C2DD28151ED8176F00B27553 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2DD281C1ED8176F00B27553 /* NSRunLoopNewUnitTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C2E930041ED570740073ED8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,13 +280,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E930261ED570750073ED8A /* NSRunLoopTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		C2DD281F1ED8176F00B27553 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2E930071ED570740073ED8A /* NSRunLoopTest */;
+			targetProxy = C2DD281E1ED8176F00B27553 /* PBXContainerItemProxy */;
+		};
 		C2E930231ED570750073ED8A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C2E930071ED570740073ED8A /* NSRunLoopTest */;
@@ -257,6 +318,32 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C2DD28201ED8176F00B27553 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VGT62P4UF6;
+				INFOPLIST_FILE = NSRunLoopNewUnitTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.NSRunLoopNewUnitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSRunLoopTest.app/NSRunLoopTest";
+			};
+			name = Debug;
+		};
+		C2DD28211ED8176F00B27553 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VGT62P4UF6;
+				INFOPLIST_FILE = NSRunLoopNewUnitTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.NSRunLoopNewUnitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSRunLoopTest.app/NSRunLoopTest";
+			};
+			name = Release;
+		};
 		C2E930281ED570750073ED8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -351,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VGT62P4UF6;
 				INFOPLIST_FILE = NSRunLoopTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -363,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VGT62P4UF6;
 				INFOPLIST_FILE = NSRunLoopTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -398,6 +487,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C2DD28221ED8176F00B27553 /* Build configuration list for PBXNativeTarget "NSRunLoopNewUnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2DD28201ED8176F00B27553 /* Debug */,
+				C2DD28211ED8176F00B27553 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C2E930031ED570740073ED8A /* Build configuration list for PBXProject "NSRunLoopTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -414,6 +512,7 @@
 				C2E9302C1ED570750073ED8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2E9302D1ED570750073ED8A /* Build configuration list for PBXNativeTarget "NSRunLoopTestTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +521,7 @@
 				C2E9302F1ED570750073ED8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
