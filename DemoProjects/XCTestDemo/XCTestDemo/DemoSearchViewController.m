@@ -7,6 +7,7 @@
 //
 
 #import "DemoSearchViewController.h"
+#import "DemoSearchManager.h"
 
 @interface DemoSearchViewController ()
 <UISearchBarDelegate,
@@ -60,6 +61,19 @@ static const CGFloat SearchBarHeight = 44.f;
         
     }
     return cell;
+}
+
+//did click the search 
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    NSCharacterSet *blankSets = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *searchText = [searchBar.text stringByTrimmingCharactersInSet:blankSets];
+    if (searchText.length) {
+        [[DemoSearchManager sharedManager] getUserInfoWithUserName:searchText
+                                                         completed:
+         ^(NSData *userInfoData) {
+             NSLog(@"user info dictionary: %@", userInfoData);
+         }];
+    }
 }
 
 #pragma mark - Lazy Loading

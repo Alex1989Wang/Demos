@@ -14,6 +14,8 @@
 		C29D3BB91EDB209900178FE6 /* XCTestDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BB81EDB209900178FE6 /* XCTestDemoUITests.m */; };
 		C29D3BC81EDB211100178FE6 /* DemoSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BC71EDB211100178FE6 /* DemoSearchViewController.m */; };
 		C29D3BCA1EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BC91EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m */; };
+		C29D3BCC1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BCB1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m */; };
+		C29D3BCF1EDBD8AE00178FE6 /* DemoSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BCE1EDBD8AE00178FE6 /* DemoSearchManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		C29D3BC61EDB211100178FE6 /* DemoSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSearchViewController.h; sourceTree = "<group>"; };
 		C29D3BC71EDB211100178FE6 /* DemoSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSearchViewController.m; sourceTree = "<group>"; };
 		C29D3BC91EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestDemoSynchronousTests.m; sourceTree = "<group>"; };
+		C29D3BCB1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestDemoAsynchronousTests.m; sourceTree = "<group>"; };
+		C29D3BCD1EDBD8AE00178FE6 /* DemoSearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSearchManager.h; sourceTree = "<group>"; };
+		C29D3BCE1EDBD8AE00178FE6 /* DemoSearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSearchManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,8 @@
 				C29D3B971EDB209800178FE6 /* AppDelegate.m */,
 				C29D3BC61EDB211100178FE6 /* DemoSearchViewController.h */,
 				C29D3BC71EDB211100178FE6 /* DemoSearchViewController.m */,
+				C29D3BCD1EDBD8AE00178FE6 /* DemoSearchManager.h */,
+				C29D3BCE1EDBD8AE00178FE6 /* DemoSearchManager.m */,
 				C29D3B9F1EDB209800178FE6 /* Assets.xcassets */,
 				C29D3BA11EDB209800178FE6 /* LaunchScreen.storyboard */,
 				C29D3BA41EDB209800178FE6 /* Info.plist */,
@@ -122,6 +129,7 @@
 		C29D3BAC1EDB209900178FE6 /* XCTestDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				C29D3BCB1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m */,
 				C29D3BC91EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m */,
 				C29D3BAF1EDB209900178FE6 /* Info.plist */,
 			);
@@ -269,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29D3BCF1EDBD8AE00178FE6 /* DemoSearchManager.m in Sources */,
 				C29D3B981EDB209800178FE6 /* AppDelegate.m in Sources */,
 				C29D3B951EDB209800178FE6 /* main.m in Sources */,
 				C29D3BC81EDB211100178FE6 /* DemoSearchViewController.m in Sources */,
@@ -280,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29D3BCA1EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m in Sources */,
+				C29D3BCC1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +507,7 @@
 				C29D3BBF1EDB209900178FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C29D3BC01EDB209900178FE6 /* Build configuration list for PBXNativeTarget "XCTestDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +516,7 @@
 				C29D3BC21EDB209900178FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C29D3BC31EDB209900178FE6 /* Build configuration list for PBXNativeTarget "XCTestDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +525,7 @@
 				C29D3BC51EDB209900178FE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
