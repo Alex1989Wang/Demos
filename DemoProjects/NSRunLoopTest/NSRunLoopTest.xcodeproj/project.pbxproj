@@ -24,13 +24,6 @@
 			remoteGlobalIDString = C2E930071ED570740073ED8A;
 			remoteInfo = NSRunLoopTest;
 		};
-		C2E930221ED570750073ED8A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C2E930001ED570740073ED8A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C2E930071ED570740073ED8A;
-			remoteInfo = NSRunLoopTest;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +40,6 @@
 		C2E930171ED570740073ED8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2E9301A1ED570740073ED8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2E9301C1ED570740073ED8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2E930211ED570750073ED8A /* NSRunLoopTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSRunLoopTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +51,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C2E930051ED570740073ED8A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C2E9301E1ED570750073ED8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -97,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				C2E930081ED570740073ED8A /* NSRunLoopTest.app */,
-				C2E930211ED570750073ED8A /* NSRunLoopTestTests.xctest */,
 				C2DD28191ED8176F00B27553 /* NSRunLoopNewUnitTest.xctest */,
 			);
 			name = Products;
@@ -165,24 +149,6 @@
 			productReference = C2E930081ED570740073ED8A /* NSRunLoopTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C2E930201ED570750073ED8A /* NSRunLoopTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C2E9302D1ED570750073ED8A /* Build configuration list for PBXNativeTarget "NSRunLoopTestTests" */;
-			buildPhases = (
-				C2E9301D1ED570750073ED8A /* Sources */,
-				C2E9301E1ED570750073ED8A /* Frameworks */,
-				C2E9301F1ED570750073ED8A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C2E930231ED570750073ED8A /* PBXTargetDependency */,
-			);
-			name = NSRunLoopTestTests;
-			productName = NSRunLoopTestTests;
-			productReference = C2E930211ED570750073ED8A /* NSRunLoopTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,11 +169,6 @@
 						DevelopmentTeam = VGT62P4UF6;
 						ProvisioningStyle = Automatic;
 					};
-					C2E930201ED570750073ED8A = {
-						CreatedOnToolsVersion = 8.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C2E930071ED570740073ED8A;
-					};
 				};
 			};
 			buildConfigurationList = C2E930031ED570740073ED8A /* Build configuration list for PBXProject "NSRunLoopTest" */;
@@ -224,7 +185,6 @@
 			projectRoot = "";
 			targets = (
 				C2E930071ED570740073ED8A /* NSRunLoopTest */,
-				C2E930201ED570750073ED8A /* NSRunLoopTestTests */,
 				C2DD28181ED8176F00B27553 /* NSRunLoopNewUnitTest */,
 			);
 		};
@@ -245,13 +205,6 @@
 				C2E9301B1ED570740073ED8A /* LaunchScreen.storyboard in Resources */,
 				C2E930181ED570740073ED8A /* Assets.xcassets in Resources */,
 				C2E930161ED570740073ED8A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C2E9301F1ED570750073ED8A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,13 +229,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2E9301D1ED570750073ED8A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -290,11 +236,6 @@
 			isa = PBXTargetDependency;
 			target = C2E930071ED570740073ED8A /* NSRunLoopTest */;
 			targetProxy = C2DD281E1ED8176F00B27553 /* PBXContainerItemProxy */;
-		};
-		C2E930231ED570750073ED8A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C2E930071ED570740073ED8A /* NSRunLoopTest */;
-			targetProxy = C2E930221ED570750073ED8A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -460,30 +401,6 @@
 			};
 			name = Release;
 		};
-		C2E9302E1ED570750073ED8A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = NSRunLoopTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.NSRunLoopTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSRunLoopTest.app/NSRunLoopTest";
-			};
-			name = Debug;
-		};
-		C2E9302F1ED570750073ED8A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = NSRunLoopTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.NSRunLoopTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSRunLoopTest.app/NSRunLoopTest";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -510,15 +427,6 @@
 			buildConfigurations = (
 				C2E9302B1ED570750073ED8A /* Debug */,
 				C2E9302C1ED570750073ED8A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C2E9302D1ED570750073ED8A /* Build configuration list for PBXNativeTarget "NSRunLoopTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C2E9302E1ED570750073ED8A /* Debug */,
-				C2E9302F1ED570750073ED8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
