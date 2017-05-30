@@ -17,6 +17,9 @@
 		C29D3BCC1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BCB1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m */; };
 		C29D3BCF1EDBD8AE00178FE6 /* DemoSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BCE1EDBD8AE00178FE6 /* DemoSearchManager.m */; };
 		C29D3BD21EDC740D00178FE6 /* DemoUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BD11EDC740D00178FE6 /* DemoUser.m */; };
+		C29D3BD41EDD737800178FE6 /* Alex1989Wang.plist in Resources */ = {isa = PBXBuildFile; fileRef = C29D3BD31EDD737800178FE6 /* Alex1989Wang.plist */; };
+		C29D3BD61EDD740A00178FE6 /* XCTestDemoPerformanceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BD51EDD740A00178FE6 /* XCTestDemoPerformanceTest.m */; };
+		C29D3BD71EDD75FB00178FE6 /* Alex1989Wang.plist in Resources */ = {isa = PBXBuildFile; fileRef = C29D3BD31EDD737800178FE6 /* Alex1989Wang.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,8 @@
 		C29D3BCE1EDBD8AE00178FE6 /* DemoSearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSearchManager.m; sourceTree = "<group>"; };
 		C29D3BD01EDC740D00178FE6 /* DemoUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoUser.h; sourceTree = "<group>"; };
 		C29D3BD11EDC740D00178FE6 /* DemoUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoUser.m; sourceTree = "<group>"; };
+		C29D3BD31EDD737800178FE6 /* Alex1989Wang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Alex1989Wang.plist; sourceTree = "<group>"; };
+		C29D3BD51EDD740A00178FE6 /* XCTestDemoPerformanceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestDemoPerformanceTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +123,7 @@
 				C29D3B9F1EDB209800178FE6 /* Assets.xcassets */,
 				C29D3BA11EDB209800178FE6 /* LaunchScreen.storyboard */,
 				C29D3BA41EDB209800178FE6 /* Info.plist */,
+				C29D3BD31EDD737800178FE6 /* Alex1989Wang.plist */,
 				C29D3B931EDB209800178FE6 /* Supporting Files */,
 			);
 			path = XCTestDemo;
@@ -134,6 +140,7 @@
 		C29D3BAC1EDB209900178FE6 /* XCTestDemoTests */ = {
 			isa = PBXGroup;
 			children = (
+				C29D3BD51EDD740A00178FE6 /* XCTestDemoPerformanceTest.m */,
 				C29D3BCB1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m */,
 				C29D3BC91EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m */,
 				C29D3BAF1EDB209900178FE6 /* Info.plist */,
@@ -258,6 +265,7 @@
 			files = (
 				C29D3BA31EDB209800178FE6 /* LaunchScreen.storyboard in Resources */,
 				C29D3BA01EDB209800178FE6 /* Assets.xcassets in Resources */,
+				C29D3BD41EDD737800178FE6 /* Alex1989Wang.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29D3BD71EDD75FB00178FE6 /* Alex1989Wang.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +305,7 @@
 			files = (
 				C29D3BCA1EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m in Sources */,
 				C29D3BCC1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m in Sources */,
+				C29D3BD61EDD740A00178FE6 /* XCTestDemoPerformanceTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

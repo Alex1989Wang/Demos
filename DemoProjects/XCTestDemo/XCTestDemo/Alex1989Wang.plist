@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>avatar_url</key>
+	<string>https://avatars2.githubusercontent.com/u/4620388?v=3</string>
+	<key>bio</key>
+	<string>Adventurous and humble.</string>
+	<key>blog</key>
+	<string></string>
+	<key>company</key>
+	<string></string>
+	<key>created_at</key>
+	<string>2013-06-05T11:30:14Z</string>
+	<key>email</key>
+	<string></string>
+	<key>events_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/events{/privacy}</string>
+	<key>followers</key>
+	<integer>2</integer>
+	<key>followers_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/followers</string>
+	<key>following</key>
+	<integer>11</integer>
+	<key>following_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/following{/other_user}</string>
+	<key>gists_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/gists{/gist_id}</string>
+	<key>gravatar_id</key>
+	<string></string>
+	<key>hireable</key>
+	<string></string>
+	<key>html_url</key>
+	<string>https://github.com/Alex1989Wang</string>
+	<key>id</key>
+	<integer>4620388</integer>
+	<key>location</key>
+	<string></string>
+	<key>login</key>
+	<string>Alex1989Wang</string>
+	<key>name</key>
+	<string>王江</string>
+	<key>organizations_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/orgs</string>
+	<key>public_gists</key>
+	<integer>0</integer>
+	<key>public_repos</key>
+	<integer>10</integer>
+	<key>received_events_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/received_events</string>
+	<key>repos_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/repos</string>
+	<key>site_admin</key>
+	<false/>
+	<key>starred_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/starred{/owner}{/repo}</string>
+	<key>subscriptions_url</key>
+	<string>https://api.github.com/users/Alex1989Wang/subscriptions</string>
+	<key>type</key>
+	<string>User</string>
+	<key>updated_at</key>
+	<string>2017-04-23T14:17:20Z</string>
+	<key>url</key>
+	<string>https://api.github.com/users/Alex1989Wang</string>
+</dict>
+</plist>
