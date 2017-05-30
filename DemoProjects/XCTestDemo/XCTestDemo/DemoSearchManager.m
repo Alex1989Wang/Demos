@@ -57,7 +57,7 @@
     [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:defaultCon
                                                           delegate:self
-                                                     delegateQueue:nil];
+                                                     delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request];
     self.onGoingTask = dataTask;
     [dataTask resume];
@@ -66,36 +66,50 @@
 - (void)resetTask {
     [self.onGoingTask cancel];
     self.onGoingTask = nil;
-    
-    dispatch_async(self.dataOperationQueue, ^{
-        self.resultData = nil;
-    });
-    [self resultData];
 }
-     
+
+- (void)resetResultData {
+    //reset result data
+    __weak typeof(self) weakSelf = self;
+    dispatch_async(self.dataOperationQueue, ^{
+        __strong typeof(weakSelf) strSelf = weakSelf;
+        if (strSelf->_resultData) {
+            strSelf->_resultData = nil;
+        }
+    });
+}
+
 #pragma mark - Delegate
 - (void)URLSession:(NSURLSession *)session
               task:(nonnull NSURLSessionTask *)task
 didCompleteWithError:(nullable NSError *)error {
+    NSAssert([NSThread isMainThread], @"should comple on main thread.");
     if (error) {
-        NSLog(@"data task can't be finished.");
+        NSLog(@"data task can't be finished: %@.", error);
         if (self.resultBlock) {
             self.resultBlock(nil);
         }
+        [self resetResultData];
     }
     else {
         dispatch_async(self.dataOperationQueue, ^{
             NSData *finisedData = [self.resultData copy];
             if (finisedData.length) {
                 if (self.resultBlock) {
+                    __weak typeof(self) weakSelf = self;
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        self.resultBlock(finisedData);
+                        __strong typeof(weakSelf) strSelf = weakSelf;
+                        strSelf.resultBlock(finisedData);
+                        [strSelf resetResultData];
                     });
                 }
             }
             else if (self.resultBlock) {
+                __weak typeof(self) weakSelf = self;
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    self.resultBlock(nil);
+                    __strong typeof(weakSelf) strSelf = weakSelf;
+                    strSelf.resultBlock(nil);
+                    [strSelf resetResultData];
                 });
             }
         });
@@ -116,9 +130,7 @@ didCompleteWithError:(nullable NSError *)error {
 #pragma mark - Lazy Loading
 - (NSMutableData *)resultData {
     if (_resultData == nil) {
-        dispatch_sync(self.dataOperationQueue, ^{
-            _resultData = [NSMutableData data];
-        });
+        _resultData = [NSMutableData data];
     }
     return _resultData;
 }

@@ -8,6 +8,7 @@
 
 #import "DemoSearchViewController.h"
 #import "DemoSearchManager.h"
+#import "DemoUser.h"
 
 @interface DemoSearchViewController ()
 <UISearchBarDelegate,
@@ -16,6 +17,7 @@ UITableViewDelegate>
 
 @property (nonatomic, weak) UISearchBar *searchBar;
 @property (nonatomic, weak) UITableView *resultsTable;
+@property (nonatomic, strong) NSMutableArray <DemoUser *> *users;
 @end
 
 static NSString *resultCellID = @"XCTestDemo.searchResultCellID";
@@ -49,16 +51,22 @@ static const CGFloat SearchBarHeight = 44.f;
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.users.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    DemoUser *user = self.users[indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:resultCellID];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
                                       reuseIdentifier:resultCellID];
-        
+        cell.textLabel.text = user.userName;
+        cell.detailTextLabel.text = user.userLocation;
+    }
+    else {
+        cell.textLabel.text = user.userName;
+        cell.detailTextLabel.text = user.userLocation;
     }
     return cell;
 }
@@ -68,10 +76,17 @@ static const CGFloat SearchBarHeight = 44.f;
     NSCharacterSet *blankSets = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     NSString *searchText = [searchBar.text stringByTrimmingCharactersInSet:blankSets];
     if (searchText.length) {
+        __weak typeof(self) weakSelf = self;
         [[DemoSearchManager sharedManager] getUserInfoWithUserName:searchText
                                                          completed:
          ^(NSData *userInfoData) {
              NSLog(@"user info dictionary: %@", userInfoData);
+             __strong typeof(weakSelf) strSelf = weakSelf;
+             DemoUser *user = [[DemoUser alloc] initWithUserInfoData:userInfoData];
+             if (user) {
+                 [strSelf.users addObject:user];
+                 [strSelf.resultsTable reloadData];
+             }
          }];
     }
 }
@@ -115,6 +130,13 @@ static const CGFloat SearchBarHeight = 44.f;
         UIViewAutoresizingFlexibleHeight;
     }
     return _resultsTable;
+}
+
+- (NSMutableArray<DemoUser *> *)users {
+    if (nil == _users) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
 }
 
 @end

@@ -16,6 +16,7 @@
 		C29D3BCA1EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BC91EDB2C7800178FE6 /* XCTestDemoSynchronousTests.m */; };
 		C29D3BCC1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BCB1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m */; };
 		C29D3BCF1EDBD8AE00178FE6 /* DemoSearchManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BCE1EDBD8AE00178FE6 /* DemoSearchManager.m */; };
+		C29D3BD21EDC740D00178FE6 /* DemoUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D3BD11EDC740D00178FE6 /* DemoUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		C29D3BCB1EDBD7A500178FE6 /* XCTestDemoAsynchronousTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCTestDemoAsynchronousTests.m; sourceTree = "<group>"; };
 		C29D3BCD1EDBD8AE00178FE6 /* DemoSearchManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSearchManager.h; sourceTree = "<group>"; };
 		C29D3BCE1EDBD8AE00178FE6 /* DemoSearchManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSearchManager.m; sourceTree = "<group>"; };
+		C29D3BD01EDC740D00178FE6 /* DemoUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoUser.h; sourceTree = "<group>"; };
+		C29D3BD11EDC740D00178FE6 /* DemoUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				C29D3BC71EDB211100178FE6 /* DemoSearchViewController.m */,
 				C29D3BCD1EDBD8AE00178FE6 /* DemoSearchManager.h */,
 				C29D3BCE1EDBD8AE00178FE6 /* DemoSearchManager.m */,
+				C29D3BD01EDC740D00178FE6 /* DemoUser.h */,
+				C29D3BD11EDC740D00178FE6 /* DemoUser.m */,
 				C29D3B9F1EDB209800178FE6 /* Assets.xcassets */,
 				C29D3BA11EDB209800178FE6 /* LaunchScreen.storyboard */,
 				C29D3BA41EDB209800178FE6 /* Info.plist */,
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29D3BCF1EDBD8AE00178FE6 /* DemoSearchManager.m in Sources */,
+				C29D3BD21EDC740D00178FE6 /* DemoUser.m in Sources */,
 				C29D3B981EDB209800178FE6 /* AppDelegate.m in Sources */,
 				C29D3B951EDB209800178FE6 /* main.m in Sources */,
 				C29D3BC81EDB211100178FE6 /* DemoSearchViewController.m in Sources */,
