@@ -11,9 +11,6 @@
 
 #define MAXVAL (100)
 
-//extern int sp;
-//extern double val[];
-
 void push(double);
 double pop(void);
 
