@@ -13,7 +13,7 @@
 
 #define MAXOP (100)
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[]) {
     int type;
     double oprand2;
     char s[MAXOP];
@@ -24,7 +24,6 @@ int main(int argc, const char * argv[]) {
                 push(atof(s));
                 break;
             }
-                
             case '+': {
                 push(pop() + pop());
                 break;
