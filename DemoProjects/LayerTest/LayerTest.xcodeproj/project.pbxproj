@@ -17,6 +17,7 @@
 		AC5A4BBC1EC15CBE00B389C6 /* LayerTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5A4BBB1EC15CBE00B389C6 /* LayerTestView.m */; };
 		AC5A4BBE1EC1611400B389C6 /* KVO-KVC.png in Resources */ = {isa = PBXBuildFile; fileRef = AC5A4BBD1EC1611400B389C6 /* KVO-KVC.png */; };
 		AC5A4BC01EC16B3B00B389C6 /* jack.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC5A4BBF1EC16B3B00B389C6 /* jack.jpg */; };
+		C281C5A11EF55FB800EA053C /* NewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C281C5A01EF55FB800EA053C /* NewTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		AC5A4BBB1EC15CBE00B389C6 /* LayerTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerTestView.m; sourceTree = "<group>"; };
 		AC5A4BBD1EC1611400B389C6 /* KVO-KVC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "KVO-KVC.png"; sourceTree = "<group>"; };
 		AC5A4BBF1EC16B3B00B389C6 /* jack.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jack.jpg; sourceTree = "<group>"; };
+		C281C59F1EF55FB800EA053C /* NewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewTestViewController.h; sourceTree = "<group>"; };
+		C281C5A01EF55FB800EA053C /* NewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 				AC5A4B8E1EC15BA300B389C6 /* ViewController.m */,
 				AC5A4BBA1EC15CBE00B389C6 /* LayerTestView.h */,
 				AC5A4BBB1EC15CBE00B389C6 /* LayerTestView.m */,
+				C281C59E1EF55F7A00EA053C /* New Examples */,
 				AC5A4B931EC15BA300B389C6 /* Assets.xcassets */,
 				AC5A4B951EC15BA300B389C6 /* LaunchScreen.storyboard */,
 				AC5A4B981EC15BA300B389C6 /* Info.plist */,
@@ -146,6 +150,15 @@
 				AC5A4BAE1EC15BA300B389C6 /* Info.plist */,
 			);
 			path = LayerTestUITests;
+			sourceTree = "<group>";
+		};
+		C281C59E1EF55F7A00EA053C /* New Examples */ = {
+			isa = PBXGroup;
+			children = (
+				C281C59F1EF55FB800EA053C /* NewTestViewController.h */,
+				C281C5A01EF55FB800EA053C /* NewTestViewController.m */,
+			);
+			path = "New Examples";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +301,7 @@
 				AC5A4B8F1EC15BA300B389C6 /* ViewController.m in Sources */,
 				AC5A4B8C1EC15BA300B389C6 /* AppDelegate.m in Sources */,
 				AC5A4BBC1EC15CBE00B389C6 /* LayerTestView.m in Sources */,
+				C281C5A11EF55FB800EA053C /* NewTestViewController.m in Sources */,
 				AC5A4B891EC15BA300B389C6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

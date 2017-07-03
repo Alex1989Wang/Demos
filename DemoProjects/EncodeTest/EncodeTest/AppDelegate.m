@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  LayerTest
+//  EncodeTest
 //
-//  Created by JiangWang on 09/05/2017.
+//  Created by JiangWang on 28/06/2017.
 //  Copyright © 2017 JiangWang. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,17 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    CGRect screenBounds = [UIScreen mainScreen].bounds;
-    UIWindow *mainWindow = [[UIWindow alloc] initWithFrame:screenBounds];
-   
-    ViewController *rootVC = [[ViewController alloc] init];
-    UINavigationController *naviCon = [[UINavigationController alloc] initWithRootViewController:rootVC];
-    mainWindow.rootViewController = naviCon;
-    
-    self.window = mainWindow;
-    [self.window makeKeyAndVisible];
-    
+    // Override point for customization after application launch.
     return YES;
 }
 

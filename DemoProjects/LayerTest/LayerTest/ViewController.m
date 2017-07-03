@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "LayerTestView.h"
+#import "NewTestViewController.h"
 
 @interface ViewController ()
 @property (nonatomic, weak) UIView *cornerRadiusTestView;
@@ -27,6 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"old test";
     
     //test view
 //    LayerTestView *layerTestView = [[LayerTestView alloc] init];
@@ -42,6 +44,14 @@
     [self transTestOne];
 //    [self transTestTwo];
     [self pushButton];
+    
+    //new test
+    UIBarButtonItem *rightItem =
+    [[UIBarButtonItem alloc] initWithTitle:@"new test"
+                                     style:UIBarButtonItemStylePlain
+                                    target:self
+                                    action:@selector(pushNewTestViewController)];
+    self.navigationItem.rightBarButtonItem = rightItem;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -229,6 +239,12 @@
         [CATransaction commit];
         NSLog(@"CAActions: %@", animationLayer.actions);
     }
+}
+
+#pragma mark - new test
+- (void)pushNewTestViewController {
+    NewTestViewController *newCon = [[NewTestViewController alloc] init];
+    [self.navigationController pushViewController:newCon animated:YES];
 }
 
 #pragma mark - Lazy Loading
