@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Partner' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for Partner
+  pod 'TYPagerController' , '~> 2.0.1'
+  pod 'RTRootNavigationController'
+  pod 'CocoaLumberjack'
+
+  target 'PartnerTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'PartnerUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

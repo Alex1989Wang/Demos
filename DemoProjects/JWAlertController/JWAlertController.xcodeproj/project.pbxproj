@@ -1,0 +1,812 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D1F5E5942FA1B74D1F3193E /* libPods-JWAlertController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20C5A246DF8DAC9979AACDEB /* libPods-JWAlertController.a */; };
+		934B6D8AD8CF73361563B8FE /* libPods-JWAlertControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 512BFF6499A170E077EBCAD8 /* libPods-JWAlertControllerTests.a */; };
+		C23549311FB337AB001E5784 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C23549301FB337AB001E5784 /* main.m */; };
+		C23549341FB337AC001E5784 /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C23549331FB337AC001E5784 /* JWAppDelegate.m */; };
+		C235493C1FB337AC001E5784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C235493B1FB337AC001E5784 /* Assets.xcassets */; };
+		C235493F1FB337AC001E5784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C235493D1FB337AC001E5784 /* LaunchScreen.storyboard */; };
+		C235494A1FB337AC001E5784 /* JWAlertControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C23549491FB337AC001E5784 /* JWAlertControllerTests.m */; };
+		C23549551FB337AC001E5784 /* JWAlertControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C23549541FB337AC001E5784 /* JWAlertControllerUITests.m */; };
+		C23549721FB33A72001E5784 /* JWAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23549661FB33A72001E5784 /* JWAlertViewController.m */; };
+		C23549741FB33A72001E5784 /* JWGeneralMiddleAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = C235496B1FB33A72001E5784 /* JWGeneralMiddleAlertController.m */; };
+		C23549761FB33A72001E5784 /* JWRateAppAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C235496F1FB33A72001E5784 /* JWRateAppAlertViewController.m */; };
+		C23549771FB33A72001E5784 /* UIViewController+JWAlertPresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = C23549711FB33A72001E5784 /* UIViewController+JWAlertPresentation.m */; };
+		C264825D1FB33EEC00CDD8B9 /* UIView+JWHighlightBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = C264825C1FB33EEC00CDD8B9 /* UIView+JWHighlightBorder.m */; };
+		C26482651FB3407F00CDD8B9 /* JWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C26482641FB3407F00CDD8B9 /* JWMainViewController.m */; };
+		C7AA707CC1EA32640884FF0B /* libPods-JWAlertControllerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3921395674F0E5DBE6AFF196 /* libPods-JWAlertControllerUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C23549461FB337AC001E5784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23549241FB337AB001E5784 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C235492B1FB337AB001E5784;
+			remoteInfo = JWAlertController;
+		};
+		C23549511FB337AC001E5784 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23549241FB337AB001E5784 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C235492B1FB337AB001E5784;
+			remoteInfo = JWAlertController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		053914A88BC6A2E0F636759B /* Pods-JWAlertControllerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAlertControllerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWAlertControllerTests/Pods-JWAlertControllerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		20C5A246DF8DAC9979AACDEB /* libPods-JWAlertController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWAlertController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3921395674F0E5DBE6AFF196 /* libPods-JWAlertControllerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWAlertControllerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A9A18E63385B32A409474F7 /* Pods-JWAlertControllerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAlertControllerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWAlertControllerUITests/Pods-JWAlertControllerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		512BFF6499A170E077EBCAD8 /* libPods-JWAlertControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWAlertControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5342181B20DD82049F0953F4 /* Pods-JWAlertControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAlertControllerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWAlertControllerTests/Pods-JWAlertControllerTests.release.xcconfig"; sourceTree = "<group>"; };
+		639838AE80E61A851E5B62E5 /* Pods-JWAlertControllerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAlertControllerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWAlertControllerUITests/Pods-JWAlertControllerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		72624CB4170AFDC7CB535245 /* Pods-JWAlertController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAlertController.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWAlertController/Pods-JWAlertController.release.xcconfig"; sourceTree = "<group>"; };
+		C235492C1FB337AB001E5784 /* JWAlertController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWAlertController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23549301FB337AB001E5784 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C23549321FB337AC001E5784 /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
+		C23549331FB337AC001E5784 /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
+		C235493B1FB337AC001E5784 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C235493E1FB337AC001E5784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C23549401FB337AC001E5784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23549451FB337AC001E5784 /* JWAlertControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWAlertControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23549491FB337AC001E5784 /* JWAlertControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAlertControllerTests.m; sourceTree = "<group>"; };
+		C235494B1FB337AC001E5784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23549501FB337AC001E5784 /* JWAlertControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JWAlertControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C23549541FB337AC001E5784 /* JWAlertControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAlertControllerUITests.m; sourceTree = "<group>"; };
+		C23549561FB337AC001E5784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23549651FB33A72001E5784 /* JWAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWAlertViewController.h; sourceTree = "<group>"; };
+		C23549661FB33A72001E5784 /* JWAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWAlertViewController.m; sourceTree = "<group>"; };
+		C23549671FB33A72001E5784 /* JWAlertViewController+JWPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JWAlertViewController+JWPrivate.h"; sourceTree = "<group>"; };
+		C235496A1FB33A72001E5784 /* JWGeneralMiddleAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWGeneralMiddleAlertController.h; sourceTree = "<group>"; };
+		C235496B1FB33A72001E5784 /* JWGeneralMiddleAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWGeneralMiddleAlertController.m; sourceTree = "<group>"; };
+		C235496E1FB33A72001E5784 /* JWRateAppAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRateAppAlertViewController.h; sourceTree = "<group>"; };
+		C235496F1FB33A72001E5784 /* JWRateAppAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWRateAppAlertViewController.m; sourceTree = "<group>"; };
+		C23549701FB33A72001E5784 /* UIViewController+JWAlertPresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JWAlertPresentation.h"; sourceTree = "<group>"; };
+		C23549711FB33A72001E5784 /* UIViewController+JWAlertPresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JWAlertPresentation.m"; sourceTree = "<group>"; };
+		C264825B1FB33EEC00CDD8B9 /* UIView+JWHighlightBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JWHighlightBorder.h"; sourceTree = "<group>"; };
+		C264825C1FB33EEC00CDD8B9 /* UIView+JWHighlightBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JWHighlightBorder.m"; sourceTree = "<group>"; };
+		C26482631FB3407F00CDD8B9 /* JWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainViewController.h; sourceTree = "<group>"; };
+		C26482641FB3407F00CDD8B9 /* JWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainViewController.m; sourceTree = "<group>"; };
+		C26482661FB3432B00CDD8B9 /* JWPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWPrefixHeader.pch; sourceTree = "<group>"; };
+		F6F57C624CC767C931F8778B /* Pods-JWAlertController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAlertController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWAlertController/Pods-JWAlertController.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C23549291FB337AB001E5784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D1F5E5942FA1B74D1F3193E /* libPods-JWAlertController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23549421FB337AC001E5784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				934B6D8AD8CF73361563B8FE /* libPods-JWAlertControllerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C235494D1FB337AC001E5784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7AA707CC1EA32640884FF0B /* libPods-JWAlertControllerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02AE9700BF23BA035FFF7449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20C5A246DF8DAC9979AACDEB /* libPods-JWAlertController.a */,
+				512BFF6499A170E077EBCAD8 /* libPods-JWAlertControllerTests.a */,
+				3921395674F0E5DBE6AFF196 /* libPods-JWAlertControllerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32D66FB649D94EE0A03D476A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6F57C624CC767C931F8778B /* Pods-JWAlertController.debug.xcconfig */,
+				72624CB4170AFDC7CB535245 /* Pods-JWAlertController.release.xcconfig */,
+				053914A88BC6A2E0F636759B /* Pods-JWAlertControllerTests.debug.xcconfig */,
+				5342181B20DD82049F0953F4 /* Pods-JWAlertControllerTests.release.xcconfig */,
+				3A9A18E63385B32A409474F7 /* Pods-JWAlertControllerUITests.debug.xcconfig */,
+				639838AE80E61A851E5B62E5 /* Pods-JWAlertControllerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C23549231FB337AB001E5784 = {
+			isa = PBXGroup;
+			children = (
+				C235492E1FB337AB001E5784 /* JWAlertController */,
+				C23549481FB337AC001E5784 /* JWAlertControllerTests */,
+				C23549531FB337AC001E5784 /* JWAlertControllerUITests */,
+				C235492D1FB337AB001E5784 /* Products */,
+				32D66FB649D94EE0A03D476A /* Pods */,
+				02AE9700BF23BA035FFF7449 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C235492D1FB337AB001E5784 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C235492C1FB337AB001E5784 /* JWAlertController.app */,
+				C23549451FB337AC001E5784 /* JWAlertControllerTests.xctest */,
+				C23549501FB337AC001E5784 /* JWAlertControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C235492E1FB337AB001E5784 /* JWAlertController */ = {
+			isa = PBXGroup;
+			children = (
+				C264825E1FB3402B00CDD8B9 /* Main UI */,
+				C23549621FB33928001E5784 /* Alert Module */,
+				C23549321FB337AC001E5784 /* JWAppDelegate.h */,
+				C23549331FB337AC001E5784 /* JWAppDelegate.m */,
+				C235493B1FB337AC001E5784 /* Assets.xcassets */,
+				C235493D1FB337AC001E5784 /* LaunchScreen.storyboard */,
+				C23549401FB337AC001E5784 /* Info.plist */,
+				C235492F1FB337AB001E5784 /* Supporting Files */,
+			);
+			path = JWAlertController;
+			sourceTree = "<group>";
+		};
+		C235492F1FB337AB001E5784 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C23549301FB337AB001E5784 /* main.m */,
+				C26482661FB3432B00CDD8B9 /* JWPrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C23549481FB337AC001E5784 /* JWAlertControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				C23549491FB337AC001E5784 /* JWAlertControllerTests.m */,
+				C235494B1FB337AC001E5784 /* Info.plist */,
+			);
+			path = JWAlertControllerTests;
+			sourceTree = "<group>";
+		};
+		C23549531FB337AC001E5784 /* JWAlertControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C23549541FB337AC001E5784 /* JWAlertControllerUITests.m */,
+				C23549561FB337AC001E5784 /* Info.plist */,
+			);
+			path = JWAlertControllerUITests;
+			sourceTree = "<group>";
+		};
+		C23549621FB33928001E5784 /* Alert Module */ = {
+			isa = PBXGroup;
+			children = (
+				C264825A1FB33EEC00CDD8B9 /* Category */,
+				C23549631FB33928001E5784 /* Controllers */,
+				C23549641FB33928001E5784 /* Models */,
+			);
+			path = "Alert Module";
+			sourceTree = "<group>";
+		};
+		C23549631FB33928001E5784 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C23549651FB33A72001E5784 /* JWAlertViewController.h */,
+				C23549661FB33A72001E5784 /* JWAlertViewController.m */,
+				C23549671FB33A72001E5784 /* JWAlertViewController+JWPrivate.h */,
+				C235496A1FB33A72001E5784 /* JWGeneralMiddleAlertController.h */,
+				C235496B1FB33A72001E5784 /* JWGeneralMiddleAlertController.m */,
+				C235496E1FB33A72001E5784 /* JWRateAppAlertViewController.h */,
+				C235496F1FB33A72001E5784 /* JWRateAppAlertViewController.m */,
+				C23549701FB33A72001E5784 /* UIViewController+JWAlertPresentation.h */,
+				C23549711FB33A72001E5784 /* UIViewController+JWAlertPresentation.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C23549641FB33928001E5784 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C264825A1FB33EEC00CDD8B9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C264825B1FB33EEC00CDD8B9 /* UIView+JWHighlightBorder.h */,
+				C264825C1FB33EEC00CDD8B9 /* UIView+JWHighlightBorder.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C264825E1FB3402B00CDD8B9 /* Main UI */ = {
+			isa = PBXGroup;
+			children = (
+				C264825F1FB3404200CDD8B9 /* Controllers */,
+			);
+			path = "Main UI";
+			sourceTree = "<group>";
+		};
+		C264825F1FB3404200CDD8B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C26482631FB3407F00CDD8B9 /* JWMainViewController.h */,
+				C26482641FB3407F00CDD8B9 /* JWMainViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C235492B1FB337AB001E5784 /* JWAlertController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C23549591FB337AC001E5784 /* Build configuration list for PBXNativeTarget "JWAlertController" */;
+			buildPhases = (
+				3EE4235D227F265F99F0E076 /* [CP] Check Pods Manifest.lock */,
+				C23549281FB337AB001E5784 /* Sources */,
+				C23549291FB337AB001E5784 /* Frameworks */,
+				C235492A1FB337AB001E5784 /* Resources */,
+				641A1EAFF3CFA8D4095A6240 /* [CP] Embed Pods Frameworks */,
+				1D496F96D76891F436B03B38 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWAlertController;
+			productName = JWAlertController;
+			productReference = C235492C1FB337AB001E5784 /* JWAlertController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C23549441FB337AC001E5784 /* JWAlertControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C235495C1FB337AC001E5784 /* Build configuration list for PBXNativeTarget "JWAlertControllerTests" */;
+			buildPhases = (
+				A02318C07DB2A1943D9D0A55 /* [CP] Check Pods Manifest.lock */,
+				C23549411FB337AC001E5784 /* Sources */,
+				C23549421FB337AC001E5784 /* Frameworks */,
+				C23549431FB337AC001E5784 /* Resources */,
+				88C1948D97FF733760509D90 /* [CP] Embed Pods Frameworks */,
+				5C22F1B14B8C0817B44F5930 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C23549471FB337AC001E5784 /* PBXTargetDependency */,
+			);
+			name = JWAlertControllerTests;
+			productName = JWAlertControllerTests;
+			productReference = C23549451FB337AC001E5784 /* JWAlertControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C235494F1FB337AC001E5784 /* JWAlertControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C235495F1FB337AC001E5784 /* Build configuration list for PBXNativeTarget "JWAlertControllerUITests" */;
+			buildPhases = (
+				D37342558669F94302D025A6 /* [CP] Check Pods Manifest.lock */,
+				C235494C1FB337AC001E5784 /* Sources */,
+				C235494D1FB337AC001E5784 /* Frameworks */,
+				C235494E1FB337AC001E5784 /* Resources */,
+				93E3683EAD43453A6FA609B9 /* [CP] Embed Pods Frameworks */,
+				7AD85B73A607CDFE0D1299A8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C23549521FB337AC001E5784 /* PBXTargetDependency */,
+			);
+			name = JWAlertControllerUITests;
+			productName = JWAlertControllerUITests;
+			productReference = C23549501FB337AC001E5784 /* JWAlertControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C23549241FB337AB001E5784 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JW;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = JiangWang;
+				TargetAttributes = {
+					C235492B1FB337AB001E5784 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Y39R442P5T;
+						ProvisioningStyle = Automatic;
+					};
+					C23549441FB337AC001E5784 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Y39R442P5T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C235492B1FB337AB001E5784;
+					};
+					C235494F1FB337AC001E5784 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Y39R442P5T;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C235492B1FB337AB001E5784;
+					};
+				};
+			};
+			buildConfigurationList = C23549271FB337AB001E5784 /* Build configuration list for PBXProject "JWAlertController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C23549231FB337AB001E5784;
+			productRefGroup = C235492D1FB337AB001E5784 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C235492B1FB337AB001E5784 /* JWAlertController */,
+				C23549441FB337AC001E5784 /* JWAlertControllerTests */,
+				C235494F1FB337AC001E5784 /* JWAlertControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C235492A1FB337AB001E5784 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C235493F1FB337AC001E5784 /* LaunchScreen.storyboard in Resources */,
+				C235493C1FB337AC001E5784 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23549431FB337AC001E5784 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C235494E1FB337AC001E5784 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D496F96D76891F436B03B38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAlertController/Pods-JWAlertController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EE4235D227F265F99F0E076 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C22F1B14B8C0817B44F5930 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAlertControllerTests/Pods-JWAlertControllerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		641A1EAFF3CFA8D4095A6240 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAlertController/Pods-JWAlertController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AD85B73A607CDFE0D1299A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAlertControllerUITests/Pods-JWAlertControllerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88C1948D97FF733760509D90 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAlertControllerTests/Pods-JWAlertControllerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93E3683EAD43453A6FA609B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAlertControllerUITests/Pods-JWAlertControllerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A02318C07DB2A1943D9D0A55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D37342558669F94302D025A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C23549281FB337AB001E5784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23549771FB33A72001E5784 /* UIViewController+JWAlertPresentation.m in Sources */,
+				C23549761FB33A72001E5784 /* JWRateAppAlertViewController.m in Sources */,
+				C23549341FB337AC001E5784 /* JWAppDelegate.m in Sources */,
+				C264825D1FB33EEC00CDD8B9 /* UIView+JWHighlightBorder.m in Sources */,
+				C23549741FB33A72001E5784 /* JWGeneralMiddleAlertController.m in Sources */,
+				C23549311FB337AB001E5784 /* main.m in Sources */,
+				C26482651FB3407F00CDD8B9 /* JWMainViewController.m in Sources */,
+				C23549721FB33A72001E5784 /* JWAlertViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C23549411FB337AC001E5784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C235494A1FB337AC001E5784 /* JWAlertControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C235494C1FB337AC001E5784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23549551FB337AC001E5784 /* JWAlertControllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C23549471FB337AC001E5784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C235492B1FB337AB001E5784 /* JWAlertController */;
+			targetProxy = C23549461FB337AC001E5784 /* PBXContainerItemProxy */;
+		};
+		C23549521FB337AC001E5784 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C235492B1FB337AB001E5784 /* JWAlertController */;
+			targetProxy = C23549511FB337AC001E5784 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C235493D1FB337AC001E5784 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C235493E1FB337AC001E5784 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C23549571FB337AC001E5784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C23549581FB337AC001E5784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C235495A1FB337AC001E5784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6F57C624CC767C931F8778B /* Pods-JWAlertController.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JWAlertController/JWPrefixHeader.pch";
+				INFOPLIST_FILE = JWAlertController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWAlertController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C235495B1FB337AC001E5784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72624CB4170AFDC7CB535245 /* Pods-JWAlertController.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/JWAlertController/JWPrefixHeader.pch";
+				INFOPLIST_FILE = JWAlertController/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWAlertController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C235495D1FB337AC001E5784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 053914A88BC6A2E0F636759B /* Pods-JWAlertControllerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = JWAlertControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWAlertControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWAlertController.app/JWAlertController";
+			};
+			name = Debug;
+		};
+		C235495E1FB337AC001E5784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5342181B20DD82049F0953F4 /* Pods-JWAlertControllerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = JWAlertControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWAlertControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JWAlertController.app/JWAlertController";
+			};
+			name = Release;
+		};
+		C23549601FB337AC001E5784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A9A18E63385B32A409474F7 /* Pods-JWAlertControllerUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = JWAlertControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWAlertControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JWAlertController;
+			};
+			name = Debug;
+		};
+		C23549611FB337AC001E5784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 639838AE80E61A851E5B62E5 /* Pods-JWAlertControllerUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = JWAlertControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWAlertControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JWAlertController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C23549271FB337AB001E5784 /* Build configuration list for PBXProject "JWAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23549571FB337AC001E5784 /* Debug */,
+				C23549581FB337AC001E5784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C23549591FB337AC001E5784 /* Build configuration list for PBXNativeTarget "JWAlertController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C235495A1FB337AC001E5784 /* Debug */,
+				C235495B1FB337AC001E5784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C235495C1FB337AC001E5784 /* Build configuration list for PBXNativeTarget "JWAlertControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C235495D1FB337AC001E5784 /* Debug */,
+				C235495E1FB337AC001E5784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C235495F1FB337AC001E5784 /* Build configuration list for PBXNativeTarget "JWAlertControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C23549601FB337AC001E5784 /* Debug */,
+				C23549611FB337AC001E5784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C23549241FB337AB001E5784 /* Project object */;
+}
