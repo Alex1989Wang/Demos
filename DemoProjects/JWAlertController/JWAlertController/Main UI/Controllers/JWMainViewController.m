@@ -192,7 +192,7 @@
                          action:@selector(clickToPresentMultipleAlerts)
                forControlEvents:UIControlEventTouchUpInside];
         [multiPresentationButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.width.mas_equalTo(150);
+            make.width.mas_equalTo(250);
             make.height.mas_equalTo(40);
             make.centerX.equalTo(self.view);
             make.centerY.equalTo(self.view).with.mas_offset(150);
