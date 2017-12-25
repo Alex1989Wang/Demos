@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Core_Data_by_Tutorials_Source_Code_v3.0/04-intermediate-fetching/starter/Bubble Tea Finder/Bubble Tea Finder.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SwiftDemos/SwiftDemos.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core_Data_by_Tutorials_Source_Code_v3.0/03-the-core-data-stack/starter/Dog Walk/Dog Walk.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Core_Data_by_Tutorials_Source_Code_v3.0/02-nsmanagedobject-subclasses/starter/Bow Ties/Bow Ties.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:CoreDataIntro/CoreDataIntro.xcodeproj">
+   </FileRef>
+</Workspace>

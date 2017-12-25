@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:iOS.Animations.by.Tutorials.3rd.Edition.code/02-springs/starter/BahamaAirLoginScreen.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOS.Animations.by.Tutorials.3rd.Edition.code/17-custom-presentation-controller-and-device-orientation-animations/starter/BeginnerCook.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOS.Animations.by.Tutorials.3rd.Edition.code/18-uinavigationcontroller-custom-transition-animations/starter/LogoReveal.xcodeproj">
+   </FileRef>
+</Workspace>

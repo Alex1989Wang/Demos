@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C213A9C01FBC352700503A3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C213A9BF1FBC352700503A3C /* main.m */; };
+		C213A9C31FBC352700503A3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C213A9C21FBC352700503A3C /* AppDelegate.m */; };
+		C213A9CB1FBC352700503A3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C213A9CA1FBC352700503A3C /* Assets.xcassets */; };
+		C213A9CE1FBC352700503A3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C213A9CC1FBC352700503A3C /* LaunchScreen.storyboard */; };
+		C213A9DB1FBC35BE00503A3C /* JWNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C213A9DA1FBC35BE00503A3C /* JWNavigationController.m */; };
+		C213A9DE1FBC360E00503A3C /* JWRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C213A9DD1FBC360E00503A3C /* JWRootNavigationController.m */; };
+		C213A9E11FBC367100503A3C /* JWMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C213A9E01FBC367100503A3C /* JWMainTabViewController.m */; };
+		C213A9E41FBC368F00503A3C /* JWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C213A9E31FBC368F00503A3C /* JWViewController.m */; };
+		C213A9E71FBC397600503A3C /* JWTabPushedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C213A9E61FBC397600503A3C /* JWTabPushedViewController.m */; };
+		C2B883DB1FBD3EEC007AFD85 /* JWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B883DA1FBD3EEC007AFD85 /* JWBaseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C213A9BB1FBC352700503A3C /* JWAutoRotateExpOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWAutoRotateExpOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C213A9BF1FBC352700503A3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C213A9C11FBC352700503A3C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C213A9C21FBC352700503A3C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C213A9CA1FBC352700503A3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C213A9CD1FBC352700503A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C213A9CF1FBC352700503A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C213A9D91FBC35BE00503A3C /* JWNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWNavigationController.h; sourceTree = "<group>"; };
+		C213A9DA1FBC35BE00503A3C /* JWNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWNavigationController.m; sourceTree = "<group>"; };
+		C213A9DC1FBC360E00503A3C /* JWRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWRootNavigationController.h; sourceTree = "<group>"; };
+		C213A9DD1FBC360E00503A3C /* JWRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWRootNavigationController.m; sourceTree = "<group>"; };
+		C213A9DF1FBC367100503A3C /* JWMainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainTabViewController.h; sourceTree = "<group>"; };
+		C213A9E01FBC367100503A3C /* JWMainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainTabViewController.m; sourceTree = "<group>"; };
+		C213A9E21FBC368F00503A3C /* JWViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWViewController.h; sourceTree = "<group>"; };
+		C213A9E31FBC368F00503A3C /* JWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWViewController.m; sourceTree = "<group>"; };
+		C213A9E51FBC397600503A3C /* JWTabPushedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTabPushedViewController.h; sourceTree = "<group>"; };
+		C213A9E61FBC397600503A3C /* JWTabPushedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTabPushedViewController.m; sourceTree = "<group>"; };
+		C2B883D91FBD3EEC007AFD85 /* JWBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWBaseViewController.h; sourceTree = "<group>"; };
+		C2B883DA1FBD3EEC007AFD85 /* JWBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWBaseViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C213A9B81FBC352700503A3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C213A9B21FBC352700503A3C = {
+			isa = PBXGroup;
+			children = (
+				C213A9BD1FBC352700503A3C /* JWAutoRotateExpOne */,
+				C213A9BC1FBC352700503A3C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C213A9BC1FBC352700503A3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C213A9BB1FBC352700503A3C /* JWAutoRotateExpOne.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C213A9BD1FBC352700503A3C /* JWAutoRotateExpOne */ = {
+			isa = PBXGroup;
+			children = (
+				C213A9D51FBC35A000503A3C /* Main */,
+				C213A9D71FBC35A000503A3C /* Others */,
+				C213A9C11FBC352700503A3C /* AppDelegate.h */,
+				C213A9C21FBC352700503A3C /* AppDelegate.m */,
+				C213A9CA1FBC352700503A3C /* Assets.xcassets */,
+				C213A9CC1FBC352700503A3C /* LaunchScreen.storyboard */,
+				C213A9CF1FBC352700503A3C /* Info.plist */,
+				C213A9BE1FBC352700503A3C /* Supporting Files */,
+			);
+			path = JWAutoRotateExpOne;
+			sourceTree = "<group>";
+		};
+		C213A9BE1FBC352700503A3C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C213A9BF1FBC352700503A3C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C213A9D51FBC35A000503A3C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C213A9D61FBC35A000503A3C /* ViewControllers */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C213A9D61FBC35A000503A3C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C213A9D91FBC35BE00503A3C /* JWNavigationController.h */,
+				C213A9DA1FBC35BE00503A3C /* JWNavigationController.m */,
+				C213A9DC1FBC360E00503A3C /* JWRootNavigationController.h */,
+				C213A9DD1FBC360E00503A3C /* JWRootNavigationController.m */,
+				C213A9DF1FBC367100503A3C /* JWMainTabViewController.h */,
+				C213A9E01FBC367100503A3C /* JWMainTabViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C213A9D71FBC35A000503A3C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				C2B883D51FBC8AE9007AFD85 /* Category */,
+				C213A9D81FBC35A000503A3C /* ViewControllers */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		C213A9D81FBC35A000503A3C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C213A9E21FBC368F00503A3C /* JWViewController.h */,
+				C213A9E31FBC368F00503A3C /* JWViewController.m */,
+				C213A9E51FBC397600503A3C /* JWTabPushedViewController.h */,
+				C213A9E61FBC397600503A3C /* JWTabPushedViewController.m */,
+				C2B883D91FBD3EEC007AFD85 /* JWBaseViewController.h */,
+				C2B883DA1FBD3EEC007AFD85 /* JWBaseViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C2B883D51FBC8AE9007AFD85 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C213A9BA1FBC352700503A3C /* JWAutoRotateExpOne */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C213A9D21FBC352700503A3C /* Build configuration list for PBXNativeTarget "JWAutoRotateExpOne" */;
+			buildPhases = (
+				C213A9B71FBC352700503A3C /* Sources */,
+				C213A9B81FBC352700503A3C /* Frameworks */,
+				C213A9B91FBC352700503A3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWAutoRotateExpOne;
+			productName = JWAutoRotateExpOne;
+			productReference = C213A9BB1FBC352700503A3C /* JWAutoRotateExpOne.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C213A9B31FBC352700503A3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JW;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = JiangWang;
+				TargetAttributes = {
+					C213A9BA1FBC352700503A3C = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = Y39R442P5T;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C213A9B61FBC352700503A3C /* Build configuration list for PBXProject "JWAutoRotateExpOne" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C213A9B21FBC352700503A3C;
+			productRefGroup = C213A9BC1FBC352700503A3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C213A9BA1FBC352700503A3C /* JWAutoRotateExpOne */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C213A9B91FBC352700503A3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C213A9CE1FBC352700503A3C /* LaunchScreen.storyboard in Resources */,
+				C213A9CB1FBC352700503A3C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C213A9B71FBC352700503A3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C213A9DE1FBC360E00503A3C /* JWRootNavigationController.m in Sources */,
+				C213A9E41FBC368F00503A3C /* JWViewController.m in Sources */,
+				C213A9E71FBC397600503A3C /* JWTabPushedViewController.m in Sources */,
+				C213A9C31FBC352700503A3C /* AppDelegate.m in Sources */,
+				C2B883DB1FBD3EEC007AFD85 /* JWBaseViewController.m in Sources */,
+				C213A9E11FBC367100503A3C /* JWMainTabViewController.m in Sources */,
+				C213A9C01FBC352700503A3C /* main.m in Sources */,
+				C213A9DB1FBC35BE00503A3C /* JWNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C213A9CC1FBC352700503A3C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C213A9CD1FBC352700503A3C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C213A9D01FBC352700503A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C213A9D11FBC352700503A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C213A9D31FBC352700503A3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = JWAutoRotateExpOne/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWAutoRotateExpOne;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C213A9D41FBC352700503A3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = JWAutoRotateExpOne/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWAutoRotateExpOne;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C213A9B61FBC352700503A3C /* Build configuration list for PBXProject "JWAutoRotateExpOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C213A9D01FBC352700503A3C /* Debug */,
+				C213A9D11FBC352700503A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C213A9D21FBC352700503A3C /* Build configuration list for PBXNativeTarget "JWAutoRotateExpOne" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C213A9D31FBC352700503A3C /* Debug */,
+				C213A9D41FBC352700503A3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C213A9B31FBC352700503A3C /* Project object */;
+}
