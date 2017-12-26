@@ -119,11 +119,18 @@ didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     self.presentationAnimator.presenting = YES;
     CGRect cellViewRect = [self.selectedCell convertRect:self.selectedCell.bounds toView:self.view];
     self.presentationAnimator.originRect = cellViewRect;
+    self.presentationAnimator.originCornerRadius = self.selectedCell.layer.cornerRadius;
+    self.selectedCell.hidden = YES;
     return self.presentationAnimator;
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     self.presentationAnimator.presenting = NO;
+    __weak typeof(self) weakSelf = self;
+    self.presentationAnimator.aniCompletion = ^{
+        __strong typeof(weakSelf) strSelf = weakSelf;
+        strSelf.selectedCell.hidden = NO;
+    };
     return self.presentationAnimator;
 }
 

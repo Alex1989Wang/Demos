@@ -10,7 +10,7 @@
 #import "JWVCPBookDetailViewController.h"
 #import "JWVCPViewController.h"
 
-static CGFloat kAnimationDuration = 1.0;
+static CGFloat kAnimationDuration = 0.5;
 
 @implementation JWVCPBookPresentationTransitionAnimator
 
@@ -35,6 +35,8 @@ static CGFloat kAnimationDuration = 1.0;
         bookDetailView.center = (CGPoint){CGRectGetMidX(smallOriginViewRect),
             CGRectGetMidY(smallOriginViewRect)};
         bookDetailView.transform = scaleTrans;
+        bookDetailView.layer.cornerRadius = self.originCornerRadius/xScale;
+        bookDetailView.layer.masksToBounds = YES;
     }
     
     [containerView addSubview:bookDetailView];
@@ -52,9 +54,14 @@ static CGFloat kAnimationDuration = 1.0;
          (CGPoint){CGRectGetMidX(self.originRect), CGRectGetMidY(self.originRect)};
          bookDetailView.transform = (self.presenting) ?
          CGAffineTransformIdentity : scaleTrans;
+         bookDetailView.layer.cornerRadius = (self.presenting) ? 0 :
+         self.originCornerRadius/xScale;
      }
                      completion:
      ^(BOOL finished) {
+         if (self.aniCompletion) {
+             self.aniCompletion();
+         }
          [transitionContext completeTransition:YES];
      }];
 }

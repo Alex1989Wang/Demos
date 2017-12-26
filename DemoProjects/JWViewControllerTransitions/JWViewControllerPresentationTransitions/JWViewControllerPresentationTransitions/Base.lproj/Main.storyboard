@@ -126,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blurred_backgrounds" translatesAutoresizingMaskIntoConstraints="NO" id="rW7-GR-E88">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mvm-55-4KB">
                                 <rect key="frame" x="82" y="50" width="210" height="280"/>
@@ -150,10 +150,10 @@
                             <constraint firstItem="Mvm-55-4KB" firstAttribute="top" secondItem="Eok-fS-tcZ" secondAttribute="bottom" constant="30" id="FJm-BM-qJK"/>
                             <constraint firstItem="Mvm-55-4KB" firstAttribute="centerX" secondItem="mX3-4E-xPt" secondAttribute="centerX" id="Gxy-tP-v48"/>
                             <constraint firstItem="ZKO-Em-XvV" firstAttribute="leading" secondItem="mX3-4E-xPt" secondAttribute="leadingMargin" id="Lqw-KS-KTy"/>
+                            <constraint firstItem="rW7-GR-E88" firstAttribute="top" secondItem="mX3-4E-xPt" secondAttribute="top" id="Ntj-Oj-4o0"/>
                             <constraint firstItem="0Ts-TI-Ygl" firstAttribute="top" secondItem="rW7-GR-E88" secondAttribute="bottom" id="Pec-b9-mbf"/>
                             <constraint firstAttribute="trailing" secondItem="rW7-GR-E88" secondAttribute="trailing" id="Q0f-TZ-4yX"/>
                             <constraint firstItem="0Ts-TI-Ygl" firstAttribute="top" secondItem="ZKO-Em-XvV" secondAttribute="bottom" constant="50" id="QfX-Nq-uYI"/>
-                            <constraint firstItem="rW7-GR-E88" firstAttribute="top" secondItem="Eok-fS-tcZ" secondAttribute="bottom" id="VY2-04-ghq"/>
                             <constraint firstItem="ZKO-Em-XvV" firstAttribute="top" secondItem="Mvm-55-4KB" secondAttribute="bottom" constant="50" id="lsp-Q2-EXT"/>
                             <constraint firstItem="rW7-GR-E88" firstAttribute="leading" secondItem="mX3-4E-xPt" secondAttribute="leading" id="n6v-YE-acI"/>
                         </constraints>
