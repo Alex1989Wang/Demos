@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17B1003" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img.9" translatesAutoresizingMaskIntoConstraints="NO" id="6We-II-fuT">
+                                <rect key="frame" x="67" y="206" width="239" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="38L-6e-pjl"/>
+                                    <constraint firstAttribute="width" constant="220" id="WcY-b0-7ti"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7wr-Rh-GkU">
+                                <rect key="frame" x="116" y="448" width="118" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="B0d-6i-FHt"/>
+                                    <constraint firstAttribute="width" constant="120" id="sx2-0N-Lzy"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.22554376400000001" green="0.78408395620000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="horizontalStrech:" destination="BYZ-38-t0r" eventType="valueChanged" id="obz-Ym-AR8"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wQB-n9-zUx">
+                                <rect key="frame" x="118" y="525" width="118" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="Bhu-h4-b5f"/>
+                                    <constraint firstAttribute="width" constant="120" id="sZs-zY-bYN"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" red="0.53580280170000005" green="0.85247844829999997" blue="0.98806573279999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="thumbTintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="verticalStrech:" destination="BYZ-38-t0r" eventType="valueChanged" id="CJn-vt-Byv"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jfaofjaodjaoifa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q34-GQ-Phb">
+                                <rect key="frame" x="209" y="239" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" red="0.72015783629441632" green="0.72015783629441632" blue="0.72015783629441632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="q34-GQ-Phb" firstAttribute="bottom" secondItem="6We-II-fuT" secondAttribute="bottom" id="0re-oy-VTy"/>
+                            <constraint firstItem="q34-GQ-Phb" firstAttribute="leading" secondItem="6We-II-fuT" secondAttribute="leading" id="Grh-m2-hp0"/>
+                            <constraint firstItem="6We-II-fuT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LSy-vq-4ef"/>
+                            <constraint firstItem="6We-II-fuT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="180" id="TOV-hB-V27"/>
+                            <constraint firstItem="7wr-Rh-GkU" firstAttribute="top" secondItem="6We-II-fuT" secondAttribute="bottom" constant="150" id="aoe-LJ-fN0"/>
+                            <constraint firstItem="wQB-n9-zUx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dTk-TI-iVp"/>
+                            <constraint firstItem="q34-GQ-Phb" firstAttribute="trailing" secondItem="6We-II-fuT" secondAttribute="trailing" id="geh-4i-nDW"/>
+                            <constraint firstItem="q34-GQ-Phb" firstAttribute="top" secondItem="6We-II-fuT" secondAttribute="top" id="jc2-ts-9KL"/>
+                            <constraint firstItem="wQB-n9-zUx" firstAttribute="top" secondItem="7wr-Rh-GkU" secondAttribute="bottom" constant="50" id="mSY-bt-d9r"/>
+                            <constraint firstItem="7wr-Rh-GkU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vPc-BP-lq5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottom" destination="0re-oy-VTy" id="DtO-6X-O5n"/>
+                        <outlet property="imageHeightConstraint" destination="38L-6e-pjl" id="hLF-gP-mMk"/>
+                        <outlet property="imageWidthConstraint" destination="WcY-b0-7ti" id="3so-hB-Fb7"/>
+                        <outlet property="left" destination="Grh-m2-hp0" id="HcZ-Fo-UXa"/>
+                        <outlet property="right" destination="geh-4i-nDW" id="5OS-ot-xu7"/>
+                        <outlet property="testImgeView" destination="6We-II-fuT" id="vyq-tJ-PvS"/>
+                        <outlet property="top" destination="jc2-ts-9KL" id="wHM-v8-yPP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img.9" width="435" height="212"/>
+    </resources>
+</document>

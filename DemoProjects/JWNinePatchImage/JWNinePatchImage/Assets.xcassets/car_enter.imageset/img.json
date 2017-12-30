@@ -1,0 +1,14 @@
+{
+    "stretch" : {
+        "top" : 105,
+        "left" : 40,
+        "bottom" : 105,
+        "right" : 260
+    },
+    "content_insets" : {
+        "top" : 60,
+        "left" : 0,
+        "bottom" : 60,
+        "right" : 250
+    }
+}

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:JWNavigationTransitionDemo/JWNavigationTransitionDemo.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:JWViewControllerPresentationTransitions/JWViewControllerPresentationTransitions.xcodeproj">
    </FileRef>
 </Workspace>
