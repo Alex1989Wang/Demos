@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C25525B42046A21F00540BD8 /* JWSuperVsSelf.m in Sources */ = {isa = PBXBuildFile; fileRef = C25525B32046A21F00540BD8 /* JWSuperVsSelf.m */; };
 		C2DD281C1ED8176F00B27553 /* NSRunLoopNewUnitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DD281B1ED8176F00B27553 /* NSRunLoopNewUnitTest.m */; };
 		C2E9300D1ED570740073ED8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9300C1ED570740073ED8A /* main.m */; };
 		C2E930101ED570740073ED8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9300F1ED570740073ED8A /* AppDelegate.m */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C25525B22046A21F00540BD8 /* JWSuperVsSelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWSuperVsSelf.h; sourceTree = "<group>"; };
+		C25525B32046A21F00540BD8 /* JWSuperVsSelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWSuperVsSelf.m; sourceTree = "<group>"; };
 		C2DD28191ED8176F00B27553 /* NSRunLoopNewUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSRunLoopNewUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2DD281B1ED8176F00B27553 /* NSRunLoopNewUnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRunLoopNewUnitTest.m; sourceTree = "<group>"; };
 		C2DD281D1ED8176F00B27553 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				C2E9300F1ED570740073ED8A /* AppDelegate.m */,
 				C2E930111ED570740073ED8A /* ViewController.h */,
 				C2E930121ED570740073ED8A /* ViewController.m */,
+				C25525B22046A21F00540BD8 /* JWSuperVsSelf.h */,
+				C25525B32046A21F00540BD8 /* JWSuperVsSelf.m */,
 				C2E930141ED570740073ED8A /* Main.storyboard */,
 				C2E930171ED570740073ED8A /* Assets.xcassets */,
 				C2E930191ED570740073ED8A /* LaunchScreen.storyboard */,
@@ -224,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E930131ED570740073ED8A /* ViewController.m in Sources */,
+				C25525B42046A21F00540BD8 /* JWSuperVsSelf.m in Sources */,
 				C2E930101ED570740073ED8A /* AppDelegate.m in Sources */,
 				C2E9300D1ED570740073ED8A /* main.m in Sources */,
 			);
