@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C22EDA01204FE583009B6A53 /* JWReplicatorLayerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22EDA00204FE583009B6A53 /* JWReplicatorLayerTestViewController.m */; };
 		C2CDECB8204E250100925A26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CDECB7204E250100925A26 /* main.m */; };
 		C2CDECBB204E250100925A26 /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CDECBA204E250100925A26 /* JWAppDelegate.m */; };
 		C2CDECC1204E250100925A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CDECBF204E250100925A26 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		C2CDECF3204E285000925A26 /* JWAnimationTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CDECEF204E285000925A26 /* JWAnimationTestView.m */; };
 		C2CDECF4204E285000925A26 /* JWAnimationTestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CDECF0204E285000925A26 /* JWAnimationTestView.xib */; };
 		C2CDECF5204E285000925A26 /* JWTestCoreAnimationCallStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CDECF2204E285000925A26 /* JWTestCoreAnimationCallStackViewController.m */; };
+		C2CDECF9204F968700925A26 /* JWGraidentMaskTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CDECF8204F968700925A26 /* JWGraidentMaskTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C22ED9FF204FE583009B6A53 /* JWReplicatorLayerTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWReplicatorLayerTestViewController.h; sourceTree = "<group>"; };
+		C22EDA00204FE583009B6A53 /* JWReplicatorLayerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWReplicatorLayerTestViewController.m; sourceTree = "<group>"; };
 		C2CDECB3204E250100925A26 /* JWLayerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWLayerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CDECB7204E250100925A26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2CDECB9204E250100925A26 /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		C2CDECF0204E285000925A26 /* JWAnimationTestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JWAnimationTestView.xib; sourceTree = "<group>"; };
 		C2CDECF1204E285000925A26 /* JWTestCoreAnimationCallStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTestCoreAnimationCallStackViewController.h; sourceTree = "<group>"; };
 		C2CDECF2204E285000925A26 /* JWTestCoreAnimationCallStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTestCoreAnimationCallStackViewController.m; sourceTree = "<group>"; };
+		C2CDECF7204F968700925A26 /* JWGraidentMaskTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWGraidentMaskTestViewController.h; sourceTree = "<group>"; };
+		C2CDECF8204F968700925A26 /* JWGraidentMaskTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWGraidentMaskTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C22ED9FE204FE56D009B6A53 /* ReplicatorLoading */ = {
+			isa = PBXGroup;
+			children = (
+				C22ED9FF204FE583009B6A53 /* JWReplicatorLayerTestViewController.h */,
+				C22EDA00204FE583009B6A53 /* JWReplicatorLayerTestViewController.m */,
+			);
+			path = ReplicatorLoading;
+			sourceTree = "<group>";
+		};
 		C2CDECAA204E250000925A26 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				C2CDECED204E281A00925A26 /* AnimationCallStack */,
+				C2CDECF6204F966100925A26 /* GradientMask */,
+				C22ED9FE204FE56D009B6A53 /* ReplicatorLoading */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -167,6 +184,15 @@
 				C2CDECF2204E285000925A26 /* JWTestCoreAnimationCallStackViewController.m */,
 			);
 			path = AnimationCallStack;
+			sourceTree = "<group>";
+		};
+		C2CDECF6204F966100925A26 /* GradientMask */ = {
+			isa = PBXGroup;
+			children = (
+				C2CDECF7204F968700925A26 /* JWGraidentMaskTestViewController.h */,
+				C2CDECF8204F968700925A26 /* JWGraidentMaskTestViewController.m */,
+			);
+			path = GradientMask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,11 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C22EDA01204FE583009B6A53 /* JWReplicatorLayerTestViewController.m in Sources */,
 				C2CDECF3204E285000925A26 /* JWAnimationTestView.m in Sources */,
 				C2CDECBB204E250100925A26 /* JWAppDelegate.m in Sources */,
 				C2CDECEB204E25DC00925A26 /* JWMainTableViewController.m in Sources */,
 				C2CDECB8204E250100925A26 /* main.m in Sources */,
 				C2CDECF5204E285000925A26 /* JWTestCoreAnimationCallStackViewController.m in Sources */,
+				C2CDECF9204F968700925A26 /* JWGraidentMaskTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +577,7 @@
 				C2CDECE2204E250100925A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2CDECE3204E250100925A26 /* Build configuration list for PBXNativeTarget "JWLayerTestTests" */ = {
 			isa = XCConfigurationList;
@@ -557,6 +586,7 @@
 				C2CDECE5204E250100925A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C2CDECE6204E250100925A26 /* Build configuration list for PBXNativeTarget "JWLayerTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +595,7 @@
 				C2CDECE8204E250100925A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
