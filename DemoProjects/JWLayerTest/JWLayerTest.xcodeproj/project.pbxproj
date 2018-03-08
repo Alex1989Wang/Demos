@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C22EDA01204FE583009B6A53 /* JWReplicatorLayerTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22EDA00204FE583009B6A53 /* JWReplicatorLayerTestViewController.m */; };
+		C22EDA052050CA78009B6A53 /* JWAnimationPauseTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C22EDA042050CA78009B6A53 /* JWAnimationPauseTestViewController.m */; };
 		C2CDECB8204E250100925A26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CDECB7204E250100925A26 /* main.m */; };
 		C2CDECBB204E250100925A26 /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CDECBA204E250100925A26 /* JWAppDelegate.m */; };
 		C2CDECC1204E250100925A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2CDECBF204E250100925A26 /* Main.storyboard */; };
@@ -42,6 +43,8 @@
 /* Begin PBXFileReference section */
 		C22ED9FF204FE583009B6A53 /* JWReplicatorLayerTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWReplicatorLayerTestViewController.h; sourceTree = "<group>"; };
 		C22EDA00204FE583009B6A53 /* JWReplicatorLayerTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWReplicatorLayerTestViewController.m; sourceTree = "<group>"; };
+		C22EDA032050CA78009B6A53 /* JWAnimationPauseTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWAnimationPauseTestViewController.h; sourceTree = "<group>"; };
+		C22EDA042050CA78009B6A53 /* JWAnimationPauseTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWAnimationPauseTestViewController.m; sourceTree = "<group>"; };
 		C2CDECB3204E250100925A26 /* JWLayerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWLayerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CDECB7204E250100925A26 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2CDECB9204E250100925A26 /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +102,15 @@
 				C22EDA00204FE583009B6A53 /* JWReplicatorLayerTestViewController.m */,
 			);
 			path = ReplicatorLoading;
+			sourceTree = "<group>";
+		};
+		C22EDA022050CA5E009B6A53 /* PauseAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				C22EDA032050CA78009B6A53 /* JWAnimationPauseTestViewController.h */,
+				C22EDA042050CA78009B6A53 /* JWAnimationPauseTestViewController.m */,
+			);
+			path = PauseAnimation;
 			sourceTree = "<group>";
 		};
 		C2CDECAA204E250000925A26 = {
@@ -170,6 +182,7 @@
 				C2CDECED204E281A00925A26 /* AnimationCallStack */,
 				C2CDECF6204F966100925A26 /* GradientMask */,
 				C22ED9FE204FE56D009B6A53 /* ReplicatorLoading */,
+				C22EDA022050CA5E009B6A53 /* PauseAnimation */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -338,6 +351,7 @@
 				C2CDECBB204E250100925A26 /* JWAppDelegate.m in Sources */,
 				C2CDECEB204E25DC00925A26 /* JWMainTableViewController.m in Sources */,
 				C2CDECB8204E250100925A26 /* main.m in Sources */,
+				C22EDA052050CA78009B6A53 /* JWAnimationPauseTestViewController.m in Sources */,
 				C2CDECF5204E285000925A26 /* JWTestCoreAnimationCallStackViewController.m in Sources */,
 				C2CDECF9204F968700925A26 /* JWGraidentMaskTestViewController.m in Sources */,
 			);
