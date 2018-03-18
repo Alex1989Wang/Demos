@@ -12,6 +12,7 @@
 #import "JWReplicatorLayerTestViewController.h"
 #import "JWAnimationPauseTestViewController.h"
 #import "JWLayerPerspectiveTestViewController.h"
+#import "JWWaveEffectTestViewController.h"
 
 typedef NS_ENUM(NSUInteger, JWLayerTestType) {
     JWLayerTestTypeAnimationCallStack,
@@ -19,6 +20,7 @@ typedef NS_ENUM(NSUInteger, JWLayerTestType) {
     JWLayerTestTypeReplicatorAnimation,
     JWLayerTestTypeAnimationPauseResume,
     JWLayerTestTypePerspective,
+    JWLayerTestTypeWaveEffect,
 };
 
 static NSString *JWMainTableViewCellReuseID = @"JWMainTableViewCellReuseID";
@@ -101,6 +103,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             break;
         }
             
+        case JWLayerTestTypeWaveEffect: {
+            JWWaveEffectTestViewController *testCon = [[JWWaveEffectTestViewController alloc] init];
+            [self.navigationController pushViewController:testCon animated:YES];
+            break;
+        }
+            
         default:
             break;
     }
@@ -113,7 +121,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
                           @(JWLayerTestTypeGradientMask) : @"Gradient Mask",
                           @(JWLayerTestTypeReplicatorAnimation) : @"Replicator Animation",
                           @(JWLayerTestTypeAnimationPauseResume) : @"Animation Pause & Resume",
-                          @(JWLayerTestTypePerspective) : @"Layer Perspective Effect"};
+                          @(JWLayerTestTypePerspective) : @"Layer Perspective Effect",
+                          @(JWLayerTestTypeWaveEffect) : @"Layer Wave Effect"};
     }
     return _testTypesMap;
 }
