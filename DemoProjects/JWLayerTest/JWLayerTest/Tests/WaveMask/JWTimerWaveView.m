@@ -35,6 +35,11 @@
     self.waveTimer = nil;
 }
 
+- (void)setWaveColor:(UIColor *)waveColor {
+    [self shapeLayer].fillColor = waveColor.CGColor;
+    [self shapeLayer].strokeColor = waveColor.CGColor;
+}
+
 #pragma mark - Initialization
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];

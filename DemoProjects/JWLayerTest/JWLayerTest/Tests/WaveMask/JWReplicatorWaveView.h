@@ -11,6 +11,11 @@
 @interface JWReplicatorWaveView : UIView
 
 /**
+ Color used to fill the wave
+ */
+@property (nonatomic, strong) UIColor *waveColor;
+
+/**
  Start waveing if all conditions are met.
  */
 - (void)startWavingIfNeeded;

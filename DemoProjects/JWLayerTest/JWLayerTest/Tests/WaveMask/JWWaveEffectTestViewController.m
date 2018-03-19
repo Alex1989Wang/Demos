@@ -7,20 +7,16 @@
 //
 
 #import "JWWaveEffectTestViewController.h"
-#import "JWTimerWaveView.h"
-#import "JWReplicatorWaveView.h"
-
-typedef NS_ENUM(NSUInteger, JWWaveViewType) {
-    JWWaveViewTypeTimer,
-    JWWaveViewTypeReplicator,
-};
+#import "JWWaveTableCell.h"
 
 static JWWaveViewType type = JWWaveViewTypeTimer;
+static NSString *const kWaveTableCellReuseID = @"jiangwang.com.waveTableCellReuseID";
 
 @interface JWWaveEffectTestViewController ()
-@property (nonatomic, strong) UIImageView *avatarView;
-@property (nonatomic, strong) JWTimerWaveView *timerWaveView;
-@property (nonatomic, strong) JWReplicatorWaveView *replicatorWaveView;
+<UITableViewDelegate,
+UITableViewDataSource>
+
+@property (nonatomic, strong) UITableView *waveTables;
 @end
 
 @implementation JWWaveEffectTestViewController
@@ -36,82 +32,51 @@ static JWWaveViewType type = JWWaveViewTypeTimer;
     self.title = (type == JWWaveViewTypeTimer) ? @"Wave Built by Timer" :
     @"Wave by Replicator Layer";
     
-    //add a avatar view
-    self.avatarView.frame = (CGRect){80, 200, 100, 100};
-    self.avatarView.image = [UIImage imageNamed:@"ic_broadcast_receive"];
-    self.avatarView.layer.cornerRadius = 100 * 0.5;
-    self.avatarView.layer.masksToBounds = YES;
-    [self.view addSubview:self.avatarView];
-
-    //add wave view
-    CGRect avatarRect = self.avatarView.bounds;
-    CGRect waveRect = (CGRect){0, CGRectGetMidY(avatarRect),
-        CGRectGetWidth(avatarRect), CGRectGetHeight(avatarRect) * 0.5};
-    self.timerWaveView.frame = waveRect;
-    self.replicatorWaveView.frame = waveRect;
-    [self.avatarView addSubview:(type == JWWaveViewTypeTimer) ? self.timerWaveView : self.replicatorWaveView];
+    //prepare table
+    self.waveTables.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.waveTables];
+    [self.waveTables.leftAnchor constraintEqualToAnchor:self.view.leftAnchor].active = YES;
+    [self.waveTables.rightAnchor constraintEqualToAnchor:self.view.rightAnchor].active = YES;
+    [self.waveTables.topAnchor constraintEqualToAnchor:self.view.topAnchor].active = YES;
+    [self.waveTables.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    
-    //start wave effect if needed;
-    if (type == JWWaveViewTypeTimer) {
-        [self.timerWaveView startWavingIfNeeded];
-    }
-    else {
-        [self.replicatorWaveView startWavingIfNeeded];
-    }
+#pragma mark - <UITableViewDelegate, UITableViewDataSource>
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    
-    //pause waving if needed;
-    if (type == JWWaveViewTypeTimer) {
-        [self.timerWaveView pauseWavingIfNeeded];
-    }
-    else {
-        [self.replicatorWaveView pauseWavingIfNeeded];
-    }
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
+    return 100;
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    CGRect avatarRect = self.avatarView.bounds;
-    CGRect waveRect = (CGRect){0, CGRectGetMidY(avatarRect),
-        CGRectGetWidth(avatarRect), CGRectGetHeight(avatarRect) * 0.5};
-    self.timerWaveView.frame = waveRect;
-    self.replicatorWaveView.frame = waveRect;
-    //start wave effect if needed;
-    if (type == JWWaveViewTypeTimer) {
-        [self.timerWaveView startWavingIfNeeded];
-    }
-    else {
-        [self.replicatorWaveView startWavingIfNeeded];
-    }
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    JWWaveTableCell *cell = [tableView dequeueReusableCellWithIdentifier:kWaveTableCellReuseID];
+    cell.waveViewType = type;
+    cell.textLabel.text =
+    [NSString stringWithFormat:@"row %ld, section %ld",
+     indexPath.row, indexPath.section];
+    return cell;
 }
 
 #pragma mark - Lazy Loading 
-- (JWTimerWaveView *)timerWaveView {
-    if (!_timerWaveView) {
-        _timerWaveView = [[JWTimerWaveView alloc] init];
+- (UITableView *)waveTables {
+    if (!_waveTables) {
+        _waveTables = [[UITableView alloc] initWithFrame:CGRectZero
+                                                   style:UITableViewStylePlain];
+        [_waveTables registerClass:[JWWaveTableCell class]
+            forCellReuseIdentifier:kWaveTableCellReuseID];
+        _waveTables.estimatedRowHeight = 0.f;
+        _waveTables.estimatedSectionFooterHeight = 0.f;
+        _waveTables.estimatedSectionHeaderHeight = 0.f;
+        _waveTables.rowHeight = kJWTableCellHeight;
+        
+        _waveTables.dataSource = self;
+        _waveTables.delegate = self;
     }
-    return _timerWaveView;
-}
-
-- (JWReplicatorWaveView *)replicatorWaveView {
-    if (!_replicatorWaveView) {
-        _replicatorWaveView = [[JWReplicatorWaveView alloc] init];
-    }
-    return _replicatorWaveView;
-}
-
-- (UIImageView *)avatarView {
-    if (!_avatarView) {
-        _avatarView = [[UIImageView alloc] init];
-    }
-    return _avatarView;
+    return _waveTables;
 }
 
 @end

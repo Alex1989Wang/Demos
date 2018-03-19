@@ -46,6 +46,11 @@ static NSString *const kWaveShapeTranslationAnimationKey = @"jiangwang.com.waveT
     self.waveShapeLayer.speed = 0;
 }
 
+- (void)setWaveColor:(UIColor *)waveColor {
+    self.waveShapeLayer.fillColor = waveColor.CGColor;
+    self.waveShapeLayer.strokeColor = waveColor.CGColor;
+}
+
 #pragma mark - Initialization
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -107,7 +112,6 @@ static NSString *const kWaveShapeTranslationAnimationKey = @"jiangwang.com.waveT
     self.waveShapeLayer.timeOffset = 0;
     self.waveShapeLayer.beginTime = timeOffsetSincePaused;
 }
-
 
 - (void)configureWaveShapes {
     CAReplicatorLayer *replicatorLayer = [self replicatorLayer];
