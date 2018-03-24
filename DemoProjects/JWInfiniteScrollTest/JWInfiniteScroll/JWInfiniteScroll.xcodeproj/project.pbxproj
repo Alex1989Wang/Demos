@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20D4A7F2064E4A700935769 /* JWInfiniteFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C20D4A7E2064E4A700935769 /* JWInfiniteFlowLayout.m */; };
 		C231904620648C4400EF0C07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C231904520648C4400EF0C07 /* main.m */; };
 		C231904F20648C4400EF0C07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C231904D20648C4400EF0C07 /* Main.storyboard */; };
 		C231905120648C4500EF0C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C231905020648C4500EF0C07 /* Assets.xcassets */; };
@@ -17,6 +18,9 @@
 		C231907C20648CAC00EF0C07 /* JWMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C231907A20648CAC00EF0C07 /* JWMainTableViewController.m */; };
 		C231908120648D4100EF0C07 /* JWInfiniteScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C231908020648D4100EF0C07 /* JWInfiniteScrollViewController.m */; };
 		C23190842064924400EF0C07 /* JWInfiniteScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C23190832064924400EF0C07 /* JWInfiniteScrollView.m */; };
+		C23190882064D6EC00EF0C07 /* JWInfiniteCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23190872064D6EC00EF0C07 /* JWInfiniteCollectionViewController.m */; };
+		C231908B2064D90500EF0C07 /* JWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C231908A2064D90500EF0C07 /* JWCollectionViewCell.m */; };
+		C231908E2064DF5700EF0C07 /* JWCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C231908D2064DF5700EF0C07 /* JWCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C20D4A7D2064E4A700935769 /* JWInfiniteFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWInfiniteFlowLayout.h; sourceTree = "<group>"; };
+		C20D4A7E2064E4A700935769 /* JWInfiniteFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWInfiniteFlowLayout.m; sourceTree = "<group>"; };
 		C231904120648C4400EF0C07 /* JWInfiniteScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWInfiniteScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C231904520648C4400EF0C07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C231904E20648C4400EF0C07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +63,12 @@
 		C231908020648D4100EF0C07 /* JWInfiniteScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWInfiniteScrollViewController.m; sourceTree = "<group>"; };
 		C23190822064924400EF0C07 /* JWInfiniteScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWInfiniteScrollView.h; sourceTree = "<group>"; };
 		C23190832064924400EF0C07 /* JWInfiniteScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWInfiniteScrollView.m; sourceTree = "<group>"; };
+		C23190862064D6EC00EF0C07 /* JWInfiniteCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWInfiniteCollectionViewController.h; sourceTree = "<group>"; };
+		C23190872064D6EC00EF0C07 /* JWInfiniteCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWInfiniteCollectionViewController.m; sourceTree = "<group>"; };
+		C23190892064D90500EF0C07 /* JWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCollectionViewCell.h; sourceTree = "<group>"; };
+		C231908A2064D90500EF0C07 /* JWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCollectionViewCell.m; sourceTree = "<group>"; };
+		C231908C2064DF5700EF0C07 /* JWCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWCollectionView.h; sourceTree = "<group>"; };
+		C231908D2064DF5700EF0C07 /* JWCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				C231907E20648CF600EF0C07 /* ScrollViewInfiniteScroll */,
+				C23190852064D6CF00EF0C07 /* CollectionViewInfiniteScroll */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -164,6 +177,21 @@
 				C23190832064924400EF0C07 /* JWInfiniteScrollView.m */,
 			);
 			path = ScrollViewInfiniteScroll;
+			sourceTree = "<group>";
+		};
+		C23190852064D6CF00EF0C07 /* CollectionViewInfiniteScroll */ = {
+			isa = PBXGroup;
+			children = (
+				C23190862064D6EC00EF0C07 /* JWInfiniteCollectionViewController.h */,
+				C23190872064D6EC00EF0C07 /* JWInfiniteCollectionViewController.m */,
+				C231908C2064DF5700EF0C07 /* JWCollectionView.h */,
+				C231908D2064DF5700EF0C07 /* JWCollectionView.m */,
+				C20D4A7D2064E4A700935769 /* JWInfiniteFlowLayout.h */,
+				C20D4A7E2064E4A700935769 /* JWInfiniteFlowLayout.m */,
+				C23190892064D90500EF0C07 /* JWCollectionViewCell.h */,
+				C231908A2064D90500EF0C07 /* JWCollectionViewCell.m */,
+			);
+			path = CollectionViewInfiniteScroll;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,8 +332,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C231908120648D4100EF0C07 /* JWInfiniteScrollViewController.m in Sources */,
+				C20D4A7F2064E4A700935769 /* JWInfiniteFlowLayout.m in Sources */,
+				C23190882064D6EC00EF0C07 /* JWInfiniteCollectionViewController.m in Sources */,
+				C231908B2064D90500EF0C07 /* JWCollectionViewCell.m in Sources */,
 				C231907C20648CAC00EF0C07 /* JWMainTableViewController.m in Sources */,
 				C23190842064924400EF0C07 /* JWInfiniteScrollView.m in Sources */,
+				C231908E2064DF5700EF0C07 /* JWCollectionView.m in Sources */,
 				C231904620648C4400EF0C07 /* main.m in Sources */,
 				C231907B20648CAC00EF0C07 /* JWAppDelegate.m in Sources */,
 			);
@@ -545,6 +577,7 @@
 				C231907020648C4500EF0C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C231907120648C4500EF0C07 /* Build configuration list for PBXNativeTarget "JWInfiniteScrollTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +586,7 @@
 				C231907320648C4500EF0C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C231907420648C4500EF0C07 /* Build configuration list for PBXNativeTarget "JWInfiniteScrollUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +595,7 @@
 				C231907620648C4500EF0C07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

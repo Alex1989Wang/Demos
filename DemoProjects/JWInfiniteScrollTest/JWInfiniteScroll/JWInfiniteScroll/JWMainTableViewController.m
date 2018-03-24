@@ -8,6 +8,7 @@
 
 #import "JWMainTableViewController.h"
 #import "JWInfiniteScrollViewController.h"
+#import "JWInfiniteCollectionViewController.h"
 
 typedef NS_ENUM(NSUInteger, JWInfiniteScrollType) {
     JWInfiniteScrollTypeScrollView,
@@ -24,7 +25,7 @@ static NSString *JWMainTableViewCellReuseID = @"JWMainTableViewCellReuseID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Layer Tests";
+    self.title = @"Infinite Scroll Tests";
     
     [self setupTableView];
 }
@@ -66,6 +67,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             break;
         }
         case JWInfiniteScrollTypeCollectionView: {
+            JWInfiniteCollectionViewController *testCon =
+            [[JWInfiniteCollectionViewController alloc] init];
+            testCon.title = self.testTypesMap[@(JWInfiniteScrollTypeCollectionView)];
+            [self.navigationController pushViewController:testCon animated:YES];
             break;
         }
         default:
@@ -77,8 +82,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (NSDictionary *)testTypesMap {
     if (nil == _testTypesMap) {
         _testTypesMap = @{@(JWInfiniteScrollTypeScrollView) : @"Scroll View Infinite Scroll",
-                          @(JWInfiniteScrollTypeCollectionView) : @"Collection View Infinite Scroll",
-                          };
+                          @(JWInfiniteScrollTypeCollectionView) : @"Collection View Infinite Scroll",};
     }
     return _testTypesMap;
 }
