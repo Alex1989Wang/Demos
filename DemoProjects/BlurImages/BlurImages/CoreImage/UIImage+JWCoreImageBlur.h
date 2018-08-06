@@ -10,8 +10,6 @@
 
 @interface UIImage (JWCoreImageBlur)
 
-- (UIImage*) blur:(UIImage*)theImage;
-
 + (void)blurImage:(UIImage *)image
        blurRadius:(CGFloat)radius
         completed:(void(^)(UIImage *resultImage))completion;
