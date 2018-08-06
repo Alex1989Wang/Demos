@@ -9,10 +9,12 @@
 #import "JWMainTableViewController.h"
 #import "UIEffectViewBlurViewController.h"
 #import "JWAccelerateFrameworkBlurViewController.h"
+#import "JWCoreImageBlurViewController.h"
 
 typedef NS_ENUM(NSUInteger, JWBlurImageType) {
     JWBlurImageTypeUIEffectView,
     JWBlurImageTypePixelManipulation,
+    JWBlurImageTypeCoreImage,
 };
 
 static NSString *JWMainTableViewCellReuseID = @"JWMainTableViewCellReuseID";
@@ -72,6 +74,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             [self.navigationController pushViewController:testCon animated:YES];
             break;
         }
+        case JWBlurImageTypeCoreImage: {
+            JWCoreImageBlurViewController *testCon =
+            [[JWCoreImageBlurViewController alloc] initWithNibName:@"JWCoreImageBlurViewController" bundle:nil];
+            testCon.title = self.testTypesMap[@(JWBlurImageTypeCoreImage)];
+            [self.navigationController pushViewController:testCon animated:YES];
+            break;
+        }
         default:
             break;
     }
@@ -81,7 +90,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (NSDictionary *)testTypesMap {
     if (nil == _testTypesMap) {
         _testTypesMap = @{@(JWBlurImageTypeUIEffectView) : @"UI Effect View Blur",
-                          @(JWBlurImageTypePixelManipulation) : @"Use Accelerate Framework",};
+                          @(JWBlurImageTypePixelManipulation) : @"Use Accelerate Framework",
+                          @(JWBlurImageTypeCoreImage) : @"Core Image Blur",};
     }
     return _testTypesMap;
 }
