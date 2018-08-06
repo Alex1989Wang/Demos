@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE9D234A2117EE3D00FE3D2E /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D23492117EE3D00FE3D2E /* JWAppDelegate.m */; };
+		EE9D23522117EE3D00FE3D2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9D23512117EE3D00FE3D2E /* Assets.xcassets */; };
+		EE9D23552117EE3D00FE3D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9D23532117EE3D00FE3D2E /* LaunchScreen.storyboard */; };
+		EE9D23582117EE3D00FE3D2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D23572117EE3D00FE3D2E /* main.m */; };
+		EE9D23622117EE3E00FE3D2E /* BlurImagesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D23612117EE3E00FE3D2E /* BlurImagesTests.m */; };
+		EE9D236D2117EE3E00FE3D2E /* BlurImagesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D236C2117EE3E00FE3D2E /* BlurImagesUITests.m */; };
+		EE9D237C2117EF0900FE3D2E /* JWMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D237B2117EF0900FE3D2E /* JWMainTableViewController.m */; };
+		EE9D23812117F18B00FE3D2E /* UIEffectViewBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D237F2117F18B00FE3D2E /* UIEffectViewBlurViewController.m */; };
+		EE9D23822117F18B00FE3D2E /* UIEffectViewBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9D23802117F18B00FE3D2E /* UIEffectViewBlurViewController.xib */; };
+		EE9D23862117F56200FE3D2E /* taobao.png in Resources */ = {isa = PBXBuildFile; fileRef = EE9D23852117F56200FE3D2E /* taobao.png */; };
+		EE9D23892117F6F600FE3D2E /* JWBlurEffectView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D23882117F6F600FE3D2E /* JWBlurEffectView.m */; };
+		EE9D238D2118205700FE3D2E /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D238B2118205700FE3D2E /* UIImage+Blur.m */; };
+		EE9D23912118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D238F2118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.m */; };
+		EE9D23922118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE9D23902118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE9D235E2117EE3D00FE3D2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE9D233D2117EE3D00FE3D2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE9D23442117EE3D00FE3D2E;
+			remoteInfo = BlurImages;
+		};
+		EE9D23692117EE3E00FE3D2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE9D233D2117EE3D00FE3D2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE9D23442117EE3D00FE3D2E;
+			remoteInfo = BlurImages;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE9D23452117EE3D00FE3D2E /* BlurImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlurImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9D23482117EE3D00FE3D2E /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
+		EE9D23492117EE3D00FE3D2E /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
+		EE9D23512117EE3D00FE3D2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE9D23542117EE3D00FE3D2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE9D23562117EE3D00FE3D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9D23572117EE3D00FE3D2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE9D235D2117EE3D00FE3D2E /* BlurImagesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlurImagesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9D23612117EE3E00FE3D2E /* BlurImagesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurImagesTests.m; sourceTree = "<group>"; };
+		EE9D23632117EE3E00FE3D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9D23682117EE3E00FE3D2E /* BlurImagesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlurImagesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE9D236C2117EE3E00FE3D2E /* BlurImagesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlurImagesUITests.m; sourceTree = "<group>"; };
+		EE9D236E2117EE3E00FE3D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE9D237A2117EF0800FE3D2E /* JWMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainTableViewController.h; sourceTree = "<group>"; };
+		EE9D237B2117EF0900FE3D2E /* JWMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainTableViewController.m; sourceTree = "<group>"; };
+		EE9D237E2117F18B00FE3D2E /* UIEffectViewBlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIEffectViewBlurViewController.h; sourceTree = "<group>"; };
+		EE9D237F2117F18B00FE3D2E /* UIEffectViewBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIEffectViewBlurViewController.m; sourceTree = "<group>"; };
+		EE9D23802117F18B00FE3D2E /* UIEffectViewBlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIEffectViewBlurViewController.xib; sourceTree = "<group>"; };
+		EE9D23852117F56200FE3D2E /* taobao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taobao.png; sourceTree = "<group>"; };
+		EE9D23872117F6F600FE3D2E /* JWBlurEffectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWBlurEffectView.h; sourceTree = "<group>"; };
+		EE9D23882117F6F600FE3D2E /* JWBlurEffectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWBlurEffectView.m; sourceTree = "<group>"; };
+		EE9D238B2118205700FE3D2E /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
+		EE9D238C2118205700FE3D2E /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
+		EE9D238E2118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAccelerateFrameworkBlurViewController.h; sourceTree = "<group>"; };
+		EE9D238F2118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAccelerateFrameworkBlurViewController.m; sourceTree = "<group>"; };
+		EE9D23902118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JWAccelerateFrameworkBlurViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE9D23422117EE3D00FE3D2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9D235A2117EE3D00FE3D2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9D23652117EE3E00FE3D2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE9D233C2117EE3D00FE3D2E = {
+			isa = PBXGroup;
+			children = (
+				EE9D23472117EE3D00FE3D2E /* BlurImages */,
+				EE9D23602117EE3E00FE3D2E /* BlurImagesTests */,
+				EE9D236B2117EE3E00FE3D2E /* BlurImagesUITests */,
+				EE9D23462117EE3D00FE3D2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE9D23462117EE3D00FE3D2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D23452117EE3D00FE3D2E /* BlurImages.app */,
+				EE9D235D2117EE3D00FE3D2E /* BlurImagesTests.xctest */,
+				EE9D23682117EE3E00FE3D2E /* BlurImagesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE9D23472117EE3D00FE3D2E /* BlurImages */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D238A2118205700FE3D2E /* Accelerate */,
+				EE9D237D2117F17600FE3D2E /* UIEffectView */,
+				EE9D237A2117EF0800FE3D2E /* JWMainTableViewController.h */,
+				EE9D237B2117EF0900FE3D2E /* JWMainTableViewController.m */,
+				EE9D23482117EE3D00FE3D2E /* JWAppDelegate.h */,
+				EE9D23492117EE3D00FE3D2E /* JWAppDelegate.m */,
+				EE9D23512117EE3D00FE3D2E /* Assets.xcassets */,
+				EE9D23532117EE3D00FE3D2E /* LaunchScreen.storyboard */,
+				EE9D23562117EE3D00FE3D2E /* Info.plist */,
+				EE9D23572117EE3D00FE3D2E /* main.m */,
+			);
+			path = BlurImages;
+			sourceTree = "<group>";
+		};
+		EE9D23602117EE3E00FE3D2E /* BlurImagesTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D23612117EE3E00FE3D2E /* BlurImagesTests.m */,
+				EE9D23632117EE3E00FE3D2E /* Info.plist */,
+			);
+			path = BlurImagesTests;
+			sourceTree = "<group>";
+		};
+		EE9D236B2117EE3E00FE3D2E /* BlurImagesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D236C2117EE3E00FE3D2E /* BlurImagesUITests.m */,
+				EE9D236E2117EE3E00FE3D2E /* Info.plist */,
+			);
+			path = BlurImagesUITests;
+			sourceTree = "<group>";
+		};
+		EE9D237D2117F17600FE3D2E /* UIEffectView */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D23852117F56200FE3D2E /* taobao.png */,
+				EE9D237E2117F18B00FE3D2E /* UIEffectViewBlurViewController.h */,
+				EE9D237F2117F18B00FE3D2E /* UIEffectViewBlurViewController.m */,
+				EE9D23802117F18B00FE3D2E /* UIEffectViewBlurViewController.xib */,
+				EE9D23872117F6F600FE3D2E /* JWBlurEffectView.h */,
+				EE9D23882117F6F600FE3D2E /* JWBlurEffectView.m */,
+			);
+			path = UIEffectView;
+			sourceTree = "<group>";
+		};
+		EE9D238A2118205700FE3D2E /* Accelerate */ = {
+			isa = PBXGroup;
+			children = (
+				EE9D238B2118205700FE3D2E /* UIImage+Blur.m */,
+				EE9D238C2118205700FE3D2E /* UIImage+Blur.h */,
+				EE9D238E2118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.h */,
+				EE9D238F2118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.m */,
+				EE9D23902118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.xib */,
+			);
+			path = Accelerate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE9D23442117EE3D00FE3D2E /* BlurImages */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9D23712117EE3E00FE3D2E /* Build configuration list for PBXNativeTarget "BlurImages" */;
+			buildPhases = (
+				EE9D23412117EE3D00FE3D2E /* Sources */,
+				EE9D23422117EE3D00FE3D2E /* Frameworks */,
+				EE9D23432117EE3D00FE3D2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlurImages;
+			productName = BlurImages;
+			productReference = EE9D23452117EE3D00FE3D2E /* BlurImages.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE9D235C2117EE3D00FE3D2E /* BlurImagesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9D23742117EE3E00FE3D2E /* Build configuration list for PBXNativeTarget "BlurImagesTests" */;
+			buildPhases = (
+				EE9D23592117EE3D00FE3D2E /* Sources */,
+				EE9D235A2117EE3D00FE3D2E /* Frameworks */,
+				EE9D235B2117EE3D00FE3D2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE9D235F2117EE3D00FE3D2E /* PBXTargetDependency */,
+			);
+			name = BlurImagesTests;
+			productName = BlurImagesTests;
+			productReference = EE9D235D2117EE3D00FE3D2E /* BlurImagesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE9D23672117EE3E00FE3D2E /* BlurImagesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE9D23772117EE3E00FE3D2E /* Build configuration list for PBXNativeTarget "BlurImagesUITests" */;
+			buildPhases = (
+				EE9D23642117EE3E00FE3D2E /* Sources */,
+				EE9D23652117EE3E00FE3D2E /* Frameworks */,
+				EE9D23662117EE3E00FE3D2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE9D236A2117EE3E00FE3D2E /* PBXTargetDependency */,
+			);
+			name = BlurImagesUITests;
+			productName = BlurImagesUITests;
+			productReference = EE9D23682117EE3E00FE3D2E /* BlurImagesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE9D233D2117EE3D00FE3D2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = JiangWang;
+				TargetAttributes = {
+					EE9D23442117EE3D00FE3D2E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EE9D235C2117EE3D00FE3D2E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE9D23442117EE3D00FE3D2E;
+					};
+					EE9D23672117EE3E00FE3D2E = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE9D23442117EE3D00FE3D2E;
+					};
+				};
+			};
+			buildConfigurationList = EE9D23402117EE3D00FE3D2E /* Build configuration list for PBXProject "BlurImages" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE9D233C2117EE3D00FE3D2E;
+			productRefGroup = EE9D23462117EE3D00FE3D2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE9D23442117EE3D00FE3D2E /* BlurImages */,
+				EE9D235C2117EE3D00FE3D2E /* BlurImagesTests */,
+				EE9D23672117EE3E00FE3D2E /* BlurImagesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE9D23432117EE3D00FE3D2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9D23822117F18B00FE3D2E /* UIEffectViewBlurViewController.xib in Resources */,
+				EE9D23552117EE3D00FE3D2E /* LaunchScreen.storyboard in Resources */,
+				EE9D23922118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.xib in Resources */,
+				EE9D23522117EE3D00FE3D2E /* Assets.xcassets in Resources */,
+				EE9D23862117F56200FE3D2E /* taobao.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9D235B2117EE3D00FE3D2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9D23662117EE3E00FE3D2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE9D23412117EE3D00FE3D2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9D238D2118205700FE3D2E /* UIImage+Blur.m in Sources */,
+				EE9D23912118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.m in Sources */,
+				EE9D23582117EE3D00FE3D2E /* main.m in Sources */,
+				EE9D237C2117EF0900FE3D2E /* JWMainTableViewController.m in Sources */,
+				EE9D23892117F6F600FE3D2E /* JWBlurEffectView.m in Sources */,
+				EE9D23812117F18B00FE3D2E /* UIEffectViewBlurViewController.m in Sources */,
+				EE9D234A2117EE3D00FE3D2E /* JWAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9D23592117EE3D00FE3D2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9D23622117EE3E00FE3D2E /* BlurImagesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE9D23642117EE3E00FE3D2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE9D236D2117EE3E00FE3D2E /* BlurImagesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE9D235F2117EE3D00FE3D2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE9D23442117EE3D00FE3D2E /* BlurImages */;
+			targetProxy = EE9D235E2117EE3D00FE3D2E /* PBXContainerItemProxy */;
+		};
+		EE9D236A2117EE3E00FE3D2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE9D23442117EE3D00FE3D2E /* BlurImages */;
+			targetProxy = EE9D23692117EE3E00FE3D2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE9D23532117EE3D00FE3D2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE9D23542117EE3D00FE3D2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE9D236F2117EE3E00FE3D2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE9D23702117EE3E00FE3D2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE9D23722117EE3E00FE3D2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = BlurImages/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.BlurImages;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE9D23732117EE3E00FE3D2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = BlurImages/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.BlurImages;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE9D23752117EE3E00FE3D2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = BlurImagesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.BlurImagesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlurImages.app/BlurImages";
+			};
+			name = Debug;
+		};
+		EE9D23762117EE3E00FE3D2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = BlurImagesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.BlurImagesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlurImages.app/BlurImages";
+			};
+			name = Release;
+		};
+		EE9D23782117EE3E00FE3D2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = BlurImagesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.BlurImagesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlurImages;
+			};
+			name = Debug;
+		};
+		EE9D23792117EE3E00FE3D2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = BlurImagesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.BlurImagesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlurImages;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE9D23402117EE3D00FE3D2E /* Build configuration list for PBXProject "BlurImages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9D236F2117EE3E00FE3D2E /* Debug */,
+				EE9D23702117EE3E00FE3D2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE9D23712117EE3E00FE3D2E /* Build configuration list for PBXNativeTarget "BlurImages" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9D23722117EE3E00FE3D2E /* Debug */,
+				EE9D23732117EE3E00FE3D2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE9D23742117EE3E00FE3D2E /* Build configuration list for PBXNativeTarget "BlurImagesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9D23752117EE3E00FE3D2E /* Debug */,
+				EE9D23762117EE3E00FE3D2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE9D23772117EE3E00FE3D2E /* Build configuration list for PBXNativeTarget "BlurImagesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE9D23782117EE3E00FE3D2E /* Debug */,
+				EE9D23792117EE3E00FE3D2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE9D233D2117EE3D00FE3D2E /* Project object */;
+}
