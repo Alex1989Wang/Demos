@@ -10,13 +10,18 @@
 #import "PGTapView.h"
 
 @interface PGTapForwardViewController ()
-@property (weak, nonatomic) IBOutlet PGTapView *tapView;
+@property (strong, nonatomic) PGTapView *tapView;
 @end
 
 @implementation PGTapForwardViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tapView = [[PGTapView alloc] initWithFrame:(CGRect){100, 100, 200, 200}];
+    self.tapView.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:self.tapView];
+    
     NSLog(@"tap gestures in tap view: %@", [self tapGesturesInView:self.tapView]);
     
     [self registerTaps:[self tapGesturesInView:self.tapView]];
