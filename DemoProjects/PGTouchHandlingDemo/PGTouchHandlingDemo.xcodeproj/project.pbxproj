@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE3B073B211AEAB500042ADB /* PGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B073A211AEAB500042ADB /* PGAppDelegate.m */; };
+		EE3B0743211AEAB500042ADB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE3B0742211AEAB500042ADB /* Assets.xcassets */; };
+		EE3B0746211AEAB500042ADB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE3B0744211AEAB500042ADB /* LaunchScreen.storyboard */; };
+		EE3B0749211AEAB500042ADB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B0748211AEAB500042ADB /* main.m */; };
+		EE3B0753211AEAB500042ADB /* PGTouchHandlingDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B0752211AEAB500042ADB /* PGTouchHandlingDemoTests.m */; };
+		EE3B075E211AEAB500042ADB /* PGTouchHandlingDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B075D211AEAB500042ADB /* PGTouchHandlingDemoUITests.m */; };
+		EE3B076D211AEBC000042ADB /* JWMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B076B211AEBC000042ADB /* JWMainTableViewController.m */; };
+		EE3B0772211AED9000042ADB /* PGRawTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B0770211AED9000042ADB /* PGRawTouchViewController.m */; };
+		EE3B0773211AED9000042ADB /* PGRawTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3B0771211AED9000042ADB /* PGRawTouchViewController.xib */; };
+		EE3B0777211AEFAD00042ADB /* PGShapesView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B0776211AEFAD00042ADB /* PGShapesView.m */; };
+		EE3B077C211B02BF00042ADB /* PGButtonTapMixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B077A211B02BF00042ADB /* PGButtonTapMixViewController.m */; };
+		EE3B077D211B02BF00042ADB /* PGButtonTapMixViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3B077B211B02BF00042ADB /* PGButtonTapMixViewController.xib */; };
+		EE3B0782211B40CE00042ADB /* PGTapForwardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B0780211B40CE00042ADB /* PGTapForwardViewController.m */; };
+		EE3B0783211B40CE00042ADB /* PGTapForwardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3B0781211B40CE00042ADB /* PGTapForwardViewController.xib */; };
+		EE3B0788211B41F900042ADB /* PGTapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B0787211B41F900042ADB /* PGTapView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE3B074F211AEAB500042ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE3B072E211AEAB500042ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE3B0735211AEAB500042ADB;
+			remoteInfo = PGTouchHandlingDemo;
+		};
+		EE3B075A211AEAB500042ADB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE3B072E211AEAB500042ADB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE3B0735211AEAB500042ADB;
+			remoteInfo = PGTouchHandlingDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE3B0736211AEAB500042ADB /* PGTouchHandlingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGTouchHandlingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3B0739211AEAB500042ADB /* PGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGAppDelegate.h; sourceTree = "<group>"; };
+		EE3B073A211AEAB500042ADB /* PGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGAppDelegate.m; sourceTree = "<group>"; };
+		EE3B0742211AEAB500042ADB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE3B0745211AEAB500042ADB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE3B0747211AEAB500042ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3B0748211AEAB500042ADB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE3B074E211AEAB500042ADB /* PGTouchHandlingDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGTouchHandlingDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3B0752211AEAB500042ADB /* PGTouchHandlingDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGTouchHandlingDemoTests.m; sourceTree = "<group>"; };
+		EE3B0754211AEAB500042ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3B0759211AEAB500042ADB /* PGTouchHandlingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PGTouchHandlingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3B075D211AEAB500042ADB /* PGTouchHandlingDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGTouchHandlingDemoUITests.m; sourceTree = "<group>"; };
+		EE3B075F211AEAB500042ADB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE3B076B211AEBC000042ADB /* JWMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWMainTableViewController.m; sourceTree = "<group>"; };
+		EE3B076C211AEBC000042ADB /* JWMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWMainTableViewController.h; sourceTree = "<group>"; };
+		EE3B076F211AED9000042ADB /* PGRawTouchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGRawTouchViewController.h; sourceTree = "<group>"; };
+		EE3B0770211AED9000042ADB /* PGRawTouchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGRawTouchViewController.m; sourceTree = "<group>"; };
+		EE3B0771211AED9000042ADB /* PGRawTouchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PGRawTouchViewController.xib; sourceTree = "<group>"; };
+		EE3B0775211AEFAD00042ADB /* PGShapesView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGShapesView.h; sourceTree = "<group>"; };
+		EE3B0776211AEFAD00042ADB /* PGShapesView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGShapesView.m; sourceTree = "<group>"; };
+		EE3B0779211B02BF00042ADB /* PGButtonTapMixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGButtonTapMixViewController.h; sourceTree = "<group>"; };
+		EE3B077A211B02BF00042ADB /* PGButtonTapMixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGButtonTapMixViewController.m; sourceTree = "<group>"; };
+		EE3B077B211B02BF00042ADB /* PGButtonTapMixViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PGButtonTapMixViewController.xib; sourceTree = "<group>"; };
+		EE3B077F211B40CE00042ADB /* PGTapForwardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGTapForwardViewController.h; sourceTree = "<group>"; };
+		EE3B0780211B40CE00042ADB /* PGTapForwardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGTapForwardViewController.m; sourceTree = "<group>"; };
+		EE3B0781211B40CE00042ADB /* PGTapForwardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PGTapForwardViewController.xib; sourceTree = "<group>"; };
+		EE3B0786211B41F900042ADB /* PGTapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGTapView.h; sourceTree = "<group>"; };
+		EE3B0787211B41F900042ADB /* PGTapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGTapView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE3B0733211AEAB500042ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3B074B211AEAB500042ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3B0756211AEAB500042ADB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE3B072D211AEAB500042ADB = {
+			isa = PBXGroup;
+			children = (
+				EE3B0738211AEAB500042ADB /* PGTouchHandlingDemo */,
+				EE3B0751211AEAB500042ADB /* PGTouchHandlingDemoTests */,
+				EE3B075C211AEAB500042ADB /* PGTouchHandlingDemoUITests */,
+				EE3B0737211AEAB500042ADB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE3B0737211AEAB500042ADB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B0736211AEAB500042ADB /* PGTouchHandlingDemo.app */,
+				EE3B074E211AEAB500042ADB /* PGTouchHandlingDemoTests.xctest */,
+				EE3B0759211AEAB500042ADB /* PGTouchHandlingDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE3B0738211AEAB500042ADB /* PGTouchHandlingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B077E211B40BA00042ADB /* TapForward */,
+				EE3B0778211B02A700042ADB /* ButtonTapMix */,
+				EE3B0774211AEF9800042ADB /* Shapes */,
+				EE3B076E211AED6900042ADB /* Touch */,
+				EE3B0739211AEAB500042ADB /* PGAppDelegate.h */,
+				EE3B073A211AEAB500042ADB /* PGAppDelegate.m */,
+				EE3B076C211AEBC000042ADB /* JWMainTableViewController.h */,
+				EE3B076B211AEBC000042ADB /* JWMainTableViewController.m */,
+				EE3B0742211AEAB500042ADB /* Assets.xcassets */,
+				EE3B0744211AEAB500042ADB /* LaunchScreen.storyboard */,
+				EE3B0747211AEAB500042ADB /* Info.plist */,
+				EE3B0748211AEAB500042ADB /* main.m */,
+			);
+			path = PGTouchHandlingDemo;
+			sourceTree = "<group>";
+		};
+		EE3B0751211AEAB500042ADB /* PGTouchHandlingDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B0752211AEAB500042ADB /* PGTouchHandlingDemoTests.m */,
+				EE3B0754211AEAB500042ADB /* Info.plist */,
+			);
+			path = PGTouchHandlingDemoTests;
+			sourceTree = "<group>";
+		};
+		EE3B075C211AEAB500042ADB /* PGTouchHandlingDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B075D211AEAB500042ADB /* PGTouchHandlingDemoUITests.m */,
+				EE3B075F211AEAB500042ADB /* Info.plist */,
+			);
+			path = PGTouchHandlingDemoUITests;
+			sourceTree = "<group>";
+		};
+		EE3B076E211AED6900042ADB /* Touch */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B076F211AED9000042ADB /* PGRawTouchViewController.h */,
+				EE3B0770211AED9000042ADB /* PGRawTouchViewController.m */,
+				EE3B0771211AED9000042ADB /* PGRawTouchViewController.xib */,
+			);
+			path = Touch;
+			sourceTree = "<group>";
+		};
+		EE3B0774211AEF9800042ADB /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B0775211AEFAD00042ADB /* PGShapesView.h */,
+				EE3B0776211AEFAD00042ADB /* PGShapesView.m */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		EE3B0778211B02A700042ADB /* ButtonTapMix */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B0779211B02BF00042ADB /* PGButtonTapMixViewController.h */,
+				EE3B077A211B02BF00042ADB /* PGButtonTapMixViewController.m */,
+				EE3B077B211B02BF00042ADB /* PGButtonTapMixViewController.xib */,
+			);
+			path = ButtonTapMix;
+			sourceTree = "<group>";
+		};
+		EE3B077E211B40BA00042ADB /* TapForward */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B077F211B40CE00042ADB /* PGTapForwardViewController.h */,
+				EE3B0780211B40CE00042ADB /* PGTapForwardViewController.m */,
+				EE3B0781211B40CE00042ADB /* PGTapForwardViewController.xib */,
+				EE3B0786211B41F900042ADB /* PGTapView.h */,
+				EE3B0787211B41F900042ADB /* PGTapView.m */,
+			);
+			path = TapForward;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE3B0735211AEAB500042ADB /* PGTouchHandlingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE3B0762211AEAB500042ADB /* Build configuration list for PBXNativeTarget "PGTouchHandlingDemo" */;
+			buildPhases = (
+				EE3B0732211AEAB500042ADB /* Sources */,
+				EE3B0733211AEAB500042ADB /* Frameworks */,
+				EE3B0734211AEAB500042ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PGTouchHandlingDemo;
+			productName = PGTouchHandlingDemo;
+			productReference = EE3B0736211AEAB500042ADB /* PGTouchHandlingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE3B074D211AEAB500042ADB /* PGTouchHandlingDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE3B0765211AEAB500042ADB /* Build configuration list for PBXNativeTarget "PGTouchHandlingDemoTests" */;
+			buildPhases = (
+				EE3B074A211AEAB500042ADB /* Sources */,
+				EE3B074B211AEAB500042ADB /* Frameworks */,
+				EE3B074C211AEAB500042ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE3B0750211AEAB500042ADB /* PBXTargetDependency */,
+			);
+			name = PGTouchHandlingDemoTests;
+			productName = PGTouchHandlingDemoTests;
+			productReference = EE3B074E211AEAB500042ADB /* PGTouchHandlingDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE3B0758211AEAB500042ADB /* PGTouchHandlingDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE3B0768211AEAB500042ADB /* Build configuration list for PBXNativeTarget "PGTouchHandlingDemoUITests" */;
+			buildPhases = (
+				EE3B0755211AEAB500042ADB /* Sources */,
+				EE3B0756211AEAB500042ADB /* Frameworks */,
+				EE3B0757211AEAB500042ADB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE3B075B211AEAB500042ADB /* PBXTargetDependency */,
+			);
+			name = PGTouchHandlingDemoUITests;
+			productName = PGTouchHandlingDemoUITests;
+			productReference = EE3B0759211AEAB500042ADB /* PGTouchHandlingDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE3B072E211AEAB500042ADB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PG;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = JiangWang;
+				TargetAttributes = {
+					EE3B0735211AEAB500042ADB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EE3B074D211AEAB500042ADB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE3B0735211AEAB500042ADB;
+					};
+					EE3B0758211AEAB500042ADB = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EE3B0735211AEAB500042ADB;
+					};
+				};
+			};
+			buildConfigurationList = EE3B0731211AEAB500042ADB /* Build configuration list for PBXProject "PGTouchHandlingDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE3B072D211AEAB500042ADB;
+			productRefGroup = EE3B0737211AEAB500042ADB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE3B0735211AEAB500042ADB /* PGTouchHandlingDemo */,
+				EE3B074D211AEAB500042ADB /* PGTouchHandlingDemoTests */,
+				EE3B0758211AEAB500042ADB /* PGTouchHandlingDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE3B0734211AEAB500042ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3B0783211B40CE00042ADB /* PGTapForwardViewController.xib in Resources */,
+				EE3B077D211B02BF00042ADB /* PGButtonTapMixViewController.xib in Resources */,
+				EE3B0773211AED9000042ADB /* PGRawTouchViewController.xib in Resources */,
+				EE3B0746211AEAB500042ADB /* LaunchScreen.storyboard in Resources */,
+				EE3B0743211AEAB500042ADB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3B074C211AEAB500042ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3B0757211AEAB500042ADB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE3B0732211AEAB500042ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3B0772211AED9000042ADB /* PGRawTouchViewController.m in Sources */,
+				EE3B0749211AEAB500042ADB /* main.m in Sources */,
+				EE3B0782211B40CE00042ADB /* PGTapForwardViewController.m in Sources */,
+				EE3B073B211AEAB500042ADB /* PGAppDelegate.m in Sources */,
+				EE3B0777211AEFAD00042ADB /* PGShapesView.m in Sources */,
+				EE3B0788211B41F900042ADB /* PGTapView.m in Sources */,
+				EE3B077C211B02BF00042ADB /* PGButtonTapMixViewController.m in Sources */,
+				EE3B076D211AEBC000042ADB /* JWMainTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3B074A211AEAB500042ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3B0753211AEAB500042ADB /* PGTouchHandlingDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE3B0755211AEAB500042ADB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE3B075E211AEAB500042ADB /* PGTouchHandlingDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE3B0750211AEAB500042ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE3B0735211AEAB500042ADB /* PGTouchHandlingDemo */;
+			targetProxy = EE3B074F211AEAB500042ADB /* PBXContainerItemProxy */;
+		};
+		EE3B075B211AEAB500042ADB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE3B0735211AEAB500042ADB /* PGTouchHandlingDemo */;
+			targetProxy = EE3B075A211AEAB500042ADB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE3B0744211AEAB500042ADB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE3B0745211AEAB500042ADB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE3B0760211AEAB500042ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE3B0761211AEAB500042ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE3B0763211AEAB500042ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = PGTouchHandlingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.PGTouchHandlingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE3B0764211AEAB500042ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = PGTouchHandlingDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.PGTouchHandlingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE3B0766211AEAB500042ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = PGTouchHandlingDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.PGTouchHandlingDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PGTouchHandlingDemo.app/PGTouchHandlingDemo";
+			};
+			name = Debug;
+		};
+		EE3B0767211AEAB500042ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = PGTouchHandlingDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.PGTouchHandlingDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PGTouchHandlingDemo.app/PGTouchHandlingDemo";
+			};
+			name = Release;
+		};
+		EE3B0769211AEAB500042ADB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = PGTouchHandlingDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.PGTouchHandlingDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PGTouchHandlingDemo;
+			};
+			name = Debug;
+		};
+		EE3B076A211AEAB500042ADB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y39R442P5T;
+				INFOPLIST_FILE = PGTouchHandlingDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiang.PGTouchHandlingDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PGTouchHandlingDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE3B0731211AEAB500042ADB /* Build configuration list for PBXProject "PGTouchHandlingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3B0760211AEAB500042ADB /* Debug */,
+				EE3B0761211AEAB500042ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE3B0762211AEAB500042ADB /* Build configuration list for PBXNativeTarget "PGTouchHandlingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3B0763211AEAB500042ADB /* Debug */,
+				EE3B0764211AEAB500042ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE3B0765211AEAB500042ADB /* Build configuration list for PBXNativeTarget "PGTouchHandlingDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3B0766211AEAB500042ADB /* Debug */,
+				EE3B0767211AEAB500042ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE3B0768211AEAB500042ADB /* Build configuration list for PBXNativeTarget "PGTouchHandlingDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE3B0769211AEAB500042ADB /* Debug */,
+				EE3B076A211AEAB500042ADB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE3B072E211AEAB500042ADB /* Project object */;
+}
