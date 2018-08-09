@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    UIImage *testImage = [UIImage imageNamed:@"taobao"];
+    UIImage *testImage = [UIImage imageNamed:@"27264289"];
     NSLog(@"test image: %@", testImage);
     [UIImage blurImage:testImage blurRadius:0
              completed:^(UIImage *resultImage) {

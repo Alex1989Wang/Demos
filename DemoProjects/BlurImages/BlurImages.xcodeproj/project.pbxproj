@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE3B078D211C1D4700042ADB /* JWToolBarBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B078B211C1D4700042ADB /* JWToolBarBlurViewController.m */; };
+		EE3B078E211C1D4700042ADB /* JWToolBarBlurViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3B078C211C1D4700042ADB /* JWToolBarBlurViewController.xib */; };
+		EE3B0790211C2DEB00042ADB /* 27264289.png in Resources */ = {isa = PBXBuildFile; fileRef = EE3B078F211C2DEB00042ADB /* 27264289.png */; };
 		EE9D234A2117EE3D00FE3D2E /* JWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE9D23492117EE3D00FE3D2E /* JWAppDelegate.m */; };
 		EE9D23522117EE3D00FE3D2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE9D23512117EE3D00FE3D2E /* Assets.xcassets */; };
 		EE9D23552117EE3D00FE3D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE9D23532117EE3D00FE3D2E /* LaunchScreen.storyboard */; };
@@ -44,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE3B078A211C1D4700042ADB /* JWToolBarBlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWToolBarBlurViewController.h; sourceTree = "<group>"; };
+		EE3B078B211C1D4700042ADB /* JWToolBarBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWToolBarBlurViewController.m; sourceTree = "<group>"; };
+		EE3B078C211C1D4700042ADB /* JWToolBarBlurViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JWToolBarBlurViewController.xib; sourceTree = "<group>"; };
+		EE3B078F211C2DEB00042ADB /* 27264289.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 27264289.png; sourceTree = "<group>"; };
 		EE9D23452117EE3D00FE3D2E /* BlurImages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlurImages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE9D23482117EE3D00FE3D2E /* JWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWAppDelegate.h; sourceTree = "<group>"; };
 		EE9D23492117EE3D00FE3D2E /* JWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWAppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +109,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE3B0789211C1D1300042ADB /* ToolBar */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B078A211C1D4700042ADB /* JWToolBarBlurViewController.h */,
+				EE3B078B211C1D4700042ADB /* JWToolBarBlurViewController.m */,
+				EE3B078C211C1D4700042ADB /* JWToolBarBlurViewController.xib */,
+			);
+			path = ToolBar;
+			sourceTree = "<group>";
+		};
 		EE9D233C2117EE3D00FE3D2E = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +142,7 @@
 		EE9D23472117EE3D00FE3D2E /* BlurImages */ = {
 			isa = PBXGroup;
 			children = (
+				EE3B0789211C1D1300042ADB /* ToolBar */,
 				EED11501211837D20021EC03 /* CoreImage */,
 				EE9D238A2118205700FE3D2E /* Accelerate */,
 				EE9D237D2117F17600FE3D2E /* UIEffectView */,
@@ -162,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				EE9D23852117F56200FE3D2E /* taobao.png */,
+				EE3B078F211C2DEB00042ADB /* 27264289.png */,
 				EE9D237E2117F18B00FE3D2E /* UIEffectViewBlurViewController.h */,
 				EE9D237F2117F18B00FE3D2E /* UIEffectViewBlurViewController.m */,
 				EE9D23802117F18B00FE3D2E /* UIEffectViewBlurViewController.xib */,
@@ -306,7 +325,9 @@
 				EEC56ED32118385600BB996E /* JWCoreImageBlurViewController.xib in Resources */,
 				EE9D23922118207C00FE3D2E /* JWAccelerateFrameworkBlurViewController.xib in Resources */,
 				EE9D23522117EE3D00FE3D2E /* Assets.xcassets in Resources */,
+				EE3B078E211C1D4700042ADB /* JWToolBarBlurViewController.xib in Resources */,
 				EE9D23862117F56200FE3D2E /* taobao.png in Resources */,
+				EE3B0790211C2DEB00042ADB /* 27264289.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +358,7 @@
 				EE9D23582117EE3D00FE3D2E /* main.m in Sources */,
 				EE9D237C2117EF0900FE3D2E /* JWMainTableViewController.m in Sources */,
 				EEC56ED22118385600BB996E /* JWCoreImageBlurViewController.m in Sources */,
+				EE3B078D211C1D4700042ADB /* JWToolBarBlurViewController.m in Sources */,
 				EE9D23892117F6F600FE3D2E /* JWBlurEffectView.m in Sources */,
 				EE9D23812117F18B00FE3D2E /* UIEffectViewBlurViewController.m in Sources */,
 				EE9D234A2117EE3D00FE3D2E /* JWAppDelegate.m in Sources */,

@@ -10,11 +10,13 @@
 #import "UIEffectViewBlurViewController.h"
 #import "JWAccelerateFrameworkBlurViewController.h"
 #import "JWCoreImageBlurViewController.h"
+#import "JWToolBarBlurViewController.h"
 
 typedef NS_ENUM(NSUInteger, JWBlurImageType) {
     JWBlurImageTypeUIEffectView,
     JWBlurImageTypePixelManipulation,
     JWBlurImageTypeCoreImage,
+    JWBlurImageTypeToolBar,
 };
 
 static NSString *JWMainTableViewCellReuseID = @"JWMainTableViewCellReuseID";
@@ -27,7 +29,7 @@ static NSString *JWMainTableViewCellReuseID = @"JWMainTableViewCellReuseID";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Infinite Scroll Tests";
+    self.title = @"Blur Tests";
     [self setupTableView];
 }
 
@@ -81,6 +83,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             [self.navigationController pushViewController:testCon animated:YES];
             break;
         }
+        case JWBlurImageTypeToolBar: {
+            JWToolBarBlurViewController *testCon =
+            [[JWToolBarBlurViewController alloc] initWithNibName:@"JWToolBarBlurViewController" bundle:nil];
+            testCon.title = self.testTypesMap[@(JWBlurImageTypeToolBar)];
+            [self.navigationController pushViewController:testCon animated:YES];
+            break;
+        }
         default:
             break;
     }
@@ -91,7 +100,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (nil == _testTypesMap) {
         _testTypesMap = @{@(JWBlurImageTypeUIEffectView) : @"UI Effect View Blur",
                           @(JWBlurImageTypePixelManipulation) : @"Use Accelerate Framework",
-                          @(JWBlurImageTypeCoreImage) : @"Core Image Blur",};
+                          @(JWBlurImageTypeCoreImage) : @"Core Image Blur",
+                          @(JWBlurImageTypeToolBar) : @"Tool Bar",};
     }
     return _testTypesMap;
 }
