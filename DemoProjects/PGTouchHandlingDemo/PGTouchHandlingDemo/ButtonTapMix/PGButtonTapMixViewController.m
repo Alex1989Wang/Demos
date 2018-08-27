@@ -18,6 +18,7 @@
     [super viewDidLoad];
     UITapGestureRecognizer *tapGest =
     [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapButton:)];
+    tapGest.delaysTouchesBegan = YES;
     [self.tapButton addGestureRecognizer:tapGest];
 }
 

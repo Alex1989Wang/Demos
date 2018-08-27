@@ -10,11 +10,15 @@
 #import "PGRawTouchViewController.h"
 #import "PGButtonTapMixViewController.h"
 #import "PGTapForwardViewController.h"
+#import "PGTapTestCollectionViewController.h"
+#import "PGPinchTestViewController.h"
 
 typedef NS_ENUM(NSUInteger, PGTouchHandlingType) {
     PGTouchHandlingTypeRawTouches,
     PGTouchHandlingTypeButtonTapMix,
     PGTouchHandlingTypeTapForward,
+    PGTouchHandlingTypeCollectionCellTap,
+    PGTouchHandlingTypePinchTouchHandlerMix,
 };
 
 static NSString *JWMainTableViewCellReuseID = @"JWMainTableViewCellReuseID";
@@ -81,6 +85,22 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
             [self.navigationController pushViewController:testCon animated:YES];
             break;
         }
+        case PGTouchHandlingTypeCollectionCellTap: {
+            UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+            flowLayout.itemSize = (CGSize){120, 80};
+            flowLayout.minimumLineSpacing = 1.0;
+            flowLayout.minimumInteritemSpacing = 1.0;
+            PGTapTestCollectionViewController *testCon = [[PGTapTestCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+            testCon.title = self.testTypesMap[@(PGTouchHandlingTypeCollectionCellTap)];
+            [self.navigationController pushViewController:testCon animated:YES];
+            break;
+        }
+        case PGTouchHandlingTypePinchTouchHandlerMix: {
+            PGPinchTestViewController *testCon = [[PGPinchTestViewController alloc] init];
+            testCon.title = self.testTypesMap[@(PGTouchHandlingTypePinchTouchHandlerMix)];
+            [self.navigationController pushViewController:testCon animated:YES];
+            break;
+        }
         default:
             break;
     }
@@ -91,7 +111,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (nil == _testTypesMap) {
         _testTypesMap = @{@(PGTouchHandlingTypeRawTouches) : @"Raw Touches",
                           @(PGTouchHandlingTypeButtonTapMix) : @"Button With Tap Gesture",
-                          @(PGTouchHandlingTypeTapForward) : @"Tap Forward",};
+                          @(PGTouchHandlingTypeTapForward) : @"Tap Forward",
+                          @(PGTouchHandlingTypeCollectionCellTap) : @"Collection Cell Tap",
+                          @(PGTouchHandlingTypePinchTouchHandlerMix) : @"Pinch Gesture and Handler Mix"};
     }
     return _testTypesMap;
 }

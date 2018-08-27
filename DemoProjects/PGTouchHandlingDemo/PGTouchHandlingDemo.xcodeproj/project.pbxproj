@@ -22,6 +22,11 @@
 		EE3B0782211B40CE00042ADB /* PGTapForwardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B0780211B40CE00042ADB /* PGTapForwardViewController.m */; };
 		EE3B0783211B40CE00042ADB /* PGTapForwardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3B0781211B40CE00042ADB /* PGTapForwardViewController.xib */; };
 		EE3B0788211B41F900042ADB /* PGTapView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B0787211B41F900042ADB /* PGTapView.m */; };
+		EE3B079C212A54A300042ADB /* PGTapTestCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B079B212A54A300042ADB /* PGTapTestCollectionViewController.m */; };
+		EE3B07A0212A55B200042ADB /* PGCollectionViewTapCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3B079E212A55B200042ADB /* PGCollectionViewTapCell.m */; };
+		EE3B07A1212A55B200042ADB /* PGCollectionViewTapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3B079F212A55B200042ADB /* PGCollectionViewTapCell.xib */; };
+		EE3BB522212BFCF800EC2D91 /* PGPinchTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3BB521212BFCF800EC2D91 /* PGPinchTestViewController.m */; };
+		EE3BB525212BFDEA00EC2D91 /* PGTouchHandlingView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3BB524212BFDEA00EC2D91 /* PGTouchHandlingView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,15 @@
 		EE3B0781211B40CE00042ADB /* PGTapForwardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PGTapForwardViewController.xib; sourceTree = "<group>"; };
 		EE3B0786211B41F900042ADB /* PGTapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGTapView.h; sourceTree = "<group>"; };
 		EE3B0787211B41F900042ADB /* PGTapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGTapView.m; sourceTree = "<group>"; };
+		EE3B079A212A54A300042ADB /* PGTapTestCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGTapTestCollectionViewController.h; sourceTree = "<group>"; };
+		EE3B079B212A54A300042ADB /* PGTapTestCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGTapTestCollectionViewController.m; sourceTree = "<group>"; };
+		EE3B079D212A55B200042ADB /* PGCollectionViewTapCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGCollectionViewTapCell.h; sourceTree = "<group>"; };
+		EE3B079E212A55B200042ADB /* PGCollectionViewTapCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGCollectionViewTapCell.m; sourceTree = "<group>"; };
+		EE3B079F212A55B200042ADB /* PGCollectionViewTapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PGCollectionViewTapCell.xib; sourceTree = "<group>"; };
+		EE3BB520212BFCF800EC2D91 /* PGPinchTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGPinchTestViewController.h; sourceTree = "<group>"; };
+		EE3BB521212BFCF800EC2D91 /* PGPinchTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGPinchTestViewController.m; sourceTree = "<group>"; };
+		EE3BB523212BFDEA00EC2D91 /* PGTouchHandlingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PGTouchHandlingView.h; sourceTree = "<group>"; };
+		EE3BB524212BFDEA00EC2D91 /* PGTouchHandlingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PGTouchHandlingView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +134,8 @@
 		EE3B0738211AEAB500042ADB /* PGTouchHandlingDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EE3BB51F212BFCD500EC2D91 /* PanWithTouchHandler */,
+				EE3B0794212A544600042ADB /* CollectionTap */,
 				EE3B077E211B40BA00042ADB /* TapForward */,
 				EE3B0778211B02A700042ADB /* ButtonTapMix */,
 				EE3B0774211AEF9800042ADB /* Shapes */,
@@ -193,6 +209,29 @@
 				EE3B0787211B41F900042ADB /* PGTapView.m */,
 			);
 			path = TapForward;
+			sourceTree = "<group>";
+		};
+		EE3B0794212A544600042ADB /* CollectionTap */ = {
+			isa = PBXGroup;
+			children = (
+				EE3B079A212A54A300042ADB /* PGTapTestCollectionViewController.h */,
+				EE3B079B212A54A300042ADB /* PGTapTestCollectionViewController.m */,
+				EE3B079D212A55B200042ADB /* PGCollectionViewTapCell.h */,
+				EE3B079E212A55B200042ADB /* PGCollectionViewTapCell.m */,
+				EE3B079F212A55B200042ADB /* PGCollectionViewTapCell.xib */,
+			);
+			path = CollectionTap;
+			sourceTree = "<group>";
+		};
+		EE3BB51F212BFCD500EC2D91 /* PanWithTouchHandler */ = {
+			isa = PBXGroup;
+			children = (
+				EE3BB520212BFCF800EC2D91 /* PGPinchTestViewController.h */,
+				EE3BB521212BFCF800EC2D91 /* PGPinchTestViewController.m */,
+				EE3BB523212BFDEA00EC2D91 /* PGTouchHandlingView.h */,
+				EE3BB524212BFDEA00EC2D91 /* PGTouchHandlingView.m */,
+			);
+			path = PanWithTouchHandler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +344,7 @@
 				EE3B0783211B40CE00042ADB /* PGTapForwardViewController.xib in Resources */,
 				EE3B077D211B02BF00042ADB /* PGButtonTapMixViewController.xib in Resources */,
 				EE3B0773211AED9000042ADB /* PGRawTouchViewController.xib in Resources */,
+				EE3B07A1212A55B200042ADB /* PGCollectionViewTapCell.xib in Resources */,
 				EE3B0746211AEAB500042ADB /* LaunchScreen.storyboard in Resources */,
 				EE3B0743211AEAB500042ADB /* Assets.xcassets in Resources */,
 			);
@@ -333,11 +373,15 @@
 			files = (
 				EE3B0772211AED9000042ADB /* PGRawTouchViewController.m in Sources */,
 				EE3B0749211AEAB500042ADB /* main.m in Sources */,
+				EE3BB525212BFDEA00EC2D91 /* PGTouchHandlingView.m in Sources */,
 				EE3B0782211B40CE00042ADB /* PGTapForwardViewController.m in Sources */,
+				EE3B079C212A54A300042ADB /* PGTapTestCollectionViewController.m in Sources */,
 				EE3B073B211AEAB500042ADB /* PGAppDelegate.m in Sources */,
+				EE3B07A0212A55B200042ADB /* PGCollectionViewTapCell.m in Sources */,
 				EE3B0777211AEFAD00042ADB /* PGShapesView.m in Sources */,
 				EE3B0788211B41F900042ADB /* PGTapView.m in Sources */,
 				EE3B077C211B02BF00042ADB /* PGButtonTapMixViewController.m in Sources */,
+				EE3BB522212BFCF800EC2D91 /* PGPinchTestViewController.m in Sources */,
 				EE3B076D211AEBC000042ADB /* JWMainTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
