@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EED96B042133E6B20068D898 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED96B032133E6B20068D898 /* AppDelegate.m */; };
+		EED96B0C2133E6B20068D898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED96B0B2133E6B20068D898 /* Assets.xcassets */; };
+		EED96B0F2133E6B20068D898 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED96B0D2133E6B20068D898 /* LaunchScreen.storyboard */; };
+		EED96B122133E6B20068D898 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED96B112133E6B20068D898 /* main.m */; };
+		EED96B1C2133E6B20068D898 /* ZombieTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EED96B1B2133E6B20068D898 /* ZombieTestTests.m */; };
+		EED96B272133E6B20068D898 /* ZombieTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EED96B262133E6B20068D898 /* ZombieTestUITests.m */; };
+		EED96B372133E96E0068D898 /* ZomebieTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED96B352133E96E0068D898 /* ZomebieTestViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EED96B182133E6B20068D898 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EED96AF72133E6B20068D898 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EED96AFE2133E6B20068D898;
+			remoteInfo = ZombieTest;
+		};
+		EED96B232133E6B20068D898 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EED96AF72133E6B20068D898 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EED96AFE2133E6B20068D898;
+			remoteInfo = ZombieTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EED96AFF2133E6B20068D898 /* ZombieTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZombieTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED96B022133E6B20068D898 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EED96B032133E6B20068D898 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EED96B0B2133E6B20068D898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EED96B0E2133E6B20068D898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EED96B102133E6B20068D898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED96B112133E6B20068D898 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EED96B172133E6B20068D898 /* ZombieTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZombieTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED96B1B2133E6B20068D898 /* ZombieTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZombieTestTests.m; sourceTree = "<group>"; };
+		EED96B1D2133E6B20068D898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED96B222133E6B20068D898 /* ZombieTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZombieTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED96B262133E6B20068D898 /* ZombieTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZombieTestUITests.m; sourceTree = "<group>"; };
+		EED96B282133E6B20068D898 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EED96B342133E96E0068D898 /* ZomebieTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZomebieTestViewController.h; sourceTree = "<group>"; };
+		EED96B352133E96E0068D898 /* ZomebieTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZomebieTestViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EED96AFC2133E6B20068D898 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED96B142133E6B20068D898 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED96B1F2133E6B20068D898 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EED96AF62133E6B20068D898 = {
+			isa = PBXGroup;
+			children = (
+				EED96B012133E6B20068D898 /* ZombieTest */,
+				EED96B1A2133E6B20068D898 /* ZombieTestTests */,
+				EED96B252133E6B20068D898 /* ZombieTestUITests */,
+				EED96B002133E6B20068D898 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EED96B002133E6B20068D898 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EED96AFF2133E6B20068D898 /* ZombieTest.app */,
+				EED96B172133E6B20068D898 /* ZombieTestTests.xctest */,
+				EED96B222133E6B20068D898 /* ZombieTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EED96B012133E6B20068D898 /* ZombieTest */ = {
+			isa = PBXGroup;
+			children = (
+				EED96B022133E6B20068D898 /* AppDelegate.h */,
+				EED96B032133E6B20068D898 /* AppDelegate.m */,
+				EED96B342133E96E0068D898 /* ZomebieTestViewController.h */,
+				EED96B352133E96E0068D898 /* ZomebieTestViewController.m */,
+				EED96B0B2133E6B20068D898 /* Assets.xcassets */,
+				EED96B0D2133E6B20068D898 /* LaunchScreen.storyboard */,
+				EED96B102133E6B20068D898 /* Info.plist */,
+				EED96B112133E6B20068D898 /* main.m */,
+			);
+			path = ZombieTest;
+			sourceTree = "<group>";
+		};
+		EED96B1A2133E6B20068D898 /* ZombieTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EED96B1B2133E6B20068D898 /* ZombieTestTests.m */,
+				EED96B1D2133E6B20068D898 /* Info.plist */,
+			);
+			path = ZombieTestTests;
+			sourceTree = "<group>";
+		};
+		EED96B252133E6B20068D898 /* ZombieTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EED96B262133E6B20068D898 /* ZombieTestUITests.m */,
+				EED96B282133E6B20068D898 /* Info.plist */,
+			);
+			path = ZombieTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EED96AFE2133E6B20068D898 /* ZombieTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED96B2B2133E6B20068D898 /* Build configuration list for PBXNativeTarget "ZombieTest" */;
+			buildPhases = (
+				EED96AFB2133E6B20068D898 /* Sources */,
+				EED96AFC2133E6B20068D898 /* Frameworks */,
+				EED96AFD2133E6B20068D898 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZombieTest;
+			productName = ZombieTest;
+			productReference = EED96AFF2133E6B20068D898 /* ZombieTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EED96B162133E6B20068D898 /* ZombieTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED96B2E2133E6B20068D898 /* Build configuration list for PBXNativeTarget "ZombieTestTests" */;
+			buildPhases = (
+				EED96B132133E6B20068D898 /* Sources */,
+				EED96B142133E6B20068D898 /* Frameworks */,
+				EED96B152133E6B20068D898 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EED96B192133E6B20068D898 /* PBXTargetDependency */,
+			);
+			name = ZombieTestTests;
+			productName = ZombieTestTests;
+			productReference = EED96B172133E6B20068D898 /* ZombieTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EED96B212133E6B20068D898 /* ZombieTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EED96B312133E6B20068D898 /* Build configuration list for PBXNativeTarget "ZombieTestUITests" */;
+			buildPhases = (
+				EED96B1E2133E6B20068D898 /* Sources */,
+				EED96B1F2133E6B20068D898 /* Frameworks */,
+				EED96B202133E6B20068D898 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EED96B242133E6B20068D898 /* PBXTargetDependency */,
+			);
+			name = ZombieTestUITests;
+			productName = ZombieTestUITests;
+			productReference = EED96B222133E6B20068D898 /* ZombieTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EED96AF72133E6B20068D898 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = JiangWang;
+				TargetAttributes = {
+					EED96AFE2133E6B20068D898 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					EED96B162133E6B20068D898 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EED96AFE2133E6B20068D898;
+					};
+					EED96B212133E6B20068D898 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EED96AFE2133E6B20068D898;
+					};
+				};
+			};
+			buildConfigurationList = EED96AFA2133E6B20068D898 /* Build configuration list for PBXProject "ZombieTest" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EED96AF62133E6B20068D898;
+			productRefGroup = EED96B002133E6B20068D898 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EED96AFE2133E6B20068D898 /* ZombieTest */,
+				EED96B162133E6B20068D898 /* ZombieTestTests */,
+				EED96B212133E6B20068D898 /* ZombieTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EED96AFD2133E6B20068D898 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED96B0F2133E6B20068D898 /* LaunchScreen.storyboard in Resources */,
+				EED96B0C2133E6B20068D898 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED96B152133E6B20068D898 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED96B202133E6B20068D898 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EED96AFB2133E6B20068D898 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED96B372133E96E0068D898 /* ZomebieTestViewController.m in Sources */,
+				EED96B122133E6B20068D898 /* main.m in Sources */,
+				EED96B042133E6B20068D898 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED96B132133E6B20068D898 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED96B1C2133E6B20068D898 /* ZombieTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED96B1E2133E6B20068D898 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EED96B272133E6B20068D898 /* ZombieTestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EED96B192133E6B20068D898 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EED96AFE2133E6B20068D898 /* ZombieTest */;
+			targetProxy = EED96B182133E6B20068D898 /* PBXContainerItemProxy */;
+		};
+		EED96B242133E6B20068D898 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EED96AFE2133E6B20068D898 /* ZombieTest */;
+			targetProxy = EED96B232133E6B20068D898 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EED96B0D2133E6B20068D898 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EED96B0E2133E6B20068D898 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EED96B292133E6B20068D898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EED96B2A2133E6B20068D898 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EED96B2C2133E6B20068D898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = ZombieTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.ZombieTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EED96B2D2133E6B20068D898 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = ZombieTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.ZombieTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EED96B2F2133E6B20068D898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = ZombieTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.ZombieTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZombieTest.app/ZombieTest";
+			};
+			name = Debug;
+		};
+		EED96B302133E6B20068D898 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = ZombieTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.ZombieTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZombieTest.app/ZombieTest";
+			};
+			name = Release;
+		};
+		EED96B322133E6B20068D898 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = ZombieTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.ZombieTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZombieTest;
+			};
+			name = Debug;
+		};
+		EED96B332133E6B20068D898 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = ZombieTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.ZombieTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZombieTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EED96AFA2133E6B20068D898 /* Build configuration list for PBXProject "ZombieTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED96B292133E6B20068D898 /* Debug */,
+				EED96B2A2133E6B20068D898 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED96B2B2133E6B20068D898 /* Build configuration list for PBXNativeTarget "ZombieTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED96B2C2133E6B20068D898 /* Debug */,
+				EED96B2D2133E6B20068D898 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED96B2E2133E6B20068D898 /* Build configuration list for PBXNativeTarget "ZombieTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED96B2F2133E6B20068D898 /* Debug */,
+				EED96B302133E6B20068D898 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EED96B312133E6B20068D898 /* Build configuration list for PBXNativeTarget "ZombieTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EED96B322133E6B20068D898 /* Debug */,
+				EED96B332133E6B20068D898 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EED96AF72133E6B20068D898 /* Project object */;
+}
