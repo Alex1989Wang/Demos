@@ -9,17 +9,25 @@
 #import "ZomebieTestViewController.h"
 
 @interface ZombieObj : NSObject
+- (void)callBack:(void(^)(void))callback;
 - (void)stubMethod;
 @end
 @implementation ZombieObj
 - (void)stubMethod {
     NSLog(@"stub method.");
 }
+- (void)callBack:(void (^)(void))callback {
+    if (callback) {
+        callback();
+    }
+    
+    [self stubMethod];
+}
 @end
 
 @interface ZomebieTestViewController ()
 @property (nonatomic, strong) UIButton *button;
-@property (nonatomic, assign) UIGestureRecognizer *tapGest;
+@property (nonatomic, assign) UIGestureRecognizer *tapGest; //dangling pointer
 @property (nonatomic, strong) ZombieObj *multiThreadNonatomicZombie;
 @end
 
@@ -51,10 +59,16 @@
 
 
 - (void)clickToMessageAssignPointer:(UIButton *)button {
+    [self callBackReleaseCrash];
+}
+
+- (void)danglingPointerCrash {
     //assign zombie
-//        NSLog(@"tap gesture: %@", self.tapGest);
-//        [self.tapGest removeTarget:self action:@selector(didTapGesture)];
-    
+    NSLog(@"tap gesture: %@", self.tapGest);
+    [self.tapGest removeTarget:self action:@selector(didTapGesture)];
+}
+
+- (void)nonatomicMultiThreadAccessCrash {
     //multi-thread zombie
     dispatch_queue_t concurrentQ = dispatch_queue_create("com.zombie.queue", DISPATCH_QUEUE_CONCURRENT);
     for (NSInteger loop = 0; loop < 1000; loop++) {
@@ -68,6 +82,15 @@
     }
 }
 
+- (void)callBackReleaseCrash {
+    self.multiThreadNonatomicZombie = [[ZombieObj alloc] init];
+    __weak typeof(self) weakSelf = self;
+    [_multiThreadNonatomicZombie callBack:^{
+        __strong typeof(weakSelf) strSelf = weakSelf;
+        strSelf.multiThreadNonatomicZombie = nil;
+        strSelf.multiThreadNonatomicZombie = [[ZombieObj alloc] init];
+    }];
+}
 #pragma mark - Stub Actions
 - (void)didTapGesture {
     
