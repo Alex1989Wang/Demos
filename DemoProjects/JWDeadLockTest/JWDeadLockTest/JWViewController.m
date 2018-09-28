@@ -14,6 +14,7 @@
 @property (nonatomic, strong) dispatch_queue_t deadlockQueue;
 @property (nonatomic, strong) NSMutableSet *completedSubblocks;
 @property (nonatomic, strong) NSLock *subblocksLock;
+@property (nonatomic, strong) dispatch_queue_t threadExplosionQueue;
 @end
 
 @implementation JWViewController
@@ -27,10 +28,12 @@
 //                                                        repeats:YES];
     self.deadLock = [[NSLock alloc] init];
     self.deadlockQueue = dispatch_queue_create("com.jiangwang.deadlock", DISPATCH_QUEUE_SERIAL);
+    self.completedSubblocks = [[NSMutableSet alloc] init];
+    self.subblocksLock = [[NSLock alloc] init];
 }
 
 - (IBAction)clickToDeadlock:(UIButton *)sender {
-    [self concurrentQueueDeadlock];
+    [self concurrentQueueWaiting];
 }
 
 - (void)timerTicked {
@@ -73,12 +76,53 @@
     });
 }
 
+- (void)concurrentQueueWaiting {
+    //    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t queue = dispatch_queue_create("com.jiangwang.queue", DISPATCH_QUEUE_CONCURRENT);
+
+    const int NumConcurrentBlocks = 20;
+    for (int i = 0; i < NumConcurrentBlocks; i++)
+    {
+        NSLog(@"dispatch %d block to queue %@", i, queue);
+        dispatch_async(queue, ^{
+            NSLog(@"Starting parent block %d", i);
+            
+            NSDate *endDate = [NSDate dateWithTimeIntervalSinceNow:1.0];
+            while ([(NSDate *)[NSDate date] compare:endDate] == NSOrderedAscending)
+            {
+                // Busy wait for 1 second to let the queue fill
+            }
+            
+            dispatch_async(queue, ^{
+                NSLog(@"Starting child block %d", i);
+                
+                [self.subblocksLock lock];
+                [self.completedSubblocks addObject:[NSNumber numberWithInt:i]];
+                [self.subblocksLock unlock];
+                
+                NSLog(@"Finished child block %d", i);
+            });
+            
+            BOOL complete = NO;
+            while (!complete)
+            {
+                [self.subblocksLock lock];
+                if ([self.completedSubblocks containsObject:[NSNumber numberWithInt:i]])
+                {
+                    complete = YES;
+                }
+                [self.subblocksLock unlock];
+            }
+            
+            NSLog(@"Finished parent block %d", i);
+        });
+    }
+}
+
 //https://www.cocoawithlove.com/2010/06/avoiding-deadlocks-and-latency-in.html
 - (void)concurrentQueueDeadlock {
-    self.completedSubblocks = [[NSMutableSet alloc] init];
-    self.subblocksLock = [[NSLock alloc] init];
-    
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_queue_t queue = dispatch_queue_create("com.jiangwang.queue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_group_t group = dispatch_group_create();
     
     const int NumConcurrentBlocks = 20;
