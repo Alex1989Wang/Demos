@@ -2,6 +2,7 @@
 
 import UIKit
 
+/*
  //两数之和
 class Solution {
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
@@ -57,6 +58,7 @@ print(solution.twoSumsV2([1], 0))
 print(solution.twoSumsV2([1, 2], 0))
 print(solution.twoSumsV2([1, 2], 1))
 print(solution.twoSumsV2([3, 2, 4], 6))
+ */
  
 
 // Definition for singly-linked list.
@@ -137,3 +139,36 @@ let solution = Solution()
 print(String(describing: solution.addTwoNumbers(l3, l2)!.description))
 
  */
+
+
+//最长子串的长度
+class Solution {
+    func lengthOfLongestSubstring(_ s: String) -> Int {
+        let stringIndices = s.indices
+        var ans: Int = 0
+        var charSets: Set<Character> = Set()
+        var subStart = stringIndices.startIndex, subEnd = stringIndices.startIndex
+        while subStart < stringIndices.endIndex && subEnd < stringIndices.endIndex {
+            print(s[subStart])
+            if !charSets.contains(s[subEnd]) {
+                charSets.insert(s[subEnd])
+                subEnd = s.index(subEnd, offsetBy: 1)
+                ans = max(ans, s.distance(from: subStart, to: subEnd))
+            }
+            else {
+                charSets.remove(s[subStart])
+                subStart = s.index(subStart, offsetBy: 1)
+            }
+        }
+        
+        return ans
+    }
+}
+
+let test1 = "abcabcbb"
+let test2 = "bbbbb"
+let test3 = "pwwkew"
+let solution = Solution()
+print(solution.lengthOfLongestSubstring(test1))
+print(solution.lengthOfLongestSubstring(test2))
+print(solution.lengthOfLongestSubstring(test3))
