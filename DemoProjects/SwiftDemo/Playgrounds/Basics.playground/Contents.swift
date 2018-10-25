@@ -44,5 +44,62 @@ for char in "Hello, world" {
 //"hello"["hello".index(before: "hello".endIndex)]
 //"hello"["hello".endIndex]
 
+//closure
+let array = ["B", "C", "D", "A"]
+let sorted = array.sorted { (str1: String, str2: String) -> Bool in
+    str1 > str2
+}
+print(array)
+print(sorted)
+let sortedTwo = array.sorted(by: {(str1: String, str2: String) -> Bool in
+    return str1 < str2
+})
+print(sortedTwo)
 
+let digitNames = [
+    0: "Zero", 1: "One", 2: "Two",   3: "Three", 4: "Four",
+    5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine"
+]
+let numbers = [16, 58, 510]
 
+let mappedNumbers = numbers.map({(number: Int) -> String in
+    var output = ""
+    var tempNum = number
+    repeat {
+        output = (digitNames[tempNum%10] ?? "") + output
+        tempNum = tempNum/10
+    } while tempNum > 0
+   return output
+})
+print(mappedNumbers)
+
+//enums
+enum Direction {
+    case north
+    case south
+    case east
+    case west
+}
+var direction = Direction.north
+direction = .east
+let north: Direction = .north
+switch direction {
+case .east:
+    print("swift enums do not fall through")
+default:
+    print("otehr dirctions")
+}
+
+struct Resolution {
+    var width: Float = 0
+    var height: Float = 0
+}
+class VideoMode {
+    var resolution = Resolution()
+    var name: String?
+    var frameRate: Float = 0.0
+}
+
+//memberwise initialization
+let p720 = Resolution(width: 480, height: 640)
+print(p720)

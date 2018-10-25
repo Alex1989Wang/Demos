@@ -142,6 +142,7 @@ print(String(describing: solution.addTwoNumbers(l3, l2)!.description))
 
 
 //最长子串的长度
+/*
 class Solution {
     func lengthOfLongestSubstring(_ s: String) -> Int {
         let stringIndices = s.indices
@@ -172,3 +173,80 @@ let solution = Solution()
 print(solution.lengthOfLongestSubstring(test1))
 print(solution.lengthOfLongestSubstring(test2))
 print(solution.lengthOfLongestSubstring(test3))
+ */
+
+//Median of two sorted arrays
+/*
+class Solution {
+    func findMedianSortedArrays(_ nums1: [Int], _ nums2: [Int]) -> Double {
+        if nums1.count <= 1 {
+            var temp2 = nums2.count/2
+            
+        }
+        
+        let temp1 = nums1.count
+        let temp2 = nums2.count
+        var i1 = 0, j1 = nums1.count
+        var i2 = 0, j2 = nums2.count
+        
+        while i1 != j1 {
+            if nums1[i1] < nums2[i2] {
+                i1 = (i1 + j1)/2
+            }
+        }
+        
+    }
+}
+ */
+
+//ZigZag Conversion
+class Solution {
+    func convert(_ s: String, _ numRows: Int) -> String {
+        if numRows == 1 {
+            return s
+        }
+        
+        if numRows == 2 {
+            var segOne: String = ""
+            var segTwo: String = ""
+            for (index, char) in s.enumerated() {
+                print("char \(char) at index \(index)")
+                if index%2 == 0 {
+                    segOne = segOne + String(char)
+                }
+                else {
+                    segTwo = segTwo + String(char)
+                }
+            }
+            return segOne + segTwo
+        }
+        
+        //>=3
+        var array: Array<String> = Array()
+        for _ in 0..<numRows {
+            array.append("")
+        }
+        for (index, char) in s.enumerated() {
+            let group = 2 * numRows - 2
+            let groupIndex = index % group
+            let rowIndex = (groupIndex < numRows) ? groupIndex :
+                (numRows - 1) - (groupIndex - (numRows - 1))
+            var segment = array[rowIndex]
+            segment = segment + String(char)
+            array[rowIndex] = segment
+        }
+        
+        var result = ""
+        for seg in array {
+            result = result + seg
+        }
+        return result
+    }
+}
+
+let solution = Solution()
+let testStr = "PAYPALISHIRING"
+let row3 = 3
+print(solution.convert(testStr, 3) == "PAHNAPLSIIGYIR")
+let row4 = 4
+print(solution.convert(testStr, 4) == "PINALSIGYAHRPI")
