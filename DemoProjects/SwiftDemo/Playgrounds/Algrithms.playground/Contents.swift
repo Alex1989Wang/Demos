@@ -253,6 +253,7 @@ let row4 = 4
 print(solution.convert(testStr, 4) == "PINALSIGYAHRPI")
  */
 
+/*
 //reverse integer
 print(Int32.max)
 print((1 << 31) - 1)
@@ -282,5 +283,40 @@ let solution = Solution()
 let testNum = 1534236469
 print(9646324351>Int(Int32.max))
 print(solution.reverse(testNum))
+ */
 
+
+//Palindrome Number
+class Solution {
+    func isPalindrome(_ x: Int) -> Bool {
+        //negative numbers
+        if x < 0 {
+            return false
+        }
+        
+        var normalDigits = [Int]()
+        var reverseDigits = [Int]()
+        var temp = x
+        while temp != 0 {
+            let mod = temp%10
+            temp = temp/10
+            normalDigits.append(mod)
+            reverseDigits.insert(mod, at: 0)
+        }
+        
+        var ret = true
+        for (index, digit) in normalDigits.enumerated() {
+            if digit != reverseDigits[index] {
+                ret = false
+                break
+            }
+        }
+        return ret
+    }
+}
+let testNum = 1
+let solution = Solution()
+print(solution.isPalindrome(testNum))
+print(solution.isPalindrome(121))
+print(solution.isPalindrome(22))
 
