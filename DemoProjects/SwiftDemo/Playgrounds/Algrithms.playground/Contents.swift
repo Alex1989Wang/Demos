@@ -199,10 +199,11 @@ class Solution {
 }
  */
 
+/*
 //ZigZag Conversion
 class Solution {
     func convert(_ s: String, _ numRows: Int) -> String {
-        if numRows == 1 {
+        if numRows <= 1 {
             return s
         }
         
@@ -250,3 +251,36 @@ let row3 = 3
 print(solution.convert(testStr, 3) == "PAHNAPLSIIGYIR")
 let row4 = 4
 print(solution.convert(testStr, 4) == "PINALSIGYAHRPI")
+ */
+
+//reverse integer
+print(Int32.max)
+print((1 << 31) - 1)
+print((Int32.max/10 - 1) * 10 + 9)
+print(Int32.min)
+class Solution {
+    func reverse(_ x: Int) -> Int {
+        var ret: Int = 0
+        var temp = x
+        while temp != 0 {
+            let mod = temp%10
+            temp = temp/10
+            if ret > Int32.max/10 || (ret == Int32.max/10 && mod > 7) {
+                ret = 0
+                break
+            }
+            if ret < Int32.min/10 || (ret == Int32.min/10 && mod < -8) {
+                ret = 0
+                break
+            }
+            ret = ret * 10 + mod
+        }
+        return ret
+    }
+}
+let solution = Solution()
+let testNum = 1534236469
+print(9646324351>Int(Int32.max))
+print(solution.reverse(testNum))
+
+
