@@ -377,3 +377,44 @@ let solution = Solution()
 print(solution.romanToInt("XII"))
 print(solution.romanToInt("IX"))
  */
+
+
+//longest common prefix
+class Solution {
+    func longestCommonPrefix(_ strs: [String]) -> String {
+        //是否为空数组
+        if strs.count == 0 || strs.contains("") {
+            return ""
+        }
+        
+        var prefixStack: Array<Character> = Array(strs.first!)
+
+        outerLoop: for str in strs {
+            //str的最长长度-cap一下
+            if prefixStack.count > str.count {
+                prefixStack.removeSubrange(str.count..<prefixStack.count)
+            }
+            
+            innerLoop: for (index, char) in str.enumerated() {
+                if index < prefixStack.count {
+                    let value = prefixStack[index]
+                    if value != char {
+                        prefixStack.removeSubrange(index..<prefixStack.count)
+                        
+                        //决定是退出那一层循环
+                        if prefixStack.count <= 0 {
+                            break outerLoop
+                        }
+                        break innerLoop
+                    }
+                }
+            }
+        }
+        return String(prefixStack)
+    }
+}
+
+let solution = Solution()
+//print(solution.longestCommonPrefix(["flower", "floor", "fl"]))
+//print(solution.longestCommonPrefix(["aaa", "aa", "aaa"]))
+print(solution.longestCommonPrefix(["a", "ac"]))
