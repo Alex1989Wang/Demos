@@ -286,6 +286,7 @@ print(solution.reverse(testNum))
  */
 
 
+/*
 //Palindrome Number
 class Solution {
     func isPalindrome(_ x: Int) -> Bool {
@@ -319,4 +320,60 @@ let solution = Solution()
 print(solution.isPalindrome(testNum))
 print(solution.isPalindrome(121))
 print(solution.isPalindrome(22))
+*/
 
+/*
+//Roman to Integer
+class Solution {
+    func romanToInt(_ s: String) -> Int {
+        let uppercase = s.uppercased()
+        let dict: Dictionary<String, Int> = [
+            "I": 1,
+            "V": 5,
+            "X": 10,
+            "L": 50,
+            "C": 100,
+            "D": 500,
+            "M": 1000,
+            "IV": 4,
+            "IX": 9,
+            "XL": 40,
+            "XC": 90,
+            "CD": 400,
+            "CM": 900,
+            ]
+        let specialChars: Array<Character> = ["I", "X", "C"]
+        
+        var index = uppercase.startIndex
+        var ret = 0
+        while index != uppercase.endIndex {
+            let char = uppercase[index]
+            let latterIndex = uppercase.index(index, offsetBy: 1)
+            var specialValue = 0
+            if specialChars.contains(char) && (latterIndex < uppercase.endIndex)  {
+                let range = index...latterIndex
+                let subStr = uppercase[range]
+                if let value = dict[String(subStr)] {
+                    specialValue = value
+                }
+            }
+            
+            ret = ret + specialValue //如果有特殊值
+            if specialValue == 0 {
+                //没有特殊值
+                if let value = dict[String(uppercase[index])] {
+                    ret = ret + value
+                }
+            }
+
+            index = (specialValue != 0) ? uppercase.index(index, offsetBy: 2) : uppercase.index(index, offsetBy: 1)
+        }
+        
+        return ret
+    }
+}
+
+let solution = Solution()
+print(solution.romanToInt("XII"))
+print(solution.romanToInt("IX"))
+ */
