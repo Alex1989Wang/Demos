@@ -2,6 +2,7 @@
 
 import UIKit
 
+/*
 var str = "Hello, playground"
 
 let constant = 10
@@ -103,3 +104,48 @@ class VideoMode {
 //memberwise initialization
 let p720 = Resolution(width: 480, height: 640)
 print(p720)
+ */
+
+//subscripts
+struct TimeTable {
+    let multiplier: Int
+    subscript(index: Int) -> Int {
+        get {
+            return multiplier * index
+        }
+    }
+}
+let timeTable4 = TimeTable.init(multiplier: 2)
+print(timeTable4[1])
+
+struct Matrix {
+    //MARK: init
+    let rows: Int, columns: Int
+    var grid: [Double]
+    init(rows: Int, columns: Int) {
+        self.rows = rows
+        self.columns = columns
+        grid = Array.init(repeating: 0.0, count: rows * columns)
+    }
+    
+    func isIndexValid(row: Int, column: Int) -> Bool {
+        return ((row >= 0 && row < rows) && (column >= 0 && column < columns))
+    }
+    
+    subscript(row: Int, column: Int) -> Double {
+        get {
+            assert(isIndexValid(row: row, column: column), "row or column index out of range")
+            return grid[row * column + column]
+        }
+        
+        set (value) {
+            assert(isIndexValid(row: row, column: column), "row or column index out of range")
+            grid[row * column + column] = value
+        }
+    }
+}
+var matrix45 = Matrix.init(rows: 4, columns: 5)
+print(matrix45.rows)
+//print(matrix45[5, 6])
+matrix45[3, 4] = 10
+print(matrix45[3, 4])

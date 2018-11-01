@@ -379,6 +379,7 @@ print(solution.romanToInt("IX"))
  */
 
 
+/*
 //longest common prefix
 class Solution {
     func longestCommonPrefix(_ strs: [String]) -> String {
@@ -418,3 +419,75 @@ let solution = Solution()
 //print(solution.longestCommonPrefix(["flower", "floor", "fl"]))
 //print(solution.longestCommonPrefix(["aaa", "aa", "aaa"]))
 print(solution.longestCommonPrefix(["a", "ac"]))
+ */
+
+//Valid parenthesis
+class Solution {
+    func isValid(_ s: String) -> Bool {
+        if s.isEmpty {
+            return true
+        }
+
+        let leftRightMap: Dictionary<Character, Character> = ["(":")", "{": "}", "[": "]"]
+        let keys = Array(leftRightMap.keys)
+        let values = Array(leftRightMap.values)
+
+        var stack: Array<Character> = [Character]()
+        var ret = false
+
+        for (index, char) in s.enumerated() {
+            
+            if !keys.contains(char) &&
+                !values.contains(char) {
+                ret = false
+                break
+            }
+            
+            if index == 0 && values.contains(char) {
+                ret = false
+                break;
+            }
+            
+            //left contains char?
+            if keys.contains(char) {
+                stack.append(char)
+            }
+            else {
+                if stack.isEmpty {
+                    ret = false
+                    break
+                }
+                
+                let left = stack.removeLast()
+                let right = leftRightMap[left]
+
+                if right == nil {
+                    ret = false
+                    break
+                }
+                
+                let rightValue = right!
+                if rightValue != char {
+                    ret = false
+                    break
+                }
+            }
+            
+            //全部检查过了
+            if index == (s.count - 1) && stack.isEmpty {
+                ret = true
+            }
+        }
+        
+        return ret
+    }
+}
+
+let solution = Solution()
+print(solution.isValid("()"))
+print(solution.isValid("()[]{}"))
+print(solution.isValid("(]"))
+print(solution.isValid("([)]"))
+print(solution.isValid("{[]}"))
+print(solution.isValid(""))
+print(solution.isValid("["))
