@@ -6,24 +6,25 @@
 //  Copyright © 2018 JiangWang. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "ZomebieTestViewController.h"
+#import "ZTAppDelegate.h"
+#import "ZTCrashCasesListTableViewController.h"
 
-@interface AppDelegate ()
+@interface ZTAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation ZTAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     CGRect windowRect = [UIScreen mainScreen].bounds;
     UIWindow *window = [[UIWindow alloc] initWithFrame:windowRect];
-    window.rootViewController = [[ZomebieTestViewController alloc] init];
+    ZTCrashCasesListTableViewController *crashListVC = [[ZTCrashCasesListTableViewController alloc] init];
+    UINavigationController *naviVC = [[UINavigationController alloc] initWithRootViewController:crashListVC];
+    window.rootViewController = naviVC;
     self.window = window;
     [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

@@ -1,0 +1,315 @@
+Process:               ZombieTest [75366]
+Path:                  /Users/USER/Library/Developer/CoreSimulator/Devices/1204D6B1-8767-4B3E-A6E6-83CFAA3D2B49/data/Containers/Bundle/Application/F1089B4B-A647-4E61-9A48-83AB81FA9ABA/ZombieTest.app/ZombieTest
+Identifier:            ZombieTest
+Version:               1.0 (1)
+Code Type:             X86-64 (Native)
+Parent Process:        launchd_sim [75239]
+Responsible:           ZombieTest [75366]
+User ID:               501
+
+Date/Time:             2018-11-05 17:21:04.989 +0800
+OS Version:            Mac OS X 10.13.6 (17G65)
+Report Version:        12
+Bridge OS Version:     3.0 (14Y664)
+Anonymous UUID:        D0611A63-0F9A-044E-6C44-ACA92BAC71C4
+
+Sleep/Wake UUID:       BFEB79EA-7DE0-4BC9-BA25-1FDF0C0D466E
+
+Time Awake Since Boot: 260000 seconds
+Time Since Wake:       29000 seconds
+
+System Integrity Protection: enabled
+
+Crashed Thread:        0  Dispatch queue: com.apple.main-thread
+
+Exception Type:        EXC_BAD_ACCESS (SIGSEGV)
+Exception Codes:       EXC_I386_GPFLT
+Exception Note:        EXC_CORPSE_NOTIFY
+
+Termination Signal:    Segmentation fault: 11
+Termination Reason:    Namespace SIGNAL, Code 0xb
+Terminating Process:   exc handler [0]
+
+Application Specific Information:
+objc_msgSend() selector name: stubMethod
+CoreSimulator 572.2 - Device: iPhone 7 - Runtime: iOS 11.3 (15E217) - DeviceType: iPhone 7
+
+Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
+0   libobjc.A.dylib               	0x000000010079798b objc_msgSend + 11
+1   com.jiangwang.ZombieTest      	0x00000001000cb9e2 -[ZombieObj callBack:] + 82 (ZTCallBackReleaseViewController.m:24)
+2   com.jiangwang.ZombieTest      	0x00000001000cbb4d -[ZTCallBackReleaseViewController clickToCrash] + 269 (ZTCallBackReleaseViewController.m:44)
+3   com.apple.UIKit               	0x000000010156a448 -[UIApplication sendAction:to:from:forEvent:] + 83
+4   com.apple.UIKit               	0x00000001016e5804 -[UIControl sendAction:to:forEvent:] + 67
+5   com.apple.UIKit               	0x00000001016e5b21 -[UIControl _sendActionsForEvents:withEvent:] + 450
+6   com.apple.UIKit               	0x00000001016e4a69 -[UIControl touchesEnded:withEvent:] + 580
+7   com.apple.UIKit               	0x00000001015df11f -[UIWindow _sendTouchesForEvent:] + 2729
+8   com.apple.UIKit               	0x00000001015e0821 -[UIWindow sendEvent:] + 4086
+9   com.apple.UIKit               	0x0000000101584370 -[UIApplication sendEvent:] + 352
+10  com.apple.UIKit               	0x0000000101ec557f __dispatchPreprocessedEventFromEventQueue + 2796
+11  com.apple.UIKit               	0x0000000101ec8194 __handleEventQueueInternal + 5949
+12  com.apple.CoreFoundation      	0x000000010108ebb1 __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__ + 17
+13  com.apple.CoreFoundation      	0x00000001010734af __CFRunLoopDoSources0 + 271
+14  com.apple.CoreFoundation      	0x0000000101072a6f __CFRunLoopRun + 1263
+15  com.apple.CoreFoundation      	0x000000010107230b CFRunLoopRunSpecific + 635
+16  com.apple.GraphicsServices    	0x000000010624ea73 GSEventRunModal + 62
+17  com.apple.UIKit               	0x00000001015690b7 UIApplicationMain + 159
+18  com.jiangwang.ZombieTest      	0x00000001000cbdbf main + 111 (main.m:14)
+19  libdyld.dylib                 	0x0000000104b3d955 start + 1
+
+Thread 1:
+0   libsystem_kernel.dylib        	0x0000000104fb528a __workq_kernreturn + 10
+1   libsystem_pthread.dylib       	0x0000000104feb20e _pthread_wqthread + 1552
+2   libsystem_pthread.dylib       	0x0000000104feabe9 start_wqthread + 13
+
+Thread 2:
+0   libsystem_kernel.dylib        	0x0000000104fb528a __workq_kernreturn + 10
+1   libsystem_pthread.dylib       	0x0000000104feb20e _pthread_wqthread + 1552
+2   libsystem_pthread.dylib       	0x0000000104feabe9 start_wqthread + 13
+
+Thread 3:
+0   libsystem_kernel.dylib        	0x0000000104fb528a __workq_kernreturn + 10
+1   libsystem_pthread.dylib       	0x0000000104feb20e _pthread_wqthread + 1552
+2   libsystem_pthread.dylib       	0x0000000104feabe9 start_wqthread + 13
+
+Thread 4:
+0   libsystem_kernel.dylib        	0x0000000104fb528a __workq_kernreturn + 10
+1   libsystem_pthread.dylib       	0x0000000104feb009 _pthread_wqthread + 1035
+2   libsystem_pthread.dylib       	0x0000000104feabe9 start_wqthread + 13
+
+Thread 5:
+0   libsystem_kernel.dylib        	0x0000000104fb528a __workq_kernreturn + 10
+1   libsystem_pthread.dylib       	0x0000000104feb20e _pthread_wqthread + 1552
+2   libsystem_pthread.dylib       	0x0000000104feabe9 start_wqthread + 13
+
+Thread 6:: com.apple.uikit.eventfetch-thread
+0   libsystem_kernel.dylib        	0x0000000104fab20a mach_msg_trap + 10
+1   libsystem_kernel.dylib        	0x0000000104faa724 mach_msg + 60
+2   com.apple.CoreFoundation      	0x00000001010737d5 __CFRunLoopServiceMachPort + 229
+3   com.apple.CoreFoundation      	0x0000000101072c19 __CFRunLoopRun + 1689
+4   com.apple.CoreFoundation      	0x000000010107230b CFRunLoopRunSpecific + 635
+5   com.apple.Foundation          	0x000000010017cb4a -[NSRunLoop(NSRunLoop) runMode:beforeDate:] + 274
+6   com.apple.Foundation          	0x00000001001f96bf -[NSRunLoop(NSRunLoop) runUntilDate:] + 143
+7   com.apple.UIKit               	0x00000001021bfba2 -[UIEventFetcher threadMain] + 118
+8   com.apple.Foundation          	0x000000010018a3b3 __NSThread__start__ + 1221
+9   libsystem_pthread.dylib       	0x0000000104feb661 _pthread_body + 340
+10  libsystem_pthread.dylib       	0x0000000104feb50d _pthread_start + 377
+11  libsystem_pthread.dylib       	0x0000000104feabf9 thread_start + 13
+
+Thread 0 crashed with X86 Thread State (64-bit):
+  rax: 0x00006080000120f0  rbx: 0x00007f8627401f10  rcx: 0x0000000000000000  rdx: 0x0000000000000303
+  rdi: 0x00006080000120f0  rsi: 0x00000001000cc670  rbp: 0x00007ffeefb33770  rsp: 0x00007ffeefb33748
+   r8: 0x000000000000003f   r9: 0x0000600000017260  r10: 0xbadd74ba0f61bead  r11: 0x00000001000cc670
+  r12: 0x00000001000cc65c  r13: 0x0000600000104020  r14: 0x0000600000104020  r15: 0x00007f862741c980
+  rip: 0x000000010079798b  rfl: 0x0000000000010206  cr2: 0x000060000158d000
+  
+Logical CPU:     1
+Error Code:      0x00000000
+Trap Number:     13
+
+
+Binary Images:
+       0x1000c9000 -        0x1000cdfff +com.jiangwang.ZombieTest (1.0 - 1) <2AC25529-C9BF-3586-9DB4-39F5538EBE0B> /Users/USER/Library/Developer/CoreSimulator/Devices/1204D6B1-8767-4B3E-A6E6-83CFAA3D2B49/data/Containers/Bundle/Application/F1089B4B-A647-4E61-9A48-83AB81FA9ABA/ZombieTest.app/ZombieTest
+       0x1000d9000 -        0x10010c757 +dyld_sim (551.1) <4015E9B7-0BDE-3909-849B-54CB9DB7DDC4> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/dyld_sim
+       0x10015c000 -        0x100463ff7  com.apple.Foundation (6.9 - 1452.23) <1D6EA911-6FD7-3744-974A-31F47291D445> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Foundation.framework/Foundation
+       0x10077c000 -        0x100e2abdf +libobjc.A.dylib (725) <2611F1A1-0ED6-3FF0-9B51-8D3B36E5A2C0> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libobjc.A.dylib
+       0x100feb000 -        0x100fecff7 +libSystem.dylib (1252.50.4) <FF275BB3-52F1-3DE0-B393-5E9104E89F8C> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libSystem.dylib
+       0x100ff3000 -        0x101374ff7  com.apple.CoreFoundation (6.9 - 1452.23) <580CC3A8-B670-331F-99F9-80CAF0B95BF4> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+       0x10153f000 -        0x1026c2ff7  com.apple.UIKit (1.0 - 1000) <ACF9D4D9-0378-3996-A9DA-C3F24CCD797D> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UIKit.framework/UIKit
+       0x1036ff000 -        0x10383aff7  com.apple.MobileCoreServices (822.29 - 822.29) <4B4E01AB-2FE8-3413-AC36-3348354142C9> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+       0x10393a000 -        0x103964ffb +libarchive.2.dylib (54) <CB33F0A3-55EA-3974-85FF-68F5A7D9E7F4> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libarchive.2.dylib
+       0x103972000 -        0x103b92ffb +libicucore.A.dylib (59173.0.2) <FD37B956-DE18-3CB7-B0C5-9080152434E7> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libicucore.A.dylib
+       0x103c79000 -        0x103d5dffb +libxml2.2.dylib (31.10) <97CB74ED-8303-33FC-A183-3CD1E45F78F5> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libxml2.2.dylib
+       0x103da3000 -        0x103db5fff +libz.1.dylib (70) <96E91BBD-E173-3753-A033-0A705CF2A176> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libz.1.dylib
+       0x103dbb000 -        0x10415cff7  com.apple.CFNetwork (897.15 - 897.15) <6409FC0B-F9B3-3CC8-B7FF-7B83753C0613> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+       0x104522000 -        0x104582fff  com.apple.SystemConfiguration (1.17 - 1.17) <1B6A8990-546B-38F4-9897-A449BE0A9F93> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/SystemConfiguration.framework/SystemConfiguration
+       0x1045bb000 -        0x104626ff3  com.apple.framework.IOKit (2.0.2 - 1445.50.26) <8E60B0C4-B1DC-3402-81F0-1DB370811E70> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+       0x10466a000 -        0x10469bff7 +libCRFSuite.dylib (41) <B2EB97C1-A6FC-378B-A605-D239A27E06AB> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libCRFSuite.dylib
+       0x1046b2000 -        0x1046b3fff +liblangid.dylib (128) <8A8CD37B-F806-3370-96BF-E63C14A5B77C> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/liblangid.dylib
+       0x1046b9000 -        0x104706ff7 +libc++.1.dylib (400.9.1) <F587A22C-6B8E-3808-A919-45BE50770AD8> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libc++.1.dylib
+       0x104754000 -        0x10476cfff +libMobileGestalt.dylib (585.50.24) <1A5510B1-D4E8-374B-8B55-7A098C8F8C34> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libMobileGestalt.dylib
+       0x1047af000 -        0x1047bfffb +libbsm.0.dylib (39) <6F619BE4-8B0E-323D-81BE-77878525A9BD> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libbsm.0.dylib
+       0x1047ca000 -        0x1048c3ff7  com.apple.Security (10.0 - 58286.52.5) <B75A8B14-62CC-3F6E-817E-C38FA9D3E00C> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Security.framework/Security
+       0x1049a4000 -        0x1049cafff +libc++abi.dylib (400.8.2) <C6FC5F37-E698-353D-9C18-C798CD262473> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libc++abi.dylib
+       0x1049db000 -        0x1049dffff +libcache.dylib (80) <AF21750E-72FA-3450-A09B-D19756E98DC2> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcache.dylib
+       0x1049e5000 -        0x1049efff3 +libcommonCrypto.dylib (60118.50.1) <EE3E4889-7608-39CB-8E20-8EC5001E81CD> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcommonCrypto.dylib
+       0x1049fe000 -        0x104a05ff7 +libcompiler_rt.dylib (62.1.2) <B38CDE47-C0D5-3BA0-92DB-63FA4F005247> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcompiler_rt.dylib
+       0x104a0f000 -        0x104a18ff7 +libcopyfile.dylib (146.50.5) <BCF5FBF7-A1A7-3FDF-81FD-E31762F4FEAD> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcopyfile.dylib
+       0x104a20000 -        0x104aa6fc7 +libcorecrypto.dylib (562.50.17) <E5CEDBE9-93CA-35C1-818E-AA0C41A09CB8> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libcorecrypto.dylib
+       0x104ac5000 -        0x104afbfff +libdispatch.dylib (913.50.12) <0E66FB5F-4202-3F46-9277-FAF1E2119E0A> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libdispatch.dylib
+       0x104b3c000 -        0x104b56fff +libdyld.dylib (551.1) <C3E9B0F0-69B3-3F34-82E2-CD8873554CFE> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libdyld.dylib
+       0x104b70000 -        0x104b70ff7 +liblaunch.dylib (1205.50.76) <92516D8D-1E1B-36E6-A4F7-962150A3F270> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/liblaunch.dylib
+       0x104b77000 -        0x104b7cff3 +libmacho.dylib (906.2) <44206B19-6245-38E8-A8BE-B598FB6BF3D4> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libmacho.dylib
+       0x104b83000 -        0x104b84ffb +libremovefile.dylib (45) <948CAF34-B97F-3E9A-9291-5901DA8B96EF> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libremovefile.dylib
+       0x104b8a000 -        0x104ba0ff3 +libsystem_asl.dylib (356.50.1) <092D95E9-70C3-3C49-8DD6-1F592A12D15C> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_asl.dylib
+       0x104baf000 -        0x104baffff +libsystem_blocks.dylib (68) <EF559E17-18C8-3899-95B5-392D0A624F56> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_blocks.dylib
+       0x104bb4000 -        0x104c37fff +libsystem_c.dylib (1244.50.9) <1D34BA91-C8E9-3BEF-833F-BAF81A6288D8> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_c.dylib
+       0x104c63000 -        0x104c66ff7 +libsystem_configuration.dylib (963.50.8) <1F2E7940-7800-3B18-9696-B8CF73B4E0D6> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_configuration.dylib
+       0x104c6d000 -        0x104c71fff +libsystem_containermanager.dylib (136.50.1) <4A64F4A9-807B-391E-AE66-9DB5899B8941> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_containermanager.dylib
+       0x104c79000 -        0x104c7affb +libsystem_coreservices.dylib (51) <CCD81184-9BD0-3A4E-AE13-978545775879> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_coreservices.dylib
+       0x104c80000 -        0x104c81ff7 +libsystem_darwin.dylib (1244.50.9) <6F225F71-D53F-3D6C-AAE4-07D78AB00671> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_darwin.dylib
+       0x104c87000 -        0x104c8dff7 +libsystem_dnssd.dylib (878.50.17) <88559E76-D9F3-30DE-83E6-F6C6F8BDBF5B> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_dnssd.dylib
+       0x104c94000 -        0x104cd2ffb +libsystem_info.dylib (517.30.1) <C4381E29-C194-3BCB-BE1A-0B0E04DFC2A0> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_info.dylib
+       0x104ce8000 -        0x104d30feb +libsystem_m.dylib (3147.50.1) <FC51D950-6073-3F96-9383-B6592B017B05> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_m.dylib
+       0x104d3e000 -        0x104d5bfff +libsystem_malloc.dylib (140.50.6) <C4C35C24-4B04-3269-8BA7-22EDEF4A9A35> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_malloc.dylib
+       0x104d6a000 -        0x104e3afff +libsystem_network.dylib (1229.52.1) <636E9A68-6DF8-368D-B641-16880306DFB0> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_network.dylib
+       0x104e82000 -        0x104e8bff3 +libsystem_notify.dylib (172) <A3D20D0F-3C0D-3204-83C0-E944D1B5DA20> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_notify.dylib
+       0x104e94000 -        0x104e97ffb +libsystem_sandbox.dylib (765.50.51) <F13762D3-D91A-3E46-A338-5089B46D4B8A> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sandbox.dylib
+       0x104e9e000 -        0x104e9ffff +libsystem_sim_kernel.dylib (185.50.4) <30EFFA0C-5F28-342F-9073-9A9BD88AC2E5> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_kernel.dylib
+       0x104ea7000 -        0x104ea9ff3 +libsystem_sim_platform.dylib (185.50.4) <67008C16-4C47-306D-9129-2D32B6D146F9> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_platform.dylib
+       0x104eaf000 -        0x104eafff7 +libsystem_sim_pthread.dylib (185.50.4) <2DFE3144-30F7-3C28-81BC-C8334AF7F497> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_pthread.dylib
+       0x104eb5000 -        0x104ec8ff7 +libsystem_trace.dylib (829.50.17) <098D7461-9D36-335B-8B27-7A975850EB73> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_trace.dylib
+       0x104ed9000 -        0x104edfff3 +libunwind.dylib (126.5.1) <E9F51449-1020-3F82-9895-07266E75FF84> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libunwind.dylib
+       0x104ee6000 -        0x104f11ff7 +libxpc.dylib (1205.50.76) <22B51B1C-1E07-3FEE-A4E9-60E90E7520D6> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libxpc.dylib
+       0x104f39000 -        0x104f39ff7 +libsystem_sim_pthread_host.dylib (185.50.4) <58E08990-9E73-3B5E-9841-5A8D05E206F3> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_pthread_host.dylib
+       0x104f3e000 -        0x104f70ff7 +libclosured.dylib (551.1) <0D923664-8A28-3E80-8FAE-DF777CC2041A> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/closure/libclosured.dylib
+       0x104f8c000 -        0x104f8cff7 +libsystem_sim_platform_host.dylib (185.50.4) <10DB614E-7C95-3FE9-A34D-AD1BECDE1DDF> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_platform_host.dylib
+       0x104f92000 -        0x104f92ff7 +libsystem_sim_kernel_host.dylib (185.50.4) <ACF1711C-A830-3931-B4F3-2AAC50B44547> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/system/libsystem_sim_kernel_host.dylib
+       0x104f98000 -        0x104fbeff7  libsystem_kernel.dylib (4570.71.2) <F22B8D73-69D8-36D7-BF66-7F9AC70C08C2> /usr/lib/system/libsystem_kernel.dylib
+       0x104fd8000 -        0x104fdfff7  libsystem_platform.dylib (161.50.1) <6355EE2D-5456-3CA8-A227-B96E8F1E2AF8> /usr/lib/system/libsystem_platform.dylib
+       0x104fe8000 -        0x104ff3fff  libsystem_pthread.dylib (301.50.1) <0E51CCBA-91F2-34E1-BF2A-FEEFD3D321E4> /usr/lib/system/libsystem_pthread.dylib
+       0x105000000 -        0x105179ff7 +libsqlite3.dylib (274.8.1) <5B39CB31-10F1-30BF-8631-DCC9293A3526> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libsqlite3.dylib
+       0x1051ab000 -        0x1051c1ff3 +libcoretls.dylib (155.50.1) <B6C4533A-1829-33D2-8ABB-9442A381433D> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcoretls.dylib
+       0x1051cf000 -        0x1051d0ff3 +libcoretls_cfhelpers.dylib (155.50.1) <15BEE94A-8A65-310C-BB82-A0C655A96B49> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcoretls_cfhelpers.dylib
+       0x1051d7000 -        0x10533aff7 +libnetwork.dylib (1229.52.1) <D1DBF19E-CC22-3222-80A3-8E99F55F8B12> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libnetwork.dylib
+       0x1053a9000 -        0x1053bffff +libapple_nghttp2.dylib (1.24) <C3E68B70-1886-3AA1-A927-847831AE28C6> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libapple_nghttp2.dylib
+       0x1053cd000 -        0x105483fff +libboringssl.dylib (109.50.14) <32440464-7AD2-3043-BA87-08EC9FC32197> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libboringssl.dylib
+       0x105509000 -        0x105565ff3 +libusrtcp.dylib (1229.52.1) <37A06E35-C435-3CDC-9BEC-C8FC038BEAE9> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libusrtcp.dylib
+       0x105577000 -        0x105577fff +libapple_crypto.dylib (109.50.14) <A86020C8-924C-36D4-B300-418461B79B43> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libapple_crypto.dylib
+       0x10557b000 -        0x105588fff +libbz2.1.0.dylib (38) <205448A5-7386-3AD4-A46C-3781F211FD14> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libbz2.1.0.dylib
+       0x10558e000 -        0x1055a6ffb +liblzma.5.dylib (10) <BEEA9027-9A10-3999-B50B-01A12089DB98> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/liblzma.5.dylib
+       0x1055af000 -        0x105604ffb  com.apple.DocumentManager (1.0 - 68.7.11) <8B42DCC5-6773-3491-B979-56DEC2549D27> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UIKit.framework/Frameworks/DocumentManager.framework/DocumentManager
+       0x10565d000 -        0x1056f1ffb  com.apple.FileProvider (125.16 - 125.16) <7C1CB92F-8947-3758-89BA-A08F88E7A05E> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/FileProvider.framework/FileProvider
+       0x105777000 -        0x105868fff  com.apple.UIFoundation (1.0 - 546.2) <6AC7D8AE-BB3F-3D6F-B223-2B91135B0C72> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+       0x105912000 -        0x105916ff7  com.apple.AggregateDictionary (1.0 - 1) <7534F1E2-D4EB-3AC7-A2D9-9D955FD53A71> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AggregateDictionary.framework/AggregateDictionary
+       0x10591f000 -        0x105949fff  com.apple.UserNotifications (1.0 - ???) <F496E551-563D-3643-A582-A0901E2389FA> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/UserNotifications.framework/UserNotifications
+       0x10597c000 -        0x1059d7ff3  com.apple.FrontBoardServices (486.13.3 - 486.13.3) <D431C1E5-B601-39A7-93A1-78DDBBA8B636> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices
+       0x105a5d000 -        0x105abdff3  com.apple.BaseBoard (360.2.1 - 360.2.1) <02C03718-B99E-3661-97C9-488D5C42F055> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/BaseBoard.framework/BaseBoard
+       0x105b3a000 -        0x105c01fef  com.apple.CoreUI (1.0 - 493.4) <8BFB4951-5514-375E-9B82-B0FF2A942D1F> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CoreUI.framework/CoreUI
+       0x105d4d000 -        0x105d59ffb  com.apple.opengles (16.4.2 - 16.4.2) <2D38ACE6-BE41-3809-9B47-06B2F9F41516> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+       0x105d67000 -        0x105d7eff3  com.apple.MobileAssets (1.0 - 437.52.1) <0390CE81-1FAE-3AA0-AAA9-4A217E7DC456> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MobileAsset.framework/MobileAsset
+       0x105d9a000 -        0x105dcbffb  com.apple.BackBoardServices (1.0 - 1.0) <BAC1A49A-3AEA-3D6B-9406-9FD0647905CB> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/BackBoardServices.framework/BackBoardServices
+       0x105e10000 -        0x10607eff7  com.apple.CoreImage (11.0.0 - 579.4.11) <61096886-3ED9-34B3-BF8C-1CCAF4948BD1> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreImage.framework/CoreImage
+       0x106242000 -        0x106256fff  com.apple.GraphicsServices (1.0 - 1.0) <FD2C0C22-352B-397E-9AF8-F31B4224D024> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/GraphicsServices.framework/GraphicsServices
+       0x106272000 -        0x106873fff  com.apple.CoreGraphics (2.0 - 1161.10) <2E41082A-987F-3E0E-9EF2-0D5D81F0395D> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+       0x106987000 -        0x106e9dfff  com.apple.ImageIO.framework (3.3.0 - 1739.1) <C9E2E7D0-6A92-31FD-BBAF-10B061FABAD3> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/ImageIO.framework/ImageIO
+       0x106fc2000 -        0x10717aff7  com.apple.QuartzCore (1.11 - 584.40.1) <D1F4030E-33CB-321E-9637-6D1F6A964FC5> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+       0x107263000 -        0x10729dff3  com.apple.SpringBoardServices (1.0 - 1.0) <32057EA5-448E-312B-8E09-3078D93FB2A1> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/SpringBoardServices.framework/SpringBoardServices
+       0x1072f2000 -        0x107334ff3  com.apple.AppSupport (1.0.0 - 29) <0F002650-1231-3BAB-8DE6-F2E780D89F5B> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AppSupport.framework/AppSupport
+       0x10737b000 -        0x1074d1ff3  com.apple.CoreText (352.0 - 578.18) <81E58ADE-10BC-35C6-810F-2B31729891D4> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreText.framework/CoreText
+       0x1075a6000 -        0x1075fdff3  com.apple.TextInput (1.0 - 1.0) <D0D46F29-B723-3DEF-BE38-A43178EE434D> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextInput.framework/TextInput
+       0x107686000 -        0x107809ffb  com.apple.WebKitLegacy (8605 - 8605.1.33.0.2) <D07CF1CB-2827-394B-902A-ADE4E4761506> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/WebKitLegacy.framework/WebKitLegacy
+       0x107972000 -        0x107985ff7 +libAccessibility.dylib (2400.83.24) <AF3E88DA-41A4-3359-9F33-9C9086BB1880> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAccessibility.dylib
+       0x1079ac000 -        0x1079acfff  com.apple.Accelerate (1.11 - Accelerate 1.11) <E75C8616-8550-3A03-941E-9E18BC929549> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Accelerate
+       0x1079b0000 -        0x107a02fff  com.apple.PhysicsKit (1.0 - 1) <DCAD56C9-9BAC-334F-A362-C069DA6F3E88> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/PhysicsKit.framework/PhysicsKit
+       0x107a36000 -        0x107ac9ff3  com.apple.Network (1.0 - 1) <F09BF359-7D7F-3C30-BC17-78FED6CA5827> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/Network.framework/Network
+       0x107b30000 -        0x107b39ffb  com.apple.mobileicons.framework (1.0 - 1.0) <19F2171D-AE67-304D-B3E4-086B906CF418> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/MobileIcons.framework/MobileIcons
+       0x107b46000 -        0x107b58ffb  com.apple.DocumentManagerCore (1.0 - 68.7.11) <C9968798-83FC-325A-A593-61A58B903A73> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/DocumentManagerCore.framework/DocumentManagerCore
+       0x107b70000 -        0x107b92ffb  com.apple.pluginkit.framework (1.0 - 1) <F8AC4EDB-B198-30AD-9964-FC3A42C606A8> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/PlugInKit.framework/PlugInKit
+       0x107bb8000 -        0x107bd6ffb  com.apple.CoreVideo (1.8 - 0.0) <2822951B-6C78-38BE-81A4-878943628CFA> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+       0x107bf2000 -        0x10836ffdb  com.apple.vImage (8.1 - ???) <63466683-DC43-3EA0-AF50-D0E1A0BAB01D> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
+       0x108407000 -        0x108407fff  com.apple.Accelerate.vecLib (3.11 - vecLib 3.11) <601FF5F5-36BE-3048-B0B7-C49749B5E206> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib
+       0x10840b000 -        0x108582ffb +libvDSP.dylib (622.50.5) <4424E596-65C1-3E8D-9259-DD40229E5C80> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvDSP.dylib
+       0x108596000 -        0x108954fff +libLAPACK.dylib (1211.50.2) <3ED9CCCA-ED9E-361B-ABAA-384DF86A3784> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLAPACK.dylib
+       0x1089a4000 -        0x108b46fe3 +libBLAS.dylib (1211.50.2) <66DA5B1E-D473-3071-9BA6-1830C8D4FB5C> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBLAS.dylib
+       0x108b6c000 -        0x108c05fe3 +libvMisc.dylib (622.50.5) <312DF90F-AF84-3106-889A-227BEA18199C> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvMisc.dylib
+       0x108c17000 -        0x108c2cffb +libLinearAlgebra.dylib (1211.50.2) <F1FEFCCA-AFF9-37D9-9098-01501FC79585> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLinearAlgebra.dylib
+       0x108c36000 -        0x108ca1ff7 +libSparse.dylib (79.50.2) <1FF192FD-B2E2-3944-91BB-A74EE5373B04> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libSparse.dylib
+       0x108cbb000 -        0x108ccdff7 +libSparseBLAS.dylib (1211.50.2) <B1C1F8E0-9891-3AC0-AE8E-73670970022E> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libSparseBLAS.dylib
+       0x108cd6000 -        0x108cdbff3 +libQuadrature.dylib (3) <148045D9-255D-3E50-8E13-C9AF9BC37EE9> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libQuadrature.dylib
+       0x108ce0000 -        0x108d17fe7 +libBNNS.dylib (38.1) <D6B0D450-F018-33C8-BBFE-AE048CCB9732> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBNNS.dylib
+       0x108d22000 -        0x108d38fc3 +libcompression.dylib (47.50.1) <F3B0759A-C3E3-3DC0-9F1F-257257FEDB9D> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcompression.dylib
+       0x108d40000 -        0x108d41ff3  com.apple.FontServices (1.0 - 1) <F3E7B4FC-7502-3F84-9803-0D42ABFE23C4> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FontServices.framework/FontServices
+       0x108d47000 -        0x108e52ff7 +libFontParser.dylib (222.1.3) <94692D2A-1977-33E2-BD43-DC88E9EA3F1C> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib
+       0x108f2c000 -        0x108fadfff  com.apple.Metal (125.21 - 125.21) <C44F16DE-9A01-344F-97A1-B38C0ECE865F> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Metal.framework/Metal
+       0x109091000 -        0x1090d9ff3  com.apple.AppleJPEG (1.0 - 1) <0B61A7A8-9D44-334E-9BEB-6387AE2313A1> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AppleJPEG.framework/AppleJPEG
+       0x1090e9000 -        0x1090eefff +libCoreFSCache.dylib (162.6.1) <B321614B-C6EF-3D3B-A980-4C075E941727> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/OpenGLES.framework/libCoreFSCache.dylib
+       0x1090f4000 -        0x109179fff  com.apple.ColorSync (4.13.0 - 3325) <48E8D1CE-BA9B-3ACE-A820-84A03AAFCE8E> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ColorSync.framework/ColorSync
+       0x1091ab000 -        0x1091b4fff +libGFXShared.dylib (16.4.2) <FFF80C9D-C4B9-3447-B2B9-7F36BB17216F> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/OpenGLES.framework/libGFXShared.dylib
+       0x1091bd000 -        0x1091ffff7 +libGLImage.dylib (16.4.2) <0FAC17AF-6234-31FC-A854-D180F2955E3F> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/OpenGLES.framework/libGLImage.dylib
+       0x10920b000 -        0x10920dfff +libCVMSPluginSupport.dylib (16.4.2) <26B185C8-793E-34D6-8573-8CE268E6E4CD> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/OpenGLES.framework/libCVMSPluginSupport.dylib
+       0x109214000 -        0x10921cff3 +libCoreVMClient.dylib (162.6.1) <67EE4344-0436-3309-86A2-56DE39535AA4> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/OpenGLES.framework/libCoreVMClient.dylib
+       0x109225000 -        0x109ecdf2b +libLLVMContainer.dylib (602.2.46) <8D07C75C-FC2D-3E17-AEC8-B3CBC1D8175B> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/OpenGLES.framework/libLLVMContainer.dylib
+       0x10a26f000 -        0x10a28dff7  com.apple.ProtocolBuffer (1 - 260) <7FC916BE-E8DF-308E-9DB9-214378272B5B> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ProtocolBuffer.framework/ProtocolBuffer
+       0x10a2af000 -        0x10a2b7ff3  com.apple.CorePhoneNumbers (1.0 - 1) <64E64AA0-CBD6-331D-A4A2-BB06B95B42BC> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CorePhoneNumbers.framework/CorePhoneNumbers
+       0x10a2c1000 -        0x10a38dff3  com.apple.TextureIO (3.6 - 3.6) <3E4B2289-28DF-33E5-ABB5-10511FB2CDF0> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TextureIO.framework/TextureIO
+       0x10a3b8000 -        0x10a4b7fef +libate.dylib (1.13.1) <E709A7A8-6B70-32A0-9577-D5636DBC6751> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libate.dylib
+       0x10a4cc000 -        0x10a566ff3  com.apple.CoreMedia (1.0 - 2275.58.6) <CD1AA0E7-385E-31F7-9C24-6AA88EF1AEF5> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreMedia.framework/CoreMedia
+       0x10a60c000 -        0x10a60fff3  com.apple.iphonesimulator.SimulatorClient (1.0 - 1) <4E3E8EF8-35F2-3A0F-93D3-5F9B6BB0A417> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/SimulatorClient.framework/SimulatorClient
+       0x10a615000 -        0x10a63dfff  com.apple.applesauce (1.0 - ???) <79870C2B-91F1-3FDC-B175-0B772E07E7D2> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AppleSauce.framework/AppleSauce
+       0x10a64a000 -        0x10a652ffb  com.apple.datamigration (1.0 - 1.0) <525D777A-2AEA-30E0-9DBC-5D20106668F4> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/DataMigration.framework/DataMigration
+       0x10a660000 -        0x10a675fff  com.apple.commonutilities (8.0 - 900) <D991CE6A-E1BB-3F47-82E9-7E0E5C4B7065> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CommonUtilities.framework/CommonUtilities
+       0x10a69a000 -        0x10a6e4acf  dyld (551.4) <8A72DE9C-A136-3506-AA02-4BA2B82DCAF3> /usr/lib/dyld
+       0x10a738000 -        0x10ab5efff  com.apple.vision.FaceCore (3.1.10 - 3.1.10) <84FC3B23-541F-349C-95D1-ED959CFC6371> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FaceCore.framework/FaceCore
+       0x10ad86000 -        0x10af4fff3 +libFosl_dynamic.dylib (17.8) <BE669073-0B16-363F-9C76-4516108F669A> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libFosl_dynamic.dylib
+       0x10afa2000 -        0x10b299ff7  com.apple.VideoToolbox (1.0 - 2275.58.6) <B26554EC-DCB3-3EDE-9CB9-C8AE0DECFA1A> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/VideoToolbox.framework/VideoToolbox
+       0x10b334000 -        0x10b3bdff7  com.apple.audio.CoreAudio (4.3.0 - 4.3.0) <F37274C9-B807-32CE-954F-AD5F785B389B> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+       0x10b3ee000 -        0x10b4f0ff3  com.apple.managedconfiguration (1.0 - 1.0) <D460660A-6579-3FD7-B8A6-E2712EC3CF8A> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ManagedConfiguration.framework/ManagedConfiguration
+       0x10b5f6000 -        0x10b64cff7  com.apple.Accounts (113 - 113) <0CA1ADF2-01B5-3D21-AF54-9AEF2D7A6323> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accounts.framework/Accounts
+       0x10b6a4000 -        0x10b6ceffb  com.apple.persistentconnection (1.0 - 1.0) <7D77F85D-FB59-3AFB-B780-77EDB8345AB8> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/PersistentConnection.framework/PersistentConnection
+       0x10b6fc000 -        0x10b78dff3  com.apple.CoreTelephony (113 - 5783) <05C2FD58-C02E-3010-9769-4194BF5CDC61> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreTelephony.framework/CoreTelephony
+       0x10b811000 -        0x10b827ffb  com.apple.AssertionServices (1.0 - 1) <878EF500-268A-31F0-B07F-279E9BBD5684> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/AssertionServices.framework/AssertionServices
+       0x10b84e000 -        0x10bb8cff3 +CoreData (851) <39082697-9FE9-309A-B14B-FB4EC7298640> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/CoreData.framework/CoreData
+       0x10bd9b000 -        0x10bda2ff7 +libcupolicy.dylib (5783) <B60A73AD-222F-36D1-81BE-E3D8D3A50B9A> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libcupolicy.dylib
+       0x10bdad000 -        0x10bde8fff +libTelephonyUtilDynamic.dylib (3312) <6401E7B3-FA8B-35CC-BE20-5248DAC6CAB9> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libTelephonyUtilDynamic.dylib
+       0x10be34000 -        0x10be5aff3  com.apple.StreamingZip (1.0 - 1) <9B163555-E6CF-393C-95A2-3B40F6A3D56A> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/StreamingZip.framework/StreamingZip
+       0x10be78000 -        0x10c885ff7  com.apple.JavaScriptCore (8605 - 8605.1.33.0.2) <01ADEFB7-F195-34E8-8EF0-6E9F7C4B780B> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/JavaScriptCore.framework/JavaScriptCore
+       0x10cb3f000 -        0x10e341ffb  com.apple.WebCore (8605 - 8605.1.33.0.2) <93492A21-2881-3FE3-B9FC-1F284106677C> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/WebCore.framework/WebCore
+       0x10f172000 -        0x10f711feb +libwebrtc.dylib (7605.1.33.0.2) <4876CA3E-5750-315F-9A2F-51307EDB1237> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/WebCore.framework/Frameworks/libwebrtc.dylib
+       0x10f929000 -        0x10fd80ff7  com.apple.audio.toolbox.AudioToolbox (1.8 - 1.8) <8322458B-5BB7-31D9-815A-BFEF3A7D04FC> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+       0x10ff68000 -        0x10ff72ff7 +libAudioStatistics.dylib (975.4.20.5) <CEB205FC-518D-30CD-8823-550D7599F30B> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAudioStatistics.dylib
+       0x10ff7f000 -        0x10ffc2fff  com.apple.awd (1.0 - 930.1) <C072C7E1-12A4-347F-B0CB-1B10EFF2C004> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/WirelessDiagnostics.framework/WirelessDiagnostics
+       0x10fff5000 -        0x10fffdffb  com.apple.RTCReporting (9.32.64 - 9.32.64) <150D6DC6-0700-384A-83A1-A8D947D21706> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/RTCReporting.framework/RTCReporting
+       0x11000c000 -        0x110012fff  com.apple.TCC (1.0 - 1) <0168A6E2-2E1F-35BD-B190-9F8B314396EC> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/TCC.framework/TCC
+       0x11001e000 -        0x110108fff +libAWDSupportFramework.dylib (793) <4E156849-FA15-3C6A-BBFC-69C7B259C641> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libAWDSupportFramework.dylib
+       0x110224000 -        0x110235ff7 +libprotobuf-lite.dylib (793) <7ED47EAB-46FB-3913-B438-F6159392F182> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libprotobuf-lite.dylib
+       0x11024d000 -        0x110279fff  com.apple.CoreAnalytics.CoreAnalytics (1.0 - 1) <57EBCD90-88F2-3984-AD04-CA9B08E494A2> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/CoreAnalytics.framework/CoreAnalytics
+       0x1102a3000 -        0x110304fff +libprotobuf.dylib (793) <44C9EBF0-6825-382D-A051-B18BD9476317> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libprotobuf.dylib
+       0x11035c000 -        0x110366ff7  com.apple.MediaAccessibility (1.0 - 114) <80E21DC2-879E-3E83-9767-8A5F0902B9F9> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/MediaAccessibility.framework/MediaAccessibility
+       0x112206000 -        0x11220ffff +libMobileGestaltExtensions.dylib (585.50.24) <8BA15426-05FF-3E09-B16B-907F72C49CC1> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/usr/lib/libMobileGestaltExtensions.dylib
+       0x112229000 -        0x11223ffff +libCGInterfaces.dylib (417) <F9B8C290-5F2D-34C8-80F4-1D55210E6B25> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/Libraries/libCGInterfaces.dylib
+       0x112251000 -        0x112262fff +libGSFontCache.dylib (121.20) <A49BB3A1-259D-3817-B845-079FC93095DF> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FontServices.framework/libGSFontCache.dylib
+       0x112521000 -        0x112526ffb  com.apple.ConstantClasses (1.0 - 1) <1C9674F9-D317-3073-8513-598C4D5816A0> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/ConstantClasses.framework/ConstantClasses
+       0x112832000 -        0x112864ff7 +libTrueTypeScaler.dylib (222.1.3) <294D35A8-CAD5-30F1-889E-7AA0508091DA> /Applications/Xcode9.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/CoreSimulator/Profiles/Runtimes/iOS.simruntime/Contents/Resources/RuntimeRoot/System/Library/PrivateFrameworks/FontServices.framework/libTrueTypeScaler.dylib
+
+External Modification Summary:
+  Calls made by other processes targeting this process:
+    task_for_pid: 1
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by this process:
+    task_for_pid: 0
+    thread_create: 0
+    thread_set_state: 0
+  Calls made by all processes on this machine:
+    task_for_pid: 21652312
+    thread_create: 0
+    thread_set_state: 27477
+
+VM Region Summary:
+ReadOnly portion of Libraries: Total=237.3M resident=0K(0%) swapped_out_or_unallocated=237.3M(100%)
+Writable regions: Total=128.1M written=0K(0%) resident=0K(0%) swapped_out=0K(0%) unallocated=128.1M(100%)
+ 
+                                VIRTUAL   REGION 
+REGION TYPE                        SIZE    COUNT (non-coalesced) 
+===========                     =======  ======= 
+Activity Tracing                   256K        2 
+CG image                            12K        2 
+CG raster data                      40K        4 
+CoreAnimation                      592K       13 
+CoreUI image file                  108K        2 
+Kernel Alloc Once                    8K        2 
+MALLOC                           115.0M       31 
+MALLOC guard page                   48K       13 
+STACK GUARD                       56.0M        8 
+Stack                             11.0M       10 
+VM_ALLOCATE                         20K        2 
+__DATA                            24.2M      205 
+__FONT_DATA                          4K        2 
+__LINKEDIT                        66.9M      164 
+__TEXT                           170.4M      163 
+__UNICODE                          560K        2 
+mapped file                       34.8M        9 
+shared memory                       24K        4 
+===========                     =======  ======= 
+TOTAL                            480.1M      620 
+
