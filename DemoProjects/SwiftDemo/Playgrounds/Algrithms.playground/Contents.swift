@@ -495,6 +495,7 @@ print(solution.isValid("["))
  */
 
 
+/*
 //merge two sorted lists
 public class ListNode {
     public var val: Int
@@ -572,3 +573,44 @@ for intValue in [3, 4] {
 
 let result = solution.mergeTwoLists(node2, node1)
 print(result?.description)
+ */
+
+
+//remove duplicates from sorted array
+class Solution {
+    func removeDuplicates(_ nums: inout [Int]) -> Int {
+        if nums.count == 0 {
+            return 0
+        }
+        
+        var index = nums.count - 1
+        var tempValue: Int? = nil
+        while index >= 0 {
+            if let duplicate = tempValue, duplicate == nums[index] {
+                nums.remove(at: index)
+            }
+            
+            //temp value forward
+            tempValue = nums[index]
+            index -= 1
+        }
+        return nums.count
+    }
+}
+
+let solution = Solution()
+var array = [0,0,1,1,1,2,2,3,3,4]
+print(solution.removeDuplicates(&array))
+print(array)
+
+var test01 = [0,0]
+print(solution.removeDuplicates(&test01))
+print(test01)
+
+var test02 = [0]
+print(solution.removeDuplicates(&test02))
+print(test02)
+
+var test03 = [Int]()
+print(solution.removeDuplicates(&test03))
+print(test03)
