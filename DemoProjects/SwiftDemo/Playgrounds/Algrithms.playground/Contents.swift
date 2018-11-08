@@ -421,6 +421,7 @@ let solution = Solution()
 print(solution.longestCommonPrefix(["a", "ac"]))
  */
 
+/*
 //Valid parenthesis
 class Solution {
     func isValid(_ s: String) -> Bool {
@@ -491,3 +492,83 @@ print(solution.isValid("([)]"))
 print(solution.isValid("{[]}"))
 print(solution.isValid(""))
 print(solution.isValid("["))
+ */
+
+
+//merge two sorted lists
+public class ListNode {
+    public var val: Int
+    public var next: ListNode?
+    public init(_ val: Int) {
+        self.val = val
+        self.next = nil
+    }
+    
+    public var description: String {
+        var tempNode: ListNode? = self
+        var des = "\(tempNode?.val ?? 0)"
+        while tempNode?.next != nil {
+            des += "-> \(tempNode?.next?.val ?? 0)"
+            tempNode = tempNode?.next
+        }
+        return des
+    }
+}
+
+class Solution {
+    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+        //是否有空
+        var tempL1 = l1
+        var tempL2 = l2
+        var resultTemp: ListNode? = ListNode.init(0)
+        let result = resultTemp
+
+        repeat {
+
+            if tempL1 == nil {
+                resultTemp?.next = tempL2
+                tempL2 = tempL2?.next
+                break
+            }
+            
+            if tempL2 == nil {
+                resultTemp?.next = tempL1
+                tempL1 = tempL1?.next
+                break
+            }
+            
+            if let l1Value = tempL1?.val, let l2Value = tempL2?.val {
+                if l1Value <= l2Value {
+                    resultTemp?.next = ListNode.init(l1Value)
+                    tempL1 = tempL1?.next
+                }
+                else {
+                    resultTemp?.next = ListNode.init(l2Value)
+                    tempL2 = tempL2?.next
+                }
+            }
+            
+            resultTemp = resultTemp?.next
+        } while tempL1 != nil || tempL2 != nil
+
+        return result?.next
+    }
+}
+
+let solution = Solution()
+let node1: ListNode? = ListNode.init(1)
+var tempNode1: ListNode? = node1
+for intValue in [2, 4] {
+    tempNode1?.next = ListNode.init(intValue)
+    tempNode1 = tempNode1?.next
+}
+
+let node2: ListNode? = ListNode.init(1)
+var tempNode2 = node2
+for intValue in [3, 4] {
+    tempNode2?.next = ListNode.init(intValue)
+    tempNode2 = tempNode2?.next
+}
+
+let result = solution.mergeTwoLists(node2, node1)
+print(result?.description)
