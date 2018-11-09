@@ -576,6 +576,7 @@ print(result?.description)
  */
 
 
+/*
 //remove duplicates from sorted array
 class Solution {
     func removeDuplicates(_ nums: inout [Int]) -> Int {
@@ -614,3 +615,48 @@ print(test02)
 var test03 = [Int]()
 print(solution.removeDuplicates(&test03))
 print(test03)
+ */
+
+//remove element
+class Solution {
+    func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
+        if nums.count == 0 {
+            return 0
+        }
+        
+        var index = 0
+        var indexJ = index
+        while indexJ < nums.count {
+            if nums[indexJ] != val {
+                let temp = nums[index]
+                nums[index] = nums[indexJ]
+                nums[indexJ] = temp
+                index += 1
+            }
+            
+            indexJ += 1
+        }
+        
+        nums = Array(nums[0..<index])
+        return index
+    }
+}
+
+let solution = Solution()
+var testNums = [0,1,2,2,3,0,4,2]
+print(solution.removeElement(&testNums, 2))
+print(testNums)
+
+var test01 = [Int]()
+print(solution.removeElement(&test01, 2))
+print(test01)
+
+var test02 = [0]
+print(solution.removeElement(&test02, 0))
+print(test02)
+
+var test03 = [0, 0, 0]
+print(solution.removeElement(&test03, 0))
+print(test03)
+
+
