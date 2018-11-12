@@ -617,6 +617,7 @@ print(solution.removeDuplicates(&test03))
 print(test03)
  */
 
+/*
 //remove element
 class Solution {
     func removeElement(_ nums: inout [Int], _ val: Int) -> Int {
@@ -658,5 +659,50 @@ print(test02)
 var test03 = [0, 0, 0]
 print(solution.removeElement(&test03, 0))
 print(test03)
+*/
 
+//implement strStr()
+class Solution {
+    func strStr(_ haystack: String, _ needle: String) -> Int {
+        if needle.isEmpty {
+            return 0
+        }
+        
+        var result = -1 //没有找打
+        let needles: Array<Character> = Array(needle)
+        outter: for (index, _) in haystack.enumerated() {
+            if index+needles.count > haystack.count {
+                break outter
+            }
+            
+            var temp = 0
+            var haystackTemp = index
+            var same = true
+            inner: while temp < needles.count {
+                let needleChar = needles[temp]
+                let startIndex = haystack.startIndex;
+                let charIndex = haystack.index(startIndex, offsetBy: haystackTemp)
+                let haystackChar = haystack[charIndex]
+                temp += 1
+                haystackTemp += 1
+                if needleChar != haystackChar {
+                    same = false
+                    break inner
+                }
+            }
+            
+            if same {
+                result = index
+                break outter
+            }
+        }
+        return result
+    }
+}
 
+let solution = Solution()
+print(solution.strStr("jioafjaof", ""))
+print(solution.strStr("", ""))
+print(solution.strStr("", "ajfoa"))
+print(solution.strStr("ajfoa", "ajfoa"))
+print(solution.strStr("ajfoa", "oa"))
