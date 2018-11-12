@@ -661,6 +661,7 @@ print(solution.removeElement(&test03, 0))
 print(test03)
 */
 
+/*
 //implement strStr()
 class Solution {
     func strStr(_ haystack: String, _ needle: String) -> Int {
@@ -706,3 +707,55 @@ print(solution.strStr("", ""))
 print(solution.strStr("", "ajfoa"))
 print(solution.strStr("ajfoa", "ajfoa"))
 print(solution.strStr("ajfoa", "oa"))
+ */
+
+
+//search insertion position
+class Solution {
+    func searchInsert(_ nums: [Int], _ target: Int) -> Int {
+        if nums.count == 0 {
+            return 0
+        }
+        
+        /*
+        var position = 0
+        var hasChanged = false
+        for (index, value) in nums.enumerated() {
+            if value >= target {
+                position = index
+                hasChanged = true
+                break
+            }
+        }
+        return hasChanged ? position : nums.count
+         */
+        var lower = 0
+        var upper = nums.count - 1
+        var mid = (lower + upper)/2
+        while lower != upper {
+            let value = nums[mid]
+            //找到了匹配
+            if value == target {
+                break
+            }
+            
+            if value < target {
+                lower = mid
+            }
+        }
+        return mid
+    }
+}
+
+let solution = Solution()
+let test01 = [1,3,5,6]
+print(solution.searchInsert(test01, 5))
+
+let test02 = [1,3,5,6]
+print(solution.searchInsert(test02, 2))
+
+let test03 = [1,3,5,6]
+print(solution.searchInsert(test03, 7))
+
+let test04 = [1,3,5,6]
+print(solution.searchInsert(test04, 0))
