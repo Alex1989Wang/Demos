@@ -710,6 +710,7 @@ print(solution.strStr("ajfoa", "oa"))
  */
 
 
+/*
 //search insertion position
 class Solution {
     func searchInsert(_ nums: [Int], _ target: Int) -> Int {
@@ -759,3 +760,60 @@ print(solution.searchInsert(test03, 7))
 
 let test04 = [1,3,5,6]
 print(solution.searchInsert(test04, 0))
+ */
+
+//count and say
+class Solution {
+    func countAndSay(_ n: Int) -> String {
+        assert(n >= 1 && n <= 30)
+
+        var index = 1
+        var result = "1"
+        while index < n {
+            result = generateString(source: result)
+            index += 1
+        }
+        return result
+    }
+    
+    func generateString(source: String) -> String {
+        var count = 1
+        var index = 1
+        var tempChar: Character = source.first!
+        
+        var result = ""
+        while index < source.count {
+            let tartgetIndex = source.index(source.startIndex, offsetBy: index)
+            let char = source[tartgetIndex]
+            
+            if tempChar == char {
+                count += 1
+            }
+            else {
+                result = result + "\(count)\(tempChar)"
+                count = 1
+                tempChar = char
+            }
+            index += 1
+            
+            if index == source.count {
+                result = result + "\(count)\(char)"
+            }
+        }
+        
+        //length == 1
+        if index == 1 {
+            result = result + "\(count)\(tempChar)"
+        }
+        
+        return result
+    }
+}
+
+let solution = Solution()
+//print(solution.countAndSay(1))
+//print(solution.countAndSay(2))
+//print(solution.countAndSay(3))
+//print(solution.countAndSay(4))
+//print(solution.countAndSay(5))
+print(solution.countAndSay(6))

@@ -107,6 +107,7 @@ print(p720)
  */
 
 //subscripts
+/*
 struct TimeTable {
     let multiplier: Int
     subscript(index: Int) -> Int {
@@ -149,3 +150,106 @@ print(matrix45.rows)
 //print(matrix45[5, 6])
 matrix45[3, 4] = 10
 print(matrix45[3, 4])
+ */
+
+
+/*
+//initializers
+class MyClass {
+    var myProperty: Int = 0
+//    init(with property: Int) {
+//        myProperty = property
+//    }
+}
+
+//let myClass = MyClass.init(with: 2)
+//print(myClass.myProperty)
+let myClass = MyClass()
+print(myClass.myProperty)
+
+struct Celsius {
+    var temperatureInCelsius: Double
+    init(fromFahrenheit fahrenheit: Double) {
+        temperatureInCelsius = (fahrenheit - 32.0) / 1.8
+    }
+    init(fromKelvin kelvin: Double) {
+        temperatureInCelsius = kelvin - 273.15
+    }
+}
+
+//parameter names and argument label
+struct Color {
+    let red, green, blue: Double
+    init(red: Double, green: Double, blue: Double) {
+        self.red   = red
+        self.green = green
+        self.blue  = blue
+    }
+    init(_ white: Double) {
+        red   = white
+        green = white
+        blue  = white
+    }
+    
+    init(white: Double) {
+        red   = white
+        green = white
+        blue  = white
+    }
+    
+    init(withWhite white: Double) {
+        red   = white
+        green = white
+        blue  = white
+    }
+}
+
+let color = Color.init(withWhite: 2)
+
+//default initializer
+class Initilizer {
+    var dummyProperty = 0
+    init(dummy: Int) {
+        dummyProperty = dummy
+    }
+    
+    init() {
+        
+    }
+}
+
+class SubInitilizer: Initilizer {
+    var anotherDummy: Int = 1
+}
+
+let sub = SubInitilizer()
+print(sub.anotherDummy)
+ */
+
+//funnel point
+class RootClass {
+    var dummyRoot = 0
+    
+    //designated initializer
+    init(dummy: Int) {
+        dummyRoot = dummy
+    }
+    
+    convenience init() {
+        self.init(dummy: 0)
+    }
+}
+
+class SubClass: RootClass {
+    //designated initilizer
+    var anotherDummy = 0
+    init(anotherDummy: Int, dummy: Int) {
+        super.init(dummy: dummy)
+        self.anotherDummy = anotherDummy
+    }
+    
+    convenience init() {
+        self.init(anotherDummy: 0, dummy: 0)
+    }
+}
+
