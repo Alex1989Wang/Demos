@@ -226,6 +226,7 @@ let sub = SubInitilizer()
 print(sub.anotherDummy)
  */
 
+/*
 //funnel point
 class RootClass {
     var dummyRoot = 0
@@ -252,4 +253,44 @@ class SubClass: RootClass {
         self.init(anotherDummy: 0, dummy: 0)
     }
 }
+ */
 
+//designated initializer/ convenience intializer/ override
+class Food {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+    
+    convenience init() {
+        self.init(name: "")
+    }
+}
+
+class RecipeIngredient: Food {
+    var quantity: Int
+    init(name: String, quantity: Int) {
+        self.quantity = quantity
+        super.init(name: name)
+    }
+    
+    convenience override init(name: String) {
+        self.init(name: name, quantity: 1)
+    }
+}
+
+class ShoppingListItem: RecipeIngredient {
+    var purchased = false
+    var description: String {
+        var output = "\(quantity) x \(name)"
+        output += purchased ? " ✔" : " ✘"
+        return output
+    }
+}
+
+let item01 = ShoppingListItem.init(name: "", quantity: 1)
+let item02 = ShoppingListItem()
+let item03 = ShoppingListItem(name: "jfiaoj")
+let item04 = ShoppingListItem.init(name: "item 4")
+let item05 = ShoppingListItem(name: "item 5", quantity: 3)
+print(item04.description)
