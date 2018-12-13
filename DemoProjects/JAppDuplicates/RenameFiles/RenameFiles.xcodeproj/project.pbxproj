@@ -70,6 +70,9 @@
 		EEC104A221C2371900B4C74F /* font_zh-Hans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "font_zh-Hans.png"; sourceTree = "<group>"; };
 		EEC104A321C2371900B4C74F /* font_zh-Hant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "font_zh-Hant.png"; sourceTree = "<group>"; };
 		EEC104A421C2371900B4C74F /* project.pbxproj */ = {isa = PBXFileReference; lastKnownFileType = text.pbxproject; path = project.pbxproj; sourceTree = "<group>"; };
+		EEC104A821C2506500B4C74F /* SCCapPreADVToolTip.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCapPreADVToolTip.m; sourceTree = "<group>"; };
+		EEC104A921C2506500B4C74F /* SCCapPreADVToolTip.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCCapPreADVToolTip.xib; sourceTree = "<group>"; };
+		EEC104AA21C2506500B4C74F /* SCCapPreADVToolTip.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCapPreADVToolTip.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,9 @@
 		EEC1046821C2371900B4C74F /* TestFiles */ = {
 			isa = PBXGroup;
 			children = (
+				EEC104AA21C2506500B4C74F /* SCCapPreADVToolTip.h */,
+				EEC104A821C2506500B4C74F /* SCCapPreADVToolTip.m */,
+				EEC104A921C2506500B4C74F /* SCCapPreADVToolTip.xib */,
 				EEC1046921C2371900B4C74F /* HomePage */,
 				EEC104A421C2371900B4C74F /* project.pbxproj */,
 			);

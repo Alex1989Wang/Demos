@@ -83,7 +83,7 @@ class FileRenamer {
             //project file substitution
             projectStr = project.replacingOccurrences(of: fileName, with: newFileName)
 
-            //source files import
+            //source files import && xib
             for anyFile in files {
                 if let anyFileStr = try? String.init(contentsOfFile: anyFile) {
                     let fileContent = anyFileStr.replacingOccurrences(of: fileName, with: newFileName)
