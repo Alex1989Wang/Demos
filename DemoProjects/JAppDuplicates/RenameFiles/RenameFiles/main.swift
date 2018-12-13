@@ -19,11 +19,6 @@ let fileManager = FileManager.default
 class FileRenamer {
     let console = ConsoleIO()
 
-    /// prompt the usage
-    public func startPrompt() {
-//        console.writeMessage(<#T##message: String##String#>)
-    }
-    
     /// start renaming files
     public func rename() {
         files = allFiles(in: dir)
@@ -89,6 +84,17 @@ class FileRenamer {
             projectStr = project.replacingOccurrences(of: fileName, with: newFileName)
 
             //source files import
+            for anyFile in files {
+                if let anyFileStr = try? String.init(contentsOfFile: anyFile) {
+                    let fileContent = anyFileStr.replacingOccurrences(of: fileName, with: newFileName)
+                    try? fileManager.removeItem(atPath: anyFile)
+                    let fileData = fileContent.data(using: .utf8)
+                    fileManager.createFile(atPath: anyFile, contents: fileData, attributes: nil)
+                }
+                else {
+                    console.writeMessage("failed to read: " + anyFile, to: .error)
+                }
+            }
 
             ret = true
         }
@@ -100,7 +106,7 @@ class FileRenamer {
         var valid = false
         let nsFile: NSString = file as NSString
         let pathExt = nsFile.pathExtension
-        valid = pathExt == "xib" || pathExt == "h" || pathExt == "m"
+        valid = (pathExt == "xib" || pathExt == "h" || pathExt == "m")
         return valid
     }
     
