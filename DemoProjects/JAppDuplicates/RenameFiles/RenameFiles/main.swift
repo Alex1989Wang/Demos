@@ -88,6 +88,7 @@ class FileRenamer {
                 if let anyFileStr = try? String.init(contentsOfFile: anyFile) {
                     let fileContent = anyFileStr.replacingOccurrences(of: fileName, with: newFileName)
                     try? fileManager.removeItem(atPath: anyFile)
+                    //creat new
                     let fileData = fileContent.data(using: .utf8)
                     fileManager.createFile(atPath: anyFile, contents: fileData, attributes: nil)
                 }
@@ -95,7 +96,13 @@ class FileRenamer {
                     console.writeMessage("failed to read: " + anyFile, to: .error)
                 }
             }
-
+            
+            let newFilePath = file.replacingOccurrences(of: fileName, with: newFileName)
+            try? fileManager.moveItem(atPath: file, toPath: newFilePath)
+            //replace global files
+            let index = files.firstIndex(of: file)! //force
+            files.remove(at: index)
+            files.append(newFilePath)
             ret = true
         }
         
