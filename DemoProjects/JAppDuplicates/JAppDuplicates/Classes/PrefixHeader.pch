@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  JAppDuplicates
+//
+//  Created by JiangWang on 2018/12/11.
+//  Copyright © 2018 JiangWang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "JStickersController.h"
+
+#endif /* PrefixHeader_pch */

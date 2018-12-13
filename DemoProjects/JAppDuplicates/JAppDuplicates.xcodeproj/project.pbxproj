@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEC1037A21BF525300B4C74F /* JAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC1037921BF525300B4C74F /* JAppDelegate.m */; };
+		EEC1037D21BF525300B4C74F /* JViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC1037C21BF525300B4C74F /* JViewController.m */; };
+		EEC1038021BF525300B4C74F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC1037E21BF525300B4C74F /* Main.storyboard */; };
+		EEC1038221BF525400B4C74F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEC1038121BF525400B4C74F /* Assets.xcassets */; };
+		EEC1038521BF525400B4C74F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC1038321BF525400B4C74F /* LaunchScreen.storyboard */; };
+		EEC1038821BF525400B4C74F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC1038721BF525400B4C74F /* main.m */; };
+		EEC1039221BF525400B4C74F /* JAppDuplicatesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC1039121BF525400B4C74F /* JAppDuplicatesTests.m */; };
+		EEC1039D21BF525400B4C74F /* JAppDuplicatesUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC1039C21BF525400B4C74F /* JAppDuplicatesUITests.m */; };
+		EEC103B521BF5DD500B4C74F /* JClassOne.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC103B121BF5DD500B4C74F /* JClassOne.m */; };
+		EEC103B621BF5DD500B4C74F /* JClassTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC103B421BF5DD500B4C74F /* JClassTwo.m */; };
+		EEC103DA21BF5E5100B4C74F /* RenameClasses.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103B821BF5E5100B4C74F /* RenameClasses.sh */; };
+		EEC103DB21BF5E5100B4C74F /* EnvCheckUtil.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103B921BF5E5100B4C74F /* EnvCheckUtil.sh */; };
+		EEC103DC21BF5E5100B4C74F /* injectedContentShell.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103BA21BF5E5100B4C74F /* injectedContentShell.sh */; };
+		EEC103DD21BF5E5100B4C74F /* testInsertCodeToFun.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103BC21BF5E5100B4C74F /* testInsertCodeToFun.sh */; };
+		EEC103DE21BF5E5100B4C74F /* randomchargen.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103BD21BF5E5100B4C74F /* randomchargen.sh */; };
+		EEC103DF21BF5E5100B4C74F /* InsertCodeToFunSourceFile.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC103BE21BF5E5100B4C74F /* InsertCodeToFunSourceFile.m */; };
+		EEC103E021BF5E5100B4C74F /* testgunsedinstall.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103BF21BF5E5100B4C74F /* testgunsedinstall.sh */; };
+		EEC103E121BF5E5100B4C74F /* InjectedContentKit_Example in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C021BF5E5100B4C74F /* InjectedContentKit_Example */; };
+		EEC103E221BF5E5100B4C74F /* InjectedContentKit_Example_Symbols in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C121BF5E5100B4C74F /* InjectedContentKit_Example_Symbols */; };
+		EEC103E321BF5E5100B4C74F /* main.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C221BF5E5100B4C74F /* main.sh */; };
+		EEC103E421BF5E5100B4C74F /* discardallchanges.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C321BF5E5100B4C74F /* discardallchanges.sh */; };
+		EEC103E521BF5E5100B4C74F /* RenameProperty.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C421BF5E5100B4C74F /* RenameProperty.sh */; };
+		EEC103E621BF5E5100B4C74F /* RenameDir.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C521BF5E5100B4C74F /* RenameDir.sh */; };
+		EEC103E721BF5E5100B4C74F /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C621BF5E5100B4C74F /* ReadMe.md */; };
+		EEC103E821BF5E5100B4C74F /* GetAndStoreProperties.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C721BF5E5100B4C74F /* GetAndStoreProperties.sh */; };
+		EEC103E921BF5E5100B4C74F /* StringUtil.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C821BF5E5100B4C74F /* StringUtil.sh */; };
+		EEC103EA21BF5E5100B4C74F /* RenameFunction.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103C921BF5E5100B4C74F /* RenameFunction.sh */; };
+		EEC103EB21BF5E5100B4C74F /* BlackListFunctionConfig.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103CB21BF5E5100B4C74F /* BlackListFunctionConfig.cfg */; };
+		EEC103EC21BF5E5100B4C74F /* TrashClass.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103CC21BF5E5100B4C74F /* TrashClass.cfg */; };
+		EEC103ED21BF5E5100B4C74F /* DefaultFunctionsBlackListConfig.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103CD21BF5E5100B4C74F /* DefaultFunctionsBlackListConfig.cfg */; };
+		EEC103EE21BF5E5100B4C74F /* RenameFunctions.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103CE21BF5E5100B4C74F /* RenameFunctions.cfg */; };
+		EEC103EF21BF5E5100B4C74F /* TmpCustomBlackListPropertiesConfig.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103CF21BF5E5100B4C74F /* TmpCustomBlackListPropertiesConfig.cfg */; };
+		EEC103F021BF5E5100B4C74F /* injectedContentConfig.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D021BF5E5100B4C74F /* injectedContentConfig.cfg */; };
+		EEC103F121BF5E5100B4C74F /* CustomPropertiesBlackListConfig.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D121BF5E5100B4C74F /* CustomPropertiesBlackListConfig.cfg */; };
+		EEC103F221BF5E5100B4C74F /* RenameProperties.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D221BF5E5100B4C74F /* RenameProperties.cfg */; };
+		EEC103F321BF5E5100B4C74F /* DefaultPropertiesBlackListConfig.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D321BF5E5100B4C74F /* DefaultPropertiesBlackListConfig.cfg */; };
+		EEC103F421BF5E5100B4C74F /* DefaultClassesBlackListConfig.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D421BF5E5100B4C74F /* DefaultClassesBlackListConfig.cfg */; };
+		EEC103F521BF5E5100B4C74F /* RenameClasses.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D521BF5E5100B4C74F /* RenameClasses.cfg */; };
+		EEC103F621BF5E5100B4C74F /* TmpCustomPropertiesBlackListConfig.cfg in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D621BF5E5100B4C74F /* TmpCustomPropertiesBlackListConfig.cfg */; };
+		EEC103F721BF5E5100B4C74F /* DeleteTrashClasses.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D721BF5E5100B4C74F /* DeleteTrashClasses.sh */; };
+		EEC103F821BF5E5100B4C74F /* GetAndStoreClasses.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D821BF5E5100B4C74F /* GetAndStoreClasses.sh */; };
+		EEC103F921BF5E5100B4C74F /* FileUtil.sh in Resources */ = {isa = PBXBuildFile; fileRef = EEC103D921BF5E5100B4C74F /* FileUtil.sh */; };
+		EEC1040021BF5EE400B4C74F /* JStickersController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC103FF21BF5EE400B4C74F /* JStickersController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EEC1038E21BF525400B4C74F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC1036D21BF525300B4C74F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC1037421BF525300B4C74F;
+			remoteInfo = JAppDuplicates;
+		};
+		EEC1039921BF525400B4C74F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EEC1036D21BF525300B4C74F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEC1037421BF525300B4C74F;
+			remoteInfo = JAppDuplicates;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EEC1037521BF525300B4C74F /* JAppDuplicates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JAppDuplicates.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC1037821BF525300B4C74F /* JAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAppDelegate.h; sourceTree = "<group>"; };
+		EEC1037921BF525300B4C74F /* JAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAppDelegate.m; sourceTree = "<group>"; };
+		EEC1037B21BF525300B4C74F /* JViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JViewController.h; sourceTree = "<group>"; };
+		EEC1037C21BF525300B4C74F /* JViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JViewController.m; sourceTree = "<group>"; };
+		EEC1037F21BF525300B4C74F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EEC1038121BF525400B4C74F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EEC1038421BF525400B4C74F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EEC1038621BF525400B4C74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC1038721BF525400B4C74F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEC1038D21BF525400B4C74F /* JAppDuplicatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JAppDuplicatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC1039121BF525400B4C74F /* JAppDuplicatesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAppDuplicatesTests.m; sourceTree = "<group>"; };
+		EEC1039321BF525400B4C74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC1039821BF525400B4C74F /* JAppDuplicatesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JAppDuplicatesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEC1039C21BF525400B4C74F /* JAppDuplicatesUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAppDuplicatesUITests.m; sourceTree = "<group>"; };
+		EEC1039E21BF525400B4C74F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEC103B121BF5DD500B4C74F /* JClassOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JClassOne.m; sourceTree = "<group>"; };
+		EEC103B221BF5DD500B4C74F /* JClassTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JClassTwo.h; sourceTree = "<group>"; };
+		EEC103B321BF5DD500B4C74F /* JClassOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JClassOne.h; sourceTree = "<group>"; };
+		EEC103B421BF5DD500B4C74F /* JClassTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JClassTwo.m; sourceTree = "<group>"; };
+		EEC103B821BF5E5100B4C74F /* RenameClasses.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RenameClasses.sh; sourceTree = "<group>"; };
+		EEC103B921BF5E5100B4C74F /* EnvCheckUtil.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = EnvCheckUtil.sh; sourceTree = "<group>"; };
+		EEC103BA21BF5E5100B4C74F /* injectedContentShell.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = injectedContentShell.sh; sourceTree = "<group>"; };
+		EEC103BC21BF5E5100B4C74F /* testInsertCodeToFun.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = testInsertCodeToFun.sh; sourceTree = "<group>"; };
+		EEC103BD21BF5E5100B4C74F /* randomchargen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = randomchargen.sh; sourceTree = "<group>"; };
+		EEC103BE21BF5E5100B4C74F /* InsertCodeToFunSourceFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsertCodeToFunSourceFile.m; sourceTree = "<group>"; };
+		EEC103BF21BF5E5100B4C74F /* testgunsedinstall.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = testgunsedinstall.sh; sourceTree = "<group>"; };
+		EEC103C021BF5E5100B4C74F /* InjectedContentKit_Example */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = InjectedContentKit_Example; sourceTree = "<group>"; };
+		EEC103C121BF5E5100B4C74F /* InjectedContentKit_Example_Symbols */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InjectedContentKit_Example_Symbols; sourceTree = "<group>"; };
+		EEC103C221BF5E5100B4C74F /* main.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = main.sh; sourceTree = "<group>"; };
+		EEC103C321BF5E5100B4C74F /* discardallchanges.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = discardallchanges.sh; sourceTree = "<group>"; };
+		EEC103C421BF5E5100B4C74F /* RenameProperty.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RenameProperty.sh; sourceTree = "<group>"; };
+		EEC103C521BF5E5100B4C74F /* RenameDir.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RenameDir.sh; sourceTree = "<group>"; };
+		EEC103C621BF5E5100B4C74F /* ReadMe.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		EEC103C721BF5E5100B4C74F /* GetAndStoreProperties.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = GetAndStoreProperties.sh; sourceTree = "<group>"; };
+		EEC103C821BF5E5100B4C74F /* StringUtil.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = StringUtil.sh; sourceTree = "<group>"; };
+		EEC103C921BF5E5100B4C74F /* RenameFunction.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = RenameFunction.sh; sourceTree = "<group>"; };
+		EEC103CB21BF5E5100B4C74F /* BlackListFunctionConfig.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BlackListFunctionConfig.cfg; sourceTree = "<group>"; };
+		EEC103CC21BF5E5100B4C74F /* TrashClass.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TrashClass.cfg; sourceTree = "<group>"; };
+		EEC103CD21BF5E5100B4C74F /* DefaultFunctionsBlackListConfig.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DefaultFunctionsBlackListConfig.cfg; sourceTree = "<group>"; };
+		EEC103CE21BF5E5100B4C74F /* RenameFunctions.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RenameFunctions.cfg; sourceTree = "<group>"; };
+		EEC103CF21BF5E5100B4C74F /* TmpCustomBlackListPropertiesConfig.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TmpCustomBlackListPropertiesConfig.cfg; sourceTree = "<group>"; };
+		EEC103D021BF5E5100B4C74F /* injectedContentConfig.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = injectedContentConfig.cfg; sourceTree = "<group>"; };
+		EEC103D121BF5E5100B4C74F /* CustomPropertiesBlackListConfig.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CustomPropertiesBlackListConfig.cfg; sourceTree = "<group>"; };
+		EEC103D221BF5E5100B4C74F /* RenameProperties.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RenameProperties.cfg; sourceTree = "<group>"; };
+		EEC103D321BF5E5100B4C74F /* DefaultPropertiesBlackListConfig.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DefaultPropertiesBlackListConfig.cfg; sourceTree = "<group>"; };
+		EEC103D421BF5E5100B4C74F /* DefaultClassesBlackListConfig.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DefaultClassesBlackListConfig.cfg; sourceTree = "<group>"; };
+		EEC103D521BF5E5100B4C74F /* RenameClasses.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RenameClasses.cfg; sourceTree = "<group>"; };
+		EEC103D621BF5E5100B4C74F /* TmpCustomPropertiesBlackListConfig.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TmpCustomPropertiesBlackListConfig.cfg; sourceTree = "<group>"; };
+		EEC103D721BF5E5100B4C74F /* DeleteTrashClasses.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = DeleteTrashClasses.sh; sourceTree = "<group>"; };
+		EEC103D821BF5E5100B4C74F /* GetAndStoreClasses.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = GetAndStoreClasses.sh; sourceTree = "<group>"; };
+		EEC103D921BF5E5100B4C74F /* FileUtil.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = FileUtil.sh; sourceTree = "<group>"; };
+		EEC103FE21BF5EE400B4C74F /* JStickersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JStickersController.h; sourceTree = "<group>"; };
+		EEC103FF21BF5EE400B4C74F /* JStickersController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JStickersController.m; sourceTree = "<group>"; };
+		EEC1040121BF62F200B4C74F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEC1037221BF525300B4C74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC1038A21BF525400B4C74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC1039521BF525400B4C74F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEC1036C21BF525300B4C74F = {
+			isa = PBXGroup;
+			children = (
+				EEC1037721BF525300B4C74F /* JAppDuplicates */,
+				EEC1039021BF525400B4C74F /* JAppDuplicatesTests */,
+				EEC1039B21BF525400B4C74F /* JAppDuplicatesUITests */,
+				EEC1037621BF525300B4C74F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEC1037621BF525300B4C74F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEC1037521BF525300B4C74F /* JAppDuplicates.app */,
+				EEC1038D21BF525400B4C74F /* JAppDuplicatesTests.xctest */,
+				EEC1039821BF525400B4C74F /* JAppDuplicatesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEC1037721BF525300B4C74F /* JAppDuplicates */ = {
+			isa = PBXGroup;
+			children = (
+				EEC103B721BF5E5100B4C74F /* Injections */,
+				EEC103B021BF5DD500B4C74F /* Classes */,
+				EEC1037821BF525300B4C74F /* JAppDelegate.h */,
+				EEC1037921BF525300B4C74F /* JAppDelegate.m */,
+				EEC1037B21BF525300B4C74F /* JViewController.h */,
+				EEC1037C21BF525300B4C74F /* JViewController.m */,
+				EEC1037E21BF525300B4C74F /* Main.storyboard */,
+				EEC1038121BF525400B4C74F /* Assets.xcassets */,
+				EEC1038321BF525400B4C74F /* LaunchScreen.storyboard */,
+				EEC1038621BF525400B4C74F /* Info.plist */,
+				EEC1038721BF525400B4C74F /* main.m */,
+			);
+			path = JAppDuplicates;
+			sourceTree = "<group>";
+		};
+		EEC1039021BF525400B4C74F /* JAppDuplicatesTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEC1039121BF525400B4C74F /* JAppDuplicatesTests.m */,
+				EEC1039321BF525400B4C74F /* Info.plist */,
+			);
+			path = JAppDuplicatesTests;
+			sourceTree = "<group>";
+		};
+		EEC1039B21BF525400B4C74F /* JAppDuplicatesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EEC1039C21BF525400B4C74F /* JAppDuplicatesUITests.m */,
+				EEC1039E21BF525400B4C74F /* Info.plist */,
+			);
+			path = JAppDuplicatesUITests;
+			sourceTree = "<group>";
+		};
+		EEC103B021BF5DD500B4C74F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				EEC103B321BF5DD500B4C74F /* JClassOne.h */,
+				EEC103B121BF5DD500B4C74F /* JClassOne.m */,
+				EEC103B221BF5DD500B4C74F /* JClassTwo.h */,
+				EEC103B421BF5DD500B4C74F /* JClassTwo.m */,
+				EEC1040121BF62F200B4C74F /* PrefixHeader.pch */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		EEC103B721BF5E5100B4C74F /* Injections */ = {
+			isa = PBXGroup;
+			children = (
+				EEC103FA21BF5E8600B4C74F /* InjectionCodes */,
+				EEC103B821BF5E5100B4C74F /* RenameClasses.sh */,
+				EEC103B921BF5E5100B4C74F /* EnvCheckUtil.sh */,
+				EEC103BA21BF5E5100B4C74F /* injectedContentShell.sh */,
+				EEC103BB21BF5E5100B4C74F /* test */,
+				EEC103C221BF5E5100B4C74F /* main.sh */,
+				EEC103C321BF5E5100B4C74F /* discardallchanges.sh */,
+				EEC103C421BF5E5100B4C74F /* RenameProperty.sh */,
+				EEC103C521BF5E5100B4C74F /* RenameDir.sh */,
+				EEC103C621BF5E5100B4C74F /* ReadMe.md */,
+				EEC103C721BF5E5100B4C74F /* GetAndStoreProperties.sh */,
+				EEC103C821BF5E5100B4C74F /* StringUtil.sh */,
+				EEC103C921BF5E5100B4C74F /* RenameFunction.sh */,
+				EEC103CA21BF5E5100B4C74F /* configures */,
+				EEC103D721BF5E5100B4C74F /* DeleteTrashClasses.sh */,
+				EEC103D821BF5E5100B4C74F /* GetAndStoreClasses.sh */,
+				EEC103D921BF5E5100B4C74F /* FileUtil.sh */,
+			);
+			path = Injections;
+			sourceTree = "<group>";
+		};
+		EEC103BB21BF5E5100B4C74F /* test */ = {
+			isa = PBXGroup;
+			children = (
+				EEC103BC21BF5E5100B4C74F /* testInsertCodeToFun.sh */,
+				EEC103BD21BF5E5100B4C74F /* randomchargen.sh */,
+				EEC103BE21BF5E5100B4C74F /* InsertCodeToFunSourceFile.m */,
+				EEC103BF21BF5E5100B4C74F /* testgunsedinstall.sh */,
+				EEC103C021BF5E5100B4C74F /* InjectedContentKit_Example */,
+				EEC103C121BF5E5100B4C74F /* InjectedContentKit_Example_Symbols */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		EEC103CA21BF5E5100B4C74F /* configures */ = {
+			isa = PBXGroup;
+			children = (
+				EEC103CB21BF5E5100B4C74F /* BlackListFunctionConfig.cfg */,
+				EEC103CC21BF5E5100B4C74F /* TrashClass.cfg */,
+				EEC103CD21BF5E5100B4C74F /* DefaultFunctionsBlackListConfig.cfg */,
+				EEC103CE21BF5E5100B4C74F /* RenameFunctions.cfg */,
+				EEC103CF21BF5E5100B4C74F /* TmpCustomBlackListPropertiesConfig.cfg */,
+				EEC103D021BF5E5100B4C74F /* injectedContentConfig.cfg */,
+				EEC103D121BF5E5100B4C74F /* CustomPropertiesBlackListConfig.cfg */,
+				EEC103D221BF5E5100B4C74F /* RenameProperties.cfg */,
+				EEC103D321BF5E5100B4C74F /* DefaultPropertiesBlackListConfig.cfg */,
+				EEC103D421BF5E5100B4C74F /* DefaultClassesBlackListConfig.cfg */,
+				EEC103D521BF5E5100B4C74F /* RenameClasses.cfg */,
+				EEC103D621BF5E5100B4C74F /* TmpCustomPropertiesBlackListConfig.cfg */,
+			);
+			path = configures;
+			sourceTree = "<group>";
+		};
+		EEC103FA21BF5E8600B4C74F /* InjectionCodes */ = {
+			isa = PBXGroup;
+			children = (
+				EEC103FE21BF5EE400B4C74F /* JStickersController.h */,
+				EEC103FF21BF5EE400B4C74F /* JStickersController.m */,
+			);
+			path = InjectionCodes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEC1037421BF525300B4C74F /* JAppDuplicates */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEC103A121BF525400B4C74F /* Build configuration list for PBXNativeTarget "JAppDuplicates" */;
+			buildPhases = (
+				EEC1037121BF525300B4C74F /* Sources */,
+				EEC1037221BF525300B4C74F /* Frameworks */,
+				EEC1037321BF525300B4C74F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JAppDuplicates;
+			productName = JAppDuplicates;
+			productReference = EEC1037521BF525300B4C74F /* JAppDuplicates.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EEC1038C21BF525400B4C74F /* JAppDuplicatesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEC103A421BF525400B4C74F /* Build configuration list for PBXNativeTarget "JAppDuplicatesTests" */;
+			buildPhases = (
+				EEC1038921BF525400B4C74F /* Sources */,
+				EEC1038A21BF525400B4C74F /* Frameworks */,
+				EEC1038B21BF525400B4C74F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEC1038F21BF525400B4C74F /* PBXTargetDependency */,
+			);
+			name = JAppDuplicatesTests;
+			productName = JAppDuplicatesTests;
+			productReference = EEC1038D21BF525400B4C74F /* JAppDuplicatesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EEC1039721BF525400B4C74F /* JAppDuplicatesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEC103A721BF525400B4C74F /* Build configuration list for PBXNativeTarget "JAppDuplicatesUITests" */;
+			buildPhases = (
+				EEC1039421BF525400B4C74F /* Sources */,
+				EEC1039521BF525400B4C74F /* Frameworks */,
+				EEC1039621BF525400B4C74F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EEC1039A21BF525400B4C74F /* PBXTargetDependency */,
+			);
+			name = JAppDuplicatesUITests;
+			productName = JAppDuplicatesUITests;
+			productReference = EEC1039821BF525400B4C74F /* JAppDuplicatesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEC1036D21BF525300B4C74F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = J;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = JiangWang;
+				TargetAttributes = {
+					EEC1037421BF525300B4C74F = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					EEC1038C21BF525400B4C74F = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = EEC1037421BF525300B4C74F;
+					};
+					EEC1039721BF525400B4C74F = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = EEC1037421BF525300B4C74F;
+					};
+				};
+			};
+			buildConfigurationList = EEC1037021BF525300B4C74F /* Build configuration list for PBXProject "JAppDuplicates" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EEC1036C21BF525300B4C74F;
+			productRefGroup = EEC1037621BF525300B4C74F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEC1037421BF525300B4C74F /* JAppDuplicates */,
+				EEC1038C21BF525400B4C74F /* JAppDuplicatesTests */,
+				EEC1039721BF525400B4C74F /* JAppDuplicatesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEC1037321BF525300B4C74F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEC103E121BF5E5100B4C74F /* InjectedContentKit_Example in Resources */,
+				EEC103F721BF5E5100B4C74F /* DeleteTrashClasses.sh in Resources */,
+				EEC1038521BF525400B4C74F /* LaunchScreen.storyboard in Resources */,
+				EEC103F421BF5E5100B4C74F /* DefaultClassesBlackListConfig.cfg in Resources */,
+				EEC103F921BF5E5100B4C74F /* FileUtil.sh in Resources */,
+				EEC1038221BF525400B4C74F /* Assets.xcassets in Resources */,
+				EEC103F821BF5E5100B4C74F /* GetAndStoreClasses.sh in Resources */,
+				EEC103DE21BF5E5100B4C74F /* randomchargen.sh in Resources */,
+				EEC103EC21BF5E5100B4C74F /* TrashClass.cfg in Resources */,
+				EEC103E221BF5E5100B4C74F /* InjectedContentKit_Example_Symbols in Resources */,
+				EEC1038021BF525300B4C74F /* Main.storyboard in Resources */,
+				EEC103E721BF5E5100B4C74F /* ReadMe.md in Resources */,
+				EEC103DC21BF5E5100B4C74F /* injectedContentShell.sh in Resources */,
+				EEC103F621BF5E5100B4C74F /* TmpCustomPropertiesBlackListConfig.cfg in Resources */,
+				EEC103E621BF5E5100B4C74F /* RenameDir.sh in Resources */,
+				EEC103E021BF5E5100B4C74F /* testgunsedinstall.sh in Resources */,
+				EEC103EE21BF5E5100B4C74F /* RenameFunctions.cfg in Resources */,
+				EEC103F021BF5E5100B4C74F /* injectedContentConfig.cfg in Resources */,
+				EEC103EF21BF5E5100B4C74F /* TmpCustomBlackListPropertiesConfig.cfg in Resources */,
+				EEC103E821BF5E5100B4C74F /* GetAndStoreProperties.sh in Resources */,
+				EEC103DD21BF5E5100B4C74F /* testInsertCodeToFun.sh in Resources */,
+				EEC103E521BF5E5100B4C74F /* RenameProperty.sh in Resources */,
+				EEC103F221BF5E5100B4C74F /* RenameProperties.cfg in Resources */,
+				EEC103F521BF5E5100B4C74F /* RenameClasses.cfg in Resources */,
+				EEC103E921BF5E5100B4C74F /* StringUtil.sh in Resources */,
+				EEC103F321BF5E5100B4C74F /* DefaultPropertiesBlackListConfig.cfg in Resources */,
+				EEC103F121BF5E5100B4C74F /* CustomPropertiesBlackListConfig.cfg in Resources */,
+				EEC103E321BF5E5100B4C74F /* main.sh in Resources */,
+				EEC103DB21BF5E5100B4C74F /* EnvCheckUtil.sh in Resources */,
+				EEC103E421BF5E5100B4C74F /* discardallchanges.sh in Resources */,
+				EEC103EA21BF5E5100B4C74F /* RenameFunction.sh in Resources */,
+				EEC103EB21BF5E5100B4C74F /* BlackListFunctionConfig.cfg in Resources */,
+				EEC103ED21BF5E5100B4C74F /* DefaultFunctionsBlackListConfig.cfg in Resources */,
+				EEC103DA21BF5E5100B4C74F /* RenameClasses.sh in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC1038B21BF525400B4C74F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC1039621BF525400B4C74F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEC1037121BF525300B4C74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEC1037D21BF525300B4C74F /* JViewController.m in Sources */,
+				EEC103B521BF5DD500B4C74F /* JClassOne.m in Sources */,
+				EEC1040021BF5EE400B4C74F /* JStickersController.m in Sources */,
+				EEC1038821BF525400B4C74F /* main.m in Sources */,
+				EEC103DF21BF5E5100B4C74F /* InsertCodeToFunSourceFile.m in Sources */,
+				EEC103B621BF5DD500B4C74F /* JClassTwo.m in Sources */,
+				EEC1037A21BF525300B4C74F /* JAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC1038921BF525400B4C74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEC1039221BF525400B4C74F /* JAppDuplicatesTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEC1039421BF525400B4C74F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEC1039D21BF525400B4C74F /* JAppDuplicatesUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EEC1038F21BF525400B4C74F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC1037421BF525300B4C74F /* JAppDuplicates */;
+			targetProxy = EEC1038E21BF525400B4C74F /* PBXContainerItemProxy */;
+		};
+		EEC1039A21BF525400B4C74F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEC1037421BF525300B4C74F /* JAppDuplicates */;
+			targetProxy = EEC1039921BF525400B4C74F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EEC1037E21BF525300B4C74F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEC1037F21BF525300B4C74F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EEC1038321BF525400B4C74F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEC1038421BF525400B4C74F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEC1039F21BF525400B4C74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EEC103A021BF525400B4C74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEC103A221BF525400B4C74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J58RDDKVF7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JAppDuplicates/Classes/PrefixHeader.pch";
+				INFOPLIST_FILE = JAppDuplicates/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JAppDuplicates;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EEC103A321BF525400B4C74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J58RDDKVF7;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/JAppDuplicates/Classes/PrefixHeader.pch";
+				INFOPLIST_FILE = JAppDuplicates/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JAppDuplicates;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EEC103A521BF525400B4C74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J58RDDKVF7;
+				INFOPLIST_FILE = JAppDuplicatesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JAppDuplicatesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JAppDuplicates.app/JAppDuplicates";
+			};
+			name = Debug;
+		};
+		EEC103A621BF525400B4C74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J58RDDKVF7;
+				INFOPLIST_FILE = JAppDuplicatesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JAppDuplicatesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JAppDuplicates.app/JAppDuplicates";
+			};
+			name = Release;
+		};
+		EEC103A821BF525400B4C74F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J58RDDKVF7;
+				INFOPLIST_FILE = JAppDuplicatesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JAppDuplicatesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JAppDuplicates;
+			};
+			name = Debug;
+		};
+		EEC103A921BF525400B4C74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J58RDDKVF7;
+				INFOPLIST_FILE = JAppDuplicatesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JAppDuplicatesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JAppDuplicates;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEC1037021BF525300B4C74F /* Build configuration list for PBXProject "JAppDuplicates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEC1039F21BF525400B4C74F /* Debug */,
+				EEC103A021BF525400B4C74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEC103A121BF525400B4C74F /* Build configuration list for PBXNativeTarget "JAppDuplicates" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEC103A221BF525400B4C74F /* Debug */,
+				EEC103A321BF525400B4C74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEC103A421BF525400B4C74F /* Build configuration list for PBXNativeTarget "JAppDuplicatesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEC103A521BF525400B4C74F /* Debug */,
+				EEC103A621BF525400B4C74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEC103A721BF525400B4C74F /* Build configuration list for PBXNativeTarget "JAppDuplicatesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEC103A821BF525400B4C74F /* Debug */,
+				EEC103A921BF525400B4C74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEC1036D21BF525300B4C74F /* Project object */;
+}
