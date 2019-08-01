@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JClassOne : NSObject
 
+- (void)classOneMethod:(NSString *)paramOne segmentTwo:(NSString *)paramTwo;
 @end
 
 NS_ASSUME_NONNULL_END

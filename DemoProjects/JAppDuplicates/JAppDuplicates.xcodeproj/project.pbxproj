@@ -70,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1964DC645E62D0E191931DBA /* codeObfuscation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = codeObfuscation.h; path = ./codeObfuscation.h; sourceTree = "<group>"; };
 		EEC1037521BF525300B4C74F /* JAppDuplicates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JAppDuplicates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEC1037821BF525300B4C74F /* JAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAppDelegate.h; sourceTree = "<group>"; };
 		EEC1037921BF525300B4C74F /* JAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAppDelegate.m; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 				EEC1039021BF525400B4C74F /* JAppDuplicatesTests */,
 				EEC1039B21BF525400B4C74F /* JAppDuplicatesUITests */,
 				EEC1037621BF525300B4C74F /* Products */,
+				1964DC645E62D0E191931DBA /* codeObfuscation.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -625,6 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = J58RDDKVF7;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/JAppDuplicates/Classes/PrefixHeader.pch";
 				INFOPLIST_FILE = JAppDuplicates/Info.plist;

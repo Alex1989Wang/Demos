@@ -16,4 +16,8 @@
     }
     return self;
 }
+
+- (void)classTwoMethod:(NSString *)paramOne segmentTwo:(NSString *)paramTwo {
+    NSLog(@"stub method.");
+}
 @end
