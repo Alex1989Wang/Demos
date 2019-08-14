@@ -12,6 +12,7 @@ import AVKit
 class HomeViewController: UIViewController {
     
     private let captureSession = AVCaptureSession()
+    private let sessionQueue = SessionSerialQueue()
     
     var previewView: CapturePreviewView {
         get {
@@ -26,30 +27,55 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         //configure
         setupSession()
-        captureSession.startRunning()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        startSession()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopSession()
     }
 }
 
 extension HomeViewController {
+    private struct QueueIdentity {
+        let label: String!
+    }
+    
     func setupSession() {
-        captureSession.beginConfiguration()
-        defer { captureSession.commitConfiguration() }
-        
-        //camera
-        guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else { return }
-        guard let cameraInput = try? AVCaptureDeviceInput(device: camera), captureSession.canAddInput(cameraInput) else { return }
-        captureSession.addInput(cameraInput)
-        
-        //photo output
-        let photoOutput = AVCapturePhotoOutput()
-        guard captureSession.canAddOutput(photoOutput) else { return }
-        captureSession.sessionPreset = .photo
-        captureSession.addOutput(photoOutput)
-        
+        sessionQueue.async { [weak self] in
+            self?.captureSession.beginConfiguration()
+            defer { self?.captureSession.commitConfiguration() }
+            
+            //camera
+            guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else { return }
+            guard let cameraInput = try? AVCaptureDeviceInput(device: camera), (self?.captureSession.canAddInput(cameraInput) ?? false) else { return }
+            self?.captureSession.addInput(cameraInput)
+            
+            //photo output
+            let photoOutput = AVCapturePhotoOutput()
+            guard (self?.captureSession.canAddOutput(photoOutput) ?? false) else { return }
+            self?.captureSession.sessionPreset = .photo
+            self?.captureSession.addOutput(photoOutput)
+        }
         //preview
         previewView.videoPreviewLayer.session = self.captureSession
+    }
+    
+    func startSession() {
+        sessionQueue.async { [weak self] in
+            self?.captureSession.startRunning()
+        }
+    }
+    
+    func stopSession() {
+        sessionQueue.async { [weak self] in
+            self?.captureSession.stopRunning()
+        }
     }
 }
