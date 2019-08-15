@@ -1,16 +1,22 @@
 PODS:
+  - CocoaLumberjack/Core (3.5.3)
+  - CocoaLumberjack/Swift (3.5.3):
+    - CocoaLumberjack/Core
   - SnapKit (5.0.0)
 
 DEPENDENCIES:
+  - CocoaLumberjack/Swift
   - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
     - SnapKit
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: 69e12401c3310a0d32a8bf31c3733cbe359e7ee7
+PODFILE CHECKSUM: a1423e280f53772b6561f39ef208490272206a6c
 
 COCOAPODS: 1.5.3

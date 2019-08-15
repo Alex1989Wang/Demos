@@ -14,6 +14,7 @@
 		EE2D4A782302B04F002246D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D4A772302B04F002246D8 /* HomeViewController.swift */; };
 		EE2D4A7A2302BF3B002246D8 /* CapturePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D4A792302BF3B002246D8 /* CapturePreviewView.swift */; };
 		EE2D4A7C2303B0B0002246D8 /* SessionSerialQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D4A7B2303B0B0002246D8 /* SessionSerialQueue.swift */; };
+		EE2D4A7E2305083E002246D8 /* PhotoCaptureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D4A7D2305083E002246D8 /* PhotoCaptureProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EE2D4A772302B04F002246D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE2D4A792302BF3B002246D8 /* CapturePreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturePreviewView.swift; sourceTree = "<group>"; };
 		EE2D4A7B2303B0B0002246D8 /* SessionSerialQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionSerialQueue.swift; sourceTree = "<group>"; };
+		EE2D4A7D2305083E002246D8 /* PhotoCaptureProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				EE2D4A7B2303B0B0002246D8 /* SessionSerialQueue.swift */,
 				EE2D4A772302B04F002246D8 /* HomeViewController.swift */,
+				EE2D4A7D2305083E002246D8 /* PhotoCaptureProcessor.swift */,
 				EE2D4A792302BF3B002246D8 /* CapturePreviewView.swift */,
 			);
 			path = Home;
@@ -184,12 +187,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Metal/Pods-Metal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE2D4A7A2302BF3B002246D8 /* CapturePreviewView.swift in Sources */,
+				EE2D4A7E2305083E002246D8 /* PhotoCaptureProcessor.swift in Sources */,
 				EE2D4A7C2303B0B0002246D8 /* SessionSerialQueue.swift in Sources */,
 				EE2D4A642302AFFB002246D8 /* AppDelegate.swift in Sources */,
 				EE2D4A782302B04F002246D8 /* HomeViewController.swift in Sources */,

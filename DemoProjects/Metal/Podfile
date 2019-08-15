@@ -7,5 +7,7 @@ target 'Metal' do
 
   # Pods for Metal
   pod 'SnapKit'
+  
+  pod 'CocoaLumberjack/Swift'
 
 end
