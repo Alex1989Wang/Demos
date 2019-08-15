@@ -13,12 +13,19 @@ class HomeViewController: UIViewController {
     
     private let captureSession = AVCaptureSession()
     private let sessionQueue = SessionSerialQueue()
+    private var photoOutput: AVCapturePhotoOutput!
     
     var previewView: CapturePreviewView {
         get {
             return self.view as! CapturePreviewView
         }
     }
+    
+    private lazy var captureButton: UIButton = {
+        let button = UIButton(type: .contactAdd)
+        button.addTarget(self, action: #selector(capturePhoto), for: .touchUpInside)
+        return button
+    }()
 
     override func loadView() {
          self.view = CapturePreviewView()
@@ -59,6 +66,7 @@ extension HomeViewController {
             
             //photo output
             let photoOutput = AVCapturePhotoOutput()
+            self?.photoOutput = photoOutput
             guard (self?.captureSession.canAddOutput(photoOutput) ?? false) else { return }
             self?.captureSession.sessionPreset = .photo
             self?.captureSession.addOutput(photoOutput)
@@ -77,5 +85,13 @@ extension HomeViewController {
         sessionQueue.async { [weak self] in
             self?.captureSession.stopRunning()
         }
+    }
+}
+
+
+// MARK: - actions
+extension HomeViewController {
+    @objc func capturePhoto() {
+        
     }
 }

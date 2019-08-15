@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7068B041E239803D5C29937F /* Pods_Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFB74587262AC88036F6C6A /* Pods_Metal.framework */; };
 		EE2D4A642302AFFB002246D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2D4A632302AFFB002246D8 /* AppDelegate.swift */; };
 		EE2D4A6B2302AFFC002246D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE2D4A6A2302AFFC002246D8 /* Assets.xcassets */; };
 		EE2D4A6E2302AFFD002246D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE2D4A6C2302AFFD002246D8 /* LaunchScreen.storyboard */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24442D3C7862BD12B6ADD671 /* Pods-Metal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Metal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Metal/Pods-Metal.debug.xcconfig"; sourceTree = "<group>"; };
+		8FFB74587262AC88036F6C6A /* Pods_Metal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Metal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAA4327CA82FB80554955D8D /* Pods-Metal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Metal.release.xcconfig"; path = "Pods/Target Support Files/Pods-Metal/Pods-Metal.release.xcconfig"; sourceTree = "<group>"; };
 		EE2D4A602302AFFB002246D8 /* Metal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Metal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE2D4A632302AFFB002246D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE2D4A6A2302AFFC002246D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7068B041E239803D5C29937F /* Pods_Metal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA8E3D10E299FCB207B81606 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24442D3C7862BD12B6ADD671 /* Pods-Metal.debug.xcconfig */,
+				CAA4327CA82FB80554955D8D /* Pods-Metal.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EE2D4A572302AFFB002246D8 = {
 			isa = PBXGroup;
 			children = (
 				EE2D4A622302AFFB002246D8 /* Metal */,
 				EE2D4A612302AFFB002246D8 /* Products */,
+				DA8E3D10E299FCB207B81606 /* Pods */,
+				F1C4975C9E15126BE0BDBFF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +99,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		F1C4975C9E15126BE0BDBFF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FFB74587262AC88036F6C6A /* Pods_Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -90,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE2D4A722302AFFD002246D8 /* Build configuration list for PBXNativeTarget "Metal" */;
 			buildPhases = (
+				61718FA97322329BBEB074AD /* [CP] Check Pods Manifest.lock */,
 				EE2D4A5C2302AFFB002246D8 /* Sources */,
 				EE2D4A5D2302AFFB002246D8 /* Frameworks */,
 				EE2D4A5E2302AFFB002246D8 /* Resources */,
+				371908A5BDB7C8FD6B49CE36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,6 +173,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		371908A5BDB7C8FD6B49CE36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Metal/Pods-Metal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Metal/Pods-Metal-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61718FA97322329BBEB074AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Metal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EE2D4A5C2302AFFB002246D8 /* Sources */ = {
@@ -292,6 +365,7 @@
 		};
 		EE2D4A732302AFFD002246D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24442D3C7862BD12B6ADD671 /* Pods-Metal.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +385,7 @@
 		};
 		EE2D4A742302AFFD002246D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAA4327CA82FB80554955D8D /* Pods-Metal.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
