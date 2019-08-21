@@ -35,6 +35,12 @@ class TestCollectionViewCell: UICollectionViewCell {
 
 class JWCollectionViewController: UIViewController {
     
+    private struct LayoutParam {
+        let itemSize = CGSize(width: 100, height: 200)
+    }
+    
+    private let param = LayoutParam()
+
     /// 是否删除的标志
     private var delete: Bool = false
 
@@ -43,18 +49,18 @@ class JWCollectionViewController: UIViewController {
         view.backgroundColor = .white
         
         //添加collectionView
-        let layout: UICollectionViewFlowLayout = {
-            let flowLayout = UICollectionViewFlowLayout()
-            flowLayout.itemSize = CGSize(width: 50, height: 50)
+        let layout: JWTransformLayout = {
+            let flowLayout = JWTransformLayout()
+            flowLayout.itemSize = param.itemSize
             flowLayout.scrollDirection = .horizontal
             flowLayout.minimumLineSpacing = 10
             flowLayout.minimumInteritemSpacing = 10
             return flowLayout
         }()
         
-        let collectionView: UICollectionView = {
-            let frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: 50)
-            let view = UICollectionView(frame: frame, collectionViewLayout: layout)
+        let collectionView: JWTransformColletionView = {
+            let frame = CGRect(x: 0, y: 100, width: view.bounds.width, height: param.itemSize.height)
+            let view = JWTransformColletionView(frame: frame, collectionViewLayout: layout)
             view.register(TestCollectionViewCell.self, forCellWithReuseIdentifier: "TestCollectionViewCell")
             view.delegate = self
             view.dataSource = self

@@ -16,10 +16,11 @@
 		C2D283771FD4F0210052A460 /* JWHorizontalPageCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D283761FD4F0210052A460 /* JWHorizontalPageCollectionLayout.m */; };
 		C2D2837A1FD528B20052A460 /* JWTestCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D283791FD528B20052A460 /* JWTestCollectionViewCell.m */; };
 		EE25292822F273C80025C94B /* JWCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE25292722F273C80025C94B /* JWCollectionViewController.swift */; };
+		EEDE4A45230CDAD0002EDFFE /* JWTransformLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE4A44230CDAD0002EDFFE /* JWTransformLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C2D2835B1FD4EFF30052A460 /* JWHorizaontalPageCollectionLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWHorizaontalPageCollectionLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2D2835B1FD4EFF30052A460 /* JWHorizontalPageCollectionLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWHorizontalPageCollectionLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D2835F1FD4EFF30052A460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C2D283611FD4EFF30052A460 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C2D283621FD4EFF30052A460 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,8 +34,9 @@
 		C2D283761FD4F0210052A460 /* JWHorizontalPageCollectionLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWHorizontalPageCollectionLayout.m; sourceTree = "<group>"; };
 		C2D283781FD528B20052A460 /* JWTestCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JWTestCollectionViewCell.h; sourceTree = "<group>"; };
 		C2D283791FD528B20052A460 /* JWTestCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JWTestCollectionViewCell.m; sourceTree = "<group>"; };
-		EE25292622F273C80025C94B /* JWHorizaontalPageCollectionLayout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWHorizaontalPageCollectionLayout-Bridging-Header.h"; sourceTree = "<group>"; };
+		EE25292622F273C80025C94B /* JWHorizontalPageCollectionLayout-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWHorizontalPageCollectionLayout-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE25292722F273C80025C94B /* JWCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWCollectionViewController.swift; sourceTree = "<group>"; };
+		EEDE4A44230CDAD0002EDFFE /* JWTransformLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTransformLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +53,7 @@
 		C2D283521FD4EFF30052A460 = {
 			isa = PBXGroup;
 			children = (
-				C2D2835D1FD4EFF30052A460 /* JWHorizaontalPageCollectionLayout */,
+				C2D2835D1FD4EFF30052A460 /* JWHorizontalPageCollectionLayout */,
 				C2D2835C1FD4EFF30052A460 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,12 +61,12 @@
 		C2D2835C1FD4EFF30052A460 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2D2835B1FD4EFF30052A460 /* JWHorizaontalPageCollectionLayout.app */,
+				C2D2835B1FD4EFF30052A460 /* JWHorizontalPageCollectionLayout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C2D2835D1FD4EFF30052A460 /* JWHorizaontalPageCollectionLayout */ = {
+		C2D2835D1FD4EFF30052A460 /* JWHorizontalPageCollectionLayout */ = {
 			isa = PBXGroup;
 			children = (
 				C2D283611FD4EFF30052A460 /* AppDelegate.h */,
@@ -79,9 +81,10 @@
 				C2D2835E1FD4EFF30052A460 /* Supporting Files */,
 				C2D283751FD4F0210052A460 /* JWHorizontalPageCollectionLayout.h */,
 				C2D283761FD4F0210052A460 /* JWHorizontalPageCollectionLayout.m */,
-				EE25292622F273C80025C94B /* JWHorizaontalPageCollectionLayout-Bridging-Header.h */,
+				EEDE4A44230CDAD0002EDFFE /* JWTransformLayout.swift */,
+				EE25292622F273C80025C94B /* JWHorizontalPageCollectionLayout-Bridging-Header.h */,
 			);
-			path = JWHorizaontalPageCollectionLayout;
+			path = JWHorizontalPageCollectionLayout;
 			sourceTree = "<group>";
 		};
 		C2D2835E1FD4EFF30052A460 /* Supporting Files */ = {
@@ -97,9 +100,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C2D2835A1FD4EFF30052A460 /* JWHorizaontalPageCollectionLayout */ = {
+		C2D2835A1FD4EFF30052A460 /* JWHorizontalPageCollectionLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C2D283721FD4EFF30052A460 /* Build configuration list for PBXNativeTarget "JWHorizaontalPageCollectionLayout" */;
+			buildConfigurationList = C2D283721FD4EFF30052A460 /* Build configuration list for PBXNativeTarget "JWHorizontalPageCollectionLayout" */;
 			buildPhases = (
 				C2D283571FD4EFF30052A460 /* Sources */,
 				C2D283581FD4EFF30052A460 /* Frameworks */,
@@ -109,9 +112,9 @@
 			);
 			dependencies = (
 			);
-			name = JWHorizaontalPageCollectionLayout;
+			name = JWHorizontalPageCollectionLayout;
 			productName = JWHorizaontalPageCollectionLayout;
-			productReference = C2D2835B1FD4EFF30052A460 /* JWHorizaontalPageCollectionLayout.app */;
+			productReference = C2D2835B1FD4EFF30052A460 /* JWHorizontalPageCollectionLayout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -132,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C2D283561FD4EFF30052A460 /* Build configuration list for PBXProject "JWHorizaontalPageCollectionLayout" */;
+			buildConfigurationList = C2D283561FD4EFF30052A460 /* Build configuration list for PBXProject "JWHorizontalPageCollectionLayout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -146,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C2D2835A1FD4EFF30052A460 /* JWHorizaontalPageCollectionLayout */,
+				C2D2835A1FD4EFF30052A460 /* JWHorizontalPageCollectionLayout */,
 			);
 		};
 /* End PBXProject section */
@@ -172,6 +175,7 @@
 				EE25292822F273C80025C94B /* JWCollectionViewController.swift in Sources */,
 				C2D283661FD4EFF30052A460 /* ViewController.m in Sources */,
 				C2D283631FD4EFF30052A460 /* AppDelegate.m in Sources */,
+				EEDE4A45230CDAD0002EDFFE /* JWTransformLayout.swift in Sources */,
 				C2D283601FD4EFF30052A460 /* main.m in Sources */,
 				C2D283771FD4F0210052A460 /* JWHorizontalPageCollectionLayout.m in Sources */,
 				C2D2837A1FD528B20052A460 /* JWTestCollectionViewCell.m in Sources */,
@@ -296,11 +300,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y39R442P5T;
-				INFOPLIST_FILE = JWHorizaontalPageCollectionLayout/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JWHorizontalPageCollectionLayout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWHorizaontalPageCollectionLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "JWHorizaontalPageCollectionLayout/JWHorizaontalPageCollectionLayout-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "JWHorizontalPageCollectionLayout/JWHorizontalPageCollectionLayout-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -312,11 +316,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y39R442P5T;
-				INFOPLIST_FILE = JWHorizaontalPageCollectionLayout/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JWHorizontalPageCollectionLayout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.JWHorizaontalPageCollectionLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "JWHorizaontalPageCollectionLayout/JWHorizaontalPageCollectionLayout-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "JWHorizontalPageCollectionLayout/JWHorizontalPageCollectionLayout-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -324,7 +328,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C2D283561FD4EFF30052A460 /* Build configuration list for PBXProject "JWHorizaontalPageCollectionLayout" */ = {
+		C2D283561FD4EFF30052A460 /* Build configuration list for PBXProject "JWHorizontalPageCollectionLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2D283701FD4EFF30052A460 /* Debug */,
@@ -333,7 +337,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C2D283721FD4EFF30052A460 /* Build configuration list for PBXNativeTarget "JWHorizaontalPageCollectionLayout" */ = {
+		C2D283721FD4EFF30052A460 /* Build configuration list for PBXNativeTarget "JWHorizontalPageCollectionLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C2D283731FD4EFF30052A460 /* Debug */,
