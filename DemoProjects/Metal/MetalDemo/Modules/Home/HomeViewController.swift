@@ -15,14 +15,22 @@ class HomeViewController: UIViewController {
     private let captureSession = AVCaptureSession()
     private let sessionQueue = SessionSerialQueue()
     private var photoOutput: AVCapturePhotoOutput!
+    private var videoDataOutput: AVCaptureVideoDataOutput!
     private var currentVideoInput: AVCaptureDeviceInput!
     private let photoProccessor = PhotoCaptureProcessor()
+    private let videoBufferDelegate = VideoSampleBufferDelegate()
     
-    var previewView: CapturePreviewView {
-        get {
-            return self.view as! CapturePreviewView
+//    var previewView: CapturePreviewView {
+//        get {
+//            return self.view as! CapturePreviewView
+//        }
+//    }
+    
+        var previewView: PreviewMetalView {
+            get {
+                return self.view as! PreviewMetalView
+            }
         }
-    }
     
     private lazy var captureButton: UIButton = {
         let button = UIButton(type: .custom)
@@ -31,11 +39,11 @@ class HomeViewController: UIViewController {
         button.backgroundColor = .brown
         return button
     }()
-
-    override func loadView() {
-         self.view = CapturePreviewView()
-    }
     
+    override func loadView() {
+        self.view = PreviewMetalView(frame: .zero, device: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -67,6 +75,8 @@ extension HomeViewController {
     
     func setupSession() {
         sessionQueue.async { [weak self] in
+            guard let sSelf = self else { return }
+            
             self?.captureSession.beginConfiguration()
             defer { self?.captureSession.commitConfiguration() }
             
@@ -82,13 +92,35 @@ extension HomeViewController {
             guard (self?.captureSession.canAddOutput(photoOutput) ?? false) else { return }
             self?.captureSession.sessionPreset = .photo
             self?.captureSession.addOutput(photoOutput)
+            
+            //video output
+            let videoOutput = AVCaptureVideoDataOutput()
+            self?.videoDataOutput = videoOutput
+            videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
+            videoOutput.setSampleBufferDelegate(sSelf.videoBufferDelegate, queue: sSelf.videoBufferDelegate.videoQueue)
+            guard (self?.captureSession.canAddOutput(videoOutput) ?? false) else { return }
+            self?.captureSession.addOutput(videoOutput)
         }
-        //preview
-        previewView.videoPreviewLayer.session = self.captureSession
+
     }
     
     func startSession() {
         sessionQueue.async { [weak self] in
+            guard let sSelf = self else { return }
+            
+            //添加preview
+            if let unwrappedVideoDataOutputConnection = sSelf.videoDataOutput.connection(with: .video) {
+                let videoDevicePosition = sSelf.currentVideoInput.device.position
+                let interfaceOrientation = UIApplication.shared.statusBarOrientation
+                let rotation = PreviewMetalView.Rotation(with: interfaceOrientation,
+                                                         videoOrientation: unwrappedVideoDataOutputConnection.videoOrientation,
+                                                         cameraPosition: videoDevicePosition)
+                sSelf.previewView.mirroring = (videoDevicePosition == .front)
+                if let rotation = rotation {
+                    sSelf.previewView.rotation = rotation
+                }
+            }
+            
             self?.captureSession.startRunning()
         }
     }
@@ -104,8 +136,7 @@ extension HomeViewController {
 // MARK: - actions
 extension HomeViewController {
     @objc func capturePhoto() {
-        guard let photoConnection = self.photoOutput.connection(with: .video) else { return }
-        
+
         var photoSettings = AVCapturePhotoSettings()
         
         // Capture HEIF photos when supported. Enable auto-flash and high-resolution photos.

@@ -19,7 +19,7 @@ class SessionSerialQueue {
     private static var counter: Int = 0
     
     /// 内部使用的dispatch queue
-    private let queue: DispatchQueue!
+    let queue: DispatchQueue!
     
     /// 内部使用的queue标识
     private let queueSpecificsKey = DispatchSpecificKey<QueueIdentity>()
