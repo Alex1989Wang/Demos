@@ -10,7 +10,10 @@ import UIKit
 import AVKit
 
 class VideoSampleBufferDelegate: NSObject {
+    
     private let processQueue = SessionSerialQueue()
+    
+    weak var previewView: PreviewMetalView?
     
     var videoQueue: DispatchQueue {
         get {
@@ -41,7 +44,8 @@ extension VideoSampleBufferDelegate: AVCaptureVideoDataOutputSampleBufferDelegat
      Note that to maintain optimal performance, some sample buffers directly reference pools of memory that may need to be reused by the device system and other capture inputs. This is frequently the case for uncompressed device native capture where memory blocks are copied as little as possible. If multiple sample buffers reference such pools of memory for too long, inputs will no longer be able to copy new samples into memory and those samples will be dropped. If your application is causing samples to be dropped by retaining the provided CMSampleBuffer objects for too long, but it needs access to the sample data for a long period of time, consider copying the data into a new buffer and then calling CFRelease on the sample buffer if it was previously retained so that the memory it references can be reused.
      */
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        
+        guard let videoPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer), let preview = previewView else { return }
+        preview.pixelBuffer = videoPixelBuffer
     }
     
     

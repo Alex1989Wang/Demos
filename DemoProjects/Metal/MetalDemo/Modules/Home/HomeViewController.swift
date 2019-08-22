@@ -96,9 +96,10 @@ extension HomeViewController {
             //video output
             let videoOutput = AVCaptureVideoDataOutput()
             self?.videoDataOutput = videoOutput
+            guard (self?.captureSession.canAddOutput(videoOutput) ?? false) else { return }
             videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
             videoOutput.setSampleBufferDelegate(sSelf.videoBufferDelegate, queue: sSelf.videoBufferDelegate.videoQueue)
-            guard (self?.captureSession.canAddOutput(videoOutput) ?? false) else { return }
+            sSelf.videoBufferDelegate.previewView = sSelf.previewView
             self?.captureSession.addOutput(videoOutput)
         }
 
@@ -108,20 +109,22 @@ extension HomeViewController {
         sessionQueue.async { [weak self] in
             guard let sSelf = self else { return }
             
-            //添加preview
-            if let unwrappedVideoDataOutputConnection = sSelf.videoDataOutput.connection(with: .video) {
-                let videoDevicePosition = sSelf.currentVideoInput.device.position
-                let interfaceOrientation = UIApplication.shared.statusBarOrientation
-                let rotation = PreviewMetalView.Rotation(with: interfaceOrientation,
-                                                         videoOrientation: unwrappedVideoDataOutputConnection.videoOrientation,
-                                                         cameraPosition: videoDevicePosition)
-                sSelf.previewView.mirroring = (videoDevicePosition == .front)
-                if let rotation = rotation {
-                    sSelf.previewView.rotation = rotation
+            self?.captureSession.startRunning()
+            
+            DispatchQueue.main.async {
+                //添加preview
+                if let unwrappedVideoDataOutputConnection = sSelf.videoDataOutput.connection(with: .video) {
+                    let videoDevicePosition = sSelf.currentVideoInput.device.position
+                    let interfaceOrientation = UIApplication.shared.statusBarOrientation
+                    let rotation = PreviewMetalView.Rotation(with: interfaceOrientation,
+                                                             videoOrientation: unwrappedVideoDataOutputConnection.videoOrientation,
+                                                             cameraPosition: videoDevicePosition)
+                    sSelf.previewView.mirroring = (videoDevicePosition == .front)
+                    if let rotation = rotation {
+                        sSelf.previewView.rotation = rotation
+                    }
                 }
             }
-            
-            self?.captureSession.startRunning()
         }
     }
     
