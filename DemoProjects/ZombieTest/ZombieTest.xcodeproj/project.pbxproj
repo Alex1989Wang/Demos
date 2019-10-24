@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE3DE7CE2355C0BD000502C9 /* ZTSortObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DE7CD2355C0BD000502C9 /* ZTSortObject.m */; };
+		EE3DE7D12355C157000502C9 /* ZTSorter.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DE7D02355C157000502C9 /* ZTSorter.m */; };
+		EE3DE7D52355C488000502C9 /* ZTSortDescriptorTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE3DE7D32355C488000502C9 /* ZTSortDescriptorTestViewController.m */; };
+		EE3DE7D62355C488000502C9 /* ZTSortDescriptorTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3DE7D42355C488000502C9 /* ZTSortDescriptorTestViewController.xib */; };
 		EE59F7FA219044070059D349 /* ZombieTest_2018-11-05-172107_jiang-camera360.crash in Resources */ = {isa = PBXBuildFile; fileRef = EE59F7F9219044070059D349 /* ZombieTest_2018-11-05-172107_jiang-camera360.crash */; };
 		EE59F7FF219045AB0059D349 /* ZTCrashMutableArrayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE59F7FD219045AB0059D349 /* ZTCrashMutableArrayViewController.m */; };
 		EE59F800219045AB0059D349 /* ZTCrashMutableArrayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE59F7FE219045AB0059D349 /* ZTCrashMutableArrayViewController.xib */; };
@@ -50,6 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE3DE7CC2355C0BD000502C9 /* ZTSortObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTSortObject.h; sourceTree = "<group>"; };
+		EE3DE7CD2355C0BD000502C9 /* ZTSortObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTSortObject.m; sourceTree = "<group>"; };
+		EE3DE7CF2355C157000502C9 /* ZTSorter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTSorter.h; sourceTree = "<group>"; };
+		EE3DE7D02355C157000502C9 /* ZTSorter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTSorter.m; sourceTree = "<group>"; };
+		EE3DE7D22355C488000502C9 /* ZTSortDescriptorTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTSortDescriptorTestViewController.h; sourceTree = "<group>"; };
+		EE3DE7D32355C488000502C9 /* ZTSortDescriptorTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTSortDescriptorTestViewController.m; sourceTree = "<group>"; };
+		EE3DE7D42355C488000502C9 /* ZTSortDescriptorTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZTSortDescriptorTestViewController.xib; sourceTree = "<group>"; };
 		EE59F7F9219044070059D349 /* ZombieTest_2018-11-05-172107_jiang-camera360.crash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ZombieTest_2018-11-05-172107_jiang-camera360.crash"; sourceTree = "<group>"; };
 		EE59F7FC219045AB0059D349 /* ZTCrashMutableArrayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZTCrashMutableArrayViewController.h; sourceTree = "<group>"; };
 		EE59F7FD219045AB0059D349 /* ZTCrashMutableArrayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZTCrashMutableArrayViewController.m; sourceTree = "<group>"; };
@@ -114,6 +125,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE3DE7CB2355C06F000502C9 /* SortDescriptor */ = {
+			isa = PBXGroup;
+			children = (
+				EE3DE7CC2355C0BD000502C9 /* ZTSortObject.h */,
+				EE3DE7CD2355C0BD000502C9 /* ZTSortObject.m */,
+				EE3DE7CF2355C157000502C9 /* ZTSorter.h */,
+				EE3DE7D02355C157000502C9 /* ZTSorter.m */,
+				EE3DE7D22355C488000502C9 /* ZTSortDescriptorTestViewController.h */,
+				EE3DE7D32355C488000502C9 /* ZTSortDescriptorTestViewController.m */,
+				EE3DE7D42355C488000502C9 /* ZTSortDescriptorTestViewController.xib */,
+			);
+			path = SortDescriptor;
+			sourceTree = "<group>";
+		};
 		EE59F7FB219045620059D349 /* MutableArrayMultiThread */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +159,7 @@
 				EE8B810C2190239800DB6D78 /* Nonatomic */,
 				EE8B8112219028E400DB6D78 /* BlockMissuse */,
 				EE59F7FB219045620059D349 /* MutableArrayMultiThread */,
+				EE3DE7CB2355C06F000502C9 /* SortDescriptor */,
 			);
 			path = TestCases;
 			sourceTree = "<group>";
@@ -357,6 +383,7 @@
 				EE59F7FA219044070059D349 /* ZombieTest_2018-11-05-172107_jiang-camera360.crash in Resources */,
 				EE59F800219045AB0059D349 /* ZTCrashMutableArrayViewController.xib in Resources */,
 				EE8B810B2190224100DB6D78 /* ZombieTest  2018-11-5, 2-55 PM.crash in Resources */,
+				EE3DE7D62355C488000502C9 /* ZTSortDescriptorTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,13 +408,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE3DE7D12355C157000502C9 /* ZTSorter.m in Sources */,
 				EE8B81092190223800DB6D78 /* ZTCrashAssignPropertyViewController.m in Sources */,
+				EE3DE7CE2355C0BD000502C9 /* ZTSortObject.m in Sources */,
 				EE8B80FA219019EC00DB6D78 /* ZTCrashCasesListTableViewController.m in Sources */,
 				EE8B810321901ED400DB6D78 /* ZTDummyObject.m in Sources */,
 				EE8B8110219023AF00DB6D78 /* ZTCrashNonatomicViewController.m in Sources */,
 				EE8B811621902BD500DB6D78 /* ZTCallBackReleaseViewController.m in Sources */,
 				EE59F7FF219045AB0059D349 /* ZTCrashMutableArrayViewController.m in Sources */,
 				EED96B122133E6B20068D898 /* main.m in Sources */,
+				EE3DE7D52355C488000502C9 /* ZTSortDescriptorTestViewController.m in Sources */,
 				EED96B042133E6B20068D898 /* ZTAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

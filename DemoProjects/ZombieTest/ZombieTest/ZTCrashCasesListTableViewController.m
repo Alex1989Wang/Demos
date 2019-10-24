@@ -11,6 +11,7 @@
 #import "ZTCrashNonatomicViewController.h"
 #import "ZTCallBackReleaseViewController.h"
 #import "ZTCrashMutableArrayViewController.h"
+#import "ZTSortDescriptorTestViewController.h"
 
 
 typedef NS_ENUM(NSUInteger, ZTCrashType) {
@@ -18,6 +19,7 @@ typedef NS_ENUM(NSUInteger, ZTCrashType) {
     ZTCrashTypeNonatomicMultithread,
     ZTCrashTypeBlockMissUse,
     ZTCrashTypeMutableArray,
+    ZTCrashTypeSortDescriptor,
 };
 
 NSString *const kCrashListTableCellID = @"ZTCrashListTableCellID";
@@ -52,35 +54,41 @@ NSString *const kCrashListTableCellID = @"ZTCrashListTableCellID";
     ZTCrashType type = indexPath.row;
     NSString *title = self.crashes[@(type)];
     switch (type) {
-            case ZTCrashTypeAssignDanglingPointer: {
-                ZTCrashAssignPropertyViewController *assignCaseVC =
-                [[ZTCrashAssignPropertyViewController alloc] initWithNibName:@"ZTCrashAssignPropertyViewController" bundle:nil];
-                assignCaseVC.title = title;
-                [self.navigationController pushViewController:assignCaseVC animated:YES];
-                break;
-            }
+        case ZTCrashTypeAssignDanglingPointer: {
+            ZTCrashAssignPropertyViewController *assignCaseVC =
+            [[ZTCrashAssignPropertyViewController alloc] initWithNibName:@"ZTCrashAssignPropertyViewController" bundle:nil];
+            assignCaseVC.title = title;
+            [self.navigationController pushViewController:assignCaseVC animated:YES];
+            break;
+        }
             
-            case ZTCrashTypeNonatomicMultithread: {
-                ZTCrashNonatomicViewController *nonatomicVC =
-                [[ZTCrashNonatomicViewController alloc] initWithNibName:@"ZTCrashNonatomicViewController" bundle:nil];
-                nonatomicVC.title = title;
-                [self.navigationController pushViewController:nonatomicVC animated:YES];
-                break;
-            }
+        case ZTCrashTypeNonatomicMultithread: {
+            ZTCrashNonatomicViewController *nonatomicVC =
+            [[ZTCrashNonatomicViewController alloc] initWithNibName:@"ZTCrashNonatomicViewController" bundle:nil];
+            nonatomicVC.title = title;
+            [self.navigationController pushViewController:nonatomicVC animated:YES];
+            break;
+        }
             
-            case ZTCrashTypeBlockMissUse: {
-                ZTCallBackReleaseViewController *testVC = [[ZTCallBackReleaseViewController alloc] init];
-                testVC.title = title;
-                [self.navigationController pushViewController:testVC animated:YES];
-                break;
-            }
+        case ZTCrashTypeBlockMissUse: {
+            ZTCallBackReleaseViewController *testVC = [[ZTCallBackReleaseViewController alloc] init];
+            testVC.title = title;
+            [self.navigationController pushViewController:testVC animated:YES];
+            break;
+        }
             
-            case ZTCrashTypeMutableArray: {
-                ZTCrashMutableArrayViewController *testVC = [[ZTCrashMutableArrayViewController alloc] init];
-                testVC.title = title;
-                [self.navigationController pushViewController:testVC animated:YES];
-                break;
-            }
+        case ZTCrashTypeMutableArray: {
+            ZTCrashMutableArrayViewController *testVC = [[ZTCrashMutableArrayViewController alloc] init];
+            testVC.title = title;
+            [self.navigationController pushViewController:testVC animated:YES];
+            break;
+        }
+        case ZTCrashTypeSortDescriptor: {
+            ZTSortDescriptorTestViewController *testVC = [[ZTSortDescriptorTestViewController alloc] init];
+            testVC.title = title;
+            [self.navigationController pushViewController:testVC animated:YES];
+            break;
+        }
             
         default:
             NSAssert(NO, @"invalid type");
@@ -93,7 +101,8 @@ NSString *const kCrashListTableCellID = @"ZTCrashListTableCellID";
         _crashes = @{@(ZTCrashTypeAssignDanglingPointer): @"Assign Property",
                      @(ZTCrashTypeNonatomicMultithread): @"Nonatomic Multithreading Issue",
                      @(ZTCrashTypeBlockMissUse): @"Block Missuse",
-                     @(ZTCrashTypeMutableArray): @"Mutable Array"
+                     @(ZTCrashTypeMutableArray): @"Mutable Array",
+                     @(ZTCrashTypeSortDescriptor): @"Sort Descriptor"
                      };
     }
     return _crashes;

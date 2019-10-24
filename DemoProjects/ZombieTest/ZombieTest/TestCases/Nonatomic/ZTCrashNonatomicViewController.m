@@ -24,6 +24,7 @@
 - (IBAction)clickToCrash {
 
     //multi-thread zombie
+    /*
     for (NSInteger loop = 0; loop < 1000; loop++) {
         __weak typeof(self) wSelf = self;
         dispatch_async(self.queue, ^{
@@ -33,6 +34,14 @@
         });
         
         //main
+        [self.dummy dummyMethod];
+    }
+     */
+    
+    for (NSInteger loop = 0; loop < 100000; loop++) {
+        dispatch_async(self.queue, ^{
+            _dummy = [[ZTDummyObject alloc] init];
+        });
         [self.dummy dummyMethod];
     }
 }
