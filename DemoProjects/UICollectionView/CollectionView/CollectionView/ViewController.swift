@@ -53,11 +53,11 @@ class ViewController: UIViewController {
     
     
     @IBAction func clickToQueryCell() {
-        let cases = [2, 3]
+        let cases = [5]
         guard !cases.isEmpty else { return }
         let randomIndex = Int(arc4random_uniform(100).remainderReportingOverflow(dividingBy: (UInt32)(cases.count)).partialValue)
         let random = cases[randomIndex]
-        let newItem = ((targetIndexPath?.row ?? 0) + 50).remainderReportingOverflow(dividingBy: 100).partialValue
+        let newItem = ((targetIndexPath?.row ?? 0) + 50).remainderReportingOverflow(dividingBy: 100).partialValue //0||50 rotating
         let newIndexPath = IndexPath(item: newItem, section: 0)
         targetIndexPath = newIndexPath
         switch random {
@@ -81,6 +81,16 @@ class ViewController: UIViewController {
                 let cell = self.collection.cellForItem(at: newIndexPath)
                 print("scrolling -> layout -> dispatch \n queried cell: \(cell.debugDescription) at indexPath: \(newIndexPath.debugDescription)")
             }
+        case 4:
+            collection.scrollToItem(at: newIndexPath, at: [.centeredHorizontally], animated: false)
+            collection.layoutSubviews()
+            let cell = self.collection.cellForItem(at: newIndexPath)
+            print("layout\n queried cell: \(cell.debugDescription) at indexPath: \(newIndexPath.debugDescription)")
+        case 5:
+            collection.scrollToItem(at: newIndexPath, at: [.centeredHorizontally], animated: false)
+            collection.layoutIfNeeded()
+            let cell = self.collection.cellForItem(at: newIndexPath)
+            print("layoutIfNeeded\n queried cell: \(cell.debugDescription) at indexPath: \(newIndexPath.debugDescription)")
         default:
             break
         }
