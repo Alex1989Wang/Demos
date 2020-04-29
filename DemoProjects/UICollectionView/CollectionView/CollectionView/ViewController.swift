@@ -53,7 +53,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func clickToQueryCell() {
-        let cases = [5]
+        let cases = [2]
         guard !cases.isEmpty else { return }
         let randomIndex = Int(arc4random_uniform(100).remainderReportingOverflow(dividingBy: (UInt32)(cases.count)).partialValue)
         let random = cases[randomIndex]

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StackViewTestViewController" customModule="AutoLayout" customModuleProvider="target">
+            <connections>
+                <outlet property="button" destination="9he-5J-1FA" id="d2f-Q4-Ex2"/>
+                <outlet property="container" destination="VcE-zj-a2R" id="huM-7p-JeV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="kWT-3e-zB6">
+                    <rect key="frame" x="30" y="10" width="334" height="110"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAQ-mv-0au">
+                            <rect key="frame" x="0.0" y="0.0" width="72" height="110"/>
+                            <state key="normal" image="settingView_about_logo"/>
+                            <connections>
+                                <action selector="tapToHide:" destination="-1" eventType="touchUpInside" id="iuQ-iY-n6e"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" id="pXJ-lT-6ar">
+                            <rect key="frame" x="74" y="0.0" width="260" height="110"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" text="我是标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MO7-nw-RvU">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="jfiaojdfia " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnH-w2-4W8">
+                                    <rect key="frame" x="0.0" y="30.5" width="260" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="900" text="我是描述，很长很长很长很长很长很长的描述。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCA-5l-4Rz">
+                                    <rect key="frame" x="0.0" y="61" width="260" height="39"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9he-5J-1FA">
+                                    <rect key="frame" x="0.0" y="110" width="260" height="0.0"/>
+                                    <state key="normal" title="按钮按钮"/>
+                                </button>
+                            </subviews>
+                            <viewLayoutGuide key="safeArea" id="9of-kn-0Fp"/>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XBL-gZ-mk3">
+                    <rect key="frame" x="30" y="170" width="270" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KrU-T1-YnT">
+                            <rect key="frame" x="0.0" y="0.0" width="90" height="60"/>
+                            <state key="normal" title="Button One"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Id-sX-ENg">
+                            <rect key="frame" x="90" y="0.0" width="90" height="60"/>
+                            <state key="normal" title="Button Two"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cu-oQ-Gyb">
+                            <rect key="frame" x="180" y="0.0" width="90" height="60"/>
+                            <state key="normal" title="Button Three"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="Pgu-et-y2u"/>
+                        <constraint firstItem="2Cu-oQ-Gyb" firstAttribute="width" secondItem="KrU-T1-YnT" secondAttribute="width" id="Xob-3P-LJl"/>
+                        <constraint firstItem="6Id-sX-ENg" firstAttribute="width" secondItem="KrU-T1-YnT" secondAttribute="width" id="v8P-Wn-Tj4"/>
+                    </constraints>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VcE-zj-a2R">
+                    <rect key="frame" x="30" y="406" width="270" height="96"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="96" id="sVK-D8-bjy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kWT-3e-zB6" secondAttribute="trailing" constant="-30" id="9fM-2O-ehb"/>
+                <constraint firstItem="kWT-3e-zB6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="DYw-rp-dzI"/>
+                <constraint firstItem="VcE-zj-a2R" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-30" id="JCe-fq-gd6"/>
+                <constraint firstItem="XBL-gZ-mk3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="OIn-0v-vu5"/>
+                <constraint firstItem="VcE-zj-a2R" firstAttribute="top" secondItem="XBL-gZ-mk3" secondAttribute="bottom" constant="176" id="T9y-tz-5VV"/>
+                <constraint firstItem="XBL-gZ-mk3" firstAttribute="top" secondItem="kWT-3e-zB6" secondAttribute="bottom" constant="50" id="Y5g-yA-C5s"/>
+                <constraint firstItem="kWT-3e-zB6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="e9H-wz-uqk"/>
+                <constraint firstItem="VcE-zj-a2R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="vJX-fJ-CfZ"/>
+                <constraint firstItem="XBL-gZ-mk3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-30" id="wgc-n8-ZaT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-15" y="72"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="settingView_about_logo" width="70" height="70"/>
+    </resources>
+</document>

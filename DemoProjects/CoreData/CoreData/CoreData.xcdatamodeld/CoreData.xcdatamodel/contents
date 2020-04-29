@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="1.0.0">
+    <entity name="Employee" representedClassName=".EmployeeMO" parentEntity="Person" syncable="YES"/>
+    <entity name="Person" representedClassName="Person" isAbstract="YES" syncable="YES">
+        <attribute name="dateOfBirth" attributeType="Date" defaultDateTimeInterval="607445460" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String" defaultValueString=""/>
+    </entity>
+    <elements>
+        <element name="Employee" positionX="-82.9765625" positionY="-3.1171875" width="128" height="43"/>
+        <element name="Person" positionX="110.96875" positionY="-8.65625" width="128" height="73"/>
+    </elements>
+</model>
