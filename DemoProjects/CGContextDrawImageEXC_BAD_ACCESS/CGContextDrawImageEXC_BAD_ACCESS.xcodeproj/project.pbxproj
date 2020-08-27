@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE73FEA82476252F00277FBA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE73FEA72476252F00277FBA /* AppDelegate.m */; };
+		EE73FEAB2476252F00277FBA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE73FEAA2476252F00277FBA /* SceneDelegate.m */; };
+		EE73FEAE2476252F00277FBA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE73FEAD2476252F00277FBA /* ViewController.m */; };
+		EE73FEB12476252F00277FBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE73FEAF2476252F00277FBA /* Main.storyboard */; };
+		EE73FEB32476253000277FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE73FEB22476253000277FBA /* Assets.xcassets */; };
+		EE73FEB62476253000277FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE73FEB42476253000277FBA /* LaunchScreen.storyboard */; };
+		EE73FEB92476253000277FBA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE73FEB82476253000277FBA /* main.m */; };
+		EE73FEC12476254C00277FBA /* UIImage+ExchangeChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE73FEBF2476254C00277FBA /* UIImage+ExchangeChannel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EE73FEA32476252E00277FBA /* CGContextDrawImageEXC_BAD_ACCESS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGContextDrawImageEXC_BAD_ACCESS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE73FEA62476252F00277FBA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EE73FEA72476252F00277FBA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EE73FEA92476252F00277FBA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		EE73FEAA2476252F00277FBA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		EE73FEAC2476252F00277FBA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EE73FEAD2476252F00277FBA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EE73FEB02476252F00277FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE73FEB22476253000277FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE73FEB52476253000277FBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE73FEB72476253000277FBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE73FEB82476253000277FBA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EE73FEBF2476254C00277FBA /* UIImage+ExchangeChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ExchangeChannel.m"; sourceTree = "<group>"; };
+		EE73FEC02476254C00277FBA /* UIImage+ExchangeChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ExchangeChannel.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE73FEA02476252E00277FBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE73FE9A2476252E00277FBA = {
+			isa = PBXGroup;
+			children = (
+				EE73FEA52476252F00277FBA /* CGContextDrawImageEXC_BAD_ACCESS */,
+				EE73FEA42476252E00277FBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE73FEA42476252E00277FBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE73FEA32476252E00277FBA /* CGContextDrawImageEXC_BAD_ACCESS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE73FEA52476252F00277FBA /* CGContextDrawImageEXC_BAD_ACCESS */ = {
+			isa = PBXGroup;
+			children = (
+				EE73FEC02476254C00277FBA /* UIImage+ExchangeChannel.h */,
+				EE73FEBF2476254C00277FBA /* UIImage+ExchangeChannel.m */,
+				EE73FEA62476252F00277FBA /* AppDelegate.h */,
+				EE73FEA72476252F00277FBA /* AppDelegate.m */,
+				EE73FEA92476252F00277FBA /* SceneDelegate.h */,
+				EE73FEAA2476252F00277FBA /* SceneDelegate.m */,
+				EE73FEAC2476252F00277FBA /* ViewController.h */,
+				EE73FEAD2476252F00277FBA /* ViewController.m */,
+				EE73FEAF2476252F00277FBA /* Main.storyboard */,
+				EE73FEB22476253000277FBA /* Assets.xcassets */,
+				EE73FEB42476253000277FBA /* LaunchScreen.storyboard */,
+				EE73FEB72476253000277FBA /* Info.plist */,
+				EE73FEB82476253000277FBA /* main.m */,
+			);
+			path = CGContextDrawImageEXC_BAD_ACCESS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE73FEA22476252E00277FBA /* CGContextDrawImageEXC_BAD_ACCESS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE73FEBC2476253000277FBA /* Build configuration list for PBXNativeTarget "CGContextDrawImageEXC_BAD_ACCESS" */;
+			buildPhases = (
+				EE73FE9F2476252E00277FBA /* Sources */,
+				EE73FEA02476252E00277FBA /* Frameworks */,
+				EE73FEA12476252E00277FBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CGContextDrawImageEXC_BAD_ACCESS;
+			productName = CGContextDrawImageEXC_BAD_ACCESS;
+			productReference = EE73FEA32476252E00277FBA /* CGContextDrawImageEXC_BAD_ACCESS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE73FE9B2476252E00277FBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = JiangWang;
+				TargetAttributes = {
+					EE73FEA22476252E00277FBA = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = EE73FE9E2476252E00277FBA /* Build configuration list for PBXProject "CGContextDrawImageEXC_BAD_ACCESS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE73FE9A2476252E00277FBA;
+			productRefGroup = EE73FEA42476252E00277FBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE73FEA22476252E00277FBA /* CGContextDrawImageEXC_BAD_ACCESS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE73FEA12476252E00277FBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE73FEB62476253000277FBA /* LaunchScreen.storyboard in Resources */,
+				EE73FEB32476253000277FBA /* Assets.xcassets in Resources */,
+				EE73FEB12476252F00277FBA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE73FE9F2476252E00277FBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE73FEC12476254C00277FBA /* UIImage+ExchangeChannel.m in Sources */,
+				EE73FEAE2476252F00277FBA /* ViewController.m in Sources */,
+				EE73FEA82476252F00277FBA /* AppDelegate.m in Sources */,
+				EE73FEB92476253000277FBA /* main.m in Sources */,
+				EE73FEAB2476252F00277FBA /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EE73FEAF2476252F00277FBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE73FEB02476252F00277FBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE73FEB42476253000277FBA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE73FEB52476253000277FBA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE73FEBA2476253000277FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE73FEBB2476253000277FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE73FEBD2476253000277FBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = CGContextDrawImageEXC_BAD_ACCESS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangwang.CGContextDrawImageEXC-BAD-ACCESS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE73FEBE2476253000277FBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YFZ6GPTEHY;
+				INFOPLIST_FILE = CGContextDrawImageEXC_BAD_ACCESS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jiangwang.CGContextDrawImageEXC-BAD-ACCESS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE73FE9E2476252E00277FBA /* Build configuration list for PBXProject "CGContextDrawImageEXC_BAD_ACCESS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE73FEBA2476253000277FBA /* Debug */,
+				EE73FEBB2476253000277FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE73FEBC2476253000277FBA /* Build configuration list for PBXNativeTarget "CGContextDrawImageEXC_BAD_ACCESS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE73FEBD2476253000277FBA /* Debug */,
+				EE73FEBE2476253000277FBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE73FE9B2476252E00277FBA /* Project object */;
+}
