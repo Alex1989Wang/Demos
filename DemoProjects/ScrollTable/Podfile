@@ -7,5 +7,6 @@ target 'ScrollTable' do
 
   # Pods for ScrollTable
   pod 'Masonry'
+  pod 'MJRefresh'
 
 end
