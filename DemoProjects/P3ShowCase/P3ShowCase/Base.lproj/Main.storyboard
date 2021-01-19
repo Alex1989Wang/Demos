@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="P3ShowCase" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aLu-2i-1uc">
+                                <rect key="frame" x="21" y="20" width="333.5" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="dfQ-BP-4DL"/>
+                                </constraints>
+                            </imageView>
+                            <mtkView contentMode="scaleToFill" colorPixelFormat="BGRA8Unorm" depthStencilPixelFormat="Depth32Float" translatesAutoresizingMaskIntoConstraints="NO" id="Yn2-Qj-Nkx">
+                                <rect key="frame" x="21" y="397" width="333.5" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="3Ws-uF-sbf"/>
+                                </constraints>
+                            </mtkView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l4t-Wt-r8f">
+                                <rect key="frame" x="163" y="358" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aLu-2i-1uc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="150:300" id="5rM-Ih-Edj"/>
+                            <constraint firstItem="Yn2-Qj-Nkx" firstAttribute="top" secondItem="l4t-Wt-r8f" secondAttribute="bottom" constant="8" symbolic="YES" id="Gd7-q6-Syj"/>
+                            <constraint firstItem="aLu-2i-1uc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cXl-AJ-ZyT"/>
+                            <constraint firstItem="l4t-Wt-r8f" firstAttribute="centerX" secondItem="Yn2-Qj-Nkx" secondAttribute="centerX" id="ed1-kN-scf"/>
+                            <constraint firstItem="aLu-2i-1uc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ogL-T9-lIQ"/>
+                            <constraint firstItem="Yn2-Qj-Nkx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sHI-W5-bFf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yn2-Qj-Nkx" secondAttribute="bottom" constant="20" id="wH4-mD-y6L"/>
+                            <constraint firstItem="Yn2-Qj-Nkx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="150:300" id="xrz-b1-Sn1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="aLu-2i-1uc" id="wrZ-Nx-qN9"/>
+                        <outlet property="metalView" destination="Yn2-Qj-Nkx" id="hGj-1i-M7a"/>
+                        <outlet property="wideColorFilterSwitch" destination="l4t-Wt-r8f" id="j5F-M8-SRk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304.34782608695656" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

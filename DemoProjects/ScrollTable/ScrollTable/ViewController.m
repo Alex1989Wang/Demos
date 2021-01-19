@@ -155,7 +155,7 @@ typedef NS_ENUM(NSUInteger, MIXHomeScrollMode) {
 //                tableOffset.y += offset;
 //                [self.feedTable setContentOffset:tableOffset];
 //            }
-//            
+//
 //        }
 //        else {
 //            if (self.feedTable.contentOffset.y > 0) {
