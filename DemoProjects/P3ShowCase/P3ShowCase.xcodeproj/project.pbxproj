@@ -21,6 +21,8 @@
 		EE660A6A25B6C15C00A052C4 /* WideColorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660A6625B6C15B00A052C4 /* WideColorFilter.swift */; };
 		EE660A7D25B6C51000A052C4 /* filters.metal in Sources */ = {isa = PBXBuildFile; fileRef = EE660A6925B6C15C00A052C4 /* filters.metal */; };
 		EE660A8925B6D6B200A052C4 /* PassThrough.metal in Sources */ = {isa = PBXBuildFile; fileRef = EE660A8825B6D6B200A052C4 /* PassThrough.metal */; };
+		EE660AA625B831FF00A052C4 /* ImageConvertor.m in Sources */ = {isa = PBXBuildFile; fileRef = EE660AA525B831FF00A052C4 /* ImageConvertor.m */; };
+		EE660AA925B834CA00A052C4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE660AA825B834CA00A052C4 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,10 @@
 		EE660A8225B6D61700A052C4 /* P3ShowCase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "P3ShowCase-Bridging-Header.h"; sourceTree = "<group>"; };
 		EE660A8325B6D61700A052C4 /* VertexData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VertexData.h; sourceTree = "<group>"; };
 		EE660A8825B6D6B200A052C4 /* PassThrough.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = PassThrough.metal; sourceTree = "<group>"; };
+		EE660A9E25B8295F00A052C4 /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		EE660AA425B831FF00A052C4 /* ImageConvertor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageConvertor.h; sourceTree = "<group>"; };
+		EE660AA525B831FF00A052C4 /* ImageConvertor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageConvertor.m; sourceTree = "<group>"; };
+		EE660AA825B834CA00A052C4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +93,10 @@
 				EE660A6925B6C15C00A052C4 /* filters.metal */,
 				EE660A8825B6D6B200A052C4 /* PassThrough.metal */,
 				EE660A8325B6D61700A052C4 /* VertexData.h */,
+				EE660A9E25B8295F00A052C4 /* Defines.h */,
+				EE660AA825B834CA00A052C4 /* Extensions.swift */,
+				EE660AA425B831FF00A052C4 /* ImageConvertor.h */,
+				EE660AA525B831FF00A052C4 /* ImageConvertor.m */,
 				EE660A6625B6C15B00A052C4 /* WideColorFilter.swift */,
 				EE660A8225B6D61700A052C4 /* P3ShowCase-Bridging-Header.h */,
 			);
@@ -181,8 +191,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE660AA625B831FF00A052C4 /* ImageConvertor.m in Sources */,
 				EE660A7D25B6C51000A052C4 /* filters.metal in Sources */,
 				EE660A4725B6B5D600A052C4 /* ViewController.swift in Sources */,
+				EE660AA925B834CA00A052C4 /* Extensions.swift in Sources */,
 				EE660A4325B6B5D600A052C4 /* AppDelegate.swift in Sources */,
 				EE660A6A25B6C15C00A052C4 /* WideColorFilter.swift in Sources */,
 				EE660A8925B6D6B200A052C4 /* PassThrough.metal in Sources */,
@@ -342,8 +354,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MTLLINKER_FLAGS = "-cikernel";
-				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.P3ShowCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "P3ShowCase/P3ShowCase-Bridging-Header.h";
@@ -367,8 +377,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MTLLINKER_FLAGS = "-cikernel";
-				MTL_COMPILER_FLAGS = "-fcikernel";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jiangwang.P3ShowCase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "P3ShowCase/P3ShowCase-Bridging-Header.h";

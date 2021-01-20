@@ -17,7 +17,7 @@ struct RasterizerData {
 vertex RasterizerData pass_through_vertex(device const VertexData *vertexes [[ buffer(0)]],
                                           uint vid [[ vertex_id ]]) {
     RasterizerData output;
-    output.position = float4(vertexes[vid].position, 0);
+    output.position = float4(vertexes[vid].position, 1);
     output.texture_coord = float2(vertexes[vid].textCoord);
     return output;
 }

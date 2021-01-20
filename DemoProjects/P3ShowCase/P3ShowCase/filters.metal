@@ -6,6 +6,7 @@
 //  Copyright © 2017 com.peteredmonston. All rights reserved.
 //
 
+/*
 #include <metal_stdlib>
 using namespace metal;
 #include <CoreImage/CoreImage.h> // includes CIKernelMetalLib.h
@@ -31,3 +32,4 @@ extern "C" {
     }
 }
 
+ */
